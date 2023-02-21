@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import JsonResponse
+# from django.http import JsonResponse
 from .forms import AddItem, UpdateItem
 from .models import Order, Item
 import re
@@ -8,11 +8,12 @@ import re
 
 
 def index(request):
-    form = AddItem()
-    new_order = Order.objects.create()
-    context = {"form": form,
-               "new_order": new_order}
-    return render(request, 'billing/index.html', context)
+    return render(request, 'index.html')
+    # form = AddItem()
+    # new_order = Order.objects.create()
+    # context = {"form": form,
+    #            "new_order": new_order}
+    # return render(request, 'billing/index.html', context)
 
 
 def search_item(request):
