@@ -18,29 +18,54 @@ $(document).ready(function () {
         });
         // Search Bar on Focusout
         searchBar.on('blur', function () {
-            searchTarget.animate({ height: 'hide' }, 200);
             searchBar.val('');
-            instantlyAdded.focus();
         });
-        // Search Bar focus shortcuts ==> Ctrl + I
+
+        /* Keypress Events*/
         $(document).keydown(function (event) {
             if (event.ctrlKey && event.which === 73) { // check for Ctrl+I
                 event.preventDefault();
                 searchBar.focus();
 
             }
-        });
-        // Function focusout on key press Esc or Alt and focus to instantly added element
-        $(document).keydown(function (event) {
+
             if (event.which === 27 || event.altKey) { // check for esc or alt
                 event.preventDefault();
+                searchTarget.animate({ height: 'hide' }, 200);
                 searchBar.blur();
             }
 
+            if (event.which === 9) { // Check for tab whole Search list is visible3
+                if (searchTarget.is(':visible')) {
+                    event.preventDefault();
+                    menuItems();
+                }
+            }
         });
 
 
     }/* End of search Bar Function */
 
     searchBarFunction();
+
+    function menuItems() {
+        // alert('Please select');
+        var max = $("#search-bar004-target ul li").length;
+        var min = 0;
+        var pointer = 0;
+
+        $(document).keydown(function (event) {
+            if (event.which === 40) { // check for Ctrl+I
+                event.preventDefault();
+                if (pointer < max - 1) {
+                    $('#search-bar004-target ul li').eq(pointer).css({ 'background-color': '#fff' });
+                    pointer++;
+                }
+
+            }
+
+            $('#search-bar004-target ul li').eq(pointer).css({ 'background-color': 'red' });
+        });
+
+    }
 });/* End of  document Ready Function */
