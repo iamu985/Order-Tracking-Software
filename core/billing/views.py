@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 # from django.http import JsonResponse
 from .forms import AddItem, UpdateItem
 from .models import Order, Item
@@ -16,6 +17,7 @@ def index(request):
     # return render(request, 'billing/index.html', context)
 
 
+@csrf_exempt
 def search_items(request):
     item_name = request.POST.get('item-name')
     query = re.compile(item_name, re.IGNORECASE)

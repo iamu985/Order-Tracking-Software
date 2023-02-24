@@ -13,6 +13,9 @@
         placeholder="Search Items"
         aria-label="Search"
         hx-post="{% url 'billing:search_items' %}"
+        hx-target="#search-results"
+        hx-trigger="focus, keyup changed"
+        name="item-name"
       />
     </form>
     <!-- Drop down List Section -->
