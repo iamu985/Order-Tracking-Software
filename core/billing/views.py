@@ -17,14 +17,17 @@ def index(request):
 
 
 def search_item(request):
-    item_name = request.GET.get('item-name')
+    item_name = request.POST.get('item-name')
     query = re.compile(item_name, re.IGNORECASE)
     suggestions = []
     for item in Item.objects.all():
         if re.search(query, item.name):
             suggestions.append((item.name, item.id))
-    # context = {"suggestions": suggestions}
-    return JsonResponse(suggestions, safe=False)
+    context = {"suggestions": suggestions}
+    return render(
+        request,
+        'partials/search-results.html',
+        context)
 
 
 def add_item(request):

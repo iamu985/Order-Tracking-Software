@@ -1,233 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% load static %}
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/index.css' %}">
-        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-        <script src="{% static 'js/jquery-3.6.3.min.js' %}"></script>
-        <script src="{% static 'js/functions.js' %}"></script>
-        <title>Pizzeria</title>
-    </head>
-    <body>
-        <header>
-            <div class="d-flex bd-highlight ">
-                <div class="p-2 w-100 bd-highlight ">
-                    <div class="logo">
-                        Logo <span>Pizzeria</span>
-                    </div>
-                </div>
-                <div class="p-2 flex-shrink-1 bd-highlight">Settings</div>
-            </div>
-        </header>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-8 create-order ">
-                    <div class="title">Create Order</div>
-                    <div class="d-flex justify-content-between">
-                        <div class="p-2 w-50 bd-highlight">Order no: 1234</div>
-                        <div class="p-2 flex-shrink-1 bd-highlight">Date: 12/12/2023</div>
-                    </div>
-                    <div class="container-fluid position-relative">
-                        <form class="d-flex">
-                            <input class="form-control me-2"
-                                   id="search-bar004"
-                                   type="search"
-                                   placeholder="Search Items"
-                                   aria-label="Search">
-                        </form>
-                        <div class="list-menu position-absolute end-0" id="search-bar004-target">
-                            <ul class="two-columns">
-                                <li>1 Chicken Legs ₹300</li>
-                                <li>4 chicken Hakka Noodels ₹400</li>
-                                <li>6 chicken Mansurian ₹400</li>
-                                <li>7 chicken leg ₹250</li>
-                                <li>1 Chicken Legs ₹300</li>
-                                <li>4 chicken Hakka Noodels ₹400</li>
-                                <li>6 chicken Mansurian ₹400</li>
-                                <li>7 chicken leg ₹250</li>
-                                <li>1 Chicken Legs ₹300</li>
-                                <li>4 chicken Hakka Noodels ₹400</li>
-                                <li>6 chicken Mansurian ₹400</li>
-                                <li>7 chicken leg ₹250</li>
-                                <li>1 Chicken Legs ₹300</li>
-                                <li>4 chicken Hakka Noodels ₹400</li>
-                                <li>6 chicken Mansurian ₹400</li>
-                                <li>7 chicken leg ₹250</li>
-                                <li>1 Chicken Legs ₹300</li>
-                                <li>
-                                    4 chicken Hakka Noodels ₹400
-                                </li>
-                                <li>
-                                    6 chicken Mansurian ₹400
-                                </li>
-                                <li>
-                                    7 chicken leg ₹250
-                                </li>
-                                <li>
-                                    1 Chicken Legs ₹300
-                                </li>
-                                <li>
-                                    4 chicken Hakka Noodels ₹400
-                                </li>
-                                <li>
-                                    6 chicken Mansurian ₹400
-                                </li>
-                                <li>
-                                    7 chicken leg ₹250
-                                </li>
-                                <li>
-                                    1 Chicken Legs ₹300
-                                </li>
-                                <li>
-                                    4 chicken Hakka Noodels ₹400
-                                </li>
-                                <li>
-                                    6 chicken Mansurian ₹400
-                                </li>
-                                <li>
-                                    7 chicken leg ₹250
-                                </li>
-                                <li>
-                                    1 Chicken Legs ₹300
-                                </li>
-                                <li>
-                                    4 chicken Hakka Noodels ₹400
-                                </li>
-                                <li>
-                                    6 chicken Mansurian ₹400
-                                </li>
-                                <li>
-                                    7 chicken leg ₹250
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- Drop down List Section -->
-                    </div>
-                    <div>
-                        Items:
-                    </div>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">
-                                    SN.
-                                </th>
-                                <th scope="col">
-                                    Item Name
-                                </th>
-                                <th scope="col">
-                                    Quantity
-                                </th>
-                                <th scope="col">
-                                    Amount
-                                </th>
-                                <th scope="col">
-                                    Function
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">
-                                    1
-                                </th>
-                                <td>
-                                    Chicken Legs
-                                </td>
-                                <td>
-                                    <input class="items-quantity" type="number" min="1" value="1">
-                                </td>
-                                <td>
-                                    ₹ 440
-                                </td>
-                                <td>
-                                    Remove
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    2
-                                </th>
-                                <td>
-                                    Chicken Fried Rice
-                                </td>
-                                <td>
-                                    <input class="items-quantity" type="number" min="1" value="1">
-                                </td>
-                                <td>
-                                    ₹ 333
-                                </td>
-                                <td>
-                                    Remove
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    2
-                                </th>
-                                <td>
-                                    Chicken Fried Rice Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor,
-                                    cumque.
-                                </td>
-                                <td>
-                                    <input class="items-quantity" type="number" min="1" value="1">
-                                </td>
-                                <td>
-                                    ₹ 333
-                                </td>
-                                <td>
-                                    Remove
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">
-                                    3
-                                </th>
-                                <td>
-                                    Cofee
-                                </td>
-                                <td>
-                                    <input class="items-quantity"
-                                           id="instantly-added"
-                                           type="number"
-                                           min="1"
-                                           value="1">
-                                </td>
-                                <td>
-                                    ₹ 20
-                                </td>
-                                <td>
-                                    Remove
-                                </td>
-                            </tr>
-                        </tbody>
-                        <tfoot>
-                            <tr>
-                                <th colspan="3">
-                                </th>
-                                <th scope="col">
-                                    Total
-                                </th>
-                                <th scope="col">
-                                    ₹ 5000/-
-                                </th>
-                            </tr>
-                        </tfoot>
-                    </table>
-                    <div class="d-flex justify-content-center order-create-btn">
-                        <button type="button" class="btn btn-warning ">
-                            Create
-                        </button>
-                    </div>
-                </div>
-                <div class="col-md-4 recent-order">
-                    Order
-                </div>
-            </div>
+  {% load static %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.6.3.min.js' %}"></script>
+    <script src="{% static 'js/functions.js' %}"></script>
+    <script src="{% static 'js/htmx.min.js' %}"></script>
+    <title>Pizzeria</title>
+  </head>
+  <body>
+    <header>
+      <div class="d-flex bd-highlight">
+        <div class="p-2 w-100 bd-highlight">
+          <div class="logo">Logo <span>Pizzeria</span></div>
         </div>
-    </body>
+        <div class="p-2 flex-shrink-1 bd-highlight">Settings</div>
+      </div>
+    </header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-8 create-order">
+          <div class="title">Create Order</div>
+          <div class="d-flex justify-content-between">
+            <div class="p-2 w-50 bd-highlight">
+              Order no: {{ new_order_id }}
+            </div>
+            <div class="p-2 flex-shrink-1 bd-highlight">
+              Date: {{ new_order_date }}
+            </div>
+          </div>
+          <div class="container-fluid position-relative">
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                id="search-bar004"
+                type="search"
+                placeholder="Search Items"
+                aria-label="Search"
+              />
+            </form>
+            <div
+              class="list-menu position-absolute end-0"
+              id="search-bar004-target"
+            >
+              <ul class="two-columns">
+                <li>1 Chicken Legs ₹300</li>
+                <li>4 chicken Hakka Noodels ₹400</li>
+                <li>6 chicken Mansurian ₹400</li>
+                <li>7 chicken leg ₹250</li>
+                <li>1 Chicken Legs ₹300</li>
+                <li>4 chicken Hakka Noodels ₹400</li>
+                <li>6 chicken Mansurian ₹400</li>
+                <li>7 chicken leg ₹250</li>
+                <li>1 Chicken Legs ₹300</li>
+                <li>4 chicken Hakka Noodels ₹400</li>
+                <li>6 chicken Mansurian ₹400</li>
+                <li>7 chicken leg ₹250</li>
+                <li>1 Chicken Legs ₹300</li>
+                <li>4 chicken Hakka Noodels ₹400</li>
+                <li>6 chicken Mansurian ₹400</li>
+                <li>7 chicken leg ₹250</li>
+                <li>1 Chicken Legs ₹300</li>
+                <li>4 chicken Hakka Noodels ₹400</li>
+                <li>6 chicken Mansurian ₹400</li>
+                <li>7 chicken leg ₹250</li>
+                <li>1 Chicken Legs ₹300</li>
+                <li>4 chicken Hakka Noodels ₹400</li>
+                <li>6 chicken Mansurian ₹400</li>
+                <li>7 chicken leg ₹250</li>
+                <li>1 Chicken Legs ₹300</li>
+                <li>4 chicken Hakka Noodels ₹400</li>
+                <li>6 chicken Mansurian ₹400</li>
+                <li>7 chicken leg ₹250</li>
+                <li>1 Chicken Legs ₹300</li>
+                <li>4 chicken Hakka Noodels ₹400</li>
+                <li>6 chicken Mansurian ₹400</li>
+                <li>7 chicken leg ₹250</li>
+              </ul>
+            </div>
+            <!-- Drop down List Section -->
+          </div>
+          <div>Items:</div>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">SN.</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Function</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Chicken Legs</td>
+                <td>
+                  <input
+                    class="items-quantity"
+                    type="number"
+                    min="1"
+                    value="1"
+                  />
+                </td>
+                <td>₹ 440</td>
+                <td>Remove</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Chicken Fried Rice</td>
+                <td>
+                  <input
+                    class="items-quantity"
+                    type="number"
+                    min="1"
+                    value="1"
+                  />
+                </td>
+                <td>₹ 333</td>
+                <td>Remove</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>
+                  Chicken Fried Rice Lorem ipsum, dolor sit amet consectetur
+                  adipisicing elit. Dolor, cumque.
+                </td>
+                <td>
+                  <input
+                    class="items-quantity"
+                    type="number"
+                    min="1"
+                    value="1"
+                  />
+                </td>
+                <td>₹ 333</td>
+                <td>Remove</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Cofee</td>
+                <td>
+                  <input
+                    class="items-quantity"
+                    id="instantly-added"
+                    type="number"
+                    min="1"
+                    value="1"
+                  />
+                </td>
+                <td>₹ 20</td>
+                <td>Remove</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th colspan="3"></th>
+                <th scope="col">Total</th>
+                <th scope="col">₹ 5000/-</th>
+              </tr>
+            </tfoot>
+          </table>
+          <div class="d-flex justify-content-center order-create-btn">
+            <button type="button" class="btn btn-warning">Create</button>
+          </div>
+        </div>
+        <div class="col-md-4 recent-order">Order</div>
+      </div>
+    </div>
+  </body>
 </html>
