@@ -3,16 +3,17 @@ from uuid import uuid4 as uuid
 
 # Create your models here.
 
+
 class Order(models.Model):
     ORDER_STATUS_CHOICE = [
-            ('Waiting', 'Waiting'),
-            ('Delivered', 'Delivered'),
-            ('Paid', 'Paid'),
-            ]
+        ('Waiting', 'Waiting'),
+        ('Delivered', 'Delivered'),
+        ('Paid', 'Paid'),
+    ]
     ordered_on = models.DateTimeField(auto_now_add=True)
     paid_online = models.BooleanField(default=False)
-    order_status = models.CharField(choices=ORDER_STATUS_CHOICE, 
-                                    max_length=10, 
+    order_status = models.CharField(choices=ORDER_STATUS_CHOICE,
+                                    max_length=10,
                                     default=ORDER_STATUS_CHOICE[0][0])
 
     def get_id(self):
@@ -46,4 +47,4 @@ class Item(models.Model):
     order = models.ManyToManyField("Order")
 
     def __str__(self):
-        return f"{self.name} - Rs. {self.price}"
+        return f"{self.id}. {self.name} - Rs. {self.price}"

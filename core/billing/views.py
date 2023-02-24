@@ -16,13 +16,16 @@ def index(request):
     # return render(request, 'billing/index.html', context)
 
 
-def search_item(request):
+def search_items(request):
     item_name = request.POST.get('item-name')
     query = re.compile(item_name, re.IGNORECASE)
     suggestions = []
     for item in Item.objects.all():
         if re.search(query, item.name):
-            suggestions.append((item.name, item.id))
+            suggestions.append(
+                #  item[0] is the item object
+                #  item[1] is the string to represent the item
+                (item, str(item)))
     context = {"suggestions": suggestions}
     return render(
         request,
