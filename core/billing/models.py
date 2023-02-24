@@ -22,12 +22,6 @@ class Order(models.Model):
         """
         return self.pk
 
-    def get_total_orders(self):
-        """
-        Returns the number total objects in the Order queryset
-        """
-        return len(self.objects.all())
-
     def get_total_price(self, order_id):
         """
         Returns the total price of the order.
