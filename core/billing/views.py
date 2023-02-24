@@ -20,19 +20,28 @@ def index(request):
 @csrf_exempt
 def search_items(request):
     item_name = request.POST.get('item-name')
-    query = re.compile(item_name, re.IGNORECASE)
     suggestions = []
-    for item in Item.objects.all():
-        if re.search(query, item.name):
-            suggestions.append(
-                #  item[0] is the item object
-                #  item[1] is the string to represent the item
-                (item, str(item)))
+    try:
+        index_number = int(item_name)
+        item = Item.objects.get(pk=index_number)
+        suggestions.append(
+            (item, str(item))
+        )
+    except ValueError:
+        query = re.compile(item_name, re.IGNORECASE)
+
+        for item in Item.objects.all():
+            if re.search(query, item.name):
+                suggestions.append(
+                    #  item[0] is the item object
+                    #  item[1] is the string to represent the item
+                    (item, str(item)))
     context = {"suggestions": suggestions}
     return render(
         request,
         'partials/search-results.html',
-        context)
+        context
+    )
 
 
 def add_item(request):
