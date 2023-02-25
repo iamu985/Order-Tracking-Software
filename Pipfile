@@ -9,6 +9,7 @@ django-tailwind = "*"
 django-widget-tweaks = "*"
 django-pytest = "*"
 pytest-django = "*"
+coverage = "*"
 
 [dev-packages]
 
