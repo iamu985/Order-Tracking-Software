@@ -1,5 +1,13 @@
 <ul class="two-columns" id="search-results">
   {% for item in suggestions %}
-  <li>{{ item.1 }}</li>
+  <li>
+    <a
+      href="#"
+      hx-post="{% url 'billing:add_item' item.0.id %}"
+      hx-target="#add-items-target"
+      hx-trigger="click"
+      >{{ item.1 }}</a
+    >
+  </li>
   {% endfor %}
 </ul>

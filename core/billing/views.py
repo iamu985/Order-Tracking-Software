@@ -1,20 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 # from django.http import JsonResponse
 from .forms import AddItem, UpdateItem
-from .models import Order, Item
+from .models import Order, Item, OrderItem
+from .context_processors import new_order_id
 import re
-
-# Create your views here.
 
 
 def index(request):
     return render(request, 'index.html')
-    # form = AddItem()
-    # new_order = Order.objects.create()
-    # context = {"form": form,
-    #            "new_order": new_order}
-    # return render(request, 'billing/index.html', context)
 
 
 @csrf_exempt
@@ -44,5 +38,34 @@ def search_items(request):
     )
 
 
-def add_item(request):
-    pass
+@csrf_exempt
+def add_item(request, item_id):
+    #  adds item to the order
+    order_id = new_order_id(request).get('new_order_id')
+    print(f"{order_id=} {item_id=}")
+    item = Item.objects.get(pk=item_id)
+    print(f"{item=}")
+    order = Order.objects.get_or_create(pk=order_id)[0]
+    order_item = OrderItem.objects.create(
+        order=order,
+        item=item)
+    order_item.save()
+    context = {"order": order}
+    return render(
+        request,
+        'partials/show-added-items.html',
+        context
+    )
+
+
+@csrf_exempt
+def update_item_quantity(request, item_id, order_id):
+    # updates the quantity of the item in the order
+    order = Order.objects.get(pk=order_id)
+    print(f'Got order: {order}')
+    order_item = order.orderitem_set.get(item__pk=item_id)
+    print(f'Got relative order_item: {str(order_item.item)}')
+    order_item.quantity += 1
+    print(f'Updated quantity: {order_item.quantity}')
+    order_item.save()
+    return redirect('billing:index')
