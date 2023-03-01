@@ -4,6 +4,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .forms import AddItem, UpdateItem
 from .models import Order, Item, OrderItem
 from .context_processors import new_order_id
+from .utils import delete_order_item
 import re
 
 
@@ -61,11 +62,36 @@ def add_item(request, item_id):
 @csrf_exempt
 def update_item_quantity(request, item_id, order_id):
     # updates the quantity of the item in the order
+    quantity = request.POST.get('item-quantity')
     order = Order.objects.get(pk=order_id)
     print(f'Got order: {order}')
     order_item = order.orderitem_set.get(item__pk=item_id)
     print(f'Got relative order_item: {str(order_item.item)}')
-    order_item.quantity += 1
+    order_item.quantity = quantity
     print(f'Updated quantity: {order_item.quantity}')
     order_item.save()
-    return redirect('billing:index')
+    context = {"order": order}
+    return render(request, 'partials/show-added-items.html', context)
+
+
+@csrf_exempt
+def delete_item(request, order_id, item_id):
+    order = delete_order_item(order_id, item_id)
+    context = {
+        'order': order
+    }
+    return render(request,
+                  'partials/show-added-items.html', context)
+
+
+@csrf_exempt
+def create_order(request, order_id):
+    print(f'Create Order: {order_id}')
+    order = Order.objects.get(pk=order_id)
+    order.save()
+    new_order = Order.objects.create(pk=order_id+1)
+    context = {
+        'prev_order': order,
+        'order': new_order,
+    }
+    return render(request, 'index.html', context)

@@ -34,7 +34,7 @@ class Order(models.Model):
         This includes the sum of the toal prices of the items that 
         are ordered.
         """
-        return sum([item.price for item in self.items.all()])
+        return sum([order_item.get_price() for order_item in self.orderitem_set.all()])
 
     def __str__(self):
         return f"OrderId: {self.pk}"
@@ -44,6 +44,9 @@ class Item(models.Model):
     name = models.CharField(max_length=120)
     price = models.IntegerField(default=0)
 
+    def get_quantity(self):
+        return self.orderitem_set.all()[0].quantity
+
     def __str__(self):
         return f"{self.id}. {self.name} - Rs. {self.price}"
 
@@ -52,3 +55,9 @@ class OrderItem(models.Model):
     order = models.ForeignKey("Order", on_delete=models.CASCADE)
     item = models.ForeignKey("Item", on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=1)
+
+    def get_price(self):
+        return self.item.price * self.quantity
+
+    def __str__(self):
+        return f"{self.item.name} - {self.quantity} - Rs. {self.item.price}"

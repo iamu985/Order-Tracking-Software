@@ -10,6 +10,7 @@ django-widget-tweaks = "*"
 django-pytest = "*"
 pytest-django = "*"
 coverage = "*"
+djhtml = "*"
 
 [dev-packages]
 

@@ -8,11 +8,29 @@ urlpatterns = [
 ]
 
 htmx_patterns = [
-    path('search-items', views.search_items, name="search_items"),
+    path('search-items',
+         views.search_items,
+         name="search_items"
+         ),
+
     path('add-item/<int:item_id>/',
-         views.add_item, name="add_item"),
+         views.add_item,
+         name="add_item"
+         ),
+
     path('update-item-quantity/<int:item_id>/<int:order_id>',
-         views.update_item_quantity, name="update_item_quantity"),
+         views.update_item_quantity,
+         name="update_item_quantity"
+         ),
+
+    path('delete-item/<int:item_id>/<int:order_id>',
+         views.delete_item,
+         name="delete_item"
+         ),
+
+    path('create-order/<int:order_id>',
+         views.create_order,
+         name='create_order')
 ]
 
 urlpatterns += htmx_patterns
