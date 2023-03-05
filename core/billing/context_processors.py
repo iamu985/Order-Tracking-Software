@@ -27,15 +27,13 @@ def new_order_id(request):
     }
 
 
-"""
-Issue: Orders will return all the orders in the database.
-If there are initially 3 orders, it will return all those 3 orders.
-> print("There are orders in the database")
-It gets the last order ie Order 3
-Then returns the new_order_id to be 3 + 1 = 4
-
-But in the add_item view, the new order id is received 4
-When we add item to the Order.item_set , the order gets created and
-Now the new_order_id will get increased as per the function. So the new_order_id
-would be 5 without completely adding the items.
-"""
+def all_orders(request):
+    #  Returns all orders
+    orders = Order.objects.all()
+    total_orders = len(orders)
+    print("IN all orders")
+    context = {
+        'orders': orders[0:total_orders-1],
+        'length': total_orders,
+    }
+    return context

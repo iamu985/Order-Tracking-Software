@@ -4,6 +4,17 @@
   <div class="p-2 flex-shrink-1 bd-highlight">Date: {{ new_order_date }}</div>
 </div>
 <div class="container-fluid position-relative">
+  <div class="py-3">
+    TableNumber:
+    <input
+      type="number"
+      class="items-quanitity"
+      min="1"
+      value="{{order.table_number}}"
+      name="table-number"
+      hx-post="{% url 'billing:update_table_number' new_order_id %}"
+    />
+  </div>
   <form class="d-flex">
     <input
       class="form-control me-2"
@@ -17,10 +28,9 @@
       name="item-name"
     />
   </form>
-    <!-- Drop down List Section -->
+  <!-- Drop down List Section -->
   <div class="list-menu position-absolute end-0" id="search-bar004-target">
     {% include 'partials/search-results.html' %}
   </div>
 </div>
-  <!--Add items section-->
-
+<!--Add items section-->

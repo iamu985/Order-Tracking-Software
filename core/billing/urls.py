@@ -30,7 +30,11 @@ htmx_patterns = [
 
     path('create-order/<int:order_id>',
          views.create_order,
-         name='create_order')
+         name='create_order'),
+
+    path('update-table-number/<int:order_id>',
+         views.update_table_number,
+         name='update_table_number')
 ]
 
 urlpatterns += htmx_patterns

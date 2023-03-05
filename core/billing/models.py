@@ -21,6 +21,7 @@ class Order(models.Model):
     #  all the items are set and it is finally saved as a model.
     is_new = models.BooleanField(default=True)
     items = models.ManyToManyField('Item', through="OrderItem")
+    table_number = models.PositiveIntegerField(default=1)
 
     def get_id(self):
         """
@@ -37,7 +38,7 @@ class Order(models.Model):
         return sum([order_item.get_price() for order_item in self.orderitem_set.all()])
 
     def __str__(self):
-        return f"OrderId: {self.pk}"
+        return f"OrderId: {self.pk} Table: {self.table_number}"
 
 
 class Item(models.Model):

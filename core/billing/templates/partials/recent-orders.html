@@ -1,0 +1,8 @@
+<div>Recent Orders</div>
+<div>
+  <ul>
+    {% if orders %} {% for order in orders %}
+    <li>Order: {{ order.id }} - Table: {{ order.table_number }}</li>
+    {% endfor %} {% endif %}
+  </ul>
+</div>

@@ -95,3 +95,15 @@ def create_order(request, order_id):
         'order': new_order,
     }
     return render(request, 'index.html', context)
+
+
+@csrf_exempt
+def update_table_number(request, order_id):
+    order = Order.objects.get(pk=order_id)
+    table_number = request.POST.get('table-number')
+    order.table_number = table_number
+    order.save()
+    context = {
+        'order': order,
+    }
+    return render(request, 'index.html', context)

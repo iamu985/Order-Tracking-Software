@@ -22,15 +22,11 @@
           <div>Items:</div>
           {% include 'partials/show-added-items.html' %}
           <div class="d-flex justify-content-center order-create-btn">
-            <button
-              type="button"
+            <a
               class="btn btn-warning"
-              hx-post="{% url 'billing:create_order' new_order_id %}"
-              hx-trigger="click"
-              hx-target="body"
+              href="{% url 'billing:create_order' new_order_id %}"
+              >Create</a
             >
-              Create
-            </button>
           </div>
         </div>
         <div class="col-md-4 recent-order">
