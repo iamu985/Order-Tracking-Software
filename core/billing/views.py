@@ -1,4 +1,7 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 # from django.http import JsonResponse
 from .forms import AddItem, UpdateItem
@@ -107,3 +110,45 @@ def update_table_number(request, order_id):
         'order': order,
     }
     return render(request, 'index.html', context)
+
+
+def pizzeria_login(request):
+    form = AuthenticationForm
+    if request.method == "POST":
+        print('Inside login post method')
+        form = AuthenticationForm(request, data=request.POST)
+        print('Got login form')
+        if form.is_valid():
+            print('Form is valid')
+            user = form.get_user()
+            print('Got User')
+            if user is not None:
+                print('User exists')
+                login(request, user)
+                return redirect('billing:pizzeria_admin')
+            else:
+                print('User does not exist')
+                return render(request,
+                              'pizzeria-login.html',
+                              {'error_message': 'Invalid Login!'})
+        else:
+            print('Form is invalid')
+            form = AuthenticationForm
+            return render(request,
+                          'pizzeria-login.html',
+                          {'login_form': form,
+                           'error_message': 'Form is Invalid'})
+    else:
+        print('Inside request get method')
+        context = {
+            'login_form': form
+        }
+
+        print('Rendering login page')
+        return render(request, 'pizzeria-login.html', context)
+
+
+@login_required
+def pizzeria_admin(request):
+    return render(request,
+                  'pizzeria-admin.html')
