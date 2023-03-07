@@ -5,7 +5,7 @@
     {% for order in orders %}
     <li class="list-group-item my-1">
       <div class="m-2 btn-group">
-        Order no.{{ order.id }} Table: {{ order.table_number }}
+        OrderID.{{ sorder.id }} Table{{ order.table_number }} Total: Rs. {{ order.get_total_price }}
         <div class="dropdown mx-2">
           <a
             class="btn btn-warning dropdown-toggle btn-sm"

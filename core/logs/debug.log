@@ -130,3 +130,32 @@ django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 4: 'if'. Lo
 2023-03-07 07:48:52,072 billing.context_processors DEBUG    Function Name: all_orders
 2023-03-07 07:48:52,073 billing.context_processors DEBUG    Orders contains 14 orders from 1 to 14
 2023-03-07 07:48:52,457 django.request WARNING  Not Found: /favicon.ico
+2023-03-07 16:24:46,184 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-07 16:24:46,186 billing.context_processors DEBUG    Total orders: 14 from 1 to 14
+2023-03-07 16:24:46,186 billing.context_processors INFO     There are orders in the database
+2023-03-07 16:24:46,186 billing.context_processors INFO     Got last order: OrderId: 14 Table: 1
+2023-03-07 16:24:46,186 billing.context_processors INFO     new_order_id: 14
+2023-03-07 16:24:46,186 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-07 16:24:46,187 billing.context_processors DEBUG    Orders contains 14 orders from 1 to 14
+2023-03-07 16:25:09,997 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-07 16:25:09,999 billing.context_processors DEBUG    Total orders: 14 from 1 to 14
+2023-03-07 16:25:09,999 billing.context_processors INFO     There are orders in the database
+2023-03-07 16:25:09,999 billing.context_processors INFO     Got last order: OrderId: 14 Table: 1
+2023-03-07 16:25:09,999 billing.context_processors INFO     new_order_id: 14
+2023-03-07 16:25:10,000 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-07 16:25:10,001 billing.context_processors DEBUG    Orders contains 14 orders from 1 to 14
+2023-03-07 16:25:21,915 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-07 16:25:21,918 billing.context_processors DEBUG    Total orders: 14 from 1 to 14
+2023-03-07 16:25:21,919 billing.context_processors INFO     There are orders in the database
+2023-03-07 16:25:21,919 billing.context_processors INFO     Got last order: OrderId: 14 Table: 1
+2023-03-07 16:25:21,919 billing.context_processors INFO     new_order_id: 14
+2023-03-07 16:25:21,919 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-07 16:25:21,920 billing.context_processors DEBUG    Orders contains 14 orders from 1 to 14
+2023-03-07 16:25:23,452 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-07 16:25:23,454 billing.context_processors DEBUG    Total orders: 14 from 1 to 14
+2023-03-07 16:25:23,454 billing.context_processors INFO     There are orders in the database
+2023-03-07 16:25:23,455 billing.context_processors INFO     Got last order: OrderId: 14 Table: 1
+2023-03-07 16:25:23,455 billing.context_processors INFO     new_order_id: 14
+2023-03-07 16:25:23,455 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-07 16:25:23,456 billing.context_processors DEBUG    Orders contains 14 orders from 1 to 14
+2023-03-07 16:25:23,676 django.request WARNING  Not Found: /favicon.ico
