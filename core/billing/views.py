@@ -1,3 +1,4 @@
+import logging
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
@@ -9,6 +10,46 @@ from .models import Order, Item, OrderItem
 from .context_processors import new_order_id
 from .utils import delete_order_item
 import re
+from django.conf import settings
+
+
+#  logging setup
+LOG_DIR = settings.BASE_DIR / 'logs'
+logging.config.dictConfig({
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'console': {
+            'format': '%(name)-12s %(levelname)-8s %(message)s'
+        },
+        'file': {
+            'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
+        }
+    },
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'console'
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'formatter': 'file',
+            'filename': f'{LOG_DIR}/debug.log'
+        }
+    },
+    'loggers': {
+        '': {
+            'level': 'DEBUG',
+            'handlers': ['console', 'file']
+        }
+    }
+})
+
+
+logger = logging.getLogger(__name__)
+
+#  Views
 
 
 def index(request):
@@ -17,6 +58,7 @@ def index(request):
 
 @csrf_exempt
 def search_items(request):
+    logger.debug('Function Name: search_items')
     item_name = request.POST.get('item-name')
     suggestions = []
     try:
@@ -44,16 +86,19 @@ def search_items(request):
 
 @csrf_exempt
 def add_item(request, item_id):
+    logger.debug('Function Name: add_item')
     #  adds item to the order
     order_id = new_order_id(request).get('new_order_id')
-    print(f"{order_id=} {item_id=}")
+    logger.debug(f"Received order_id: {order_id}")
     item = Item.objects.get(pk=item_id)
-    print(f"{item=}")
+    logger.debug(f'Received item {item.name}')
     order = Order.objects.get_or_create(pk=order_id)[0]
     order_item = OrderItem.objects.create(
         order=order,
         item=item)
     order_item.save()
+    logger.info(
+        f'Created order_item {order_item.item.name} for order {order_item.order.id}')
     context = {"order": order}
     return render(
         request,
@@ -64,14 +109,15 @@ def add_item(request, item_id):
 
 @csrf_exempt
 def update_item_quantity(request, item_id, order_id):
+    logger.debug('Function Name: update_item_quantity')
     # updates the quantity of the item in the order
     quantity = request.POST.get('item-quantity')
     order = Order.objects.get(pk=order_id)
-    print(f'Got order: {order}')
+    logger.debug(f'Got order: {order}')
     order_item = order.orderitem_set.get(item__pk=item_id)
-    print(f'Got relative order_item: {str(order_item.item)}')
+    logger.debug(f'Got relative order_item: {str(order_item.item)}')
     order_item.quantity = quantity
-    print(f'Updated quantity: {order_item.quantity}')
+    logger.debug(f'Updated quantity: {order_item.quantity}')
     order_item.save()
     context = {"order": order}
     return render(request, 'partials/show-added-items.html', context)
@@ -79,6 +125,7 @@ def update_item_quantity(request, item_id, order_id):
 
 @csrf_exempt
 def delete_item(request, order_id, item_id):
+    logger.debug('Function Name: delete_item')
     order = delete_order_item(order_id, item_id)
     context = {
         'order': order
@@ -89,10 +136,13 @@ def delete_item(request, order_id, item_id):
 
 @csrf_exempt
 def create_order(request, order_id):
-    print(f'Create Order: {order_id}')
+    logger.debug('Function Name: create_order')
+    logger.debug(f'Created Order {order_id}')
     order = Order.objects.get(pk=order_id)
     order.save()
+    logger.info(f'Saved order {order_id}')
     new_order = Order.objects.create(pk=order_id+1)
+    logger.debug(f'Created new order {order_id+1}')
     context = {
         'prev_order': order,
         'order': new_order,
@@ -102,10 +152,21 @@ def create_order(request, order_id):
 
 @csrf_exempt
 def update_table_number(request, order_id):
+    logger.debug('Function Name: update_table_number')
+    logger.info(f'Updating table number for order {order_id}')
     order = Order.objects.get(pk=order_id)
+    logger.debug(f'Got order {order.id}')
     table_number = request.POST.get('table-number')
+    logger.debug(f'Got table number {table_number}')
+    old_table_number = order.table_number
     order.table_number = table_number
     order.save()
+    logger.info(
+        f'Updated table number for order {order.id} from {old_table_number} to {order.table_number}'
+    )
+    logger.debug(
+        f'Updated table number in Order {order.id} is {order.table_number}')
+
     context = {
         'order': order,
     }
@@ -113,42 +174,45 @@ def update_table_number(request, order_id):
 
 
 def pizzeria_login(request):
+    logger.debug('Function Name: pizzeria_login')
     form = AuthenticationForm
     if request.method == "POST":
-        print('Inside login post method')
+        logger.info('Got request method POST')
         form = AuthenticationForm(request, data=request.POST)
-        print('Got login form')
+        logger.debug('Got login form')
         if form.is_valid():
-            print('Form is valid')
+            logger.debug('Received form is valid')
             user = form.get_user()
-            print('Got User')
             if user is not None:
-                print('User exists')
+                logger.debug('The user exists!')
                 login(request, user)
                 return redirect('billing:pizzeria_admin')
             else:
-                print('User does not exist')
+                logger.debug('User does not exist')
                 return render(request,
                               'pizzeria-login.html',
                               {'error_message': 'Invalid Login!'})
         else:
-            print('Form is invalid')
+            logger.debug('Received form is invalid')
             form = AuthenticationForm
             return render(request,
                           'pizzeria-login.html',
                           {'login_form': form,
                            'error_message': 'Form is Invalid'})
     else:
-        print('Inside request get method')
+        logger.debug('Got request method GET')
         context = {
             'login_form': form
         }
-
-        print('Rendering login page')
         return render(request, 'pizzeria-login.html', context)
 
 
 @login_required
 def pizzeria_admin(request):
+    logger.debug('Function Name: pizzeria_admin')
     return render(request,
                   'pizzeria-admin.html')
+
+
+def remove_order():
+    pass
