@@ -1,7 +1,8 @@
 <div><h3 class="my-2">Recent Orders</h3></div>
 <div>
   <ul class="list-group my-2">
-    {% if orders %} {% for order in orders %}
+    {% if orders %} 
+    {% for order in orders %}
     <li class="list-group-item my-1">
       <div class="m-2 btn-group">
         Order no.{{ order.id }} Table: {{ order.table_number }}
@@ -34,6 +35,15 @@
         <!--Modal Section-->
         {% include 'partials/view-edit-modal.html' %}
       </div>
+      </li>
+      {% endfor %}
+      {% else %}
+      <li class="list-group-item my-1">
+        <div class="m-2 btn-group">
+          No orders yet
+        </div>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

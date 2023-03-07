@@ -1,0 +1,65 @@
+2023-03-07 07:44:41,950 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-07 07:44:41,954 billing.context_processors DEBUG    Total orders: 14 from 1 to 14
+2023-03-07 07:44:41,955 billing.context_processors INFO     There are orders in the database
+2023-03-07 07:44:41,955 billing.context_processors INFO     Got last order: OrderId: 14 Table: 1
+2023-03-07 07:44:41,955 billing.context_processors INFO     new_order_id: 14
+2023-03-07 07:44:41,955 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-07 07:44:41,956 billing.context_processors DEBUG    Orders contains 14 orders from 1 to 14
+2023-03-07 07:44:42,117 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 56, in index
+    return render(request, 'index.html')
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/engine.py", line 206, in select_template
+    return self.get_template(template_name)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/defaulttags.py", line 953, in do_if
+    nodelist = parser.parse(("elif", "else", "endif"))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/defaulttags.py", line 853, in do_for
+    nodelist_loop = parser.parse(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    self.unclosed_block_tag(parse_until)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 581, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 4: 'for'. Looking for one of: empty, endfor.
+2023-03-07 07:47:45,538 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/forms.py changed, reloading.
