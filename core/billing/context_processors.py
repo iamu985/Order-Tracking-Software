@@ -29,12 +29,12 @@ def new_order_id(request):
 
 def all_orders(request):
     #  Returns all orders
-    orders = Order.objects.all()
+    orders = Order.objects.filter(is_new=False).order_by('-ordered_on')
     total_orders = len(orders)
     print("IN all orders")
     if orders:
         context = {
-            'orders': orders[0:total_orders-1],
+            'orders': orders,
             'length': total_orders,
         }
     context = {
