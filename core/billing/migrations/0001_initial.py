@@ -15,7 +15,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Item',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=120)),
                 ('price', models.IntegerField(default=0)),
             ],
@@ -23,25 +24,36 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Order',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('ordered_on', models.DateTimeField(auto_now_add=True)),
                 ('paid_online', models.BooleanField(default=False)),
-                ('order_status', models.CharField(choices=[('Waiting', 'Waiting'), ('Delivered', 'Delivered'), ('Paid', 'Paid')], default='Waiting', max_length=10)),
+                ('order_status', models.CharField(choices=[('Waiting', 'Waiting'), (
+                    'Delivered', 'Delivered'), ('Paid', 'Paid')], default='Waiting', max_length=10)),
                 ('is_new', models.BooleanField(default=True)),
+                ('table_number', models.PositiveIntegerField(default=1)),
             ],
         ),
         migrations.CreateModel(
             name='OrderItem',
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('id', models.BigAutoField(auto_created=True,
+                 primary_key=True, serialize=False, verbose_name='ID')),
                 ('quantity', models.PositiveIntegerField(default=1)),
-                ('item', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='billing.item')),
-                ('order', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='billing.order')),
+                ('item', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='billing.item')),
+                ('order', models.ForeignKey(
+                    on_delete=django.db.models.deletion.CASCADE, to='billing.order')),
             ],
         ),
         migrations.AddField(
             model_name='order',
             name='items',
-            field=models.ManyToManyField(through='billing.OrderItem', to='billing.item'),
+            field=models.ManyToManyField(
+                through='billing.OrderItem', to='billing.item'),
+            model_name='order',
+            name='items',
+            field=models.ManyToManyField(
+                through='billing.OrderItem', to='billing.item'),
         ),
     ]

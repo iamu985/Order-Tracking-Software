@@ -76,6 +76,21 @@ def search_items(request):
                     #  item[0] is the item object
                     #  item[1] is the string to represent the item
                     (item, str(item)))
+    try:
+        index_number = int(item_name)
+        item = Item.objects.get(pk=index_number)
+        suggestions.append(
+            (item, str(item))
+        )
+    except ValueError:
+        query = re.compile(item_name, re.IGNORECASE)
+
+        for item in Item.objects.all():
+            if re.search(query, item.name):
+                suggestions.append(
+                    #  item[0] is the item object
+                    #  item[1] is the string to represent the item
+                    (item, str(item)))
     context = {"suggestions": suggestions}
     return render(
         request,

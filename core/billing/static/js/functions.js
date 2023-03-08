@@ -1,46 +1,100 @@
 $(document).ready(function () {
 
-    function searchBarFunction() {
 
-        /*----------------------------------------------------------------
-        Function for search bar
-        1. List will be automatically dropped when Searchbar is focused
-        2. When Focused is automatically shift focus to last instantly added item
-        3. Shortcut to focus Searchbar CTRL + I
-        4. Shortcut to Focus Out ESC or ALT
-        ----------------------------------------------------------------*/
-        var instantlyAdded = $('#instantly-added');
-        const searchBar = $("#search-bar004");
-        const searchTarget = $("#search-bar004-target");
-        // Search Bar on Focus
-        searchBar.on('focus', function () {
-            searchTarget.animate({ height: 'show' }, 200);
-        });
-        // Search Bar on Focusout
-        searchBar.on('blur', function () {
+    /*----------------------------------------------------------------
+    Function for search bar
+    1. List will be automatically dropped when Searchbar is focused
+    2. When Focused is automatically shift focus to last instantly added item
+    3. Shortcut to focus Searchbar CTRL + I
+    4. Shortcut to Focus Out ESC or ALT
+    ----------------------------------------------------------------*/
+    // var instantlyAdded = $('#instantly-added');
+    const searchBar = $("#search-bar004");
+    const searchTarget = $("#search-bar004-target");
+    var listItem = $('#search-bar004-target ul li');
+    var istab = false;
+    var pointer = 0;
+
+
+    // Search Bar on Focus
+    searchBar.on('focus', function () {
+        searchTarget.animate({ height: 'show' }, 200);
+    });
+
+
+    // Search Bar on Focusout
+    searchBar.on('blur', function () {
+        searchBar.val('');
+
+    });
+
+    /* Keypress Events*/
+    $(document).keydown(function (event) {
+
+        if (event.ctrlKey && event.which === 73) { // check for Ctrl+I
+            event.preventDefault();
+            searchBar.focus();
+        }
+
+        if (event.which === 27 || event.altKey) { // check for esc or alt
+            event.preventDefault();
             searchTarget.animate({ height: 'hide' }, 200);
-            searchBar.val('');
-            instantlyAdded.focus();
-        });
-        // Search Bar focus shortcuts ==> Ctrl + I
-        $(document).keydown(function (event) {
-            if (event.ctrlKey && event.which === 73) { // check for Ctrl+I
+            rebaseBackground(pointer);
+            pointer = 0;
+            istab = false;
+            searchBar.blur();
+        }
+
+        if (event.which === 9 && searchTarget.is(':visible') && istab == false) { // Check for tab whole Search list is visible3
+            event.preventDefault();
+            listItem.eq(0).css({ 'background-color': 'gray' });
+            istab = true;
+        }
+
+        if (istab) {
+            let max = $("#search-bar004-target ul li").length;
+            let half = Math.round(max / 2);
+
+            if (event.which === 40 && pointer < max - 1) { /* down arrow */
                 event.preventDefault();
-                searchBar.focus();
+                rebaseBackground();
+                pointer++;
+            }
+
+            if (event.which === 39) { /* right arrow */
+                event.preventDefault();
+                let shift = pointer + half;
+                if (shift < max) {
+                    rebaseBackground();
+                    pointer = shift;
+                }
 
             }
-        });
-        // Function focusout on key press Esc or Alt and focus to instantly added element
-        $(document).keydown(function (event) {
-            if (event.which === 27 || event.altKey) { // check for esc or alt
+
+            if (event.which === 37) { /* left arrow */
                 event.preventDefault();
-                searchBar.blur();
+                let shift = pointer - half;
+                if (shift >= 0) {
+                    rebaseBackground();
+                    pointer = shift;
+                }
             }
 
-        });
+            if (event.which === 38) { /* up arrow */
+                event.preventDefault();
+                if (pointer > 0) {
+                    rebaseBackground();
+                    pointer--;
+                }
+            }
+
+            $('#search-bar004-target ul li').eq(pointer).css({ 'background-color': 'gray' });
+        }
+
+    });
 
 
-    }/* End of search Bar Function */
-
-    searchBarFunction();
+    function rebaseBackground() {
+        $('#search-bar004-target ul li').removeAttr('style');
+    }
 });/* End of  document Ready Function */

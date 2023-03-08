@@ -40,30 +40,65 @@ header {
 
 .list-menu {
     /* background-color: #a09494; */
+    background-color: #9e92d0;
     /* border: 1px solid black;  */
     display: none;
     position: absolute;
     width: inherit;
-
-
-    /* height: 500px; */
+    max-height: 34rem;
+    overflow: auto;
 
 }
 
-.list-menu>ul {
+#search-results {
     display: table-cell;
-    column-count: 2;
-    width: 67.5rem;
+    column-count: 1;
+    width: 100rem;
+    padding-left: 1.5rem;
+    padding-right: 1.8rem;
+    ;
     /* border: 1px solid black; */
     background-color: #fff;
     list-style: none;
 
 }
 
+#search-results>ul>li {
+    padding: 5px 20px;
+    /* font-weight: bolder;  */
+}
 
-
-.list-menu>ul>li:nth-child(even) {
+#search-results>ul>li:nth-child(even) {
     background-color: rgb(210, 203, 203);
+}
+
+#search-results>ul>li:hover {
+    background-color: #414141;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 3px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 50px;
+    background-color: #f2efef;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 50px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #fff;
 }
 
 /* 
@@ -108,3 +143,17 @@ $yellow:  #ffc107 !default;
 $green:   #198754 !default;
 $teal:    #20c997 !default;
 $cyan:    #0dcaf0 !default; */
+
+/* For Empty Recent Orders */
+.recent-orders-empty {
+    color: white !important;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    margin-top: 20rem;
+    margin-bottom: auto;
+}
+
+/* .custom-modal{
+    width: 50rem;
+} */

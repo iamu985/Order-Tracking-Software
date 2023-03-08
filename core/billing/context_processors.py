@@ -70,7 +70,7 @@ def new_order_id(request):
 def all_orders(request):
     logger.debug("Function Name: all_orders")
     #  Returns all orders
-    orders = Order.objects.all()
+    orders = Order.objects.filter(is_new=False).order_by('-ordered_on')
     logger.debug(
         f'Orders contains {len(orders)} orders from {orders[0].id} to {orders[len(orders) - 1].id}')
     total_orders = len(orders)
