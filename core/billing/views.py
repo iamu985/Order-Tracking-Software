@@ -176,33 +176,35 @@ def update_table_number(request, order_id):
 def pizzeria_login(request):
     logger.debug('Function Name: pizzeria_login')
     form = AuthenticationForm
-    if request.method == "POST":
-        logger.info('Got request method POST')
-        form = AuthenticationForm(request, data=request.POST)
-        logger.debug('Got login form')
+    if request.method == 'POST':
+        logger.info('Received POST request')
+        form = AuthenticationForm(data=request.POST)
+        logger.info('Received form data')
         if form.is_valid():
-            logger.debug('Received form is valid')
+            logger.info('Form is valid')
             user = form.get_user()
+            logger.info('Got user')
             if user is not None:
-                logger.debug('The user exists!')
+                logger.info('User exists!')
                 login(request, user)
                 return redirect('billing:pizzeria_admin')
             else:
-                logger.debug('User does not exist')
-                return render(request,
-                              'pizzeria-login.html',
-                              {'error_message': 'Invalid Login!'})
+                logger.info('User does not exist')
+                context = {
+                    'login_form': form,
+                    'error_message': 'User does not exist!',
+                }
+                return render(request, 'pizzeria-login.html', context)
         else:
-            logger.debug('Received form is invalid')
-            form = AuthenticationForm
-            return render(request,
-                          'pizzeria-login.html',
-                          {'login_form': form,
-                           'error_message': 'Form is Invalid'})
-    else:
-        logger.debug('Got request method GET')
+            context = {
+                'login_form': form,
+                'error_message': 'Invalid Credentials',
+            }
+            return render(request, 'pizzeria-login.html', context)
+    if request.method == "GET":
+        logger.info('Received GET request')
         context = {
-            'login_form': form
+            'login_form': form,
         }
         return render(request, 'pizzeria-login.html', context)
 
