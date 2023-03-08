@@ -11,7 +11,7 @@ body {
 .heroSec {
     height: 350px;
     border: solid black 1px hidden;
-    background-color: #3c174e;
+    background-color: #202428;
     display: flex;
     justify-content: center;
     box-shadow: 0 0 10px #000;

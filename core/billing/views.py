@@ -1,5 +1,6 @@
 import logging
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
@@ -76,21 +77,6 @@ def search_items(request):
                     #  item[0] is the item object
                     #  item[1] is the string to represent the item
                     (item, str(item)))
-    try:
-        index_number = int(item_name)
-        item = Item.objects.get(pk=index_number)
-        suggestions.append(
-            (item, str(item))
-        )
-    except ValueError:
-        query = re.compile(item_name, re.IGNORECASE)
-
-        for item in Item.objects.all():
-            if re.search(query, item.name):
-                suggestions.append(
-                    #  item[0] is the item object
-                    #  item[1] is the string to represent the item
-                    (item, str(item)))
     context = {"suggestions": suggestions}
     return render(
         request,
@@ -106,8 +92,22 @@ def add_item(request, item_id):
     order_id = new_order_id(request).get('new_order_id')
     logger.debug(f"Received order_id: {order_id}")
     item = Item.objects.get(pk=item_id)
-    logger.debug(f'Received item {item.name}')
     order = Order.objects.get_or_create(pk=order_id)[0]
+    if item in order.items.all():
+        logger.debug(f'Item {item.name} already in order {order_id}')
+        order_item = order.orderitem_set.get(item__pk=item_id)
+        order_item.quantity += 1
+        order_item.save()
+        logger.info(
+            f'Updated order_item {order_item.item.name} for order {order_item.order.id}')
+        context = {"order": order,
+                   'message': f'Item already in order. Updated Quantity to {order_item.quantity}'}
+        return render(
+            request,
+            'partials/show-added-items.html',
+            context
+        )
+    logger.debug(f'Received item {item.name}')
     order_item = OrderItem.objects.create(
         order=order,
         item=item)
@@ -154,6 +154,7 @@ def create_order(request, order_id):
     logger.debug('Function Name: create_order')
     logger.debug(f'Created Order {order_id}')
     order = Order.objects.get(pk=order_id)
+    order.is_new = False
     order.save()
     logger.info(f'Saved order {order_id}')
     new_order = Order.objects.create(pk=order_id+1)
