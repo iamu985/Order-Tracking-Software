@@ -17,10 +17,19 @@
     {% include 'partials/header.html' %}
     <div class="container-fluid">
       <div class="row">
-        {% include 'partials/order-create.html' %}
-
-        <div class="col-md-4 recent-order">Order</div>
+        <div class="col-md-8 create-order">
+          {% include 'partials/order-create.html' %}
+          <div>Items:</div>
+          {% include 'partials/show-added-items.html' %}
+          <div class="d-flex justify-content-center order-create-btn">
+            <a class="btn btn-warning"
+               href="{% url 'billing:create_order' new_order_id %}">Create</a
+              >
+            </div>
+          </div>
+          <div class="col-md-4 recent-order">{% include 'partials/recent-orders.html' %}</div>
+        </div>
       </div>
-    </div>
-  </body>
-</html>
+      {% include 'partials/modal-recent-order.html' %}
+    </body>
+  </html>
