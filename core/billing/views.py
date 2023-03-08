@@ -1,31 +1,109 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_exempt
 # from django.http import JsonResponse
 from .forms import AddItem, UpdateItem
-from .models import Order, Item
+from .models import Order, Item, OrderItem
+from .context_processors import new_order_id
+from .utils import delete_order_item
 import re
-
-# Create your views here.
 
 
 def index(request):
     return render(request, 'index.html')
-    # form = AddItem()
-    # new_order = Order.objects.create()
-    # context = {"form": form,
-    #            "new_order": new_order}
-    # return render(request, 'billing/index.html', context)
 
 
-def search_item(request):
-    item_name = request.GET.get('item-name')
-    query = re.compile(item_name, re.IGNORECASE)
+@csrf_exempt
+def search_items(request):
+    item_name = request.POST.get('item-name')
     suggestions = []
-    for item in Item.objects.all():
-        if re.search(query, item.name):
-            suggestions.append((item.name, item.id))
-    # context = {"suggestions": suggestions}
-    return JsonResponse(suggestions, safe=False)
+    try:
+        index_number = int(item_name)
+        item = Item.objects.get(pk=index_number)
+        suggestions.append(
+            (item, str(item))
+        )
+    except ValueError:
+        query = re.compile(item_name, re.IGNORECASE)
+
+        for item in Item.objects.all():
+            if re.search(query, item.name):
+                suggestions.append(
+                    #  item[0] is the item object
+                    #  item[1] is the string to represent the item
+                    (item, str(item)))
+    context = {"suggestions": suggestions}
+    return render(
+        request,
+        'partials/search-results.html',
+        context
+    )
 
 
-def add_item(request):
-    pass
+@csrf_exempt
+def add_item(request, item_id):
+    #  adds item to the order
+    order_id = new_order_id(request).get('new_order_id')
+    print(f"{order_id=} {item_id=}")
+    item = Item.objects.get(pk=item_id)
+    print(f"{item=}")
+    order = Order.objects.get_or_create(pk=order_id)[0]
+    order_item = OrderItem.objects.create(
+        order=order,
+        item=item)
+    order_item.save()
+    context = {"order": order}
+    return render(
+        request,
+        'partials/show-added-items.html',
+        context
+    )
+
+
+@csrf_exempt
+def update_item_quantity(request, item_id, order_id):
+    # updates the quantity of the item in the order
+    quantity = request.POST.get('item-quantity')
+    order = Order.objects.get(pk=order_id)
+    print(f'Got order: {order}')
+    order_item = order.orderitem_set.get(item__pk=item_id)
+    print(f'Got relative order_item: {str(order_item.item)}')
+    order_item.quantity = quantity
+    print(f'Updated quantity: {order_item.quantity}')
+    order_item.save()
+    context = {"order": order}
+    return render(request, 'partials/show-added-items.html', context)
+
+
+@csrf_exempt
+def delete_item(request, order_id, item_id):
+    order = delete_order_item(order_id, item_id)
+    context = {
+        'order': order
+    }
+    return render(request,
+                  'partials/show-added-items.html', context)
+
+
+@csrf_exempt
+def create_order(request, order_id):
+    print(f'Create Order: {order_id}')
+    order = Order.objects.get(pk=order_id)
+    order.save()
+    new_order = Order.objects.create(pk=order_id+1)
+    context = {
+        'prev_order': order,
+        'order': new_order,
+    }
+    return render(request, 'index.html', context)
+
+
+@csrf_exempt
+def update_table_number(request, order_id):
+    order = Order.objects.get(pk=order_id)
+    table_number = request.POST.get('table-number')
+    order.table_number = table_number
+    order.save()
+    context = {
+        'order': order,
+    }
+    return render(request, 'index.html', context)
