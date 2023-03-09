@@ -1,119 +1,126 @@
-  
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
-    background-color: #fff;
+body {
+    background-color: #f3f3f3
 }
 
 /* heroSection */
-.heroSec{
- height: 305px;
- /* border: solid #fff 1px; */
- background-color: #202428;
- display: flex;
- justify-content: center;
-}
-.headContainer{
-    /* border: solid #fff 1px; */
-    margin: auto;
+.heroSec {
+    height: 350px;
+    border: solid black 1px hidden;
+    background-color: #202428;
     display: flex;
     justify-content: center;
-
-
+    box-shadow: 0 0 10px #000;
 }
-#logo{
-    color: #fff;
 
- 
+#logo {
+    top: 20px;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 0 15px #000;
 }
+
 /* /heroSection */
 
 /* loginSection */
 
-.logInSec{
+.logInSec {
     display: flex;
     justify-content: center;
     padding-top: 50px;
     padding-bottom: 100px;
 }
 
-.box{
+.box {
     position: absolute;
     width: 500px;
-    height: 280px;
+    height: 22rem;
     padding: 30px;
     display: flex;
     justify-content: center;
     border: solid black 1px hidden;
-    background-color: #e8b738;
+    background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 0 10px black;
     position: absolute;
 
 }
- /* box top text */
-h2{
+
+/* box top text */
+h2 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight:700;
-    font-size: 25px; 
+    font-weight: 700;
+    font-size: 25px;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     color: #393744;
 }
+
 /* /box top text */
- 
+
 /* details */
-.container{
-    position:absolute;
+.container {
+    position: absolute;
     padding: 20px;
-    justify-content:center;
+    justify-content: center;
+    align-items: center;
     /* border: solid black 1px; */
-    margin-top: 50px;        
+    margin-top: 50px;
 }
+
 /* details */
 
-#avatar{
+#avatar {
+    margin-left: 50px;
     width: 30px;
     height: auto;
 }
 
-#lock{
+#lock {
+    margin-left: 50px;
     width: 30px;
     height: auto;
 }
 
-#username{    
+#username {
     padding-left: 90px;
     padding-top: 10px;
-    padding-bottom:10px;
+    padding-bottom: 10px;
     margin-left: 15px;
     margin-bottom: 40px;
     border-radius: 5px;
     margin-bottom: 40px;
-    border-style: none;    
+    border: 1px solid #000000
 }
 
-#password{
+#password {
+   
     padding-left: 90px;
     padding-top: 10px;
-    padding-bottom:10px;
-    margin-left: 250px;
+    padding-bottom: 10px;
+    margin-left: 15px;
     border-radius: 5px;
     margin-bottom: 40px;
     border-style: none;
-
+    border: 1px solid #000000
 }
+
 /* /details */
 
 /*button*/
-.submit{
+.submit {
     display: flex;
-    justify-content:center;
+    justify-content: center;
 }
-#login{
+
+#login {
     width: 150px;
     height: 40px;
     border-radius: 5px;
@@ -122,8 +129,8 @@ h2{
     color: white;
 }
 
-#login:active{
-     box-shadow: 0 0 10px;
+#login:active {
+    box-shadow: 0 0 10px #000;
 }
-/* /button */
 
+/* /button */

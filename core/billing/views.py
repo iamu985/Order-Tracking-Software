@@ -1,5 +1,6 @@
 import logging
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
@@ -91,8 +92,22 @@ def add_item(request, item_id):
     order_id = new_order_id(request).get('new_order_id')
     logger.debug(f"Received order_id: {order_id}")
     item = Item.objects.get(pk=item_id)
-    logger.debug(f'Received item {item.name}')
     order = Order.objects.get_or_create(pk=order_id)[0]
+    if item in order.items.all():
+        logger.debug(f'Item {item.name} already in order {order_id}')
+        order_item = order.orderitem_set.get(item__pk=item_id)
+        order_item.quantity += 1
+        order_item.save()
+        logger.info(
+            f'Updated order_item {order_item.item.name} for order {order_item.order.id}')
+        context = {"order": order,
+                   'message': f'Item already in order. Updated Quantity to {order_item.quantity}'}
+        return render(
+            request,
+            'partials/show-added-items.html',
+            context
+        )
+    logger.debug(f'Received item {item.name}')
     order_item = OrderItem.objects.create(
         order=order,
         item=item)
@@ -139,6 +154,7 @@ def create_order(request, order_id):
     logger.debug('Function Name: create_order')
     logger.debug(f'Created Order {order_id}')
     order = Order.objects.get(pk=order_id)
+    order.is_new = False
     order.save()
     logger.info(f'Saved order {order_id}')
     new_order = Order.objects.create(pk=order_id+1)
@@ -176,33 +192,35 @@ def update_table_number(request, order_id):
 def pizzeria_login(request):
     logger.debug('Function Name: pizzeria_login')
     form = AuthenticationForm
-    if request.method == "POST":
-        logger.info('Got request method POST')
-        form = AuthenticationForm(request, data=request.POST)
-        logger.debug('Got login form')
+    if request.method == 'POST':
+        logger.info('Received POST request')
+        form = AuthenticationForm(data=request.POST)
+        logger.info('Received form data')
         if form.is_valid():
-            logger.debug('Received form is valid')
+            logger.info('Form is valid')
             user = form.get_user()
+            logger.info('Got user')
             if user is not None:
-                logger.debug('The user exists!')
+                logger.info('User exists!')
                 login(request, user)
                 return redirect('billing:pizzeria_admin')
             else:
-                logger.debug('User does not exist')
-                return render(request,
-                              'pizzeria-login.html',
-                              {'error_message': 'Invalid Login!'})
+                logger.info('User does not exist')
+                context = {
+                    'login_form': form,
+                    'error_message': 'User does not exist!',
+                }
+                return render(request, 'pizzeria-login.html', context)
         else:
-            logger.debug('Received form is invalid')
-            form = AuthenticationForm
-            return render(request,
-                          'pizzeria-login.html',
-                          {'login_form': form,
-                           'error_message': 'Form is Invalid'})
-    else:
-        logger.debug('Got request method GET')
+            context = {
+                'login_form': form,
+                'error_message': 'Invalid Credentials',
+            }
+            return render(request, 'pizzeria-login.html', context)
+    if request.method == "GET":
+        logger.info('Received GET request')
         context = {
-            'login_form': form
+            'login_form': form,
         }
         return render(request, 'pizzeria-login.html', context)
 
@@ -216,3 +234,14 @@ def pizzeria_admin(request):
 
 def remove_order():
     pass
+
+
+@csrf_exempt
+def modal_view(request, order_id):
+    logger.debug('Function: modal_view')
+    order = Order.objects.get(pk=order_id)
+    logger.debug(f'Got order: {order.id} Reqeuested Order: {order_id}')
+    context = {
+        'order': order,
+    }
+    return render(request, 'partials/modal-recent-order.html', context)

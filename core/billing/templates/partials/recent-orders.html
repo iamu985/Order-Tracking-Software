@@ -1,50 +1,41 @@
-<div><h3 class="my-2">Recent Orders</h3></div>
-<div>
-  <ul class="list-group my-2">
-    {% if orders %} 
+<div>Recent Orders</div>
+{% comment %} Searchbar {% endcomment %}
+<input type="search" name="" id="">
+<div class="recent-orders">
+  {% if orders %}
     {% for order in orders %}
-    <li class="list-group-item my-1">
-      <div class="m-2 btn-group">
-        OrderID.{{ sorder.id }} Table{{ order.table_number }} Total: Rs. {{ order.get_total_price }}
-        <div class="dropdown mx-2">
-          <a
-            class="btn btn-warning dropdown-toggle btn-sm"
-            href="#"
-            role="button"
-            id="dropdownMenuLink"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            {{order.order_status}}
-          </a>
-
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Waiting</a>
-            <a class="dropdown-item" href="#">Pending</a>
-            <a class="dropdown-item" href="#">Paid</a>
-          </div>
-        </div>
-        <button
-          class="btn btn-warning btn-sm"
-          data-toggle="modal"
-          data-target="#exampleModal"
-        >
-          View and Edit
-        </button>
-        <!--Modal Section-->
-        {% include 'partials/view-edit-modal.html' %}
+      <div class="card">
+        <table>
+          <tr>
+            <th>Order</th>
+            <th>Table</th>
+            <th>Amount</th>
+            <th>Status</th>
+            <th>Function</th>
+          </tr>
+          <tr>
+            <td>{{ order.id }}</td>
+            <td>{{ order.table_number }}</td>
+            <td>{{ order.get_total_price }}</td>
+            <td>Resolve</td>
+            <td>
+              <button type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#myModal"
+                      hx-get="{% url 'billing:modal_view' order.id %}"
+                      hx-trigger="click"
+                      hx-target="#add-items-target"
+                      >View</button>
+            </td>
+          </tr>
+        </table>
       </div>
-      </li>
-      {% endfor %}
-      {% else %}
-      <li class="list-group-item my-1">
-        <div class="m-2 btn-group">
-          No orders yet
-        </div>
-        </li>
-      {% endif %}
-      </ul>
     </div>
-  </div>
+    <div>
+    {% endfor %}
+  {% else %}
+    <div class="recent-orders-empty">No recent Orders</div>
+  {% endif %}
+</ul>
 </div>

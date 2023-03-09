@@ -44,11 +44,11 @@ def new_order_id(request):
     logger.debug("Function Name: new_order_id")
     #  Returns new_order_id and new_order_date
     orders = Order.objects.all()
-    logger.debug(
-        f"Total orders: {len(orders)} from {orders[0].id} to {orders[len(orders) - 1].id}")
     new_order_id = 1
     if orders:
         logger.info("There are orders in the database")
+        logger.debug(
+            f"Total orders: {len(orders)} from {orders[0].id} to {orders[len(orders) - 1].id}")
         last_order = orders[len(orders) - 1]
         logger.info(f"Got last order: {str(last_order)}")
         if last_order.is_new:
@@ -70,12 +70,15 @@ def new_order_id(request):
 def all_orders(request):
     logger.debug("Function Name: all_orders")
     #  Returns all orders
-    orders = Order.objects.all()
-    logger.debug(
-        f'Orders contains {len(orders)} orders from {orders[0].id} to {orders[len(orders) - 1].id}')
+    orders = Order.objects.filter(is_new=False).order_by('-ordered_on')
+    if orders:
+        logger.debug(
+            f'Orders contains {len(orders)} orders from {orders[0].id} to {orders[len(orders) - 1].id}')
+    else:
+        logger.debug("Orders is empty")
     total_orders = len(orders)
     context = {
-        'orders': orders[0:total_orders-1],
+        'orders': orders,
         'length': total_orders,
     }
     return context

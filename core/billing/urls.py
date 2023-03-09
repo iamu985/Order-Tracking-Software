@@ -36,7 +36,11 @@ htmx_patterns = [
 
     path('update-table-number/<int:order_id>',
          views.update_table_number,
-         name='update_table_number')
+         name='update_table_number'),
+
+    path('modal-view/<int:order_id>',
+         views.modal_view,
+         name="modal_view"),
 ]
 
 urlpatterns += htmx_patterns
