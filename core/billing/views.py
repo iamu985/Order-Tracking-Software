@@ -234,3 +234,13 @@ def pizzeria_admin(request):
 
 def remove_order():
     pass
+
+
+@csrf_exempt
+def modal_view(request, order_id):
+    logger.debug('Function: modal_view')
+    order = Order.objects.get(pk=order_id)
+    context = {
+        'order': order,
+    }
+    return render(request, 'partials/modal-recent-order.html', context)
