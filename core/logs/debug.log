@@ -6554,3 +6554,4 @@ django.db.utils.IntegrityError: UNIQUE constraint failed: billing_order.id
 2023-03-09 15:53:30,042 billing.context_processors INFO     new_order_id: 4
 2023-03-09 15:53:30,043 billing.context_processors DEBUG    Function Name: all_orders
 2023-03-09 15:53:30,044 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 16:03:14,961 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
