@@ -159,3 +159,20 @@ django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 4: 'if'. Lo
 2023-03-07 16:25:23,455 billing.context_processors DEBUG    Function Name: all_orders
 2023-03-07 16:25:23,456 billing.context_processors DEBUG    Orders contains 14 orders from 1 to 14
 2023-03-07 16:25:23,676 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 13:19:12,088 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:19:12,112 billing.context_processors DEBUG    Total orders: 14 from 1 to 14
+2023-03-09 13:19:12,112 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:19:12,112 billing.context_processors INFO     Got last order: OrderId: 14 Table: 1
+2023-03-09 13:19:12,112 billing.context_processors INFO     new_order_id: 14
+2023-03-09 13:19:12,112 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:19:12,120 billing.context_processors DEBUG    Orders contains 14 orders from 1 to 14
+2023-03-09 13:19:13,427 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 13:19:27,397 billing.views DEBUG    Function Name: pizzeria_login
+2023-03-09 13:19:27,397 billing.views DEBUG    Got request method GET
+2023-03-09 13:19:27,413 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:19:27,421 billing.context_processors DEBUG    Total orders: 14 from 1 to 14
+2023-03-09 13:19:27,421 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:19:27,421 billing.context_processors INFO     Got last order: OrderId: 14 Table: 1
+2023-03-09 13:19:27,421 billing.context_processors INFO     new_order_id: 14
+2023-03-09 13:19:27,421 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:19:27,429 billing.context_processors DEBUG    Orders contains 14 orders from 1 to 14
