@@ -7,16 +7,16 @@
         <div class="modal-content custom-modal">
             <!-- Modal header, body, and footer go here -->
             <div class="modal-header">
-                <h5 class="modal-title">Order No: 32432</h5>
+                <h5 class="modal-title">Order No: {{ order.id }}</h5>
                 <button type="button"
-                        class="btn-close"
+                        class="close"
                         data-bs-dismiss="modal"
-                        aria-label="Close"></button>
+                        aria-label="Close">&times;</button>
             </div>
             <div class="modal-body">
                 <div class="overflow-auto">
                     <!-- Scrollable content goes here -->
-                    Items:
+                    <b>Items</b>
                     <table class="table table-striped" id="add-items-target">
                         <thead>
                             <tr>
@@ -27,12 +27,14 @@
                             </tr>
                         </thead>
                         <tbody>
+                            {% for orderitem in order.orderitem_set.all %}
                             <tr>
-                                <td>adsf</td>
-                                <td>asdfd</td>
-                                <td>asdf</td>
-                                <td>sdgd</td>
+                                <td>{{ forloog.counter }}</td>
+                                <td>{{ orderitem.item.name }}</td>
+                                <td>{{ orderitem.quantity }}</td>
+                                <td>{{ orderitem.item.price }}</td>
                             </tr>
+                            {% endfor %}
                         </tbody>
                         <tfoot>
                             <tr>

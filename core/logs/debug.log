@@ -5409,3 +5409,1148 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'modal_view' with no argument
 2023-03-09 13:02:03,280 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
 2023-03-09 13:02:03,521 django.request WARNING  Not Found: /favicon.ico
 2023-03-09 13:02:05,196 django.security.csrf WARNING  Forbidden (CSRF token missing.): /
+2023-03-09 13:27:23,215 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/urls.py changed, reloading.
+2023-03-09 13:34:40,301 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:34:40,304 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:34:40,304 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 13:34:40,304 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 13:34:40,304 billing.context_processors INFO     new_order_id: 3
+2023-03-09 13:34:40,304 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:34:40,306 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 13:34:40,531 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 13:34:42,474 billing.views DEBUG    Function: modal_view
+2023-03-09 13:34:42,476 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:34:42,477 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:34:42,478 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 13:34:42,478 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 13:34:42,478 billing.context_processors INFO     new_order_id: 3
+2023-03-09 13:34:42,478 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:34:42,480 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 13:34:52,881 billing.views DEBUG    Function: modal_view
+2023-03-09 13:34:52,882 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:34:52,883 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:34:52,883 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 13:34:52,883 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 13:34:52,883 billing.context_processors INFO     new_order_id: 3
+2023-03-09 13:34:52,883 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:34:52,884 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 13:35:04,423 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:35:04,425 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:35:04,425 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 13:35:04,425 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 13:35:04,425 billing.context_processors INFO     new_order_id: 3
+2023-03-09 13:35:04,425 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:35:04,427 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 13:35:04,607 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 13:35:06,352 billing.views DEBUG    Function: modal_view
+2023-03-09 13:35:06,354 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:35:06,355 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:35:06,355 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 13:35:06,355 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 13:35:06,356 billing.context_processors INFO     new_order_id: 3
+2023-03-09 13:35:06,356 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:35:06,358 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 13:35:15,154 billing.views DEBUG    Function: modal_view
+2023-03-09 13:35:15,156 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:35:15,157 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:35:15,157 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 13:35:15,157 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 13:35:15,158 billing.context_processors INFO     new_order_id: 3
+2023-03-09 13:35:15,158 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:35:15,159 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 13:35:18,054 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:35:18,055 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:35:18,055 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 13:35:18,055 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 13:35:18,055 billing.context_processors INFO     new_order_id: 3
+2023-03-09 13:35:18,055 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:35:18,056 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 13:35:18,238 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 13:35:45,413 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:35:45,415 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:35:45,415 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 13:35:45,416 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 13:35:45,416 billing.context_processors INFO     new_order_id: 3
+2023-03-09 13:35:45,416 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:35:45,417 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 13:35:45,624 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 13:35:47,855 billing.views DEBUG    Function: modal_view
+2023-03-09 13:35:47,856 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:35:47,857 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:35:47,857 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 13:35:47,857 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 13:35:47,857 billing.context_processors INFO     new_order_id: 3
+2023-03-09 13:35:47,857 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:35:47,858 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 13:35:55,496 billing.views DEBUG    Function: modal_view
+2023-03-09 13:35:55,497 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:35:55,498 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:35:55,498 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 13:35:55,498 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 13:35:55,498 billing.context_processors INFO     new_order_id: 3
+2023-03-09 13:35:55,498 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:35:55,499 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 13:35:58,072 billing.views DEBUG    Function: modal_view
+2023-03-09 13:35:58,073 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:35:58,074 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:35:58,074 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 13:35:58,074 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 13:35:58,074 billing.context_processors INFO     new_order_id: 3
+2023-03-09 13:35:58,074 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:35:58,075 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 13:36:22,908 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:36:22,909 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:36:22,909 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 13:36:22,909 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 13:36:22,910 billing.context_processors INFO     new_order_id: 3
+2023-03-09 13:36:22,910 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:36:22,910 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 13:36:23,114 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 13:36:24,985 billing.views DEBUG    Function: modal_view
+2023-03-09 13:36:24,987 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:36:24,988 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:36:24,988 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 13:36:24,988 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 13:36:24,989 billing.context_processors INFO     new_order_id: 3
+2023-03-09 13:36:24,989 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:36:24,990 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 13:36:32,632 billing.views DEBUG    Function: modal_view
+2023-03-09 13:36:32,634 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:36:32,634 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:36:32,634 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 13:36:32,634 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 13:36:32,634 billing.context_processors INFO     new_order_id: 3
+2023-03-09 13:36:32,634 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:36:32,635 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 13:36:57,653 billing.views DEBUG    Function: modal_view
+2023-03-09 13:36:57,655 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 13:36:57,655 billing.context_processors INFO     There are orders in the database
+2023-03-09 13:36:57,655 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 13:36:57,655 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 13:36:57,655 billing.context_processors INFO     new_order_id: 3
+2023-03-09 13:36:57,655 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 13:36:57,656 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 14:33:47,589 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:33:47,590 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:33:47,591 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 14:33:47,591 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 14:33:47,591 billing.context_processors INFO     new_order_id: 3
+2023-03-09 14:33:47,591 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:33:47,593 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 14:33:47,806 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:33:49,197 billing.views DEBUG    Function: modal_view
+2023-03-09 14:33:49,199 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:33:49,199 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:33:49,200 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 14:33:49,200 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 14:33:49,200 billing.context_processors INFO     new_order_id: 3
+2023-03-09 14:33:49,200 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:33:49,201 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 14:34:44,946 billing.views DEBUG    Function: modal_view
+2023-03-09 14:34:44,949 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:34:44,950 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:34:44,950 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 14:34:44,950 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 14:34:44,950 billing.context_processors INFO     new_order_id: 3
+2023-03-09 14:34:44,950 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:34:44,951 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 14:34:55,124 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:34:55,126 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:34:55,126 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 14:34:55,126 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 14:34:55,126 billing.context_processors INFO     new_order_id: 3
+2023-03-09 14:34:55,126 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:34:55,127 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 14:34:55,342 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:34:57,334 billing.views DEBUG    Function: modal_view
+2023-03-09 14:34:57,336 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:34:57,337 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:34:57,337 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 14:34:57,337 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 14:34:57,337 billing.context_processors INFO     new_order_id: 3
+2023-03-09 14:34:57,337 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:34:57,338 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 14:35:16,511 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-09 14:35:40,807 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:35:40,808 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:35:40,808 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 14:35:40,808 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 14:35:40,809 billing.context_processors INFO     new_order_id: 3
+2023-03-09 14:35:40,809 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:35:40,810 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 14:35:43,019 billing.views DEBUG    Function: modal_view
+2023-03-09 14:35:43,021 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:35:43,021 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:35:43,021 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 14:35:43,021 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 14:35:43,022 billing.context_processors INFO     new_order_id: 3
+2023-03-09 14:35:43,022 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:35:43,023 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 14:35:47,588 billing.views DEBUG    Function: modal_view
+2023-03-09 14:35:47,589 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:35:47,590 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:35:47,590 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 14:35:47,590 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 14:35:47,590 billing.context_processors INFO     new_order_id: 3
+2023-03-09 14:35:47,590 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:35:47,591 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 14:35:52,024 billing.views DEBUG    Function: modal_view
+2023-03-09 14:35:52,025 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:35:52,026 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:35:52,026 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 14:35:52,026 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 14:35:52,026 billing.context_processors INFO     new_order_id: 3
+2023-03-09 14:35:52,026 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:35:52,027 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 14:36:00,361 billing.views DEBUG    Function: modal_view
+2023-03-09 14:36:00,363 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:36:00,364 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:36:00,364 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 14:36:00,364 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 14:36:00,364 billing.context_processors INFO     new_order_id: 3
+2023-03-09 14:36:00,364 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:36:00,365 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 14:36:05,820 billing.views DEBUG    Function Name: search_items
+2023-03-09 14:36:05,823 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:36:05,824 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:36:05,824 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 14:36:05,824 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 14:36:05,824 billing.context_processors INFO     new_order_id: 3
+2023-03-09 14:36:05,824 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:36:05,825 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 14:36:05,908 billing.views DEBUG    Function Name: search_items
+2023-03-09 14:36:05,911 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:36:05,911 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:36:05,912 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 14:36:05,912 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 14:36:05,912 billing.context_processors INFO     new_order_id: 3
+2023-03-09 14:36:05,912 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:36:05,914 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 14:36:10,408 billing.views DEBUG    Function Name: add_item
+2023-03-09 14:36:10,408 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:36:10,409 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:36:10,409 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 14:36:10,409 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 14:36:10,410 billing.context_processors INFO     new_order_id: 3
+2023-03-09 14:36:10,410 billing.views DEBUG    Received order_id: 3
+2023-03-09 14:36:10,411 billing.views DEBUG    Received item Pork Schezwan Fried Rice
+2023-03-09 14:36:10,639 billing.views INFO     Created order_item Pork Schezwan Fried Rice for order 3
+2023-03-09 14:36:10,639 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:36:10,640 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:36:10,640 billing.context_processors DEBUG    Total orders: 3 from 1 to 3
+2023-03-09 14:36:10,641 billing.context_processors INFO     Got last order: OrderId: 3 Table: 1
+2023-03-09 14:36:10,641 billing.context_processors INFO     new_order_id: 3
+2023-03-09 14:36:10,641 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:36:10,642 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-09 14:36:12,719 billing.views DEBUG    Function Name: create_order
+2023-03-09 14:36:12,719 billing.views DEBUG    Created Order 3
+2023-03-09 14:36:12,858 billing.views INFO     Saved order 3
+2023-03-09 14:36:12,941 billing.views DEBUG    Created new order 4
+2023-03-09 14:36:12,942 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:36:12,942 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:36:12,942 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:36:12,942 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:36:12,943 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:36:12,943 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:36:12,943 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:36:13,212 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:36:15,106 billing.views DEBUG    Function: modal_view
+2023-03-09 14:36:15,107 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:36:15,108 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:36:15,108 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:36:15,108 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:36:15,108 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:36:15,108 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:36:15,109 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:36:20,211 billing.views DEBUG    Function: modal_view
+2023-03-09 14:36:20,213 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:36:20,214 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:36:20,214 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:36:20,214 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:36:20,214 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:36:20,214 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:36:20,215 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:36:30,105 billing.views DEBUG    Function: modal_view
+2023-03-09 14:36:30,108 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:36:30,110 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:36:30,110 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:36:30,110 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:36:30,110 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:36:30,111 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:36:30,113 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:37:54,478 billing.views DEBUG    Function Name: create_order
+2023-03-09 14:37:54,478 billing.views DEBUG    Created Order 3
+2023-03-09 14:37:54,481 billing.views INFO     Saved order 3
+2023-03-09 14:37:54,601 django.request ERROR    Internal Server Error: /create-order/3
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: billing_order.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 160, in create_order
+    new_order = Order.objects.create(pk=order_id+1)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 1006, in _save_table
+    results = self._do_insert(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 1047, in _do_insert
+    return manager._insert(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: billing_order.id
+2023-03-09 14:37:54,747 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:37:59,019 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:37:59,022 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:37:59,022 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:37:59,022 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:37:59,022 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:37:59,022 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:37:59,024 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:38:01,510 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:38:01,512 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:38:01,512 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:38:01,513 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:38:01,513 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:38:01,513 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:38:01,514 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:38:01,698 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:38:04,023 billing.views DEBUG    Function: modal_view
+2023-03-09 14:38:04,025 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:38:04,026 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:38:04,026 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:38:04,026 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:38:04,026 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:38:04,027 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:38:04,029 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:38:06,906 billing.views DEBUG    Function: modal_view
+2023-03-09 14:38:06,908 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:38:06,909 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:38:06,909 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:38:06,909 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:38:06,909 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:38:06,909 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:38:06,911 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:38:13,719 billing.views DEBUG    Function: modal_view
+2023-03-09 14:38:13,721 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:38:13,722 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:38:13,722 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:38:13,722 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:38:13,722 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:38:13,722 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:38:13,724 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:38:17,554 billing.views DEBUG    Function: modal_view
+2023-03-09 14:38:17,557 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:38:17,559 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:38:17,559 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:38:17,559 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:38:17,559 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:38:17,559 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:38:17,561 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:38:53,602 billing.views DEBUG    Function: modal_view
+2023-03-09 14:38:53,604 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:38:53,605 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:38:53,605 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:38:53,605 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:38:53,605 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:38:53,605 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:38:53,606 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:38:57,450 billing.views DEBUG    Function: modal_view
+2023-03-09 14:38:57,452 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:38:57,453 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:38:57,453 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:38:57,453 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:38:57,453 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:38:57,453 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:38:57,454 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:39:00,885 billing.views DEBUG    Function: modal_view
+2023-03-09 14:39:00,889 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:39:00,890 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:39:00,890 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:39:00,890 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:39:00,890 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:39:00,890 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:39:00,892 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:39:16,847 billing.views DEBUG    Function: modal_view
+2023-03-09 14:39:16,849 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:39:16,849 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:39:16,849 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:39:16,850 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:39:16,850 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:39:16,850 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:39:16,851 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:40:15,175 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:40:15,177 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:40:15,177 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:40:15,177 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:40:15,177 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:40:15,178 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:40:15,179 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:40:15,390 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:40:16,863 billing.views DEBUG    Function: modal_view
+2023-03-09 14:40:16,866 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:40:16,866 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:40:16,866 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:40:16,867 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:40:16,867 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:40:16,867 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:40:16,868 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:40:17,698 billing.views DEBUG    Function: modal_view
+2023-03-09 14:40:17,700 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:40:17,701 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:40:17,701 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:40:17,701 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:40:17,701 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:40:17,701 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:40:17,703 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:40:18,038 billing.views DEBUG    Function: modal_view
+2023-03-09 14:40:18,040 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:40:18,040 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:40:18,040 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:40:18,041 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:40:18,041 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:40:18,041 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:40:18,042 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:40:22,324 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:40:22,326 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:40:22,326 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:40:22,326 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:40:22,326 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:40:22,327 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:40:22,328 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:40:22,560 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:40:23,941 billing.views DEBUG    Function: modal_view
+2023-03-09 14:40:23,942 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:40:23,943 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:40:23,943 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:40:23,943 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:40:23,943 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:40:23,943 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:40:23,944 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:40:27,978 billing.views DEBUG    Function: modal_view
+2023-03-09 14:40:27,980 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:40:27,982 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:40:27,982 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:40:27,982 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:40:27,982 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:40:27,982 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:40:27,984 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:41:15,156 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-09 14:41:16,756 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-09 14:41:35,616 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-09 14:41:37,261 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-09 14:41:39,746 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:41:39,750 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:41:39,750 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:41:39,750 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:41:39,750 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:41:39,750 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:41:39,752 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:41:39,994 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:41:41,616 billing.views DEBUG    Function: modal_view
+2023-03-09 14:41:41,618 billing.views DEBUG    Got order: 3 Reqeuested by: 3
+2023-03-09 14:41:41,618 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:41:41,619 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:41:41,619 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:41:41,619 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:41:41,619 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:41:41,619 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:41:41,621 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:43:44,360 billing.views DEBUG    Function: modal_view
+2023-03-09 14:43:44,363 billing.views DEBUG    Got order: 3 Reqeuested by: 3
+2023-03-09 14:43:44,363 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:43:44,364 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:43:44,364 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:43:44,364 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:43:44,364 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:43:44,364 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:43:44,366 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:43:50,221 billing.views DEBUG    Function: modal_view
+2023-03-09 14:43:50,222 billing.views DEBUG    Got order: 2 Reqeuested by: 2
+2023-03-09 14:43:50,222 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:43:50,223 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:43:50,223 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:43:50,223 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:43:50,223 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:43:50,223 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:43:50,226 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:44:47,318 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:44:47,320 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:44:47,320 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:44:47,320 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:44:47,321 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:44:47,321 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:44:47,322 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:44:47,536 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:44:49,900 billing.views DEBUG    Function: modal_view
+2023-03-09 14:44:49,902 billing.views DEBUG    Got order: 3 Reqeuested by: 3
+2023-03-09 14:44:49,902 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:44:49,904 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:44:49,904 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:44:49,904 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:44:49,904 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:44:49,904 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:44:49,906 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:45:05,368 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-09 14:45:06,499 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:45:06,501 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:45:06,501 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:45:06,501 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:45:06,501 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:45:06,502 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:45:06,503 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:45:06,722 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:45:06,957 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:45:06,963 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:45:06,963 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:45:06,964 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:45:06,964 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:45:06,964 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:45:06,966 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:45:07,187 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:45:07,253 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:45:07,254 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:45:07,254 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:45:07,254 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:45:07,254 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:45:07,254 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:45:07,255 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:45:07,490 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:45:07,492 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:45:07,492 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:45:07,493 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:45:07,493 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:45:07,493 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:45:07,494 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:45:07,704 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:45:07,705 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:45:07,705 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:45:07,705 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:45:07,705 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:45:07,706 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:45:07,707 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:45:07,890 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:45:09,723 billing.views DEBUG    Function: modal_view
+2023-03-09 14:45:09,724 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 14:45:09,725 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:45:09,725 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:45:09,725 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:45:09,725 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:45:09,725 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:45:09,725 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:45:09,726 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:49:50,990 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:49:50,991 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:49:50,991 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:49:50,991 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:49:50,991 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:49:50,991 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:49:50,992 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:49:51,215 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:49:52,813 billing.views DEBUG    Function: modal_view
+2023-03-09 14:49:52,815 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 14:49:52,815 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:49:52,815 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:49:52,815 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:49:52,816 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:49:52,816 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:49:52,816 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:49:52,817 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:49:53,548 billing.views DEBUG    Function: modal_view
+2023-03-09 14:49:53,550 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 14:49:53,550 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:49:53,551 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:49:53,551 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:49:53,552 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:49:53,552 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:49:53,552 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:49:53,553 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:49:53,808 billing.views DEBUG    Function: modal_view
+2023-03-09 14:49:53,810 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 14:49:53,811 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:49:53,812 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:49:53,812 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:49:53,812 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:49:53,812 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:49:53,812 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:49:53,814 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:54:05,405 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:54:05,409 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:54:05,409 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:54:05,409 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:54:05,409 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:54:05,409 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:54:05,410 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:54:05,663 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:54:07,384 billing.views DEBUG    Function: modal_view
+2023-03-09 14:54:07,386 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 14:54:07,387 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:54:07,388 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:54:07,388 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:54:07,388 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:54:07,388 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:54:07,388 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:54:07,389 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:54:09,604 billing.views DEBUG    Function: modal_view
+2023-03-09 14:54:09,606 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 14:54:09,606 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:54:09,606 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:54:09,607 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:54:09,607 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:54:09,607 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:54:09,607 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:54:09,608 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:54:23,926 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:54:23,927 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:54:23,927 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:54:23,928 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:54:23,928 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:54:23,928 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:54:23,928 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:54:24,131 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:54:25,487 django.security.csrf WARNING  Forbidden (CSRF token missing.): /
+2023-03-09 14:54:48,872 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-09 14:55:05,013 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:55:05,015 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:55:05,015 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:55:05,015 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:55:05,015 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:55:05,015 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:55:05,017 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:55:05,248 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:55:11,617 django.security.csrf WARNING  Forbidden (CSRF token missing.): /
+2023-03-09 14:55:24,940 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-09 14:56:05,497 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:56:05,499 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:56:05,499 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:56:05,499 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:56:05,499 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:56:05,499 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:56:05,501 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:56:05,706 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:56:07,243 billing.views DEBUG    Function: modal_view
+2023-03-09 14:56:07,244 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 14:56:07,244 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:56:07,245 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:56:07,245 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:56:07,245 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:56:07,245 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:56:07,245 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:56:07,246 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:56:26,401 billing.views DEBUG    Function: modal_view
+2023-03-09 14:56:26,403 billing.views DEBUG    Got order: 2 Reqeuested Order: 2
+2023-03-09 14:56:26,403 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:56:26,404 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:56:26,404 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:56:26,404 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:56:26,404 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:56:26,404 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:56:26,405 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:59:34,823 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:59:34,825 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:59:34,825 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:59:34,825 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:59:34,825 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:59:34,825 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:59:34,826 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:59:35,027 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:59:36,556 billing.views DEBUG    Function: modal_view
+2023-03-09 14:59:36,558 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 14:59:36,558 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:59:36,559 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:59:36,559 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:59:36,559 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:59:36,560 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:59:36,560 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:59:36,561 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:59:38,025 billing.views DEBUG    Function: modal_view
+2023-03-09 14:59:38,027 billing.views DEBUG    Got order: 2 Reqeuested Order: 2
+2023-03-09 14:59:38,028 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:59:38,029 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:59:38,029 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:59:38,030 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:59:38,030 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:59:38,030 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:59:38,031 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:59:39,419 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:59:39,421 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:59:39,421 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:59:39,422 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:59:39,422 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:59:39,422 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:59:39,423 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:59:39,642 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:59:41,737 billing.views DEBUG    Function: modal_view
+2023-03-09 14:59:41,739 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 14:59:41,740 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:59:41,741 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:59:41,741 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:59:41,741 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:59:41,741 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:59:41,741 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:59:41,743 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:59:46,852 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:59:46,854 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:59:46,855 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:59:46,855 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:59:46,855 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:59:46,855 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:59:46,857 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:59:47,082 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 14:59:48,648 billing.views DEBUG    Function: modal_view
+2023-03-09 14:59:48,650 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 14:59:48,651 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:59:48,651 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:59:48,652 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:59:48,652 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:59:48,652 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:59:48,652 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:59:48,653 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 14:59:54,231 billing.views DEBUG    Function: modal_view
+2023-03-09 14:59:54,233 billing.views DEBUG    Got order: 2 Reqeuested Order: 2
+2023-03-09 14:59:54,233 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 14:59:54,234 billing.context_processors INFO     There are orders in the database
+2023-03-09 14:59:54,235 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 14:59:54,235 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 14:59:54,235 billing.context_processors INFO     new_order_id: 4
+2023-03-09 14:59:54,235 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 14:59:54,237 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:02:36,034 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:02:36,035 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:02:36,035 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:02:36,035 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:02:36,035 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:02:36,035 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:02:36,036 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:02:36,270 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:02:37,861 billing.views DEBUG    Function: modal_view
+2023-03-09 15:02:37,863 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:02:37,863 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:02:37,863 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:02:37,863 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:02:37,863 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:02:37,864 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:02:37,864 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:02:37,865 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:02:40,000 billing.views DEBUG    Function: modal_view
+2023-03-09 15:02:40,001 billing.views DEBUG    Got order: 2 Reqeuested Order: 2
+2023-03-09 15:02:40,001 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:02:40,002 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:02:40,002 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:02:40,002 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:02:40,002 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:02:40,002 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:02:40,003 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:03:11,996 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:03:11,997 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:03:11,997 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:03:11,997 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:03:11,997 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:03:11,997 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:03:11,999 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:03:12,233 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:03:13,697 billing.views DEBUG    Function: modal_view
+2023-03-09 15:03:13,699 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:03:13,699 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:03:13,700 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:03:13,700 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:03:13,700 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:03:13,700 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:03:13,700 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:03:13,701 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:03:24,297 billing.views DEBUG    Function: modal_view
+2023-03-09 15:03:24,298 billing.views DEBUG    Got order: 2 Reqeuested Order: 2
+2023-03-09 15:03:24,298 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:03:24,299 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:03:24,299 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:03:24,299 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:03:24,299 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:03:24,299 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:03:24,300 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:03:46,507 billing.views DEBUG    Function: modal_view
+2023-03-09 15:03:46,508 billing.views DEBUG    Got order: 1 Reqeuested Order: 1
+2023-03-09 15:03:46,508 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:03:46,509 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:03:46,509 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:03:46,509 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:03:46,509 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:03:46,509 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:03:46,510 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:04:06,982 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:04:06,983 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:04:06,984 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:04:06,984 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:04:06,984 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:04:06,984 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:04:06,985 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:04:07,224 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:04:08,778 billing.views DEBUG    Function: modal_view
+2023-03-09 15:04:08,779 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:04:08,779 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:04:08,780 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:04:08,780 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:04:08,780 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:04:08,780 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:04:08,780 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:04:08,781 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:04:34,582 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:04:34,584 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:04:34,584 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:04:34,584 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:04:34,584 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:04:34,584 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:04:34,586 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:04:34,847 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:04:36,515 billing.views DEBUG    Function: modal_view
+2023-03-09 15:04:36,519 billing.views DEBUG    Got order: 2 Reqeuested Order: 2
+2023-03-09 15:04:36,520 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:04:36,521 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:04:36,521 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:04:36,521 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:04:36,521 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:04:36,521 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:04:36,523 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:04:44,461 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:04:44,462 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:04:44,462 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:04:44,462 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:04:44,462 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:04:44,462 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:04:44,464 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:04:44,681 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:04:46,383 billing.views DEBUG    Function: modal_view
+2023-03-09 15:04:46,384 billing.views DEBUG    Got order: 2 Reqeuested Order: 2
+2023-03-09 15:04:46,384 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:04:46,385 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:04:46,385 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:04:46,385 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:04:46,385 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:04:46,385 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:04:46,386 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:04:58,967 billing.views DEBUG    Function: modal_view
+2023-03-09 15:04:58,969 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:04:58,969 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:04:58,970 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:04:58,970 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:04:58,970 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:04:58,970 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:04:58,970 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:04:58,971 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:13:17,030 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:13:17,032 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:13:17,033 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:13:17,033 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:13:17,033 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:13:17,033 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:13:17,034 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:13:17,382 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:13:23,878 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:13:23,880 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:13:23,880 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:13:23,881 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:13:23,881 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:13:23,881 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:13:23,882 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:13:24,123 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:13:25,847 billing.views DEBUG    Function: modal_view
+2023-03-09 15:13:25,850 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:13:25,850 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:13:25,851 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:13:25,851 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:13:25,851 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:13:25,851 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:13:25,851 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:13:25,852 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:13:33,015 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:13:33,017 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:13:33,017 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:13:33,017 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:13:33,017 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:13:33,017 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:13:33,018 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:13:33,249 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:13:34,514 billing.views DEBUG    Function: modal_view
+2023-03-09 15:13:34,515 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:13:34,516 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:13:34,516 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:13:34,516 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:13:34,516 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:13:34,516 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:13:34,516 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:13:34,517 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:13:51,450 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:13:51,454 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:13:51,454 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:13:51,455 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:13:51,455 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:13:51,455 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:13:51,458 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:13:51,709 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:15:44,753 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-09 15:15:48,195 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:15:48,197 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:15:48,197 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:15:48,198 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:15:48,198 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:15:48,198 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:15:48,200 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:15:48,362 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:15:49,881 billing.views DEBUG    Function: modal_view
+2023-03-09 15:15:49,885 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:15:49,885 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:15:49,886 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:15:49,886 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:15:49,886 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:15:49,886 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:15:49,887 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:15:49,888 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:16:06,750 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:16:06,752 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:16:06,752 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:16:06,752 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:16:06,753 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:16:06,753 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:16:06,754 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:16:06,892 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:16:09,360 billing.views DEBUG    Function: modal_view
+2023-03-09 15:16:09,362 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:16:09,362 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:16:09,363 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:16:09,363 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:16:09,364 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:16:09,364 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:16:09,364 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:16:09,366 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:16:11,252 billing.views DEBUG    Function: modal_view
+2023-03-09 15:16:11,255 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:16:11,255 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:16:11,257 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:16:11,257 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:16:11,257 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:16:11,257 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:16:11,257 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:16:11,260 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:17:29,054 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-09 15:17:41,871 billing.views DEBUG    Function: modal_view
+2023-03-09 15:17:41,874 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:17:41,878 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:17:41,878 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:17:41,878 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:17:41,878 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:17:41,879 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:17:41,879 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:17:41,880 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:17:45,074 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:17:45,076 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:17:45,076 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:17:45,076 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:17:45,076 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:17:45,076 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:17:45,077 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:17:45,240 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:18:00,050 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:18:00,051 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:18:00,052 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:18:00,052 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:18:00,052 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:18:00,052 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:18:00,053 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:18:03,112 billing.views DEBUG    Function: modal_view
+2023-03-09 15:18:03,114 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:18:03,114 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:18:03,115 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:18:03,115 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:18:03,116 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:18:03,116 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:18:03,116 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:18:03,119 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:18:07,229 billing.views DEBUG    Function: modal_view
+2023-03-09 15:18:07,231 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:18:07,231 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:18:07,232 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:18:07,232 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:18:07,232 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:18:07,232 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:18:07,233 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:18:07,233 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:18:13,149 billing.views DEBUG    Function: modal_view
+2023-03-09 15:18:13,152 billing.views DEBUG    Got order: 2 Reqeuested Order: 2
+2023-03-09 15:18:13,152 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:18:13,153 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:18:13,153 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:18:13,153 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:18:13,153 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:18:13,153 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:18:13,154 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:18:17,572 billing.views DEBUG    Function: modal_view
+2023-03-09 15:18:17,574 billing.views DEBUG    Got order: 2 Reqeuested Order: 2
+2023-03-09 15:18:17,574 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:18:17,575 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:18:17,575 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:18:17,575 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:18:17,575 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:18:17,575 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:18:17,577 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:18:21,602 billing.views DEBUG    Function: modal_view
+2023-03-09 15:18:21,605 billing.views DEBUG    Got order: 1 Reqeuested Order: 1
+2023-03-09 15:18:21,606 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:18:21,607 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:18:21,607 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:18:21,607 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:18:21,608 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:18:21,608 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:18:21,609 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:18:25,492 billing.views DEBUG    Function: modal_view
+2023-03-09 15:18:25,493 billing.views DEBUG    Got order: 1 Reqeuested Order: 1
+2023-03-09 15:18:25,494 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:18:25,494 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:18:25,494 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:18:25,494 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:18:25,494 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:18:25,494 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:18:25,495 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:49:54,842 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:49:54,848 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:49:54,849 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:49:54,849 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:49:54,849 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:49:54,849 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:49:54,851 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:49:55,465 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:50:22,365 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-09 15:51:03,854 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:51:03,860 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:51:03,861 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:51:03,861 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:51:03,862 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:51:03,862 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:51:03,867 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:51:04,159 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:52:15,398 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:52:15,400 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:52:15,400 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:52:15,400 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:52:15,400 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:52:15,400 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:52:15,402 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:52:15,561 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:52:17,173 billing.views DEBUG    Function: modal_view
+2023-03-09 15:52:17,175 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:52:17,175 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:52:17,175 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:52:17,175 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:52:17,175 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:52:17,176 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:52:17,176 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:52:17,177 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:52:43,211 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:52:43,212 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:52:43,212 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:52:43,212 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:52:43,212 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:52:43,212 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:52:43,213 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:52:43,348 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:52:44,741 billing.views DEBUG    Function: modal_view
+2023-03-09 15:52:44,743 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:52:44,743 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:52:44,744 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:52:44,744 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:52:44,744 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:52:44,744 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:52:44,744 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:52:44,745 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:53:12,344 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:53:12,346 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:53:12,346 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:53:12,347 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:53:12,347 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:53:12,347 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:53:12,349 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:53:12,484 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:53:13,956 billing.views DEBUG    Function: modal_view
+2023-03-09 15:53:13,958 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:53:13,959 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:53:13,959 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:53:13,960 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:53:13,960 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:53:13,960 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:53:13,960 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:53:13,961 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:53:16,239 billing.views DEBUG    Function: modal_view
+2023-03-09 15:53:16,240 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:53:16,240 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:53:16,241 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:53:16,241 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:53:16,241 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:53:16,241 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:53:16,241 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:53:16,242 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:53:26,529 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:53:26,531 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:53:26,531 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:53:26,531 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:53:26,531 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:53:26,531 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:53:26,532 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:53:26,654 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:53:26,741 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:53:26,742 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:53:26,742 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:53:26,742 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:53:26,742 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:53:26,743 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:53:26,743 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:53:26,880 django.request WARNING  Not Found: /favicon.ico
+2023-03-09 15:53:28,482 billing.views DEBUG    Function: modal_view
+2023-03-09 15:53:28,484 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:53:28,484 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:53:28,485 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:53:28,485 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:53:28,485 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:53:28,485 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:53:28,485 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:53:28,487 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-09 15:53:30,038 billing.views DEBUG    Function: modal_view
+2023-03-09 15:53:30,041 billing.views DEBUG    Got order: 3 Reqeuested Order: 3
+2023-03-09 15:53:30,041 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-09 15:53:30,042 billing.context_processors INFO     There are orders in the database
+2023-03-09 15:53:30,042 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-09 15:53:30,042 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-09 15:53:30,042 billing.context_processors INFO     new_order_id: 4
+2023-03-09 15:53:30,043 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-09 15:53:30,044 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1

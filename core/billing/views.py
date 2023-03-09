@@ -240,6 +240,7 @@ def remove_order():
 def modal_view(request, order_id):
     logger.debug('Function: modal_view')
     order = Order.objects.get(pk=order_id)
+    logger.debug(f'Got order: {order.id} Reqeuested Order: {order_id}')
     context = {
         'order': order,
     }
