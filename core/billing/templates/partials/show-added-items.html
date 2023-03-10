@@ -1,6 +1,6 @@
 {% if message %}
-  <div class="alert alert-info">
-    {{ message }}
+  <div class="alert alert-info" id="hideDiv" >
+    {{ message }} 
   </div>
 {% endif %}
 <table class="table table-striped" id="add-items-target">
@@ -53,3 +53,11 @@
       </tr>
     {% endif %}
   </table>
+
+  <script>
+    function hide()
+    {
+    document.getElementById("hideDiv").style.visibility="hidden";
+    }
+    setTimeout("hide()",1000);
+  </script>
