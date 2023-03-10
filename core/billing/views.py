@@ -54,7 +54,10 @@ logger = logging.getLogger(__name__)
 
 
 def index(request):
-    return render(request, 'index.html')
+    order_id = new_order_id(request).get('new_order_id')
+    order = Order.objects.get_or_create(pk=order_id)
+    context = {'order': order}
+    return render(request, 'index.html', context)
 
 
 @csrf_exempt
