@@ -6835,6 +6835,7 @@ django.db.utils.IntegrityError: UNIQUE constraint failed: billing_order.id
 2023-03-09 23:34:19,026 billing.context_processors INFO     new_order_id: 4
 2023-03-09 23:34:19,026 billing.context_processors DEBUG    Function Name: all_orders
 2023-03-09 23:34:19,041 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+<<<<<<< HEAD
 2023-03-10 10:18:25,409 billing.context_processors DEBUG    Function Name: new_order_id
 2023-03-10 10:18:25,435 billing.context_processors INFO     There are orders in the database
 2023-03-10 10:18:25,438 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
@@ -7501,3 +7502,5 @@ django.db.utils.IntegrityError: UNIQUE constraint failed: billing_order.id
 2023-03-10 10:37:07,242 billing.context_processors DEBUG    Function Name: all_orders
 2023-03-10 10:37:07,242 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
 2023-03-10 10:45:46,084 django.utils.autoreload INFO     D:\Webdevelopment\pizzaria\Order-Tracking-Software\core\billing\models.py changed, reloading.
+=======
+>>>>>>> feat-logs-aadithya
