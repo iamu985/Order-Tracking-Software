@@ -9131,3 +9131,11 @@ django.db.utils.IntegrityError: UNIQUE constraint failed: billing_order.id
 2023-03-10 13:16:00,857 billing.context_processors INFO     new_order_id: 8
 2023-03-10 13:16:00,857 billing.context_processors DEBUG    Function Name: all_orders
 2023-03-10 13:16:00,857 billing.context_processors DEBUG    Orders contains 7 orders from 7 to 1
+2023-03-11 18:01:27,625 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-11 18:01:27,628 billing.context_processors INFO     There are orders in the database
+2023-03-11 18:01:27,628 billing.context_processors DEBUG    Total orders: 8 from 1 to 8
+2023-03-11 18:01:27,628 billing.context_processors INFO     Got last order: OrderId: 8 Table: 1
+2023-03-11 18:01:27,628 billing.context_processors INFO     new_order_id: 8
+2023-03-11 18:01:27,629 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-11 18:01:27,631 billing.context_processors DEBUG    Orders contains 7 orders from 7 to 1
+2023-03-11 18:01:28,316 django.request WARNING  Not Found: /favicon.ico
