@@ -10,6 +10,7 @@ from .forms import AddItem, UpdateItem
 from .models import Order, Item, OrderItem
 from .context_processors import new_order_id
 from .utils import delete_order_item
+from .receipt_printer import print_receipt
 import re
 from django.conf import settings
 
@@ -246,5 +247,18 @@ def modal_view(request, order_id):
     logger.debug(f'Got order: {order.id} Reqeuested Order: {order_id}')
     context = {
         'order': order,
+        'order_id': order.id,
     }
     return render(request, 'partials/modal-recent-order.html', context)
+
+
+@csrf_exempt
+def print_receipt_view(request, order_id):
+    logger.debug('Function: print_receipt_view')
+    order = Order.objects.get(pk=order_id)
+    logger.debug('Function: print_receipt_view')
+    print_receipt(order)
+    context = {
+        'order': order,
+    }
+    return render(request, 'partials/modal-recent-order.html')

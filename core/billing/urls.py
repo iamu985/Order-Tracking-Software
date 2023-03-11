@@ -41,6 +41,10 @@ htmx_patterns = [
     path('modal-view/<int:order_id>',
          views.modal_view,
          name="modal_view"),
+
+    path('print-receipt/<int:order_id>',
+         views.print_receipt_view,
+         name="print_receipt"),
 ]
 
 urlpatterns += htmx_patterns
