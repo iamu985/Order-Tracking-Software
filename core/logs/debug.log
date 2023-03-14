@@ -12940,3 +12940,208 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'delete_item_from_model' not 
 2023-03-14 12:51:01,184 billing.context_processors INFO     new_order_id: 5
 2023-03-14 12:51:01,184 billing.context_processors DEBUG    Function Name: all_orders
 2023-03-14 12:51:01,186 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:37:58,396 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:37:58,399 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:37:58,400 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:37:58,400 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:37:58,401 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:37:58,405 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:37:58,406 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:37:58,406 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:37:58,406 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:37:58,406 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:37:58,407 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:37:58,408 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:38:00,433 django.request WARNING  Not Found: /favicon.ico
+2023-03-14 14:38:04,901 billing.views DEBUG    Function Name: search_items
+2023-03-14 14:38:04,943 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:38:04,945 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:38:04,945 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:38:04,946 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:38:04,946 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:38:04,946 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:38:04,948 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:38:09,179 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-14 14:38:09,179 pizzeria_admin.views INFO     Received GET request
+2023-03-14 14:38:09,182 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:38:09,183 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:38:09,183 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:38:09,184 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:38:09,184 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:38:09,184 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:38:09,186 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:38:34,706 django.security.csrf WARNING  Forbidden (Origin checking failed - https://iamu985-ubiquitous-pancake-9w9ppwvxxw73xrvr-8000.preview.app.github.dev does not match any trusted origins.): /pizzeria-admin/login
+2023-03-14 14:38:37,646 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-14 14:38:37,646 pizzeria_admin.views INFO     Received GET request
+2023-03-14 14:38:37,646 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:38:37,648 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:38:37,648 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:38:37,649 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:38:37,649 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:38:37,650 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:38:37,651 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:38:42,247 django.security.csrf WARNING  Forbidden (Origin checking failed - https://iamu985-ubiquitous-pancake-9w9ppwvxxw73xrvr-8000.preview.app.github.dev does not match any trusted origins.): /pizzeria-admin/login
+2023-03-14 14:38:49,356 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-14 14:38:49,356 pizzeria_admin.views INFO     Received GET request
+2023-03-14 14:38:49,356 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:38:49,357 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:38:49,358 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:38:49,358 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:38:49,358 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:38:49,358 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:38:49,360 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:38:56,188 django.security.csrf WARNING  Forbidden (Origin checking failed - https://iamu985-ubiquitous-pancake-9w9ppwvxxw73xrvr-8000.preview.app.github.dev does not match any trusted origins.): /pizzeria-admin/login
+2023-03-14 14:40:39,697 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-14 14:40:39,697 pizzeria_admin.views INFO     Received GET request
+2023-03-14 14:40:39,697 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:40:39,699 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:40:39,699 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:40:39,699 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:40:39,699 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:40:39,699 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:40:39,700 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:40:41,049 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-14 14:40:41,050 pizzeria_admin.views INFO     Received GET request
+2023-03-14 14:40:41,050 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:40:41,052 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:40:41,052 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:40:41,052 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:40:41,053 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:40:41,053 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:40:41,054 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:40:49,547 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-14 14:40:49,547 pizzeria_admin.views INFO     Received GET request
+2023-03-14 14:40:49,547 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:40:49,549 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:40:49,549 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:40:49,549 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:40:49,550 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:40:49,550 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:40:49,551 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:40:55,563 django.security.csrf WARNING  Forbidden (Origin checking failed - https://iamu985-ubiquitous-pancake-9w9ppwvxxw73xrvr-8000.preview.app.github.dev does not match any trusted origins.): /pizzeria-admin/login
+2023-03-14 14:43:15,866 django.utils.autoreload INFO     /workspaces/Order-Tracking-Software/core/pizzeria_admin/views.py changed, reloading.
+2023-03-14 14:43:18,690 django.utils.autoreload INFO     /workspaces/Order-Tracking-Software/core/pizzeria_admin/views.py changed, reloading.
+2023-03-14 14:43:32,232 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-14 14:43:32,233 pizzeria_admin.views INFO     Received GET request
+2023-03-14 14:43:32,236 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:43:32,238 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:43:32,238 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:43:32,239 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:43:32,239 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:43:32,239 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:43:32,241 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:43:33,927 django.request WARNING  Not Found: /favicon.ico
+2023-03-14 14:43:43,733 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-14 14:43:43,733 pizzeria_admin.views INFO     Received POST request
+2023-03-14 14:43:43,734 pizzeria_admin.views INFO     Received form data
+2023-03-14 14:43:43,735 pizzeria_admin.views INFO     Received POST request
+2023-03-14 14:43:43,736 pizzeria_admin.views INFO     Received form data
+2023-03-14 14:43:43,996 pizzeria_admin.views INFO     Form is valid
+2023-03-14 14:43:43,997 pizzeria_admin.views INFO     Form is valid
+2023-03-14 14:43:43,997 pizzeria_admin.views INFO     Got user
+2023-03-14 14:43:43,997 pizzeria_admin.views INFO     Got user
+2023-03-14 14:43:43,998 pizzeria_admin.views INFO     User exists!
+2023-03-14 14:43:43,998 pizzeria_admin.views INFO     User exists!
+2023-03-14 14:43:45,735 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-14 14:43:45,735 pizzeria_admin.views DEBUG    Method: GET
+2023-03-14 14:43:45,736 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 107. Peri Peri Fries - Rs. 100>, <Item: 106. French Fries - Rs. 100>, <Item: 105. Cheese Pakoda - Rs. 70>, <Item: 104. Onion Pakoda - Rs. 70>, <Item: 103. Veg Pakoda - Rs. 60>, <Item: 102. Chicken Manchurian - Rs. 150>, <Item: 101. Veg Manchurian - Rs. 100>, <Item: 100. Pork Sausage - Rs. 160>, <Item: 99. Chicken Sausage - Rs. 150>, <Item: 98. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 97. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 96. Cold Chocolate - Rs. 50>, <Item: 95. Hot Chocolate - Rs. 70>, <Item: 94. Blue Lagoon Milkshake - Rs. 110>, <Item: 93. Blue Berry Milkshake - Rs. 90>, <Item: 92. Kiwi Milkshake - Rs. 90>, <Item: 91. Black Current Milkshake - Rs. 90>, <Item: 90. Mango Milkshake - Rs. 90>, <Item: 89. Strawberry Milkshake - Rs. 90>, <Item: 88. Oreo Milkshake - Rs. 90>, '...(remaining elements truncated)...']>.
+2023-03-14 14:43:45,738 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:43:45,739 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:43:45,739 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:43:45,739 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:43:45,739 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:43:45,739 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:43:45,740 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:44:03,773 django.security.csrf WARNING  Forbidden (Origin checking failed - https://iamu985-ubiquitous-pancake-9w9ppwvxxw73xrvr-8000.preview.app.github.dev does not match any trusted origins.): /pizzeria-admin/
+2023-03-14 14:44:13,076 django.security.csrf WARNING  Forbidden (Origin checking failed - https://iamu985-ubiquitous-pancake-9w9ppwvxxw73xrvr-8000.preview.app.github.dev does not match any trusted origins.): /pizzeria-admin/
+2023-03-14 14:44:49,754 django.utils.autoreload INFO     /workspaces/Order-Tracking-Software/core/pizzeria_admin/views.py changed, reloading.
+2023-03-14 14:44:55,768 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-14 14:44:55,769 pizzeria_admin.views DEBUG    Method: POST
+2023-03-14 14:45:09,004 pizzeria_admin.views ERROR    Received Form is Invalid
+2023-03-14 14:45:09,006 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 107. Peri Peri Fries - Rs. 100>, <Item: 106. French Fries - Rs. 100>, <Item: 105. Cheese Pakoda - Rs. 70>, <Item: 104. Onion Pakoda - Rs. 70>, <Item: 103. Veg Pakoda - Rs. 60>, <Item: 102. Chicken Manchurian - Rs. 150>, <Item: 101. Veg Manchurian - Rs. 100>, <Item: 100. Pork Sausage - Rs. 160>, <Item: 99. Chicken Sausage - Rs. 150>, <Item: 98. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 97. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 96. Cold Chocolate - Rs. 50>, <Item: 95. Hot Chocolate - Rs. 70>, <Item: 94. Blue Lagoon Milkshake - Rs. 110>, <Item: 93. Blue Berry Milkshake - Rs. 90>, <Item: 92. Kiwi Milkshake - Rs. 90>, <Item: 91. Black Current Milkshake - Rs. 90>, <Item: 90. Mango Milkshake - Rs. 90>, <Item: 89. Strawberry Milkshake - Rs. 90>, <Item: 88. Oreo Milkshake - Rs. 90>, '...(remaining elements truncated)...']>.
+2023-03-14 14:45:09,010 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:45:09,011 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:45:09,012 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:45:09,012 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:45:09,012 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:45:09,012 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:45:09,013 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:45:09,870 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-14 14:45:09,871 pizzeria_admin.views DEBUG    Method: GET
+2023-03-14 14:45:09,873 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 107. Peri Peri Fries - Rs. 100>, <Item: 106. French Fries - Rs. 100>, <Item: 105. Cheese Pakoda - Rs. 70>, <Item: 104. Onion Pakoda - Rs. 70>, <Item: 103. Veg Pakoda - Rs. 60>, <Item: 102. Chicken Manchurian - Rs. 150>, <Item: 101. Veg Manchurian - Rs. 100>, <Item: 100. Pork Sausage - Rs. 160>, <Item: 99. Chicken Sausage - Rs. 150>, <Item: 98. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 97. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 96. Cold Chocolate - Rs. 50>, <Item: 95. Hot Chocolate - Rs. 70>, <Item: 94. Blue Lagoon Milkshake - Rs. 110>, <Item: 93. Blue Berry Milkshake - Rs. 90>, <Item: 92. Kiwi Milkshake - Rs. 90>, <Item: 91. Black Current Milkshake - Rs. 90>, <Item: 90. Mango Milkshake - Rs. 90>, <Item: 89. Strawberry Milkshake - Rs. 90>, <Item: 88. Oreo Milkshake - Rs. 90>, '...(remaining elements truncated)...']>.
+2023-03-14 14:45:09,873 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:45:09,875 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:45:09,875 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:45:09,875 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:45:09,876 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:45:09,876 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:45:09,878 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:45:42,504 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-14 14:45:42,504 pizzeria_admin.views DEBUG    Method: POST
+2023-03-14 14:45:42,505 pizzeria_admin.views INFO     Validation: True
+2023-03-14 14:45:42,534 pizzeria_admin.views DEBUG    Created new item: New Item
+2023-03-14 14:45:42,535 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:45:42,536 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:45:42,536 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:45:42,536 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:45:42,536 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:45:42,536 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:45:42,537 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:46:36,853 pizzeria_admin.views INFO     Function Name: delete_item_from_model
+2023-03-14 14:46:36,885 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:46:36,886 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:46:36,887 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:46:36,887 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:46:36,887 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:46:36,887 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:46:36,890 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:47:11,709 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-14 14:47:11,709 pizzeria_admin.views DEBUG    Method: POST
+2023-03-14 14:47:11,710 pizzeria_admin.views INFO     Validation: True
+2023-03-14 14:47:11,738 pizzeria_admin.views DEBUG    Created new item: New Item
+2023-03-14 14:47:11,739 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:47:11,740 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:47:11,741 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:47:11,741 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:47:11,741 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:47:11,741 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:47:11,742 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:47:17,180 pizzeria_admin.views INFO     Function Name: delete_item_from_model
+2023-03-14 14:47:17,211 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:47:17,213 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:47:17,213 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:47:17,214 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:47:17,215 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:47:17,215 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:47:17,217 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:47:22,731 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-14 14:47:22,732 pizzeria_admin.views DEBUG    Method: POST
+2023-03-14 14:47:22,748 pizzeria_admin.views INFO     Validation: True
+2023-03-14 14:47:22,775 pizzeria_admin.views DEBUG    Created new item: New Item
+2023-03-14 14:47:22,776 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:47:22,777 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:47:22,777 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:47:22,777 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:47:22,777 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:47:22,778 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:47:22,779 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:47:26,935 pizzeria_admin.views INFO     Function Name: delete_item_from_model
+2023-03-14 14:47:26,967 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:47:26,968 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:47:26,968 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:47:26,968 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:47:26,968 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:47:26,968 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:47:26,970 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-14 14:47:34,475 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:47:34,476 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:47:34,476 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:47:34,477 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:47:34,477 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:47:34,509 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-14 14:47:34,510 billing.context_processors INFO     There are orders in the database
+2023-03-14 14:47:34,510 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-14 14:47:34,510 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-14 14:47:34,510 billing.context_processors INFO     new_order_id: 5
+2023-03-14 14:47:34,510 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-14 14:47:34,511 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
