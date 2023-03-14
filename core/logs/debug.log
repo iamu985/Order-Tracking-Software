@@ -12940,6 +12940,7 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'delete_item_from_model' not 
 2023-03-14 12:51:01,184 billing.context_processors INFO     new_order_id: 5
 2023-03-14 12:51:01,184 billing.context_processors DEBUG    Function Name: all_orders
 2023-03-14 12:51:01,186 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+<<<<<<< Updated upstream
 2023-03-14 14:37:58,396 billing.context_processors DEBUG    Function Name: new_order_id
 2023-03-14 14:37:58,399 billing.context_processors INFO     There are orders in the database
 2023-03-14 14:37:58,400 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
@@ -13145,3 +13146,7 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'delete_item_from_model' not 
 2023-03-14 14:47:34,510 billing.context_processors INFO     new_order_id: 5
 2023-03-14 14:47:34,510 billing.context_processors DEBUG    Function Name: all_orders
 2023-03-14 14:47:34,511 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+=======
+2023-03-14 14:41:30,894 django.security.csrf WARNING  Forbidden (CSRF token from POST incorrect.): /pizzeria-admin/login
+2023-03-14 14:42:35,247 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/pizzeria_admin/views.py changed, reloading.
+>>>>>>> Stashed changes

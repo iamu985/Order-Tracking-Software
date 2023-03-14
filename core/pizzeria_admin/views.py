@@ -48,6 +48,7 @@ logging.config.dictConfig({
 
 logger = logging.getLogger(__name__)
 
+
 @csrf_exempt
 def pizzeria_login(request):
     logger.debug('Function Name: pizzeria_login')
@@ -139,11 +140,6 @@ def pizzeria_admin(request):
 
 
 @login_required
-def statistics(request):
-    return render(request, 'pizzeria_admin/statistics.html')
-
-
-@login_required
 def admin_logout(request):
     order_id = new_order_id(request).get('new_order_id')
     user = request.user
@@ -151,6 +147,11 @@ def admin_logout(request):
     order = Order.objects.get_or_create(pk=order_id)
     context = {'order': order}
     return render(request, 'index.html', context)
+
+
+@login_required
+def statistics(request):
+    return render(request, 'pizzeria_admin/statistics.html')
 
 
 @csrf_exempt
