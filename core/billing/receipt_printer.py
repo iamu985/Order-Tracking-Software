@@ -49,8 +49,7 @@ def get_logo():
     return logo
 
 
-def print_receipt(order=None):
-    order = Order.objects.get(pk=4)
+def print_receipt(order):
     p = Usb(A, B, INTERFACE, EP_IN, EP_OUT)
     logger.debug('Function: print_receipt')
     logger.debug('Printing receipt')

@@ -1,13 +1,8 @@
 import logging
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from django.contrib import messages
-from django.contrib.auth import login, logout, authenticate
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 # from django.http import JsonResponse
-from .forms import AddItem, UpdateItem
 from .models import Order, Item, OrderItem
 from .context_processors import new_order_id
 from .utils import delete_order_item
@@ -207,73 +202,6 @@ def update_table_number(request, order_id):
         'order': order,
     }
     return render(request, 'index.html', context)
-
-
-def pizzeria_login(request):
-    logger.debug('Function Name: pizzeria_login')
-    form = AuthenticationForm
-    if request.method == 'POST':
-        logger.info('Received POST request')
-        form = AuthenticationForm(data=request.POST)
-        logger.info('Received form data')
-    if request.method == 'POST':
-        logger.info('Received POST request')
-        form = AuthenticationForm(data=request.POST)
-        logger.info('Received form data')
-        if form.is_valid():
-            logger.info('Form is valid')
-            logger.info('Form is valid')
-            user = form.get_user()
-            logger.info('Got user')
-            logger.info('Got user')
-            if user is not None:
-                logger.info('User exists!')
-                logger.info('User exists!')
-                login(request, user)
-                return redirect('billing:pizzeria_admin')
-            else:
-                logger.info('User does not exist')
-                context = {
-                    'login_form': form,
-                    'error_message': 'User does not exist!',
-                }
-                return render(request, 'pizzeria-login.html', context)
-                logger.info('User does not exist')
-                context = {
-                    'login_form': form,
-                    'error_message': 'User does not exist!',
-                }
-                return render(request, 'pizzeria-login.html', context)
-        else:
-            context = {
-                'login_form': form,
-                'error_message': 'Invalid Credentials',
-            }
-            return render(request, 'pizzeria-login.html', context)
-    if request.method == "GET":
-        logger.info('Received GET request')
-        context = {
-            'login_form': form,
-            'error_message': 'Invalid Credentials',
-        }
-        return render(request, 'pizzeria-login.html', context)
-    if request.method == "GET":
-        logger.info('Received GET request')
-        context = {
-            'login_form': form,
-            'login_form': form,
-        }
-        return render(request, 'pizzeria-login.html', context)
-
-
-@login_required
-def pizzeria_admin(request):
-    logger.debug('Function Name: pizzeria_admin')
-    return render(request, 'pizzeria-admin.html')
-
-
-def remove_order():
-    pass
 
 
 @csrf_exempt

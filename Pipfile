@@ -12,6 +12,7 @@ pytest-django = "*"
 coverage = "*"
 djhtml = "*"
 python-escpos = "*"
+djlint = "*"
 
 [dev-packages]
 autopep8 = "*"

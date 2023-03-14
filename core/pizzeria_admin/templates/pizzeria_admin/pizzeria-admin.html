@@ -1,0 +1,75 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/add_update.css' %}">
+<script src="{% static 'js/htmx.min.js' %}"></script>
+<header>
+    <nav>
+        <div class="navBar">
+            <div class="navCnt1">
+                <img src="/static/img/logo_index.jpeg" alt="">
+            </div>
+            <div class="navCnt2">
+                <a href="{% url 'pizzeria_admin:statistics' %}">
+                    <li class="hover">Statistics</li>
+                </a>
+                <a href="#">
+                    <li class="hover">Order History</li>
+                </a>
+                <a href="#">
+                    <li class="hover">Printer Settings</li>
+                </a>
+                <a href="{% url 'pizzeria_admin:logout' %}" id="logout">
+                    <button>Log Out</button>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <h1 class="heading">Add & Update</h1>
+</header>
+<section>
+    <div class="container" id="pizz-admin">
+        <div class="box">
+            <div class="title">
+                <h2 class="boxTitle">Add Items</h2>
+            </div>
+            <form method="post">
+                {% csrf_token %}
+                <div class="fields">
+                    <div class="input">
+                        <label>Item Name</label>
+                        {{ form.name }}
+                    </div>
+                    <div class="input">
+                        <label>Price</label>
+                        {{ form.price }}
+                    </div>
+                </div>
+                <button class="btn"
+                        hx-post="{% url 'pizzeria_admin:admin' %}"
+                        hx-trigger="click"
+                        hx-target="#items"
+                        hx-swap="outerHTML">
+                    + ADD ITEM
+                </button>
+            </form>
+        </div>
+        <div class="box">
+            <div class="titleCnt">
+                <div class="head">
+                    <h2 class="boxTitle">Update Items</h2>
+                </div>
+                <div class="search">
+                    Search :
+                    <input type="text">
+                </div>
+            </div>
+            <div class="table">
+                <div class="tableData">ID</div>
+                <div class="tableData">Name</div>
+                <div class="tableData">Amount</div>
+                <div class="tableData">Function</div>
+            </div>
+            <!--Include show items in admin-->
+            {% include "pizzeria_admin/partials/show-all-items.html" %}
+        </div>
+    </div>
+</section>

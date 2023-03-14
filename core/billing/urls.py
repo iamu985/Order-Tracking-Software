@@ -5,8 +5,6 @@ from . import views
 app_name = "billing"
 urlpatterns = [
     path("", views.index, name='index'),
-    path("pizzeria-login", views.pizzeria_login, name='pizzeria_login'),
-    path('pizzeria-admin', views.pizzeria_admin, name="pizzeria_admin"),
 ]
 
 htmx_patterns = [
