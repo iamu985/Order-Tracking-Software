@@ -5,8 +5,6 @@ from . import views
 app_name = "billing"
 urlpatterns = [
     path("", views.index, name='index'),
-    path("pizzeria-login", views.pizzeria_login, name='pizzeria_login'),
-    path('pizzeria-admin', views.pizzeria_admin, name="pizzeria_admin"),
 ]
 
 htmx_patterns = [
@@ -41,6 +39,10 @@ htmx_patterns = [
     path('modal-view/<int:order_id>',
          views.modal_view,
          name="modal_view"),
+
+    path('print-receipt/<int:order_id>',
+         views.print_receipt_view,
+         name="print_receipt"),
 ]
 
 urlpatterns += htmx_patterns
