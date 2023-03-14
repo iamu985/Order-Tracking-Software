@@ -48,7 +48,7 @@ logging.config.dictConfig({
 
 logger = logging.getLogger(__name__)
 
-
+@csrf_exempt
 def pizzeria_login(request):
     logger.debug('Function Name: pizzeria_login')
     form = AuthenticationForm
@@ -101,6 +101,7 @@ def pizzeria_login(request):
 
 
 @login_required
+@csrf_exempt
 def pizzeria_admin(request):
     logger.debug('Function Name: pizzeria_admin')
     logger.debug(f'Method: {request.method}')
