@@ -10,6 +10,7 @@ from django.views.decorators.csrf import csrf_exempt
 from billing.models import Order, Item, OrderItem
 from billing.context_processors import new_order_id
 from .forms import CreateNewItemForm
+from .utils import get_present_month, generate_labels_for_month
 
 # All admin related views here
 
@@ -151,7 +152,15 @@ def admin_logout(request):
 
 @login_required
 def statistics(request):
-    return render(request, 'pizzeria_admin/statistics.html')
+    orders = Order.objects.all()
+    month = get_present_month()
+    label = [i for i in generate_labels_for_month(month)]
+    data = orders.filter(ordered_on__month=month)
+    context = {
+        'label': label,
+        'data': data,
+    }
+    return render(request, 'pizzeria_admin/statistics.html', context)
 
 
 @csrf_exempt
