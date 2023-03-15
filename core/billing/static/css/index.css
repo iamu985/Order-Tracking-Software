@@ -4,8 +4,14 @@
     /* font-family: 'Julee', sans-serif; */
     letter-spacing: 2px;
 
-}
 
+}
+.form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border: 2px solid #9e92d0;
+  }
+  
 header {
     min-height: 50px;
     background-color: #202428;
@@ -28,12 +34,7 @@ header {
     background-color: #414141;
     min-height: calc(100vh - 50px);
 }
-
-/* .row > div{
-    border: 2px solid black;
-
-} */
-.order-create-btn>button {
+.order-create-btn > button{
     width: 30rem;
 }
 
@@ -45,7 +46,7 @@ header {
     display: none;
     position: absolute;
     width: inherit;
-    max-height: 34rem;
+    max-height: 32rem;
     overflow: auto;
 
 }
@@ -65,7 +66,6 @@ header {
 
 #search-results>ul>li {
     padding: 5px 20px;
-    /* font-weight: bolder;  */
 }
 
 #search-results>ul>li:nth-child(even) {
@@ -76,6 +76,9 @@ header {
     background-color: #414141;
     color: #fff;
     cursor: pointer;
+}
+#search-results >ul>li:active{
+    background-color: #9e92d0;
 }
 
 /* Scroll Bar */

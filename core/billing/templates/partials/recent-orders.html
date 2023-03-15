@@ -1,26 +1,46 @@
-<div>Recent Orders</div>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/recent-orders-section.css' %}">
+<div class="recent-order-heading">Recent Orders</div>
 {% comment %} Searchbar {% endcomment %}
-<input type="search" name="" id="">
-<div class="recent-orders">
+<form action="#">
+  <input type="search"
+         class="form-control me-2 recent-order-search"
+         aria-label="Search"
+         placeholder="Search Orders">
+</form>
+<div class="recent-orders-section">
   {% if orders %}
     {% for order in orders %}
       <div class="card">
-        <table>
+        <table class="order-block">
           <tr>
-            <th>Order</th>
-            <th>Table</th>
-            <th>Amount</th>
-            <th>Status</th>
-            <th>Function</th>
+            <th class="col-1">Order</th>
+            <th class="col-1">Table</th>
+            <th class="col-1">Amount</th>
+            <th class="col-3">Status</th>
+            <th class="col-3">Function</th>
           </tr>
           <tr>
             <td>{{ order.id }}</td>
             <td>{{ order.table_number }}</td>
             <td>{{ order.get_total_price }}</td>
-            <td>Resolve</td>
+            <!-- Status Section -->
+            <td>
+              <select class="form-select form-control select-status" aria-label="Status">
+                <option value="unpaid">
+                  Unpaid
+                </option>
+                <option value="Paid">
+                  Paid
+                </option>
+                <option value="delivered" selected>
+                  Delivered
+                </option>
+              </select>
+            </td>
             <td>
               <button type="button"
-                      class="btn btn-primary"
+                      class="custom-button"
                       data-bs-toggle="modal"
                       data-bs-target="#myModal"
                       hx-get="{% url 'billing:modal_view' order.id %}"
@@ -30,12 +50,11 @@
             </td>
           </tr>
         </table>
+        {% comment %} </div> {% endcomment %}
       </div>
-    </div>
-    <div>
-    {% endfor %}
-  {% else %}
-    <div class="recent-orders-empty">No recent Orders</div>
-  {% endif %}
-</ul>
-</div>
+      <div>
+      {% endfor %}
+    {% else %}
+      <div class="recent-orders-empty">No recent Orders</div>
+    {% endif %}
+  </div>
