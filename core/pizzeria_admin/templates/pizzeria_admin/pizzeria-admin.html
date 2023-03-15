@@ -1,30 +1,7 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/add_update.css' %}">
 <script src="{% static 'js/htmx.min.js' %}"></script>
-<header>
-    <nav>
-        <div class="navBar">
-            <div class="navCnt1">
-                <img src="/static/img/logo_index.jpeg" alt="">
-            </div>
-            <div class="navCnt2">
-                <a href="{% url 'pizzeria_admin:statistics' %}">
-                    <li class="hover">Statistics</li>
-                </a>
-                <a href="#">
-                    <li class="hover">Order History</li>
-                </a>
-                <a href="#">
-                    <li class="hover">Printer Settings</li>
-                </a>
-                <a href="{% url 'pizzeria_admin:logout' %}" id="logout">
-                    <button>Log Out</button>
-                </a>
-            </div>
-        </div>
-    </nav>
-    <h1 class="heading">Add & Update</h1>
-</header>
+{% include "pizzeria_admin/partials/admin-navbar.html" %}
 <section>
     <div class="container" id="pizz-admin">
         <div class="box">
