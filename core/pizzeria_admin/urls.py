@@ -3,7 +3,7 @@ from . import views
 
 app_name = "pizzeria_admin"
 urlpatterns = [
-    path("login", views.pizzeria_login, name='login'),
+    path("login/", views.pizzeria_login, name='login'),
     path('', views.pizzeria_admin, name="admin"),
     path('statistics/', views.statistics, name="statistics"),
     path('admin-logout/', views.admin_logout, name="logout"),

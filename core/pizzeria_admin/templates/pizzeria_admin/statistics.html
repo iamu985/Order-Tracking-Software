@@ -9,12 +9,7 @@
         <link rel="stylesheet" href="{% static 'css/statistics-page.css' %}">
     </head>
     <body>
-        <header>
-            <nav>
-                <div class="navbar">
-                </div>
-            </nav>
-        </header>
+        {% comment %} {% include 'pizzeria_admin/partials/admin-navbar.html' %} {% endcomment %}
         <section class="content">
             <h1 class="heading">Statstics</h1>
             <div class="cards">
@@ -75,7 +70,7 @@
             </div>
         </section>
         <script src="{%static 'js/chart.min.js'%}"></script>
-        {% comment %} <script src="{%static 'js/statistics.js'%}"></script> {% endcomment %}
+        <script src="{% static 'js/statistics.js' %}"></script>
     </body>
 </html>
 <script>
