@@ -108,21 +108,6 @@ def add_item(request, item_id):
             context
         )
     logger.debug(f'Received item {item.name}')
-    if item in order.items.all():
-        logger.debug(f'Item {item.name} already in order {order_id}')
-        order_item = order.orderitem_set.get(item__pk=item_id)
-        order_item.quantity += 1
-        order_item.save()
-        logger.info(
-            f'Updated order_item {order_item.item.name} for order {order_item.order.id}')
-        context = {"order": order,
-                   'message': f'Item already in order. Updated Quantity to {order_item.quantity}'}
-        return render(
-            request,
-            'partials/show-added-items.html',
-            context
-        )
-    logger.debug(f'Received item {item.name}')
     order_item = OrderItem.objects.create(
         order=order,
         item=item)
