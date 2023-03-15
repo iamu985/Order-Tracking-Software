@@ -18,6 +18,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'billing',
+    'pizzeria_admin',
+
+    # third party apps
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

@@ -1,5 +1,6 @@
 from django.db import models
 from uuid import uuid4 as uuid
+import re
 
 # Create your models here.
 
@@ -47,6 +48,23 @@ class Item(models.Model):
 
     def get_quantity(self):
         return self.orderitem_set.all()[0].quantity
+
+    def get_shortened_name(self):
+        if 'chicken' in self.name.lower():
+            new_name = re.sub('chicken', 'chk', self.name.lower()).upper()
+            if len(new_name) > 11:
+                return new_name[:11]
+        if 'pork' in self.name.lower():
+            new_name = re.sub('pork', 'prk', self.name.lower()).upper()
+            if len(new_name) > 11:
+                return new_name[:11]
+        return self.name[:11].upper()
+
+    def get_price(self):
+        return f"Rs.{self.price}"
+
+    def get_total_price(self):
+        return f"Rs. {self.get_quantity() * self.price}"
 
     def __str__(self):
         return f"{self.id}. {self.name} - Rs. {self.price}"

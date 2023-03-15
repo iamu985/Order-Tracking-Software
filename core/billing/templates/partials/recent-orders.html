@@ -42,7 +42,11 @@
               <button type="button"
                       class="custom-button"
                       data-bs-toggle="modal"
-                      data-bs-target="#myModal">View</button>
+                      data-bs-target="#myModal"
+                      hx-get="{% url 'billing:modal_view' order.id %}"
+                      hx-trigger="click"
+                      hx-target="#add-items-target"
+                      >View</button>
             </td>
           </tr>
         </table>

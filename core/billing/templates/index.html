@@ -1,35 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-  {% load static %}
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
-    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'js/jquery-3.6.3.min.js' %}"></script>
-    <script src="{% static 'js/functions.js' %}"></script>
-    <script src="{% static 'js/htmx.min.js' %}"></script>
-    <title>Pizzeria</title>
-  </head>
-  <body>
-    {% include 'partials/header.html' %}
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-7 create-order">
-          {% include 'partials/order-create.html' %}
-          <div>Items:</div>
-          {% include 'partials/show-added-items.html' %}
-          <div class="d-flex justify-content-center order-create-btn">
-            <a class="btn btn-warning"
-               href="{% url 'billing:create_order' new_order_id %}">Create</a
-              >
-            </div>
-          </div>
-          <div class="col-md-5 recent-order">{% include 'partials/recent-orders.html' %}</div>
-        </div>
+{% extends 'base.html' %} 
+
+{% block content %} 
+{% include 'partials/header.html'%}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 create-order">
+      {% include 'partials/order-create.html' %}
+      <div>Items:</div>
+      {% include 'partials/show-added-items.html' %}
+      <div class="d-flex justify-content-center order-create-btn">
+        <a
+          class="btn"
+          style="background-color: #1d1d1d; color: #fefefe;"
+          href="{% url 'billing:create_order' new_order_id %}"
+          >Create</a>
       </div>
-      {% include 'partials/modal-recent-order.html' %}
-    </body>
-  </html>
+    </div>
+    <div class="col-md-4 recent-order">
+      {% include 'partials/recent-orders.html' %}
+    </div>
+  </div>
+  {% include 'partials/modal-recent-order.html' %}
+</div>
+
+{% endblock content %}
+
