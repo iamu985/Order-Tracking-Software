@@ -61,25 +61,6 @@ $(document).ready(function () {
                 pointer++;
             }
 
-            if (event.which === 39) { /* right arrow */
-                event.preventDefault();
-                let shift = pointer + half;
-                if (shift < max) {
-                    rebaseBackground();
-                    pointer = shift;
-                }
-
-            }
-
-            if (event.which === 37) { /* left arrow */
-                event.preventDefault();
-                let shift = pointer - half;
-                if (shift >= 0) {
-                    rebaseBackground();
-                    pointer = shift;
-                }
-            }
-
             if (event.which === 38) { /* up arrow */
                 event.preventDefault();
                 if (pointer > 0) {
@@ -87,6 +68,25 @@ $(document).ready(function () {
                     pointer--;
                 }
             }
+            // if (event.which === 39) { /* right arrow */
+            //     event.preventDefault();
+            //     let shift = pointer + half;
+            //     if (shift < max) {
+            //         rebaseBackground();
+            //         pointer = shift;
+            //     }
+
+            // }
+
+            // if (event.which === 37) { /* left arrow */
+            //     event.preventDefault();
+            //     let shift = pointer - half;
+            //     if (shift >= 0) {
+            //         rebaseBackground();
+            //         pointer = shift;
+            //     }
+            // }
+
 
             $('#search-bar004-target ul li').eq(pointer).css({ 'background-color': 'gray' });
         }
