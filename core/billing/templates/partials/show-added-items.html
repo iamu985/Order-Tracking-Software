@@ -1,3 +1,4 @@
+{% load static %}
 <table class="table table-striped" id="add-items-target">
   {% if order.orderitem_set.all %}
     <thead>
@@ -25,11 +26,10 @@
                    hx-target="#add-items-target"/>
           </td>
           <td>{{ item.get_price }}</td>
-          <td class="btn"
-              hx-post="{% url 'billing:delete_item' item.item.id order.id %}"
+          <td hx-post="{% url 'billing:delete_item' item.item.id order.id %}"
               hx-trigger="click"
               hx-target="#add-items-target">
-            Remove
+            remove
           </td>
         </tr>
       {% endfor %}
