@@ -34,14 +34,16 @@ body {
 .logInSec {
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding:20px;
+    margin: 10px 0px;
     padding-bottom: 100px;
 }
 
 .box {
     position: absolute;
     width: 500px;
-    height: 22rem;
+    height: 23rem;
+    overflow: hidden;
     padding: 30px;
     display: flex;
     justify-content: center;
@@ -49,7 +51,6 @@ body {
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 0 10px black;
-    position: absolute;
 
 }
 
@@ -73,6 +74,7 @@ h2 {
     align-items: center;
     /* border: solid black 1px; */
     margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 /* details */
@@ -134,3 +136,11 @@ h2 {
 }
 
 /* /button */
+.back{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    margin-top: 5px;
+}
