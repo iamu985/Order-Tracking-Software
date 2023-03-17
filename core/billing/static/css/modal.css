@@ -1,0 +1,21 @@
+.container-section-modal{
+    /* background-color: aquamarine; */
+    width: 50rem;
+}
+.modal-heading{
+    margin-top:10px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.payment-method-section{
+    display: flex;
+}
+.payment-method-container{
+    margin-left: 30px;
+}
+.save-print{
+    margin-left:1rem;
+}
+.save-print:nth-child(even){
+    margin-left: 20rem;
+}

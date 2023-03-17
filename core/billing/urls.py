@@ -5,6 +5,7 @@ from . import views
 app_name = "billing"
 urlpatterns = [
     path("", views.index, name='index'),
+    path('modal/', views.modal, name='modal')
 ]
 
 htmx_patterns = [

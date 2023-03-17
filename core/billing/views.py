@@ -226,3 +226,7 @@ def print_receipt_view(request, order_id):
         'order': order,
     }
     return render(request, 'partials/modal-recent-order.html')
+
+
+def modal(request):
+    return render(request, 'modal.html')

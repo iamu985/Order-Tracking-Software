@@ -1,0 +1,140 @@
+{% include "base.html" %}
+{% block content %}
+    {% load static %}
+    {% include "partials/header.html" %}
+    <link rel="stylesheet" href="{% static 'css/modal.css' %}">
+    <div class="container-fluid container-section-modal">
+        <div class="row">
+            <div class="col-md">
+                <a href="">
+                    <img src="{% static 'img/back.svg' %}" alt="Back" width="30px">
+                </a>
+                <div class="modal-heading">Order No: 11</div>
+                <hr>
+                <div>Items</div>
+                <hr>
+                <div class="table-responsive" style="max-height: 23rem;">
+                    <table class="table table-striped items-list-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">SN.</th>
+                                <th>Item Name</th>
+                                <th>Quantity</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>asdf Lorem ipsum dolor sit amet.</td>
+                                <td>2</td>
+                                <td>@mdo</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>2</td>
+                                <td>@mdo</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>2</td>
+                                <td>@mdo</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>2</td>
+                                <td>@mdo</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>2</td>
+                                <td>@mdo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <th colspan=2>
+                                <input class="btn btn-primary" type="button" value="Edit">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                Total
+                            </th>
+                            <th>
+                                Rs. 400
+                            </th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>
+                    Payment Method
+                </div>
+                <div class="payment-method-section">
+                    <div class="payment-method-container">
+                        <input class="form-check-input"
+                               type="radio"
+                               name="payment-method"
+                               id="payment-unpaid"
+                               value="unpaid"
+                               checked>
+                        <label class="form-check-label" for="payment-unpaid">
+                            Unpaid
+                        </label>
+                    </div>
+                    <div class="payment-method-container">
+                        <input class="form-check-input"
+                               type="radio"
+                               name="payment-method"
+                               id="payment-cash"
+                               value="cash">
+                        <label class="form-check-label" for="payment-cash">
+                            Cash
+                        </label>
+                    </div>
+                    <div class="payment-method-container">
+                        <input class="form-check-input"
+                               type="radio"
+                               name="payment-method"
+                               id="payment-online"
+                               value="online">
+                        <label class="form-check-label" for="payment-online">
+                            Online
+                        </label>
+                    </div>
+                    <input type="button" class="btn btn-secondary save-print" value="Save">
+                    <input type="button"
+                           id="print-button"
+                           class="btn btn-secondary save-print"
+                           value="Print"
+                           disabled="true">
+                </div>
+            </div>
+        </div>
+        <script>
+        //Print Button remain disabled when Unpaid
+       $('input:radio[name="payment-method"]').change(function(){
+        if($(this).is(':checked') && $(this).val() != 'unpaid'){
+           $('#print-button').prop("disabled",false);
+        }
+        else{
+           $('#print-button').prop("disabled",true);
+        }
+       });
+        </script>
+    {% endblock content %}
