@@ -1,15 +1,16 @@
 {% include "base.html" %}
 {% block content %}
     {% load static %}
+    {% load mathfilters %}
     {% include "partials/header.html" %}
     <link rel="stylesheet" href="{% static 'css/modal.css' %}">
     <div class="container-fluid container-section-modal">
         <div class="row">
             <div class="col-md">
-                <a href="">
+                <a href="{% url 'billing:index' %}">
                     <img src="{% static 'img/back.svg' %}" alt="Back" width="30px">
                 </a>
-                <div class="modal-heading">Order No: 11</div>
+                <div class="modal-heading">Order No: {{ order.id }}</div>
                 <hr>
                 <div>Items</div>
                 <hr>
@@ -19,50 +20,22 @@
                             <tr>
                                 <th scope="col">SN.</th>
                                 <th>Item Name</th>
-                                <th>Quantity</th>
+                                <th>Price</th>
+                                <th>Qnt</th>
                                 <th>Amount</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>asdf Lorem ipsum dolor sit amet.</td>
-                                <td>2</td>
-                                <td>@mdo</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>2</td>
-                                <td>@mdo</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>2</td>
-                                <td>@mdo</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>2</td>
-                                <td>@mdo</td>
-                            </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>2</td>
-                                <td>@mdo</td>
-                            </tr>
-                        </tbody>
+                        {% for orderitem in order.orderitem_set.all %}
+                            <tbody>
+                                <tr>
+                                    <th scope="row">{{ forloop.counter }}</th>
+                                    <td>{{ orderitem.item.name }}</td>
+                                    <td>₹{{ orderitem.item.price }}</td>
+                                    <td>{{ orderitem.quantity }}</td>
+                                    <td>₹{{ orderitem.item.price|mul:orderitem.quantity }}</td>
+                                </tr>
+                            </tbody>
+                        {% endfor %}
                     </table>
                 </div>
                 <table class="table table-striped">
@@ -73,18 +46,12 @@
                             </th>
                         </tr>
                         <tr>
-                            <th>
-                                Total
-                            </th>
-                            <th>
-                                Rs. 400
-                            </th>
+                            <th>Total</th>
+                            <th>Rs. {{ order.get_total_price }}</th>
                         </tr>
                     </tbody>
                 </table>
-                <div>
-                    Payment Method
-                </div>
+                <div>Payment Method</div>
                 <div class="payment-method-section">
                     <div class="payment-method-container">
                         <input class="form-check-input"
@@ -93,9 +60,7 @@
                                id="payment-unpaid"
                                value="unpaid"
                                checked>
-                        <label class="form-check-label" for="payment-unpaid">
-                            Unpaid
-                        </label>
+                        <label class="form-check-label" for="payment-unpaid">Unpaid</label>
                     </div>
                     <div class="payment-method-container">
                         <input class="form-check-input"
@@ -103,9 +68,7 @@
                                name="payment-method"
                                id="payment-cash"
                                value="cash">
-                        <label class="form-check-label" for="payment-cash">
-                            Cash
-                        </label>
+                        <label class="form-check-label" for="payment-cash">Cash</label>
                     </div>
                     <div class="payment-method-container">
                         <input class="form-check-input"
@@ -113,9 +76,7 @@
                                name="payment-method"
                                id="payment-online"
                                value="online">
-                        <label class="form-check-label" for="payment-online">
-                            Online
-                        </label>
+                        <label class="form-check-label" for="payment-online">Online</label>
                     </div>
                     <input type="button" class="btn btn-secondary save-print" value="Save">
                     <input type="button"

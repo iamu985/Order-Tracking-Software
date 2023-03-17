@@ -22,6 +22,7 @@ INSTALLED_APPS = [
 
     # third party apps
     'widget_tweaks',
+    'mathfilters',
 ]
 
 MIDDLEWARE = [
