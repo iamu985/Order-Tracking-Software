@@ -11,7 +11,12 @@
     <body>
         {% comment %} {% include 'pizzeria_admin/partials/admin-navbar.html' %} {% endcomment %}
         <section class="content">
+            <div class="headContainer">
             <h1 class="heading">Statstics</h1>
+            <button class="back">
+            <img src="{% static 'img/back.svg' %}" alt="back" width="30px">
+            </button>
+            </div>
             <div class="cards">
                 <div class="sales">
                     <h1>Daily Sales:</h1>
