@@ -48,6 +48,10 @@ htmx_patterns = [
     path('search-orders',
          views.search_orders,
          name="search_orders"),
+
+    path('update-order-status/<int:order_id>',
+         views.update_order_status,
+         name="update_order_status")
 ]
 
 urlpatterns += htmx_patterns

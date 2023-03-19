@@ -21,6 +21,7 @@ class Order(models.Model):
     #  but if set to False
     #  all the items are set and it is finally saved as a model.
     is_new = models.BooleanField(default=True)
+    is_paid = models.BooleanField(default=False)
     items = models.ManyToManyField('Item', through="OrderItem")
     table_number = models.PositiveIntegerField(default=1)
 

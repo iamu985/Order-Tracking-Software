@@ -1,5 +1,6 @@
 import logging
 from django.shortcuts import render, redirect
+from django.db.models import Q
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
 # from django.http import JsonResponse
@@ -231,3 +232,37 @@ def search_orders(request):
             'message': 'No orders found',
         }
         return render(request, 'partials/order-search-results.html', context)
+
+
+@csrf_exempt
+def update_order_status(request, order_id):
+    logger.info('Function Name: update_order_status')
+    order = Order.objects.get(pk=order_id)
+    logger.debug(f'Fetched order: {order.id} Requested order: {order_id}')
+    order_status = request.POST.get('order-status')
+    logger.debug(f'Received order status: {order_status}')
+    if order_status == 'Paid':
+        # if order status is paid
+        # we change the is_paid status to true
+        # so that the order will not be shown in recent orders
+        order.order_status = order_status
+        order.is_paid = True
+        order.save()
+        logger.info(f'Updated order {order.id} status to {order_status}')
+        orders = Order.objects.filter(Q(is_paid=False) & Q(is_new=False))
+        context = {
+            'orders': orders
+        }
+        return render(request, 'partials/order-search-results.html', context)
+
+    # if order status is delivered
+    # we don't change the is_paid status to true
+    # so that the order will still be in shown in recent orders
+    order.order_status = order_status
+    order.save()
+    logger.info(f'Updated order {order.id} status to {order_status}')
+    orders = Order.objects.filter(Q(is_paid=False) & Q(is_new=False))
+    context = {
+        'orders': orders
+    }
+    return render(request, 'partials/orders-search-results.html', context)
