@@ -1,30 +1,8 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/add_update.css' %}">
 <script src="{% static 'js/htmx.min.js' %}"></script>
-<header>
-    <nav>
-        <div class="navBar">
-            <div class="navCnt1">
-                <img src="/static/img/logo_index.jpeg" alt="">
-            </div>
-            <div class="navCnt2">
-                <a href="{% url 'pizzeria_admin:statistics' %}">
-                    <li class="hover">Statistics</li>
-                </a>
-                <a href="#">
-                    <li class="hover">Order History</li>
-                </a>
-                <a href="#">
-                    <li class="hover">Printer Settings</li>
-                </a>
-                <a href="{% url 'pizzeria_admin:logout' %}" id="logout">
-                    <button class="btn" >Log Out</button>
-                </a>
-            </div>
-        </div>
-    </nav>
-    <h1 class="heading">Add & Update</h1>
-</header>
+{% include "pizzeria_admin/partials/admin-navbar.html" %}
+<h1 class="heading">Add & Update</h1>
 <section>
     <div class="container" id="pizz-admin">
         <div class="box">
@@ -69,9 +47,7 @@
                 <div class="tableData">Function</div>
             </div>
             <!--Include show items in admin-->
-            <div class="table-items-container">
-                {% include "pizzeria_admin/partials/show-all-items.html" %}
-            </div>
+            <div class="table-items-container">{% include "pizzeria_admin/partials/show-all-items.html" %}</div>
         </div>
     </div>
 </section>

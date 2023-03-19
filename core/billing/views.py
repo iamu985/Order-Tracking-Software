@@ -1,11 +1,12 @@
 import logging
 from django.shortcuts import render, redirect
+from django.db.models import Q
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
 # from django.http import JsonResponse
 from .models import Order, Item, OrderItem
 from .context_processors import new_order_id
-from .utils import delete_order_item
+from .utils import delete_order_item, get_order_or_none
 from .receipt_printer import print_receipt
 import re
 from django.conf import settings
@@ -108,21 +109,6 @@ def add_item(request, item_id):
             context
         )
     logger.debug(f'Received item {item.name}')
-    if item in order.items.all():
-        logger.debug(f'Item {item.name} already in order {order_id}')
-        order_item = order.orderitem_set.get(item__pk=item_id)
-        order_item.quantity += 1
-        order_item.save()
-        logger.info(
-            f'Updated order_item {order_item.item.name} for order {order_item.order.id}')
-        context = {"order": order,
-                   'message': f'Item already in order. Updated Quantity to {order_item.quantity}'}
-        return render(
-            request,
-            'partials/show-added-items.html',
-            context
-        )
-    logger.debug(f'Received item {item.name}')
     order_item = OrderItem.objects.create(
         order=order,
         item=item)
@@ -204,7 +190,7 @@ def update_table_number(request, order_id):
     return render(request, 'index.html', context)
 
 
-@csrf_exempt
+# @csrf_exempt
 def modal_view(request, order_id):
     logger.debug('Function: modal_view')
     order = Order.objects.get(pk=order_id)
@@ -213,7 +199,7 @@ def modal_view(request, order_id):
         'order': order,
         'order_id': order.id,
     }
-    return render(request, 'partials/modal-recent-order.html', context)
+    return render(request, 'modal.html', context)
 
 
 @csrf_exempt
@@ -226,3 +212,57 @@ def print_receipt_view(request, order_id):
         'order': order,
     }
     return render(request, 'partials/modal-recent-order.html')
+
+
+@csrf_exempt
+def search_orders(request):
+    logger.info('Function Name: search_orders')
+    order_id = request.POST.get('order-id')
+    logger.debug(f'Received order_id: {order_id}')
+    order = get_order_or_none(order_id)
+    if order:
+        logger.debug('Order found')
+        context = {
+            'orders': [order],
+        }
+        return render(request, 'partials/order-search-results.html', context)
+    else:
+        logger.warn('Order Not Found')
+        context = {
+            'message': 'No orders found',
+        }
+        return render(request, 'partials/order-search-results.html', context)
+
+
+@csrf_exempt
+def update_order_status(request, order_id):
+    logger.info('Function Name: update_order_status')
+    order = Order.objects.get(pk=order_id)
+    logger.debug(f'Fetched order: {order.id} Requested order: {order_id}')
+    order_status = request.POST.get('order-status')
+    logger.debug(f'Received order status: {order_status}')
+    if order_status == 'Paid':
+        # if order status is paid
+        # we change the is_paid status to true
+        # so that the order will not be shown in recent orders
+        order.order_status = order_status
+        order.is_paid = True
+        order.save()
+        logger.info(f'Updated order {order.id} status to {order_status}')
+        orders = Order.objects.filter(Q(is_paid=False) & Q(is_new=False))
+        context = {
+            'orders': orders
+        }
+        return render(request, 'partials/order-search-results.html', context)
+
+    # if order status is delivered
+    # we don't change the is_paid status to true
+    # so that the order will still be in shown in recent orders
+    order.order_status = order_status
+    order.save()
+    logger.info(f'Updated order {order.id} status to {order_status}')
+    orders = Order.objects.filter(Q(is_paid=False) & Q(is_new=False))
+    context = {
+        'orders': orders
+    }
+    return render(request, 'partials/orders-search-results.html', context)

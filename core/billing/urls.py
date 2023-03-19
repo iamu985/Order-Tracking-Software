@@ -5,6 +5,7 @@ from . import views
 app_name = "billing"
 urlpatterns = [
     path("", views.index, name='index'),
+    path('modal/<int:order_id>', views.modal_view, name='modal-view'),
 ]
 
 htmx_patterns = [
@@ -36,13 +37,21 @@ htmx_patterns = [
          views.update_table_number,
          name='update_table_number'),
 
-    path('modal-view/<int:order_id>',
-         views.modal_view,
-         name="modal_view"),
+    #     path('modal-view/<int:order_id>',
+    #          views.modal_view,
+    #          name="modal_view"),
 
     path('print-receipt/<int:order_id>',
          views.print_receipt_view,
          name="print_receipt"),
+
+    path('search-orders',
+         views.search_orders,
+         name="search_orders"),
+
+    path('update-order-status/<int:order_id>',
+         views.update_order_status,
+         name="update_order_status")
 ]
 
 urlpatterns += htmx_patterns

@@ -30,11 +30,10 @@
                    hx-target="#add-items-target"/>
           </td>
           <td>{{ item.get_price }}</td>
-          <td class="btn"
-              hx-post="{% url 'billing:delete_item' item.item.id order.id %}"
+          <td hx-post="{% url 'billing:delete_item' item.item.id order.id %}"
               hx-trigger="click"
               hx-target="#add-items-target">
-            Remove
+            remove
           </td>
         </tr>
       {% endfor %}
@@ -54,10 +53,10 @@
     {% endif %}
   </table>
 
-  <script>
+   <script>
     function hide()
     {
     document.getElementById("hideDiv").style.visibility="hidden";
     }
     setTimeout("hide()",1000);
-  </script>
+  </script> 

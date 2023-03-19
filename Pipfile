@@ -13,6 +13,7 @@ coverage = "*"
 djhtml = "*"
 python-escpos = "*"
 djlint = "*"
+django-mathfilters = "*"
 
 [dev-packages]
 autopep8 = "*"

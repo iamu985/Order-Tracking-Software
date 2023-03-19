@@ -5,15 +5,11 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Statistics</title>
         <link rel="stylesheet" href="{% static 'css/statistics-page.css' %}">
     </head>
     <body>
-        <header>
-            <nav>
-                <div class="navbar"></div>
-            </nav>
-        </header>
+        {% comment %} {% include 'pizzeria_admin/partials/admin-navbar.html' %} {% endcomment %}
         <section class="content">
             <h1 class="heading">Statstics</h1>
             <div class="cards">
@@ -74,6 +70,114 @@
             </div>
         </section>
         <script src="{%static 'js/chart.min.js'%}"></script>
-        <script src="{%static 'js/statistics.js'%}"></script>
     </body>
 </html>
+<script>
+    const dailyChart = document.getElementById('dailyChart');
+
+    new Chart(dailyChart, {
+    type: 'line',
+    data: {
+        labels: {{daily_label|safe}},
+        datasets: [{
+        width: '100%',
+        label: 'Day Income',
+        title: 'Daily',
+        // just malipulate the data nothing else....
+
+        data: {{daily_data|safe}},
+
+        borderWidth: 1,
+        customCanvasBackgroundColor: {
+            color: 'lightGreen',
+        }
+
+
+        }]
+    },
+    options: {
+        scales: {
+        y: {
+            beginAtZero: false
+        }
+        }
+    }
+    });
+    const weeklyChart = document.getElementById('weeklyChart');
+
+    new Chart(weeklyChart, {
+    type: 'bar',
+    data: {
+        labels: {{weekly_label|safe}},
+        datasets: [{
+        label: 'Weekly Income',
+        title: 'Daily',
+        // just malipulate the data nothing else....
+        data: {{weekly_data|safe}},
+        borderWidth: 1,
+        customCanvasBackgroundColor: {
+            color: 'lightGreen',
+        }
+
+
+        }]
+    },
+    options: {
+        scales: {
+        y: {
+            beginAtZero: false
+        }
+        }
+    }
+    });
+    const monthlyChart = document.getElementById('monthlyChart');
+
+    new Chart(monthlyChart, {
+    type: 'bar',
+    data: {
+        labels: {{monthly_label|safe}},
+        datasets: [{
+        label: 'Monthly Income',
+        title: 'Daily',
+        // just malipulate the data nothing else....
+        data: {{monthly_data|safe}},
+        borderWidth: 1,
+
+
+        }]
+    },
+    options: {
+        scales: {
+        y: {
+            beginAtZero: false
+        }
+        }
+    }
+    });
+    const yearlyChart = document.getElementById('yearlyChart');
+
+    new Chart(yearlyChart, {
+    type: 'line',
+    data: {
+        labels: {{yearly_label|safe}},
+        datasets: [{
+        label: 'Monthly Income',
+        title: 'Daily',
+        // just malipulate the data nothing else....
+        data: {{yearly_data|safe}},
+        borderWidth: 1,
+
+
+        }]
+    },
+    options: {
+        scales: {
+        y: {
+            beginAtZero: false
+        }
+        }
+    }
+    });
+
+
+</script>

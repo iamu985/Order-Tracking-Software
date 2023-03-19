@@ -21,12 +21,13 @@ $(document).ready(function () {
         searchTarget.animate({ height: 'show' }, 200);
     });
 
-
     // Search Bar on Focusout
     searchBar.on('blur', function () {
         searchBar.val('');
 
     });
+
+
 
     /* Keypress Events*/
     $(document).keydown(function (event) {
@@ -51,33 +52,16 @@ $(document).ready(function () {
             istab = true;
         }
 
+
         if (istab) {
             let max = $("#search-bar004-target ul li").length;
+
             let half = Math.round(max / 2);
 
             if (event.which === 40 && pointer < max - 1) { /* down arrow */
                 event.preventDefault();
                 rebaseBackground();
                 pointer++;
-            }
-
-            if (event.which === 39) { /* right arrow */
-                event.preventDefault();
-                let shift = pointer + half;
-                if (shift < max) {
-                    rebaseBackground();
-                    pointer = shift;
-                }
-
-            }
-
-            if (event.which === 37) { /* left arrow */
-                event.preventDefault();
-                let shift = pointer - half;
-                if (shift >= 0) {
-                    rebaseBackground();
-                    pointer = shift;
-                }
             }
 
             if (event.which === 38) { /* up arrow */
@@ -87,6 +71,25 @@ $(document).ready(function () {
                     pointer--;
                 }
             }
+            // if (event.which === 39) { /* right arrow */
+            //     event.preventDefault();
+            //     let shift = pointer + half;
+            //     if (shift < max) {
+            //         rebaseBackground();
+            //         pointer = shift;
+            //     }
+
+            // }
+
+            // if (event.which === 37) { /* left arrow */
+            //     event.preventDefault();
+            //     let shift = pointer - half;
+            //     if (shift >= 0) {
+            //         rebaseBackground();
+            //         pointer = shift;
+            //     }
+            // }
+
 
             $('#search-bar004-target ul li').eq(pointer).css({ 'background-color': 'gray' });
         }

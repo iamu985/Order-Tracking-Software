@@ -1,0 +1,48 @@
+<div class="recent-orders-section" id="search-order">
+    {% if orders %}
+        {% for order in orders %}
+            <div class="card">
+                <table class="order-block">
+                    <tr>
+                        <th class="col-1">Order</th>
+                        <th class="col-1">Table</th>
+                        <th class="col-1">Amount</th>
+                        <th class="col-3">Status</th>
+                        <th class="col-3">Function</th>
+                    </tr>
+                    <tr>
+                        <td>{{ order.id }}</td>
+                        <td>{{ order.table_number }}</td>
+                        <td>{{ order.get_total_price }}</td>
+                        <!-- Status Section -->
+                        <td>
+                            <select class="form-select form-control select-status"
+                                    aria-label="Status"
+                                    hx-post="{% url 'billing:update_order_status' order.id %}"
+                                    hx-target="#search-order"
+                                    name='order-status'>
+                                <option value="Waiting">
+                                    Waiting
+                                </option>
+                                <option value="Paid">
+                                    Paid
+                                </option>
+                                <option value="Delivered" selected>
+                                    Delivered
+                                </option>
+                            </select>
+                        </td>
+                        <td>
+                            <a href="{% url 'billing:modal-view' order.id %}"
+                               class="custom-button btn btn-primary">View</a>
+                        </td>
+                    </tr>
+                </table>
+                {% comment %} </div> {% endcomment %}
+            </div>
+        {% endfor %}
+    {% else %}
+        <div class="recent-orders-empty">{{ message }}</div>
+        <div class="recent-orders-empty">No recent Orders</div>
+    {% endif %}
+</div>
