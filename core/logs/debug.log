@@ -21318,6 +21318,7 @@ ValueError: Field 'id' expected a number but got ''.
 2023-03-19 14:32:02,576 billing.context_processors DEBUG    Function Name: all_orders
 2023-03-19 14:32:02,579 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 1e90d2bc0e0d79d797af027d09553eb770530bc8
 =======
 2023-03-19 20:53:34,666 billing.context_processors DEBUG    Function Name: new_order_id
@@ -22424,3 +22425,1211 @@ django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 14: 'commen
 2023-03-19 22:26:28,058 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
 2023-03-19 22:29:27,201 django.utils.autoreload INFO     D:\Webdevelopment\pizzaria\Order-Tracking-Software\core\billing\models.py changed, reloading.
 >>>>>>> main
+=======
+2023-03-19 15:48:19,591 billing.views INFO     Function Name: search_orders
+2023-03-19 15:48:19,591 billing.views DEBUG    Received order_id: 
+2023-03-19 15:48:19,661 django.request ERROR    Internal Server Error: /search-orders
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 221, in search_orders
+    order = get_order_or_none(order_id)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/utils.py", line 16, in get_order_or_none
+    order = Order.objects.get(pk=order_id)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2023-03-19 15:48:19,940 billing.views INFO     Function Name: search_orders
+2023-03-19 15:48:19,940 billing.views DEBUG    Received order_id: 1
+2023-03-19 15:48:19,942 billing.views DEBUG    Order found
+2023-03-19 15:48:19,945 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:48:19,946 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:48:19,946 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 15:48:19,946 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 15:48:19,946 billing.context_processors INFO     new_order_id: 4
+2023-03-19 15:48:19,946 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 15:48:19,947 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-19 15:48:20,473 billing.views INFO     Function Name: search_orders
+2023-03-19 15:48:20,473 billing.views DEBUG    Received order_id: 10
+2023-03-19 15:48:20,475 billing.views WARNING  Order Not Found
+2023-03-19 15:48:20,476 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:48:20,477 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:48:20,477 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 15:48:20,477 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 15:48:20,477 billing.context_processors INFO     new_order_id: 4
+2023-03-19 15:48:20,477 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 15:48:20,478 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-19 15:48:23,357 billing.views INFO     Function Name: search_orders
+2023-03-19 15:48:23,357 billing.views DEBUG    Received order_id: 1
+2023-03-19 15:48:23,359 billing.views DEBUG    Order found
+2023-03-19 15:48:23,359 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:48:23,359 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:48:23,359 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 15:48:23,359 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 15:48:23,359 billing.context_processors INFO     new_order_id: 4
+2023-03-19 15:48:23,359 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 15:48:23,360 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-19 15:48:23,540 billing.views INFO     Function Name: search_orders
+2023-03-19 15:48:23,541 billing.views DEBUG    Received order_id: 
+2023-03-19 15:48:23,585 django.request ERROR    Internal Server Error: /search-orders
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 221, in search_orders
+    order = get_order_or_none(order_id)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/utils.py", line 16, in get_order_or_none
+    order = Order.objects.get(pk=order_id)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2023-03-19 15:50:43,428 billing.views DEBUG    Function Name: search_items
+2023-03-19 15:50:43,431 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:50:43,432 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:50:43,432 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 15:50:43,432 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 15:50:43,432 billing.context_processors INFO     new_order_id: 4
+2023-03-19 15:50:43,432 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 15:50:43,433 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-19 15:50:43,533 billing.views DEBUG    Function Name: search_items
+2023-03-19 15:50:43,534 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:50:43,535 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:50:43,535 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 15:50:43,535 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 15:50:43,535 billing.context_processors INFO     new_order_id: 4
+2023-03-19 15:50:43,535 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 15:50:43,536 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-19 15:50:44,506 billing.views DEBUG    Function Name: add_item
+2023-03-19 15:50:44,506 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:50:44,508 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:50:44,508 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 15:50:44,508 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 15:50:44,508 billing.context_processors INFO     new_order_id: 4
+2023-03-19 15:50:44,508 billing.views DEBUG    Received order_id: 4
+2023-03-19 15:50:44,510 billing.views DEBUG    Received item Chicken Chilli
+2023-03-19 15:50:44,660 billing.views INFO     Created order_item Chicken Chilli for order 4
+2023-03-19 15:50:44,661 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:50:44,662 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:50:44,663 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 15:50:44,663 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 15:50:44,663 billing.context_processors INFO     new_order_id: 4
+2023-03-19 15:50:44,663 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 15:50:44,664 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-19 15:50:45,600 billing.views DEBUG    Function Name: add_item
+2023-03-19 15:50:45,600 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:50:45,601 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:50:45,601 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 15:50:45,601 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 15:50:45,601 billing.context_processors INFO     new_order_id: 4
+2023-03-19 15:50:45,601 billing.views DEBUG    Received order_id: 4
+2023-03-19 15:50:45,603 billing.views DEBUG    Item Chicken Chilli already in order 4
+2023-03-19 15:50:45,680 billing.views INFO     Updated order_item Chicken Chilli for order 4
+2023-03-19 15:50:45,680 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:50:45,681 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:50:45,682 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 15:50:45,682 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 15:50:45,682 billing.context_processors INFO     new_order_id: 4
+2023-03-19 15:50:45,682 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 15:50:45,683 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-19 15:50:52,638 billing.views INFO     Function Name: search_orders
+2023-03-19 15:50:52,639 billing.views DEBUG    Received order_id: 
+2023-03-19 15:50:52,686 django.request ERROR    Internal Server Error: /search-orders
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 221, in search_orders
+    order = get_order_or_none(order_id)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/utils.py", line 16, in get_order_or_none
+    order = Order.objects.get(pk=order_id)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2023-03-19 15:50:54,137 billing.views DEBUG    Function: modal_view
+2023-03-19 15:50:54,140 billing.views DEBUG    Got order: 1 Reqeuested Order: 1
+2023-03-19 15:50:54,156 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:50:54,157 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:50:54,157 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 15:50:54,158 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 15:50:54,158 billing.context_processors INFO     new_order_id: 4
+2023-03-19 15:50:54,158 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 15:50:54,160 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-19 15:52:24,678 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:52:24,680 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:52:24,681 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 15:52:24,681 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 15:52:24,681 billing.context_processors INFO     new_order_id: 4
+2023-03-19 15:52:24,683 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:52:24,684 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:52:24,684 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 15:52:24,684 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 15:52:24,684 billing.context_processors INFO     new_order_id: 4
+2023-03-19 15:52:24,684 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 15:52:24,685 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-19 15:52:28,922 billing.views DEBUG    Function Name: search_items
+2023-03-19 15:52:28,925 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:52:28,926 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:52:28,926 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 15:52:28,926 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 15:52:28,926 billing.context_processors INFO     new_order_id: 4
+2023-03-19 15:52:28,927 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 15:52:28,927 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-19 15:52:30,007 billing.views DEBUG    Function Name: add_item
+2023-03-19 15:52:30,007 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:52:30,008 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:52:30,008 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 15:52:30,008 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 15:52:30,008 billing.context_processors INFO     new_order_id: 4
+2023-03-19 15:52:30,009 billing.views DEBUG    Received order_id: 4
+2023-03-19 15:52:30,010 billing.views DEBUG    Item Chicken Chilli already in order 4
+2023-03-19 15:52:31,875 billing.views INFO     Updated order_item Chicken Chilli for order 4
+2023-03-19 15:52:31,875 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:52:31,876 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:52:31,876 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 15:52:31,876 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 15:52:31,876 billing.context_processors INFO     new_order_id: 4
+2023-03-19 15:52:31,877 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 15:52:31,878 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-19 15:52:35,558 billing.views DEBUG    Function Name: create_order
+2023-03-19 15:52:35,558 billing.views DEBUG    Created Order 4
+2023-03-19 15:52:36,914 billing.views INFO     Saved order 4
+2023-03-19 15:52:37,034 billing.views DEBUG    Created new order 5
+2023-03-19 15:52:37,034 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 15:52:37,035 billing.context_processors INFO     There are orders in the database
+2023-03-19 15:52:37,035 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 15:52:37,035 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 15:52:37,035 billing.context_processors INFO     new_order_id: 5
+2023-03-19 15:52:37,035 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 15:52:37,037 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-19 16:10:21,358 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-19 16:11:38,646 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/context_processors.py changed, reloading.
+2023-03-19 16:13:17,566 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/models.py changed, reloading.
+2023-03-19 16:15:17,719 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/context_processors.py changed, reloading.
+2023-03-19 16:15:59,933 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/urls.py changed, reloading.
+2023-03-19 16:17:03,404 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-19 16:17:39,536 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-19 16:17:53,459 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-19 16:17:58,339 billing.views DEBUG    Function Name: create_order
+2023-03-19 16:17:58,341 billing.views DEBUG    Created Order 4
+2023-03-19 16:17:58,345 billing.views INFO     Saved order 4
+2023-03-19 16:17:58,449 django.request ERROR    Internal Server Error: /create-order/4
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: billing_order.id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 161, in create_order
+    new_order = Order.objects.create(pk=order_id+1)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 671, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 1006, in _save_table
+    results = self._do_insert(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 1047, in _do_insert
+    return manager._insert(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1791, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1660, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: billing_order.id
+2023-03-19 16:17:58,586 django.request WARNING  Not Found: /favicon.ico
+2023-03-19 16:18:03,084 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:18:03,087 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:18:03,087 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:18:03,088 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:18:03,088 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:18:03,095 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:18:03,097 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:18:03,097 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:18:03,097 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:18:03,097 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:18:03,097 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:18:03,100 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-19 16:18:05,198 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:18:05,201 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:18:05,201 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:18:05,201 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:18:05,201 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:18:05,202 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:18:05,203 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:18:05,204 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:18:05,204 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:18:05,204 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:18:05,204 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:18:05,206 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-19 16:18:05,484 django.request WARNING  Not Found: /favicon.ico
+2023-03-19 16:18:07,553 billing.views INFO     Function Name: search_orders
+2023-03-19 16:18:07,554 billing.views DEBUG    Received order_id: 
+2023-03-19 16:18:07,601 django.request ERROR    Internal Server Error: /search-orders
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 222, in search_orders
+    order = get_order_or_none(order_id)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/utils.py", line 16, in get_order_or_none
+    order = Order.objects.get(pk=order_id)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2023-03-19 16:18:08,688 billing.views INFO     Function Name: search_orders
+2023-03-19 16:18:08,688 billing.views DEBUG    Received order_id: 4
+2023-03-19 16:18:08,690 billing.views DEBUG    Order found
+2023-03-19 16:18:08,690 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:18:08,691 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:18:08,691 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:18:08,691 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:18:08,691 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:18:08,691 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:18:08,692 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-19 16:18:10,116 billing.views INFO     Function Name: search_orders
+2023-03-19 16:18:10,116 billing.views DEBUG    Received order_id: 
+2023-03-19 16:18:10,164 django.request ERROR    Internal Server Error: /search-orders
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 222, in search_orders
+    order = get_order_or_none(order_id)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/utils.py", line 16, in get_order_or_none
+    order = Order.objects.get(pk=order_id)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 636, in get
+    clone = self._chain() if self.query.combinator else self.filter(*args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1421, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1439, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1446, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/lookups.py", line 341, in get_prep_lookup
+    return super().get_prep_lookup()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/lookups.py", line 85, in get_prep_lookup
+    return self.lhs.output_field.get_prep_value(self.rhs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+ValueError: Field 'id' expected a number but got ''.
+2023-03-19 16:18:15,299 django.request ERROR    Internal Server Error: /update-order-status
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+TypeError: update_order_status() missing 1 required positional argument: 'order_id'
+2023-03-19 16:18:34,394 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:18:34,395 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:18:34,395 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:18:34,395 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:18:34,395 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:18:34,397 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:18:34,398 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:18:34,398 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:18:34,398 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:18:34,398 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:18:34,398 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:18:34,399 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-19 16:18:34,562 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 58, in index
+    return render(request, 'index.html', context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader_tags.py", line 208, in render
+    return template.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 177, in render
+    return self._render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader_tags.py", line 208, in render
+    return template.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 177, in render
+    return self._render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'update_order_status' with arguments '(4,)' not found. 1 pattern(s) tried: ['update\\-order\\-status\\Z']
+2023-03-19 16:18:34,674 django.request WARNING  Not Found: /favicon.ico
+2023-03-19 16:18:38,176 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:18:38,179 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:18:38,179 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:18:38,179 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:18:38,179 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:18:38,181 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:18:38,181 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:18:38,181 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:18:38,182 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:18:38,182 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:18:38,182 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:18:38,183 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-19 16:18:38,317 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 58, in index
+    return render(request, 'index.html', context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader_tags.py", line 208, in render
+    return template.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 177, in render
+    return self._render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader_tags.py", line 208, in render
+    return template.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 177, in render
+    return self._render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'update_order_status' with arguments '(4,)' not found. 1 pattern(s) tried: ['update\\-order\\-status\\Z']
+2023-03-19 16:20:04,999 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/urls.py changed, reloading.
+2023-03-19 16:20:10,955 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:20:10,958 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:20:10,958 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:20:10,958 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:20:10,958 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:20:10,964 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:20:10,964 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:20:10,965 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:20:10,965 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:20:10,965 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:20:10,965 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:20:10,967 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-19 16:20:11,228 django.request WARNING  Not Found: /favicon.ico
+2023-03-19 16:20:15,556 billing.views INFO     Function Name: update_order_status
+2023-03-19 16:20:15,557 billing.views DEBUG    Fetched order: {order.id} Requested order: {order_id}
+2023-03-19 16:20:15,557 billing.views DEBUG    Received order status: None
+2023-03-19 16:20:15,607 django.request ERROR    Internal Server Error: /update-order-status/4
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: billing_order.order_status
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 262, in update_order_status
+    order.save()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 976, in _save_table
+    updated = self._do_update(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 1040, in _do_update
+    return filtered._update(values) > 0
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1216, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: billing_order.order_status
+2023-03-19 16:21:01,474 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-19 16:21:02,997 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:21:03,000 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:21:03,000 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:21:03,000 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:21:03,001 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:21:03,009 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:21:03,010 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:21:03,010 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:21:03,011 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:21:03,011 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:21:03,011 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:21:03,014 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-19 16:21:03,280 django.request WARNING  Not Found: /favicon.ico
+2023-03-19 16:21:06,605 billing.views INFO     Function Name: update_order_status
+2023-03-19 16:21:06,606 billing.views DEBUG    Fetched order: 4 Requested order: 4
+2023-03-19 16:21:06,606 billing.views DEBUG    Received order status: None
+2023-03-19 16:21:06,655 django.request ERROR    Internal Server Error: /update-order-status/4
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: billing_order.order_status
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 262, in update_order_status
+    order.save()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 976, in _save_table
+    updated = self._do_update(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 1040, in _do_update
+    return filtered._update(values) > 0
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1216, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: billing_order.order_status
+2023-03-19 16:21:24,386 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:21:24,388 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:21:24,388 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:21:24,389 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:21:24,389 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:21:24,398 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:21:24,399 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:21:24,399 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:21:24,399 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:21:24,399 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:21:24,399 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:21:24,403 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-19 16:21:24,672 django.request WARNING  Not Found: /favicon.ico
+2023-03-19 16:21:29,338 billing.views INFO     Function Name: update_order_status
+2023-03-19 16:21:29,340 billing.views DEBUG    Fetched order: 4 Requested order: 4
+2023-03-19 16:21:29,341 billing.views DEBUG    Received order status: None
+2023-03-19 16:21:29,424 django.request ERROR    Internal Server Error: /update-order-status/4
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: billing_order.order_status
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 262, in update_order_status
+    order.save()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 976, in _save_table
+    updated = self._do_update(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/base.py", line 1040, in _do_update
+    return filtered._update(values) > 0
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/query.py", line 1216, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: billing_order.order_status
+2023-03-19 16:22:39,290 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:22:39,292 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:22:39,292 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:22:39,292 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:22:39,292 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:22:39,294 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:22:39,294 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:22:39,294 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:22:39,294 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:22:39,295 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:22:39,295 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:22:39,296 billing.context_processors DEBUG    Orders contains 4 orders from 4 to 1
+2023-03-19 16:22:39,554 django.request WARNING  Not Found: /favicon.ico
+2023-03-19 16:22:41,846 billing.views INFO     Function Name: update_order_status
+2023-03-19 16:22:41,848 billing.views DEBUG    Fetched order: 4 Requested order: 4
+2023-03-19 16:22:41,848 billing.views DEBUG    Received order status: Paid
+2023-03-19 16:22:41,920 billing.views INFO     Updated order 4 status to Paid
+2023-03-19 16:22:41,921 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:22:41,922 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:22:41,922 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:22:41,922 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:22:41,922 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:22:41,923 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:22:41,924 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-19 16:22:51,335 billing.views INFO     Function Name: update_order_status
+2023-03-19 16:22:51,337 billing.views DEBUG    Fetched order: 1 Requested order: 1
+2023-03-19 16:22:51,337 billing.views DEBUG    Received order status: Unpaid
+2023-03-19 16:22:51,403 billing.views INFO     Updated order 1 status to Unpaid
+2023-03-19 16:22:51,440 django.request ERROR    Internal Server Error: /update-order-status/1
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 268, in update_order_status
+    return render(request, 'partials/orders-search-results.html', context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: partials/orders-search-results.html
+2023-03-19 16:23:05,534 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:23:05,535 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:23:05,535 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:23:05,535 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:23:05,535 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:23:05,537 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:23:05,537 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:23:05,538 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:23:05,538 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:23:05,538 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:23:05,538 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:23:05,539 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-19 16:23:05,801 django.request WARNING  Not Found: /favicon.ico
+2023-03-19 16:23:09,265 billing.views INFO     Function Name: update_order_status
+2023-03-19 16:23:09,267 billing.views DEBUG    Fetched order: 3 Requested order: 3
+2023-03-19 16:23:09,267 billing.views DEBUG    Received order status: Waiting
+2023-03-19 16:23:09,269 billing.views INFO     Updated order 3 status to Waiting
+2023-03-19 16:23:09,332 django.request ERROR    Internal Server Error: /update-order-status/3
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 268, in update_order_status
+    return render(request, 'partials/orders-search-results.html', context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: partials/orders-search-results.html
+2023-03-19 16:23:11,180 billing.views INFO     Function Name: update_order_status
+2023-03-19 16:23:11,181 billing.views DEBUG    Fetched order: 3 Requested order: 3
+2023-03-19 16:23:11,181 billing.views DEBUG    Received order status: Paid
+2023-03-19 16:23:11,251 billing.views INFO     Updated order 3 status to Paid
+2023-03-19 16:23:11,251 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:23:11,252 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:23:11,252 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:23:11,252 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:23:11,252 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:23:11,252 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:23:11,253 billing.context_processors DEBUG    Orders contains 2 orders from 2 to 1
+2023-03-19 16:23:14,248 billing.views INFO     Function Name: update_order_status
+2023-03-19 16:23:14,250 billing.views DEBUG    Fetched order: 1 Requested order: 1
+2023-03-19 16:23:14,251 billing.views DEBUG    Received order status: Paid
+2023-03-19 16:23:14,637 billing.views INFO     Updated order 1 status to Paid
+2023-03-19 16:23:14,638 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:23:14,639 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:23:14,639 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:23:14,639 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:23:14,639 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:23:14,639 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:23:14,640 billing.context_processors DEBUG    Orders contains 1 orders from 2 to 2
+2023-03-19 16:23:16,253 billing.views INFO     Function Name: update_order_status
+2023-03-19 16:23:16,255 billing.views DEBUG    Fetched order: 2 Requested order: 2
+2023-03-19 16:23:16,255 billing.views DEBUG    Received order status: Paid
+2023-03-19 16:23:16,330 billing.views INFO     Updated order 2 status to Paid
+2023-03-19 16:23:16,331 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:23:16,332 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:23:16,332 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:23:16,332 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:23:16,332 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:23:16,333 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:23:16,334 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:25:09,694 billing.views DEBUG    Function Name: search_items
+2023-03-19 16:25:09,696 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:09,697 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:09,698 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:25:09,698 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:25:09,698 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:25:09,698 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:25:09,699 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:25:11,222 billing.views DEBUG    Function Name: add_item
+2023-03-19 16:25:11,222 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:11,223 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:11,223 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:25:11,223 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:25:11,223 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:25:11,223 billing.views DEBUG    Received order_id: 5
+2023-03-19 16:25:11,225 billing.views DEBUG    Received item Chicken Chilli
+2023-03-19 16:25:11,409 billing.views INFO     Created order_item Chicken Chilli for order 5
+2023-03-19 16:25:11,410 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:11,410 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:11,411 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:25:11,411 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:25:11,411 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:25:11,411 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:25:11,412 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:25:13,169 billing.views DEBUG    Function Name: search_items
+2023-03-19 16:25:13,171 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:13,172 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:13,172 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:25:13,172 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:25:13,172 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:25:13,172 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:25:13,173 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:25:14,584 billing.views DEBUG    Function Name: search_items
+2023-03-19 16:25:14,588 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:14,589 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:14,589 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:25:14,589 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:25:14,589 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:25:14,589 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:25:14,590 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:25:14,940 billing.views DEBUG    Function Name: search_items
+2023-03-19 16:25:14,942 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:14,942 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:14,942 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:25:14,942 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:25:14,942 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:25:14,942 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:25:14,943 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:25:15,061 billing.views DEBUG    Function Name: search_items
+2023-03-19 16:25:15,063 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:15,064 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:15,064 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:25:15,064 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:25:15,064 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:25:15,064 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:25:15,065 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:25:15,622 billing.views DEBUG    Function Name: search_items
+2023-03-19 16:25:15,625 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:15,626 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:15,626 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:25:15,626 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:25:15,626 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:25:15,626 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:25:15,627 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:25:17,618 billing.views DEBUG    Function Name: add_item
+2023-03-19 16:25:17,618 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:17,620 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:17,620 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:25:17,620 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:25:17,620 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:25:17,621 billing.views DEBUG    Received order_id: 5
+2023-03-19 16:25:17,623 billing.views DEBUG    Received item Black Tea
+2023-03-19 16:25:18,885 billing.views INFO     Created order_item Black Tea for order 5
+2023-03-19 16:25:18,886 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:18,886 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:18,887 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:25:18,887 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:25:18,887 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:25:18,887 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:25:18,888 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:25:18,999 billing.views DEBUG    Function Name: add_item
+2023-03-19 16:25:18,999 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:19,001 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:19,001 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:25:19,001 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:25:19,001 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:25:19,001 billing.views DEBUG    Received order_id: 5
+2023-03-19 16:25:19,004 billing.views DEBUG    Item Black Tea already in order 5
+2023-03-19 16:25:19,086 billing.views INFO     Updated order_item Black Tea for order 5
+2023-03-19 16:25:19,087 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:19,088 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:19,088 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:25:19,088 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:25:19,088 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:25:19,088 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:25:19,089 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:25:21,612 billing.views DEBUG    Function Name: add_item
+2023-03-19 16:25:21,612 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:21,614 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:21,614 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:25:21,614 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:25:21,614 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:25:21,614 billing.views DEBUG    Received order_id: 5
+2023-03-19 16:25:21,617 billing.views DEBUG    Item Black Tea already in order 5
+2023-03-19 16:25:21,688 billing.views INFO     Updated order_item Black Tea for order 5
+2023-03-19 16:25:21,689 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:21,690 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:21,690 billing.context_processors DEBUG    Total orders: 5 from 1 to 5
+2023-03-19 16:25:21,690 billing.context_processors INFO     Got last order: OrderId: 5 Table: 1
+2023-03-19 16:25:21,690 billing.context_processors INFO     new_order_id: 5
+2023-03-19 16:25:21,690 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:25:21,692 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:25:26,236 billing.views DEBUG    Function Name: create_order
+2023-03-19 16:25:26,237 billing.views DEBUG    Created Order 5
+2023-03-19 16:25:26,312 billing.views INFO     Saved order 5
+2023-03-19 16:25:26,379 billing.views DEBUG    Created new order 6
+2023-03-19 16:25:26,380 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:26,381 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:26,381 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-19 16:25:26,381 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-19 16:25:26,381 billing.context_processors INFO     new_order_id: 6
+2023-03-19 16:25:26,381 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:25:26,382 billing.context_processors DEBUG    Orders contains 1 orders from 5 to 5
+2023-03-19 16:25:31,373 billing.views INFO     Function Name: update_order_status
+2023-03-19 16:25:31,375 billing.views DEBUG    Fetched order: 5 Requested order: 5
+2023-03-19 16:25:31,376 billing.views DEBUG    Received order status: Waiting
+2023-03-19 16:25:31,377 billing.views INFO     Updated order 5 status to Waiting
+2023-03-19 16:25:31,438 django.request ERROR    Internal Server Error: /update-order-status/5
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 268, in update_order_status
+    return render(request, 'partials/orders-search-results.html', context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: partials/orders-search-results.html
+2023-03-19 16:25:58,734 billing.views INFO     Function Name: update_order_status
+2023-03-19 16:25:58,736 billing.views DEBUG    Fetched order: 5 Requested order: 5
+2023-03-19 16:25:58,737 billing.views DEBUG    Received order status: Paid
+2023-03-19 16:25:58,811 billing.views INFO     Updated order 5 status to Paid
+2023-03-19 16:25:58,812 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:25:58,813 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:25:58,813 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-19 16:25:58,813 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-19 16:25:58,813 billing.context_processors INFO     new_order_id: 6
+2023-03-19 16:25:58,813 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:25:58,815 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:26:17,107 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-19 16:26:25,113 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:26:25,115 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:26:25,115 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-19 16:26:25,116 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-19 16:26:25,116 billing.context_processors INFO     new_order_id: 6
+2023-03-19 16:26:25,125 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:26:25,126 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:26:25,126 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-19 16:26:25,126 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-19 16:26:25,126 billing.context_processors INFO     new_order_id: 6
+2023-03-19 16:26:25,126 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:26:25,129 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:26:28,527 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:26:28,529 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:26:28,529 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-19 16:26:28,529 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-19 16:26:28,529 billing.context_processors INFO     new_order_id: 6
+2023-03-19 16:26:28,530 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:26:28,531 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:26:28,531 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-19 16:26:28,531 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-19 16:26:28,531 billing.context_processors INFO     new_order_id: 6
+2023-03-19 16:26:28,531 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:26:28,532 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:26:29,904 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:26:29,906 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:26:29,907 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-19 16:26:29,907 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-19 16:26:29,907 billing.context_processors INFO     new_order_id: 6
+2023-03-19 16:26:29,909 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:26:29,910 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:26:29,911 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-19 16:26:29,911 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-19 16:26:29,911 billing.context_processors INFO     new_order_id: 6
+2023-03-19 16:26:29,911 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:26:29,912 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:26:30,179 django.request WARNING  Not Found: /favicon.ico
+2023-03-19 16:26:33,801 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-19 16:26:33,801 pizzeria_admin.views INFO     Received GET request
+2023-03-19 16:26:33,820 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:26:33,822 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:26:33,822 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-19 16:26:33,822 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-19 16:26:33,822 billing.context_processors INFO     new_order_id: 6
+2023-03-19 16:26:33,822 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:26:33,824 billing.context_processors DEBUG    Orders is empty
+2023-03-19 16:26:36,708 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-19 16:26:36,708 pizzeria_admin.views INFO     Received POST request
+2023-03-19 16:26:36,709 pizzeria_admin.views INFO     Received form data
+2023-03-19 16:26:36,709 pizzeria_admin.views INFO     Received POST request
+2023-03-19 16:26:36,709 pizzeria_admin.views INFO     Received form data
+2023-03-19 16:26:36,902 pizzeria_admin.views INFO     Form is valid
+2023-03-19 16:26:36,902 pizzeria_admin.views INFO     Form is valid
+2023-03-19 16:26:36,902 pizzeria_admin.views INFO     Got user
+2023-03-19 16:26:36,902 pizzeria_admin.views INFO     Got user
+2023-03-19 16:26:36,903 pizzeria_admin.views INFO     User exists!
+2023-03-19 16:26:36,903 pizzeria_admin.views INFO     User exists!
+2023-03-19 16:26:37,127 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-19 16:26:37,127 pizzeria_admin.views DEBUG    Method: GET
+2023-03-19 16:26:37,128 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 109. Cheese Fries - Rs. 130>, <Item: 108. Peri Peri Fries - Rs. 100>, <Item: 107. French Fries - Rs. 100>, <Item: 106. Cheese Pakoda - Rs. 70>, <Item: 105. Onion Pakoda - Rs. 70>, <Item: 104. Veg Pakoda - Rs. 60>, <Item: 103. Chicken Manchurian - Rs. 150>, <Item: 102. Veg Manchurian - Rs. 100>, <Item: 101. Pork Sausage - Rs. 160>, <Item: 100. Chicken Sausage - Rs. 150>, <Item: 99. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 98. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 97. Cold Chocolate - Rs. 50>, <Item: 96. Hot Chocolate - Rs. 70>, <Item: 95. Blue Lagoon Milkshake - Rs. 110>, <Item: 94. Blue Berry Milkshake - Rs. 90>, <Item: 93. Kiwi Milkshake - Rs. 90>, <Item: 92. Black Current Milkshake - Rs. 90>, <Item: 91. Mango Milkshake - Rs. 90>, <Item: 90. Strawberry Milkshake - Rs. 90>, '...(remaining elements truncated)...']>.
+2023-03-19 16:26:37,150 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 16:26:37,152 billing.context_processors INFO     There are orders in the database
+2023-03-19 16:26:37,152 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-19 16:26:37,152 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-19 16:26:37,152 billing.context_processors INFO     new_order_id: 6
+2023-03-19 16:26:37,152 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-19 16:26:37,153 billing.context_processors DEBUG    Orders is empty
+>>>>>>> fd9c538bef873d5969b25c6f43e1957a797a36dd

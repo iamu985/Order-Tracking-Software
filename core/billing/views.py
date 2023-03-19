@@ -265,4 +265,4 @@ def update_order_status(request, order_id):
     context = {
         'orders': orders
     }
-    return render(request, 'partials/orders-search-results.html', context)
+    return render(request, 'partials/order-search-results.html', context)

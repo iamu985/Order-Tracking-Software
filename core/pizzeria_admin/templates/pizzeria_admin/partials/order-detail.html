@@ -1,0 +1,101 @@
+{% include "base.html" %}
+{% block content %}
+    {% load static %}
+    {% load mathfilters %}
+    {% include "partials/header.html" %}
+    <link rel="stylesheet" href="{% static 'css/modal.css' %}">
+    <div class="container-fluid container-section-modal">
+        <div class="row">
+            <div class="col-md">
+                <a href="{% url 'pizzeria_admin:order_history' %}">
+                    <img src="{% static 'img/back.svg' %}" alt="Back" width="30px">
+                </a>
+                <div class="modal-heading">Order No: {{ order.id }}</div>
+                <hr>
+                <div>Items</div>
+                <hr>
+                <div class="table-responsive" style="max-height: 23rem;">
+                    <table class="table table-striped items-list-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">SN.</th>
+                                <th>Item Name</th>
+                                <th>Price</th>
+                                <th>Qnt</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        {% for orderitem in order.orderitem_set.all %}
+                            <tbody>
+                                <tr>
+                                    <th scope="row">{{ forloop.counter }}</th>
+                                    <td>{{ orderitem.item.name }}</td>
+                                    <td>₹{{ orderitem.item.price }}</td>
+                                    <td>{{ orderitem.quantity }}</td>
+                                    <td>₹{{ orderitem.item.price|mul:orderitem.quantity }}</td>
+                                </tr>
+                            </tbody>
+                        {% endfor %}
+                    </table>
+                </div>
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <th colspan=2>
+                                <input class="btn btn-primary" type="button" value="Edit">
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>Total</th>
+                            <th>Rs. {{ order.get_total_price }}</th>
+                        </tr>
+                    </tbody>
+                </table>
+                <div>Payment Method</div>
+                <div class="payment-method-section">
+                    <div class="payment-method-container">
+                        <input class="form-check-input"
+                               type="radio"
+                               name="payment-method"
+                               id="payment-unpaid"
+                               value="unpaid"
+                               checked>
+                        <label class="form-check-label" for="payment-unpaid">Unpaid</label>
+                    </div>
+                    <div class="payment-method-container">
+                        <input class="form-check-input"
+                               type="radio"
+                               name="payment-method"
+                               id="payment-cash"
+                               value="cash">
+                        <label class="form-check-label" for="payment-cash">Cash</label>
+                    </div>
+                    <div class="payment-method-container">
+                        <input class="form-check-input"
+                               type="radio"
+                               name="payment-method"
+                               id="payment-online"
+                               value="online">
+                        <label class="form-check-label" for="payment-online">Online</label>
+                    </div>
+                    <input type="button" class="btn btn-secondary save-print" value="Save">
+                    <input type="button"
+                           id="print-button"
+                           class="btn btn-secondary save-print"
+                           value="Print"
+                           disabled="true">
+                </div>
+            </div>
+        </div>
+        <script>
+        //Print Button remain disabled when Unpaid
+       $('input:radio[name="payment-method"]').change(function(){
+        if($(this).is(':checked') && $(this).val() != 'unpaid'){
+           $('#print-button').prop("disabled",false);
+        }
+        else{
+           $('#print-button').prop("disabled",true);
+        }
+       });
+        </script>
+    {% endblock content %}

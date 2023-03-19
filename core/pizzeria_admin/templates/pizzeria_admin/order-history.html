@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title %}
+    Order History
+{% endblock title %}
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/order-history.css' %}">
+    <header>
+        <nav class="navBar">
+        </nav>
+        <div class="container" id="top">
+            <div class="heading">Order History</div>
+            <div class="search">
+                <div class="bar">
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+            <div class="options">
+                <div class="title">Filter By:</div>
+                <div class="select">
+                    <input type="radio" name="option">
+                    <label>ID</label>
+                    <input type="radio" name="option">
+                    <label>Date</label>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="tableContainer">
+            <div class="tableHead">
+                <lable class="tableTitle">Order Number</lable>
+                <lable class="tableTitle">Time Stamp</lable>
+                <lable class="tableTitle">Payment Mode</lable>
+                <lable class="tableTitle">Total Price</lable>
+            </div>
+            <div class="data">
+                {% for order in orders %}
+                    <a href="{% url 'pizzeria_admin:order_detail' order.id %}">
+                        <div class="dataSet">
+                            <lable class="dataList">{{ order.id }}</lable>
+                            <lable class="dataList">{{ order.ordered_on }}</lable>
+                            <lable class="dataList">{{ order.get_payment_mode }}</lable>
+                            <lable class="dataList">{{ order.get_total_price }}</lable>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+            <div class="btn">
+                <button>View more</button>
+                <a href="#top" target="parent">
+                    <button>Back to top</button>
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
