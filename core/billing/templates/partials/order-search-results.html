@@ -16,14 +16,18 @@
                         <td>{{ order.get_total_price }}</td>
                         <!-- Status Section -->
                         <td>
-                            <select class="form-select form-control select-status" aria-label="Status">
-                                <option value="unpaid">
-                                    Unpaid
+                            <select class="form-select form-control select-status"
+                                    aria-label="Status"
+                                    hx-post="{% url 'billing:update_order_status' order.id %}"
+                                    hx-target="#search-order"
+                                    name='order-status'>
+                                <option value="Waiting">
+                                    Waiting
                                 </option>
                                 <option value="Paid">
                                     Paid
                                 </option>
-                                <option value="delivered" selected>
+                                <option value="Delivered" selected>
                                     Delivered
                                 </option>
                             </select>
