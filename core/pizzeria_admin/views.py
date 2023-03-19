@@ -3,6 +3,7 @@ import random
 
 from django.shortcuts import render, redirect
 from django.conf import settings
+from django.db.models import Q
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
@@ -175,3 +176,21 @@ def delete_item_from_model(request, item_id):
         'items': items,
     }
     return render(request, 'pizzeria_admin/partials/show-all-items.html', context)
+
+
+@login_required
+def order_history(request):
+    orders = Order.objects.all().filter(Q(is_paid=True) & Q(is_new=False))
+    context = {
+        'orders': orders
+    }
+    return render(request, 'pizzeria_admin/order-history.html', context)
+
+
+@login_required
+def order_detail_view(request, order_id):
+    order = Order.objects.get(pk=order_id)
+    context = {
+        'order': order
+    }
+    return render(request, 'pizzeria_admin/partials/order-detail.html', context)

@@ -7,6 +7,9 @@ urlpatterns = [
     path('', views.pizzeria_admin, name="admin"),
     path('statistics/', views.statistics, name="statistics"),
     path('admin-logout/', views.admin_logout, name="logout"),
+    path('order-history', views.order_history, name="order_history"),
+    path('order-detail/<int:order_id>',
+         views.order_detail_view, name="order_detail"),
 
 ]
 
