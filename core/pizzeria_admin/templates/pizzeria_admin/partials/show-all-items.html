@@ -1,0 +1,18 @@
+{% for item in items %}
+  
+    <div class="tableItems" id="items">
+        
+        <div class="tableData">{{ forloop.counter }}</div>
+        <div class="tableData">{{ item.name }}</div>
+        <div class="tableData">{{ item.price }}</div>
+        <div class="tableData">
+            <button class="button1" >Update</button>
+                <button  hx-post="{% url 'pizzeria_admin:delete_item_from_model' item.id %}"
+                        hx-trigger="click"
+                        hx-target="#items"
+                        hx-swap="outerHTML">
+                    Delete
+                 </button>
+        </div>
+    </div>
+{% endfor %}

@@ -1,0 +1,15 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/recent-orders-section.css' %}">
+<div class="recent-order-heading">Recent Orders</div>
+{% comment %} Searchbar {% endcomment %}
+<form action="#">
+  <input type="search"
+         class="form-control me-2 recent-order-search"
+         aria-label="Search"
+         placeholder="Search Orders"
+         hx-post="{% url 'billing:search_orders' %}"
+         hx-trigger="focus, keyup changed"
+         hx-target="#search-order"
+         name="order-id">
+</form>
+{% include 'partials/order-search-results.html' %}
