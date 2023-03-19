@@ -21,12 +21,13 @@ $(document).ready(function () {
         searchTarget.animate({ height: 'show' }, 200);
     });
 
-
     // Search Bar on Focusout
     searchBar.on('blur', function () {
         searchBar.val('');
 
     });
+
+
 
     /* Keypress Events*/
     $(document).keydown(function (event) {
@@ -51,8 +52,10 @@ $(document).ready(function () {
             istab = true;
         }
 
+
         if (istab) {
             let max = $("#search-bar004-target ul li").length;
+
             let half = Math.round(max / 2);
 
             if (event.which === 40 && pointer < max - 1) { /* down arrow */
