@@ -2,6 +2,7 @@ from .models import Order
 from datetime import datetime
 import logging
 from django.conf import settings
+from django.db.models import Q
 
 
 LOG_DIR = settings.BASE_DIR / 'logs'
@@ -70,7 +71,8 @@ def new_order_id(request):
 def all_orders(request):
     logger.debug("Function Name: all_orders")
     #  Returns all orders
-    orders = Order.objects.filter(is_new=False).order_by('-ordered_on')
+    orders = Order.objects.filter(Q(is_paid=False) & Q(
+        is_new=False)).order_by('-ordered_on')
     if orders:
         logger.debug(
             f'Orders contains {len(orders)} orders from {orders[0].id} to {orders[len(orders) - 1].id}')
