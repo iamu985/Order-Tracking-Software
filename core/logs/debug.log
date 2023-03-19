@@ -17446,3 +17446,8 @@ ValueError: Field 'id' expected a number but got ''.
 2023-03-19 14:32:02,576 billing.context_processors INFO     new_order_id: 4
 2023-03-19 14:32:02,576 billing.context_processors DEBUG    Function Name: all_orders
 2023-03-19 14:32:02,579 billing.context_processors DEBUG    Orders contains 3 orders from 3 to 1
+2023-03-19 20:53:34,666 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-19 20:53:34,666 billing.context_processors INFO     There are orders in the database
+2023-03-19 20:53:34,666 billing.context_processors DEBUG    Total orders: 4 from 1 to 4
+2023-03-19 20:53:34,666 billing.context_processors INFO     Got last order: OrderId: 4 Table: 1
+2023-03-19 20:53:34,666 billing.context_processors INFO     new_order_id: 4
