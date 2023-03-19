@@ -49,6 +49,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'billing.context_processors.new_order_id',
                 'billing.context_processors.all_orders',
+                'pizzeria_admin.context_processors.get_chart_data'
             ],
         },
     },

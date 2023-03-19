@@ -41,6 +41,28 @@ def get_random_date():
     return datetime.date(year, month, day)
 
 
+def generate_dummy_daily_orders(limit_per_day=50):
+    items = Item.objects.all()
+    for i in range(1, 31):
+        random_limit_per_day = random.randint(1, limit_per_day)
+        for j in range(random_limit_per_day):
+            order = Order.objects.create(
+                ordered_on=datetime.date(2021, 1, i),
+                order_status="Paid"
+            )
+            item = random.choice(items)
+            order_item = OrderItem.objects.create(
+                order=order,
+                item=item,
+                quantity=random.randint(1, 5)
+            )
+            order_item.save()
+            order.is_new = False
+            order.save()
+            print(
+                f'Day: {i} Order: {j} LimitPerDay: {random_limit_per_day} Created', end="\r")
+
+
 def generate_dummy_orders(limit=100):
     items = Item.objects.all()
     item_limit = random.randint(1, 8)
@@ -62,3 +84,62 @@ def generate_dummy_orders(limit=100):
             order.save()
             print(
                 f'Order {i} Item {j} Created|Order.isNew={order.is_new}', end="\r")
+
+
+def get_min_max_year():
+    # Returns a tuple containing the min and max year
+    # to be used while rendering the statistics page
+    CURRENT_YEAR = get_present_year()
+    remainder = CURRENT_YEAR % 10
+    min_year = CURRENT_YEAR - remainder
+    max_year = min_year + 10
+    return min_year, max_year
+
+
+def make_new_year_range():
+    # Returns a generator range object for the range of years
+    # to be used while rendering the statistics page
+    min_year, max_year = get_min_max_year()
+    return range(min_year, max_year+1)
+
+
+def get_daily_data():
+    # Returns a tuple containing the labels and data
+    # for the daily chart
+    month = get_present_month()
+    orders_by_month = Order.objects.filter(ordered_on__month=month)
+    label = [i for i in generate_labels_for_month(month)]
+    data = [len(orders_by_month.filter(ordered_on__day=i))
+            for i in range(1, 31)]
+    return label, data
+
+
+def get_weekly_data():
+    # Returns a tuple containing the labels and data
+    # for the weekly chart
+    month = get_present_month()
+    orders_by_month = Order.objects.filter(ordered_on__month=month)
+    label = ['Monday', 'Tuesday', 'Wednesday',
+             'Thursday', 'Friday', 'Saturday', 'Sunday']
+    data = [len(orders_by_month.filter(ordered_on__day=i))
+            for i in range(1, 8)]
+    return label, data
+
+
+def get_monthly_data():
+    # Returns a tuple containing the labels and data
+    # for the monthly chart
+    orders = Order.objects.all()
+    label = ['Jan', 'Feb', 'Mar', 'Apr', 'May',
+             'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    data = [len(orders.filter(ordered_on__month=i)) for i in range(1, 13)]
+    return label, data
+
+
+def get_yearly_data():
+    # Returns a tuple containing the labels and data
+    # for the yearly chart
+    orders = Order.objects.all()
+    label = list(make_new_year_range())
+    data = [len(orders.filter(ordered_on__year=i)) for i in label]
+    return label, data

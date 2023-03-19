@@ -1,4 +1,5 @@
 import logging
+import random
 
 from django.shortcuts import render, redirect
 from django.conf import settings
@@ -10,7 +11,9 @@ from django.views.decorators.csrf import csrf_exempt
 from billing.models import Order, Item, OrderItem
 from billing.context_processors import new_order_id
 from .forms import CreateNewItemForm
-from .utils import get_present_month, generate_labels_for_month
+from .utils import (get_present_month,
+                    generate_labels_for_month,
+                    make_new_year_range)
 
 # All admin related views here
 
@@ -152,19 +155,12 @@ def admin_logout(request):
 
 @login_required
 def statistics(request):
-    orders = Order.objects.all()
-    month = get_present_month()
-    label = [i for i in generate_labels_for_month(month)]
-    data = orders.filter(ordered_on__month=month)
-    context = {
-        'label': label,
-        'data': data,
-    }
-    return render(request, 'pizzeria_admin/statistics.html', context)
+    logger.info('Function Name: statistics')
+    return render(request, 'pizzeria_admin/statistics.html')
 
 
-@csrf_exempt
-@login_required
+@ csrf_exempt
+@ login_required
 def delete_item_from_model(request, item_id):
     logger.info('Function Name: delete_item_from_model')
     form = CreateNewItemForm
