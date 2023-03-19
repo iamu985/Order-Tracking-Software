@@ -5,10 +5,8 @@
 {% block content %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/order-history.css' %}">
-    <header>
-        <nav class="navBar">
-        </nav>
-        <div class="container" id="top">
+    
+        <div class="headContainer" id="top">
             <div class="heading">Order History</div>
             <div class="search">
                 <div class="bar">
@@ -24,8 +22,11 @@
                     <label>Date</label>
                 </div>
             </div>
+            <button class="goback">
+                <img src="{% static 'img/back.svg' %}" alt="back" width="30px">
+                </button>
+          
         </div>
-    </header>
     <section>
         <div class="tableContainer">
             <div class="tableHead">
@@ -38,18 +39,18 @@
                 {% for order in orders %}
                     <a href="{% url 'pizzeria_admin:order_detail' order.id %}">
                         <div class="dataSet">
-                            <lable class="dataList">{{ order.id }}</lable>
-                            <lable class="dataList">{{ order.ordered_on }}</lable>
-                            <lable class="dataList">{{ order.get_payment_mode }}</lable>
-                            <lable class="dataList">{{ order.get_total_price }}</lable>
+                            <div class="dataList">{{ order.id }}</div>
+                            <div class="dataList">{{ order.ordered_on }}</div>
+                            <div class="dataList">{{ order.get_payment_mode }}</div>
+                            <div class="dataList">₹{{ order.get_total_price }}</div>
                         </div>
                     </a>
                 {% endfor %}
             </div>
-            <div class="btn">
-                <button>View more</button>
+            <div class="optionBtn">
+                <button class="option">View more</button>
                 <a href="#top" target="parent">
-                    <button>Back to top</button>
+                    <button class="option">Back to top</button>
                 </a>
             </div>
         </div>
