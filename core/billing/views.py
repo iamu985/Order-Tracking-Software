@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 # from django.http import JsonResponse
 from .models import Order, Item, OrderItem
 from .context_processors import new_order_id
-from .utils import delete_order_item
+from .utils import delete_order_item, get_order_or_none
 from .receipt_printer import print_receipt
 import re
 from django.conf import settings
@@ -211,3 +211,23 @@ def print_receipt_view(request, order_id):
         'order': order,
     }
     return render(request, 'partials/modal-recent-order.html')
+
+
+@csrf_exempt
+def search_orders(request):
+    logger.info('Function Name: search_orders')
+    order_id = request.POST.get('order-id')
+    logger.debug(f'Received order_id: {order_id}')
+    order = get_order_or_none(order_id)
+    if order:
+        logger.debug('Order found')
+        context = {
+            'orders': [order],
+        }
+        return render(request, 'partials/order-search-results.html', context)
+    else:
+        logger.warn('Order Not Found')
+        context = {
+            'message': 'No orders found',
+        }
+        return render(request, 'partials/order-search-results.html', context)

@@ -1,5 +1,6 @@
 import pytest
 from .models import Order, Item
+from .utils import get_order_or_none, delete_order_item
 
 
 @pytest.mark.django_db
@@ -38,3 +39,17 @@ class TestModels:
         orderObj = Order.objects.create()
         obj1 = Item.objects.create(name='Test', price=100)
         assert obj1.price == 100
+
+
+@pytest.mark.django_db
+class TestUtils:
+    def test_get_order_or_none_true(self):
+        order_id = 1
+        new_order = Order.objects.create(pk=order_id)
+        order = get_order_or_none(order_id)
+        assert order.id == 1
+
+    def test_get_order_or_none_false(self):
+        order_id = 0
+        order = get_order_or_none(order_id)
+        assert order == None

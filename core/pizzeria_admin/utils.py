@@ -4,6 +4,7 @@ from billing.models import Item, Order, OrderItem
 
 
 def get_present_month():
+    # returns present month
     return datetime.datetime.today().month
 
 
