@@ -39,6 +39,14 @@ class Order(models.Model):
         """
         return sum([order_item.get_price() for order_item in self.orderitem_set.all()])
 
+    def get_payment_mode(self):
+        '''
+        returns the payment mode of the order.
+        if paid_online is True, it returns 'Online'
+        else it returns 'Cash'
+        '''
+        return 'Online' if self.paid_online else 'Cash'
+
     def __str__(self):
         return f"OrderId: {self.pk} Table: {self.table_number}"
 
