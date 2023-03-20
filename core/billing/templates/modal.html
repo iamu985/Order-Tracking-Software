@@ -83,7 +83,9 @@
                            id="print-button"
                            class="btn btn-secondary save-print"
                            value="Print"
-                           disabled="true">
+                           disabled="true"
+                           hx-post="{% url 'billing:print_receipt' order.id %}"
+                           hx-trigger="click">
                 </div>
             </div>
         </div>

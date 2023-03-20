@@ -205,6 +205,7 @@ def modal_view(request, order_id):
 @csrf_exempt
 def print_receipt_view(request, order_id):
     logger.debug('Function: print_receipt_view')
+    logger.info(f'OrderId: {order_id}')
     order = Order.objects.get(pk=order_id)
     logger.debug('Function: print_receipt_view')
     print_receipt(order)
