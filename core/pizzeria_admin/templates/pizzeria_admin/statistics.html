@@ -9,13 +9,14 @@
         <link rel="stylesheet" href="{% static 'css/statistics-page.css' %}">
     </head>
     <body>
-        {% comment %} {% include 'pizzeria_admin/partials/admin-navbar.html' %} {% endcomment %}
         <section class="content">
             <div class="headContainer">
-            <h1 class="heading">Statstics</h1>
-            <button class="back">
-            <img src="{% static 'img/back.svg' %}" alt="back" width="30px">
-            </button>
+                <h1 class="heading">Statstics</h1>
+                <form action="{% url 'pizzeria_admin:admin' %}">
+                    <button class="back">
+                        <img src="{% static 'img/back.svg' %}" alt="back" width="30px">
+                    </button>
+                </form>
             </div>
             <div class="cards">
                 <div class="sales">

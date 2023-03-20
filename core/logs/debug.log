@@ -25403,3 +25403,927 @@ django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 26: 's
 2023-03-20 00:49:15,212 billing.context_processors INFO     new_order_id: 6
 2023-03-20 00:49:15,212 billing.context_processors DEBUG    Function Name: all_orders
 2023-03-20 00:49:15,212 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 11:23:32,014 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 11:23:32,017 billing.context_processors INFO     There are orders in the database
+2023-03-20 11:23:32,017 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 11:23:32,017 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 11:23:32,017 billing.context_processors INFO     new_order_id: 6
+2023-03-20 11:23:32,028 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 11:23:32,029 billing.context_processors INFO     There are orders in the database
+2023-03-20 11:23:32,029 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 11:23:32,029 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 11:23:32,029 billing.context_processors INFO     new_order_id: 6
+2023-03-20 11:23:32,029 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 11:23:32,031 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 11:23:32,534 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 11:23:43,057 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-20 11:23:43,058 pizzeria_admin.views INFO     Received GET request
+2023-03-20 11:23:43,061 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 11:23:43,065 billing.context_processors INFO     There are orders in the database
+2023-03-20 11:23:43,066 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 11:23:43,066 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 11:23:43,066 billing.context_processors INFO     new_order_id: 6
+2023-03-20 11:23:43,066 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 11:23:43,070 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 11:23:45,400 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-20 11:23:45,400 pizzeria_admin.views INFO     Received POST request
+2023-03-20 11:23:45,401 pizzeria_admin.views INFO     Received form data
+2023-03-20 11:23:45,401 pizzeria_admin.views INFO     Received POST request
+2023-03-20 11:23:45,401 pizzeria_admin.views INFO     Received form data
+2023-03-20 11:23:45,537 pizzeria_admin.views INFO     Form is valid
+2023-03-20 11:23:45,537 pizzeria_admin.views INFO     Form is valid
+2023-03-20 11:23:45,537 pizzeria_admin.views INFO     Got user
+2023-03-20 11:23:45,537 pizzeria_admin.views INFO     Got user
+2023-03-20 11:23:45,537 pizzeria_admin.views INFO     User exists!
+2023-03-20 11:23:45,537 pizzeria_admin.views INFO     User exists!
+2023-03-20 11:23:45,757 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-20 11:23:45,757 pizzeria_admin.views DEBUG    Method: GET
+2023-03-20 11:23:45,759 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 105. Cheese Pakoda - Rs. 70>, <Item: 104. Onion Pakoda - Rs. 70>, <Item: 103. Veg Pakoda - Rs. 60>, <Item: 102. Chicken Manchurian - Rs. 150>, <Item: 101. Veg Manchurian - Rs. 100>, <Item: 100. Pork Sausage - Rs. 160>, <Item: 99. Chicken Sausage - Rs. 150>, <Item: 98. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 97. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 96. Cold Chocolate - Rs. 50>, <Item: 95. Hot Chocolate - Rs. 70>, <Item: 94. Blue Lagoon Milkshake - Rs. 110>, <Item: 93. Blue Berry Milkshake - Rs. 90>, <Item: 92. Kiwi Milkshake - Rs. 90>, <Item: 91. Black Current Milkshake - Rs. 90>, <Item: 90. Mango Milkshake - Rs. 90>, <Item: 89. Strawberry Milkshake - Rs. 90>, <Item: 88. Oreo Milkshake - Rs. 90>, <Item: 87. Chicken Cheese Sandwich(Grilled) - Rs. 100>, <Item: 86. Chicken Cheese Sandwich(Non Grilled) - Rs. 80>, '...(remaining elements truncated)...']>.
+2023-03-20 11:23:45,762 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 11:23:45,763 billing.context_processors INFO     There are orders in the database
+2023-03-20 11:23:45,764 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 11:23:45,764 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 11:23:45,764 billing.context_processors INFO     new_order_id: 6
+2023-03-20 11:23:45,764 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 11:23:45,765 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 11:23:51,785 pizzeria_admin.views INFO     Function Name: statistics
+2023-03-20 11:23:51,787 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 11:23:51,788 billing.context_processors INFO     There are orders in the database
+2023-03-20 11:23:51,789 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 11:23:51,789 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 11:23:51,789 billing.context_processors INFO     new_order_id: 6
+2023-03-20 11:23:51,789 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 11:23:51,791 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 11:26:02,144 django.request WARNING  Not Found: /accounts/login/
+2023-03-20 11:28:06,817 pizzeria_admin.views INFO     Function Name: statistics
+2023-03-20 11:28:06,819 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 11:28:06,819 billing.context_processors INFO     There are orders in the database
+2023-03-20 11:28:06,819 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 11:28:06,820 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 11:28:06,820 billing.context_processors INFO     new_order_id: 6
+2023-03-20 11:28:06,820 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 11:28:06,821 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 11:28:07,163 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 11:29:38,498 pizzeria_admin.views INFO     Function Name: statistics
+2023-03-20 11:29:38,501 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 11:29:38,502 billing.context_processors INFO     There are orders in the database
+2023-03-20 11:29:38,502 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 11:29:38,502 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 11:29:38,503 billing.context_processors INFO     new_order_id: 6
+2023-03-20 11:29:38,503 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 11:29:38,504 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 11:29:38,829 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 11:30:03,889 pizzeria_admin.views INFO     Function Name: statistics
+2023-03-20 11:30:03,890 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 11:30:03,891 billing.context_processors INFO     There are orders in the database
+2023-03-20 11:30:03,891 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 11:30:03,891 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 11:30:03,891 billing.context_processors INFO     new_order_id: 6
+2023-03-20 11:30:03,891 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 11:30:03,892 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 11:30:04,196 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 12:30:52,221 pizzeria_admin.views INFO     Function Name: statistics
+2023-03-20 12:30:52,223 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:30:52,225 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:30:52,225 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:30:52,225 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:30:52,225 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:30:52,225 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:30:52,227 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:30:52,439 django.request ERROR    Internal Server Error: /pizzeria-admin/statistics/
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/pizzeria_admin/views.py", line 160, in statistics
+    return render(request, 'pizzeria_admin/statistics.html')
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'pizzeria_admin' not found. 'pizzeria_admin' is not a valid view function or pattern name.
+2023-03-20 12:30:52,577 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 12:31:10,054 pizzeria_admin.views INFO     Function Name: statistics
+2023-03-20 12:31:10,054 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:31:10,055 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:31:10,056 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:31:10,056 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:31:10,056 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:31:10,056 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:31:10,058 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:31:10,193 django.request ERROR    Internal Server Error: /pizzeria-admin/statistics/
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/pizzeria_admin/views.py", line 160, in statistics
+    return render(request, 'pizzeria_admin/statistics.html')
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'pizzeria_admin' not found. 'pizzeria_admin' is not a valid view function or pattern name.
+2023-03-20 12:31:10,254 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 12:31:13,012 pizzeria_admin.views INFO     Function Name: statistics
+2023-03-20 12:31:13,013 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:31:13,015 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:31:13,015 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:31:13,015 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:31:13,015 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:31:13,015 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:31:13,016 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:31:15,055 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-20 12:31:15,055 pizzeria_admin.views DEBUG    Method: GET
+2023-03-20 12:31:15,057 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 105. Cheese Pakoda - Rs. 70>, <Item: 104. Onion Pakoda - Rs. 70>, <Item: 103. Veg Pakoda - Rs. 60>, <Item: 102. Chicken Manchurian - Rs. 150>, <Item: 101. Veg Manchurian - Rs. 100>, <Item: 100. Pork Sausage - Rs. 160>, <Item: 99. Chicken Sausage - Rs. 150>, <Item: 98. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 97. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 96. Cold Chocolate - Rs. 50>, <Item: 95. Hot Chocolate - Rs. 70>, <Item: 94. Blue Lagoon Milkshake - Rs. 110>, <Item: 93. Blue Berry Milkshake - Rs. 90>, <Item: 92. Kiwi Milkshake - Rs. 90>, <Item: 91. Black Current Milkshake - Rs. 90>, <Item: 90. Mango Milkshake - Rs. 90>, <Item: 89. Strawberry Milkshake - Rs. 90>, <Item: 88. Oreo Milkshake - Rs. 90>, <Item: 87. Chicken Cheese Sandwich(Grilled) - Rs. 100>, <Item: 86. Chicken Cheese Sandwich(Non Grilled) - Rs. 80>, '...(remaining elements truncated)...']>.
+2023-03-20 12:31:15,057 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:31:15,058 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:31:15,058 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:31:15,059 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:31:15,059 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:31:15,059 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:31:15,060 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:32:51,556 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:32:51,556 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:32:51,556 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:32:51,557 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:32:51,557 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:32:51,635 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:32:51,636 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:32:51,636 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:32:51,636 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:32:51,636 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:32:51,636 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:32:51,637 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:32:53,405 billing.views DEBUG    Function: modal_view
+2023-03-20 12:32:53,406 billing.views DEBUG    Got order: 4 Reqeuested Order: 4
+2023-03-20 12:32:53,408 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:32:53,408 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:32:53,408 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:32:53,408 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:32:53,408 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:32:53,408 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:32:53,410 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:36:15,123 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-20 12:36:34,228 billing.views DEBUG    Function: modal_view
+2023-03-20 12:36:34,232 billing.views DEBUG    Got order: 4 Reqeuested Order: 4
+2023-03-20 12:36:34,242 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:36:34,243 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:36:34,244 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:36:34,244 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:36:34,244 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:36:34,244 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:36:34,246 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:36:34,502 django.request ERROR    Internal Server Error: /modal/4
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 202, in modal_view
+    return render(request, 'modal.html', context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'print_receipt' with no arguments not found. 1 pattern(s) tried: ['print\\-receipt/(?P<order_id>[0-9]+)\\Z']
+2023-03-20 12:36:34,617 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 12:37:21,451 django.request WARNING  Not Found: /accounts/login/
+2023-03-20 12:37:21,492 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 12:37:27,210 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:37:27,213 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:37:27,213 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:37:27,213 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:37:27,213 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:37:27,218 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:37:27,220 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:37:27,220 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:37:27,221 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:37:27,221 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:37:27,221 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:37:27,223 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:37:28,186 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:37:28,188 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:37:28,188 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:37:28,188 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:37:28,188 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:37:28,189 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:37:28,190 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:37:28,190 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:37:28,190 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:37:28,190 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:37:28,190 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:37:28,192 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:37:28,447 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 12:37:30,358 billing.views DEBUG    Function: modal_view
+2023-03-20 12:37:30,360 billing.views DEBUG    Got order: 4 Reqeuested Order: 4
+2023-03-20 12:37:30,362 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:37:30,363 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:37:30,363 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:37:30,363 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:37:30,364 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:37:30,364 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:37:30,366 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:37:30,521 django.request ERROR    Internal Server Error: /modal/4
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 202, in modal_view
+    return render(request, 'modal.html', context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/backends/django.py", line 61, in render
+    return self.template.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/defaulttags.py", line 471, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'print_receipt' with no arguments not found. 1 pattern(s) tried: ['print\\-receipt/(?P<order_id>[0-9]+)\\Z']
+2023-03-20 12:37:42,793 billing.views DEBUG    Function: modal_view
+2023-03-20 12:37:42,795 billing.views DEBUG    Got order: 4 Reqeuested Order: 4
+2023-03-20 12:37:42,797 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:37:42,798 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:37:42,799 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:37:42,799 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:37:42,799 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:37:42,799 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:37:42,800 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:37:43,067 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 12:39:11,044 billing.views DEBUG    Function: modal_view
+2023-03-20 12:39:11,047 billing.views DEBUG    Got order: 4 Reqeuested Order: 4
+2023-03-20 12:39:11,049 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:39:11,050 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:39:11,050 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:39:11,051 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:39:11,051 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:39:11,051 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:39:11,052 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:39:11,320 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 12:40:14,563 django.utils.autoreload INFO     /home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py changed, reloading.
+2023-03-20 12:40:17,513 billing.views DEBUG    Function: modal_view
+2023-03-20 12:40:17,516 billing.views DEBUG    Got order: 4 Reqeuested Order: 4
+2023-03-20 12:40:17,528 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:40:17,529 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:40:17,529 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:40:17,529 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:40:17,529 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:40:17,529 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:40:17,531 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:40:17,810 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 12:41:42,969 billing.views DEBUG    Function: modal_view
+2023-03-20 12:41:42,971 billing.views DEBUG    Got order: 4 Reqeuested Order: 4
+2023-03-20 12:41:42,972 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:41:42,973 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:41:42,973 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:41:42,973 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:41:42,973 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:41:42,973 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:41:42,974 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:41:43,243 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 12:41:47,075 billing.views DEBUG    Function: print_receipt_view
+2023-03-20 12:41:47,076 billing.views INFO     OrderId: 4
+2023-03-20 12:41:47,078 billing.views DEBUG    Function: print_receipt_view
+2023-03-20 12:41:47,378 django.request ERROR    Internal Server Error: /print-receipt/4
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 211, in print_receipt_view
+    print_receipt(order)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/receipt_printer.py", line 53, in print_receipt
+    p = Usb(A, B, INTERFACE, EP_IN, EP_OUT)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/escpos/printer.py", line 51, in __init__
+    self.open()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/escpos/printer.py", line 57, in open
+    raise USBNotFoundError("Device not found or cable not plugged in.")
+escpos.exceptions.USBNotFoundError: USB device not found
+2023-03-20 12:46:43,999 billing.views DEBUG    Function: modal_view
+2023-03-20 12:46:44,003 billing.views DEBUG    Got order: 4 Reqeuested Order: 4
+2023-03-20 12:46:44,015 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:46:44,016 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:46:44,016 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:46:44,016 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:46:44,016 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:46:44,016 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:46:44,018 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:46:44,273 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 12:46:47,754 billing.views DEBUG    Function: print_receipt_view
+2023-03-20 12:46:47,754 billing.views INFO     OrderId: 4
+2023-03-20 12:46:47,755 billing.views DEBUG    Function: print_receipt_view
+2023-03-20 12:46:48,063 billing.receipt_printer DEBUG    Function: print_receipt
+2023-03-20 12:46:48,063 billing.receipt_printer DEBUG    Printing receipt
+2023-03-20 12:46:48,063 billing.receipt_printer INFO     Function: get_logo
+2023-03-20 12:46:48,192 django.request ERROR    Internal Server Error: /print-receipt/4
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 215, in print_receipt_view
+    return render(request, 'partials/modal-recent-order.html')
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: partials/modal-recent-order.html
+2023-03-20 12:47:56,168 billing.views DEBUG    Function: modal_view
+2023-03-20 12:47:56,170 billing.views DEBUG    Got order: 4 Reqeuested Order: 4
+2023-03-20 12:47:56,170 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:47:56,171 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:47:56,171 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:47:56,171 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:47:56,171 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:47:56,171 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:47:56,173 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:47:56,415 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 12:48:01,050 billing.views DEBUG    Function: print_receipt_view
+2023-03-20 12:48:01,050 billing.views INFO     OrderId: 4
+2023-03-20 12:48:01,052 billing.views DEBUG    Function: print_receipt_view
+2023-03-20 12:48:01,335 billing.receipt_printer DEBUG    Function: print_receipt
+2023-03-20 12:48:01,336 billing.receipt_printer DEBUG    Printing receipt
+2023-03-20 12:48:01,336 billing.receipt_printer INFO     Function: get_logo
+2023-03-20 12:48:01,407 django.request ERROR    Internal Server Error: /print-receipt/4
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 215, in print_receipt_view
+    return render(request, 'partials/modal-recent-order.html')
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: partials/modal-recent-order.html
+2023-03-20 12:48:57,235 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:48:57,237 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:48:57,237 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:48:57,237 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:48:57,237 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:48:57,239 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:48:57,240 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:48:57,240 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:48:57,240 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:48:57,240 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:48:57,240 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:48:57,242 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:48:58,570 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:48:58,572 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:48:58,573 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:48:58,574 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:48:58,574 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:48:58,574 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:48:58,574 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:48:58,576 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:01,068 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:01,070 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:01,071 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:01,071 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:01,071 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:01,071 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:01,071 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:01,072 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:01,190 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:01,193 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:01,194 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:01,194 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:01,195 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:01,195 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:01,195 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:01,196 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:01,301 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:01,304 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:01,304 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:01,304 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:01,304 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:01,304 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:01,305 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:01,305 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:02,470 billing.views DEBUG    Function Name: add_item
+2023-03-20 12:49:02,470 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:02,471 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:02,471 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:02,471 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:02,471 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:02,471 billing.views DEBUG    Received order_id: 6
+2023-03-20 12:49:02,473 billing.views DEBUG    Received item Chicken Momo
+2023-03-20 12:49:02,738 billing.views INFO     Created order_item Chicken Momo for order 6
+2023-03-20 12:49:02,738 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:02,739 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:02,739 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:02,739 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:02,739 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:02,740 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:02,741 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:05,509 billing.views DEBUG    Function Name: delete_item
+2023-03-20 12:49:05,611 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:05,613 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:05,613 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:05,613 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:05,613 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:05,613 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:05,615 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:06,945 billing.views DEBUG    Function Name: delete_item
+2023-03-20 12:49:07,017 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:07,018 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:07,019 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:07,019 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:07,019 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:07,019 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:07,021 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:08,095 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:08,097 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:08,098 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:08,098 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:08,098 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:08,098 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:08,098 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:08,099 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:08,979 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:08,982 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:08,983 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:08,983 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:08,983 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:08,983 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:08,983 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:08,984 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:09,124 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:09,127 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:09,127 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:09,127 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:09,127 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:09,127 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:09,127 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:09,128 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:09,248 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:09,250 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:09,251 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:09,251 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:09,251 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:09,251 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:09,251 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:09,252 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:10,618 billing.views DEBUG    Function Name: add_item
+2023-03-20 12:49:10,618 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:10,619 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:10,619 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:10,619 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:10,619 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:10,620 billing.views DEBUG    Received order_id: 6
+2023-03-20 12:49:10,621 billing.views DEBUG    Received item Chicken Thai-pho
+2023-03-20 12:49:10,797 billing.views INFO     Created order_item Chicken Thai-pho for order 6
+2023-03-20 12:49:10,797 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:10,798 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:10,798 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:10,798 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:10,798 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:10,798 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:10,800 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:16,205 billing.views DEBUG    Function Name: update_item_quantity
+2023-03-20 12:49:16,207 billing.views DEBUG    Got order: OrderId: 6 Table: 1
+2023-03-20 12:49:16,209 billing.views DEBUG    Got relative order_item: 46. Chicken Thai-pho - Rs. 70
+2023-03-20 12:49:16,209 billing.views DEBUG    Updated quantity: 3
+2023-03-20 12:49:16,312 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:16,313 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:16,313 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:16,313 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:16,313 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:16,313 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:16,315 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:17,525 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:17,527 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:17,529 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:17,529 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:17,529 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:17,529 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:17,529 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:17,531 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:19,709 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:19,711 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:19,711 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:19,711 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:19,712 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:19,712 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:19,712 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:19,713 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:19,921 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:19,923 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:19,924 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:19,924 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:19,924 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:19,924 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:19,924 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:19,925 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:20,278 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:20,281 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:20,282 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:20,282 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:20,282 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:20,283 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:20,283 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:20,284 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:20,558 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:20,561 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:20,562 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:20,562 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:20,562 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:20,562 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:20,562 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:20,563 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:21,397 billing.views DEBUG    Function Name: add_item
+2023-03-20 12:49:21,397 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:21,399 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:21,399 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:21,399 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:21,399 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:21,400 billing.views DEBUG    Received order_id: 6
+2023-03-20 12:49:21,402 billing.views DEBUG    Received item Milk Tea
+2023-03-20 12:49:22,365 billing.views INFO     Created order_item Milk Tea for order 6
+2023-03-20 12:49:22,366 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:22,367 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:22,367 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:22,367 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:22,367 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:22,367 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:22,369 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:27,343 billing.views DEBUG    Function Name: update_item_quantity
+2023-03-20 12:49:27,345 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:27,347 billing.views DEBUG    Got order: OrderId: 6 Table: 1
+2023-03-20 12:49:27,350 billing.views DEBUG    Got relative order_item: 75. Milk Tea - Rs. 20
+2023-03-20 12:49:27,350 billing.views DEBUG    Updated quantity: 10
+2023-03-20 12:49:27,353 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:27,445 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:27,446 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:27,447 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:27,447 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:27,447 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:27,447 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:27,448 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:27,459 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:27,461 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:27,461 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:27,461 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:27,462 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:27,464 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:30,262 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:30,265 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:30,266 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:30,266 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:30,266 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:30,266 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:30,266 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:30,268 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:30,602 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:30,604 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:30,605 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:30,605 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:30,605 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:30,605 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:30,605 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:30,606 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:30,737 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:30,739 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:30,739 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:30,739 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:30,739 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:30,740 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:30,740 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:30,740 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:31,952 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:31,955 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:31,956 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:31,956 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:31,956 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:31,956 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:31,956 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:31,957 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:32,165 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:32,168 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:32,168 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:32,168 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:32,168 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:32,168 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:32,169 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:32,169 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:32,310 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:32,313 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:32,313 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:32,314 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:32,314 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:32,314 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:32,314 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:32,315 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:32,457 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:32,459 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:32,460 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:32,460 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:32,460 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:32,460 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:32,460 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:32,461 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:32,805 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:32,807 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:32,807 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:32,808 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:32,808 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:32,808 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:32,808 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:32,809 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:33,037 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:33,040 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:33,041 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:33,041 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:33,041 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:33,041 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:33,042 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:33,043 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:35,337 billing.views DEBUG    Function Name: add_item
+2023-03-20 12:49:35,338 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:35,339 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:35,339 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:35,339 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:35,339 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:35,339 billing.views DEBUG    Received order_id: 6
+2023-03-20 12:49:35,341 billing.views DEBUG    Received item Fresh Lime Soda (Salty)
+2023-03-20 12:49:35,479 billing.views INFO     Created order_item Fresh Lime Soda (Salty) for order 6
+2023-03-20 12:49:35,480 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:35,481 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:35,481 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:35,481 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:35,481 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:35,481 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:35,483 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:36,845 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:36,847 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:36,849 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:36,849 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:36,849 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:36,849 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:36,849 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:36,850 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:39,335 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:39,338 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:39,339 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:39,339 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:39,339 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:39,339 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:39,339 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:39,340 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:40,224 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:40,227 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:40,228 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:40,228 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:40,228 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:40,228 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:40,229 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:40,230 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:40,826 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:40,829 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:40,830 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:40,830 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:40,830 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:40,830 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:40,831 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:40,832 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:40,926 billing.views DEBUG    Function Name: search_items
+2023-03-20 12:49:40,928 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:40,929 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:40,929 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:40,929 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:40,929 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:40,929 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:40,930 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:42,848 billing.views DEBUG    Function Name: add_item
+2023-03-20 12:49:42,848 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:42,849 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:42,849 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:42,849 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:42,849 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:42,850 billing.views DEBUG    Received order_id: 6
+2023-03-20 12:49:42,852 billing.views DEBUG    Received item Chicken Schezwan Fried Rice
+2023-03-20 12:49:43,043 billing.views INFO     Created order_item Chicken Schezwan Fried Rice for order 6
+2023-03-20 12:49:43,043 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:43,044 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:43,044 billing.context_processors DEBUG    Total orders: 6 from 1 to 6
+2023-03-20 12:49:43,044 billing.context_processors INFO     Got last order: OrderId: 6 Table: 1
+2023-03-20 12:49:43,045 billing.context_processors INFO     new_order_id: 6
+2023-03-20 12:49:43,045 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:43,046 billing.context_processors DEBUG    Orders contains 2 orders from 4 to 2
+2023-03-20 12:49:46,079 billing.views DEBUG    Function Name: create_order
+2023-03-20 12:49:46,079 billing.views DEBUG    Created Order 6
+2023-03-20 12:49:46,192 billing.views INFO     Saved order 6
+2023-03-20 12:49:46,259 billing.views DEBUG    Created new order 7
+2023-03-20 12:49:46,260 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:46,261 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:46,261 billing.context_processors DEBUG    Total orders: 7 from 1 to 7
+2023-03-20 12:49:46,261 billing.context_processors INFO     Got last order: OrderId: 7 Table: 1
+2023-03-20 12:49:46,261 billing.context_processors INFO     new_order_id: 7
+2023-03-20 12:49:46,261 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:46,263 billing.context_processors DEBUG    Orders contains 3 orders from 6 to 2
+2023-03-20 12:49:49,031 billing.views DEBUG    Function: modal_view
+2023-03-20 12:49:49,033 billing.views DEBUG    Got order: 6 Reqeuested Order: 6
+2023-03-20 12:49:49,033 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:49:49,034 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:49:49,034 billing.context_processors DEBUG    Total orders: 7 from 1 to 7
+2023-03-20 12:49:49,035 billing.context_processors INFO     Got last order: OrderId: 7 Table: 1
+2023-03-20 12:49:49,035 billing.context_processors INFO     new_order_id: 7
+2023-03-20 12:49:49,035 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:49:49,036 billing.context_processors DEBUG    Orders contains 3 orders from 6 to 2
+2023-03-20 12:49:52,941 billing.views DEBUG    Function: print_receipt_view
+2023-03-20 12:49:52,941 billing.views INFO     OrderId: 6
+2023-03-20 12:49:52,944 billing.views DEBUG    Function: print_receipt_view
+2023-03-20 12:49:52,976 django.request ERROR    Internal Server Error: /print-receipt/6
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 211, in print_receipt_view
+    print_receipt(order)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/receipt_printer.py", line 53, in print_receipt
+    p = Usb(A, B, INTERFACE, EP_IN, EP_OUT)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/escpos/printer.py", line 51, in __init__
+    self.open()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/escpos/printer.py", line 57, in open
+    raise USBNotFoundError("Device not found or cable not plugged in.")
+escpos.exceptions.USBNotFoundError: USB device not found
+2023-03-20 12:49:56,177 billing.views DEBUG    Function: print_receipt_view
+2023-03-20 12:49:56,177 billing.views INFO     OrderId: 6
+2023-03-20 12:49:56,179 billing.views DEBUG    Function: print_receipt_view
+2023-03-20 12:49:56,207 django.request ERROR    Internal Server Error: /print-receipt/6
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 211, in print_receipt_view
+    print_receipt(order)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/receipt_printer.py", line 53, in print_receipt
+    p = Usb(A, B, INTERFACE, EP_IN, EP_OUT)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/escpos/printer.py", line 51, in __init__
+    self.open()
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/escpos/printer.py", line 57, in open
+    raise USBNotFoundError("Device not found or cable not plugged in.")
+escpos.exceptions.USBNotFoundError: USB device not found
+2023-03-20 12:51:22,447 billing.views DEBUG    Function: modal_view
+2023-03-20 12:51:22,451 billing.views DEBUG    Got order: 6 Reqeuested Order: 6
+2023-03-20 12:51:22,458 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-20 12:51:22,459 billing.context_processors INFO     There are orders in the database
+2023-03-20 12:51:22,459 billing.context_processors DEBUG    Total orders: 7 from 1 to 7
+2023-03-20 12:51:22,459 billing.context_processors INFO     Got last order: OrderId: 7 Table: 1
+2023-03-20 12:51:22,459 billing.context_processors INFO     new_order_id: 7
+2023-03-20 12:51:22,459 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-20 12:51:22,460 billing.context_processors DEBUG    Orders contains 3 orders from 6 to 2
+2023-03-20 12:51:22,726 django.request WARNING  Not Found: /favicon.ico
+2023-03-20 12:51:26,432 billing.views DEBUG    Function: print_receipt_view
+2023-03-20 12:51:26,432 billing.views INFO     OrderId: 6
+2023-03-20 12:51:26,434 billing.views DEBUG    Function: print_receipt_view
+2023-03-20 12:51:26,739 billing.receipt_printer DEBUG    Function: print_receipt
+2023-03-20 12:51:26,740 billing.receipt_printer DEBUG    Printing receipt
+2023-03-20 12:51:26,740 billing.receipt_printer INFO     Function: get_logo
+2023-03-20 12:51:26,837 django.request ERROR    Internal Server Error: /print-receipt/6
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 215, in print_receipt_view
+    return render(request, 'partials/modal-recent-order.html')
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: partials/modal-recent-order.html
+2023-03-20 12:51:35,157 billing.views DEBUG    Function: print_receipt_view
+2023-03-20 12:51:35,157 billing.views INFO     OrderId: 6
+2023-03-20 12:51:35,159 billing.views DEBUG    Function: print_receipt_view
+2023-03-20 12:51:35,451 billing.receipt_printer DEBUG    Function: print_receipt
+2023-03-20 12:51:35,451 billing.receipt_printer DEBUG    Printing receipt
+2023-03-20 12:51:35,451 billing.receipt_printer INFO     Function: get_logo
+2023-03-20 12:51:35,540 django.request ERROR    Internal Server Error: /print-receipt/6
+Traceback (most recent call last):
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/exception.py", line 56, in inner
+    response = get_response(request)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/iamu/Programs/projects/Order-Tracking-Software/core/billing/views.py", line 215, in print_receipt_view
+    return render(request, 'partials/modal-recent-order.html')
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: partials/modal-recent-order.html
