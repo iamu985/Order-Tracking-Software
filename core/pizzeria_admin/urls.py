@@ -17,6 +17,9 @@ htmx_urlpatterns = [
     path('delete-item/<int:item_id>',
          views.delete_item_from_model,
          name="delete_item_from_model"),
+    path('order-history-search/',
+         views.order_history_search,
+         name="order_history_search"),
 
 ]
 
