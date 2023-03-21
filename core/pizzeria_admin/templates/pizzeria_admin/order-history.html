@@ -19,7 +19,9 @@
             </div>
         </div>
         <button class="goback">
-            <img src="{% static 'img/back.svg' %}" alt="back" width="30px">
+            <a href="{% url 'pizzeria_admin:admin' %}">
+                <img src="{% static 'img/back.svg' %}" alt="back" width="30px">
+            </a>
         </button>
     </div>
     {% include 'pizzeria_admin/partials/show-all-orders.html' %}
