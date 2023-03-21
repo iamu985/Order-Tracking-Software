@@ -6,7 +6,9 @@ from django.views.decorators.csrf import csrf_exempt
 # from django.http import JsonResponse
 from .models import Order, Item, OrderItem
 from .context_processors import new_order_id
-from .utils import delete_order_item, get_order_or_none
+from .utils import (delete_order_item,
+                    get_order_or_none,
+                    get_current_date)
 from .receipt_printer import print_receipt
 import re
 from django.conf import settings
@@ -54,7 +56,9 @@ logger = logging.getLogger(__name__)
 def index(request):
     order_id = new_order_id(request).get('new_order_id')
     order = Order.objects.get_or_create(pk=order_id)
-    context = {'order': order}
+    date = get_current_date()
+    context = {'order': order,
+               'date': date}
     return render(request, 'index.html', context)
 
 
