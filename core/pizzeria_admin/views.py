@@ -15,7 +15,7 @@ from .forms import CreateNewItemForm
 from .utils import (get_present_month,
                     generate_labels_for_month,
                     make_new_year_range)
-
+import re
 # All admin related views here
 
 LOG_DIR = settings.BASE_DIR / 'logs'
@@ -194,3 +194,15 @@ def order_detail_view(request, order_id):
         'order': order
     }
     return render(request, 'pizzeria_admin/partials/order-detail.html', context)
+
+
+@login_required
+def order_history_search(request):
+    logger.info('Function Name: order_history_search')
+    order_id = request.GET.get('order-query')
+    logger.debug(f'Order ID: {order_id}')
+    order = Order.objects.get(pk=order_id)
+    context = {
+        'orders': [order],
+    }
+    return render(request, 'pizzeria_admin/partials/show-all-orders.html', context)
