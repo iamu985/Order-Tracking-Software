@@ -1,30 +1,34 @@
 {% extends 'base.html' %}
 {% block content %}
-{% load static %}
-{% load widget_tweaks %}
-<!--Header Section / Hero-->
-<div class="heroSec">
-    <img src="{% static 'img/logo.svg' %}" alt="logo" id="logo">
-</div>
-<!--Log In Section-->
-<div class="logInSec">
-    <div class="box">
-        <h2>Admin Login</h2>
-        <form class="container" method="post">
-            <img src="{% static '/img/avatar.svg' %}" alt="img" id="avatar">
-            {% render_field login_form.username|attr:"id:username" %}
-            <br>
-            <img src="{% static '/img/lock.svg' %}" alt="img" id="lock">
-            {% render_field login_form.password|attr:"id:password" %}
-            <br>
-            <div class="submit">
-                <input type="submit" value="Login" id="login">
-            </div>
-            <div class="back">
-                <a href="#"><button class="btn">Go Back</button></a>
-            </div>
-        </form>
-       
+    {% load static %}
+    {% load widget_tweaks %}
+    <!--Header Section / Hero-->
+    <div class="heroSec">
+        <img src="{% static 'img/logo.svg' %}" alt="logo" id="logo">
     </div>
-</div>
+    <!--Log In Section-->
+    <br>
+    <div class="back">
+        <a href="{% url 'billing:index' %}">
+            <button class="btn">
+                <img src="{% static 'img/back.svg' %}" alt="back" width="30px">
+            </button>
+        </a>
+    </div>
+    <div class="logInSec">
+        <div class="box">
+            <h2>Admin Login</h2>
+            <form class="container" method="post">
+                <img src="{% static '/img/avatar.svg' %}" alt="img" id="avatar">
+                {% render_field login_form.username|attr:"id:username" %}
+                <br>
+                <img src="{% static '/img/lock.svg' %}" alt="img" id="lock">
+                {% render_field login_form.password|attr:"id:password" %}
+                <br>
+                <div class="submit">
+                    <input type="submit" value="Login" id="login">
+                </div>
+            </form>
+        </div>
+    </div>
 {% endblock content %}
