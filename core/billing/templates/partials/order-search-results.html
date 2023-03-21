@@ -17,18 +17,16 @@
                         <!-- Status Section -->
                         <td>
                             <select class="form-select form-control select-status"
+                                    id="select-order-status"
                                     aria-label="Status"
                                     hx-post="{% url 'billing:update_order_status' order.id %}"
                                     hx-target="#search-order"
                                     name='order-status'>
-                                <option value="Waiting">
-                                    Waiting
+                                <option value="Unpaid">
+                                    Unpaid
                                 </option>
                                 <option value="Paid">
                                     Paid
-                                </option>
-                                <option value="Delivered" selected>
-                                    Delivered
                                 </option>
                             </select>
                         </td>

@@ -8,7 +8,8 @@ from .models import Order, Item, OrderItem
 from .context_processors import new_order_id
 from .utils import (delete_order_item,
                     get_order_or_none,
-                    get_current_date)
+                    get_current_date,
+                    check_order_status)
 from .receipt_printer import print_receipt
 import re
 from django.conf import settings
@@ -245,6 +246,20 @@ def update_order_status(request, order_id):
     order = Order.objects.get(pk=order_id)
     logger.debug(f'Fetched order: {order.id} Requested order: {order_id}')
     order_status = request.POST.get('order-status')
+
+    # check order status is equal to order_status
+    if check_order_status(order.order_status, order_status):
+        logger.warning(
+            f'Order_status is already set to {order_status}')
+        orders = Order.objects.filter(
+            Q(is_paid=False) & Q(is_new=False)).order_by('-id')
+        context = {
+            'orders': orders,
+            'order': order,
+        }
+        return render(request,
+                      'partials/order-search-results.html',
+                      context)
     logger.debug(f'Received order status: {order_status}')
     if order_status == 'Paid':
         # if order status is paid
@@ -254,9 +269,12 @@ def update_order_status(request, order_id):
         order.is_paid = True
         order.save()
         logger.info(f'Updated order {order.id} status to {order_status}')
-        orders = Order.objects.filter(Q(is_paid=False) & Q(is_new=False))
+        orders = Order.objects.filter(
+            Q(is_paid=False) & Q(is_new=False)).order_by('-id')
         context = {
-            'orders': orders
+            'orders': orders,
+            'order': order,
+            'status': order_status,
         }
         return render(request, 'partials/order-search-results.html', context)
 
@@ -266,8 +284,11 @@ def update_order_status(request, order_id):
     order.order_status = order_status
     order.save()
     logger.info(f'Updated order {order.id} status to {order_status}')
-    orders = Order.objects.filter(Q(is_paid=False) & Q(is_new=False))
+    orders = Order.objects.filter(
+        Q(is_paid=False) & Q(is_new=False)).order_by('-id')
     context = {
-        'orders': orders
+        'orders': orders,
+        'order': order,
+        'status': order_status,
     }
     return render(request, 'partials/order-search-results.html', context)

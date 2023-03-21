@@ -28,3 +28,8 @@ def get_current_date():
     date_object = datetime.date.today()
     year, month, day = date_object.year, calendar.month_name[date_object.month], date_object.day
     return f"{month} {day}, {year}"
+
+
+def check_order_status(order_status, received_status):
+    #  checks if order status is the same as received status
+    return order_status == received_status

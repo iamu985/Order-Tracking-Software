@@ -5,28 +5,26 @@
 {% block content %}
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/order-history.css' %}">
-    
-        <div class="headContainer" id="top">
-            <div class="heading">Order History</div>
-            <div class="search">
-                <div class="bar">
-                    <input type="text" placeholder="Search">
-                </div>
+    <div class="headContainer" id="top">
+        <div class="heading">Order History</div>
+        <div class="search">
+            <div class="bar">
+                <input type="text" placeholder="Search">
             </div>
-            <div class="options">
-                <div class="title">Filter By:</div>
-                <div class="select">
-                    <input type="radio" name="option">
-                    <label>ID</label>
-                    <input type="radio" name="option">
-                    <label>Date</label>
-                </div>
-            </div>
-            <button class="goback">
-                <img src="{% static 'img/back.svg' %}" alt="back" width="30px">
-                </button>
-          
         </div>
+        <div class="options">
+            <div class="title">Filter By:</div>
+            <div class="select">
+                <input type="radio" name="option">
+                <label>ID</label>
+                <input type="radio" name="option">
+                <label>Date</label>
+            </div>
+        </div>
+        <button class="goback">
+            <img src="{% static 'img/back.svg' %}" alt="back" width="30px">
+        </button>
+    </div>
     <section>
         <div class="tableContainer">
             <div class="tableHead">
@@ -40,7 +38,7 @@
                     <a href="{% url 'pizzeria_admin:order_detail' order.id %}">
                         <div class="dataSet">
                             <div class="dataList">{{ order.id }}</div>
-                            <div class="dataList">{{ order.ordered_on }}</div>
+                            <div class="dataList">{{ order.get_order_date }}</div>
                             <div class="dataList">{{ order.get_payment_mode }}</div>
                             <div class="dataList">₹{{ order.get_total_price }}</div>
                         </div>

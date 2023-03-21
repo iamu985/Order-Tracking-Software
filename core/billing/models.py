@@ -7,8 +7,7 @@ import re
 
 class Order(models.Model):
     ORDER_STATUS_CHOICE = [
-        ('Waiting', 'Waiting'),
-        ('Delivered', 'Delivered'),
+        ('Unpaid', 'Unpaid'),
         ('Paid', 'Paid'),
     ]
     ordered_on = models.DateTimeField(auto_now_add=True)
@@ -46,6 +45,12 @@ class Order(models.Model):
         else it returns 'Cash'
         '''
         return 'Online' if self.paid_online else 'Cash'
+
+    def get_order_date(self):
+        """
+        Returns the date of the order.
+        """
+        return self.ordered_on.strftime('%b %d, %Y')
 
     def __str__(self):
         return f"OrderId: {self.pk} Table: {self.table_number}"
