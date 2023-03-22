@@ -37,10 +37,6 @@ htmx_patterns = [
          views.update_table_number,
          name='update_table_number'),
 
-    #     path('modal-view/<int:order_id>',
-    #          views.modal_view,
-    #          name="modal_view"),
-
     path('print-receipt/<int:order_id>',
          views.print_receipt_view,
          name="print_receipt"),
@@ -51,7 +47,11 @@ htmx_patterns = [
 
     path('update-order-status/<int:order_id>',
          views.update_order_status,
-         name="update_order_status")
+         name="update_order_status"),
+
+    path('update-payment-method/<int:order_id>',
+         views.update_payment_method,
+         name="update_payment_method"),
 ]
 
 urlpatterns += htmx_patterns

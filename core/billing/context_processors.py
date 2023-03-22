@@ -1,5 +1,5 @@
 from .models import Order
-from datetime import datetime
+from .utils import get_current_date
 import logging
 from django.conf import settings
 from django.db.models import Q
@@ -56,12 +56,12 @@ def new_order_id(request):
             logger.info(f"new_order_id: {last_order.id}")
             return {
                 "new_order_id": last_order.id,
-                "new_order_date": last_order.ordered_on,
+                "new_order_date": get_current_date(),
             }
         else:
             new_order_id = last_order.id + 1
             logger.info(f"New order id: {new_order_id}")
-    new_order_date = datetime.now()
+    new_order_date = get_current_date()
     return {
         'new_order_id': new_order_id,
         'new_order_date': new_order_date,

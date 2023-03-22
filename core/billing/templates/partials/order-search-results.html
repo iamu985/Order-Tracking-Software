@@ -8,6 +8,7 @@
                         <th class="col-1">Table</th>
                         <th class="col-1">Amount</th>
                         <th class="col-3">Status</th>
+                        <th class="col-3">Table Number</th>
                         <th class="col-3">Function</th>
                     </tr>
                     <tr>
@@ -31,6 +32,15 @@
                             </select>
                         </td>
                         <td>
+                            <input type="number"
+                                   class="items-quanitity form-select form-control mx-3"
+                                   min="1"
+                                   value="{{ order.table_number }}"
+                                   name="table-number"
+                                   placeholder="Table number"
+                                   hx-post="{% url 'billing:update_table_number' order.id %}"/>
+                        </td>
+                        <td>
                             <a href="{% url 'billing:modal-view' order.id %}"
                                class="custom-button btn btn-primary">View</a>
                         </td>
@@ -44,3 +54,8 @@
         <div class="recent-orders-empty">No recent Orders</div>
     {% endif %}
 </div>
+<script>
+    var orderObj = {{json_order_data|safe}};
+    var status = orderObj[0].fields.order_status;
+    $('#select-order-status').val(status);
+</script>

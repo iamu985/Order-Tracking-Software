@@ -1,4 +1,5 @@
 import logging
+from django.core import serializers
 from django.shortcuts import render, redirect
 from django.db.models import Q
 from django.contrib import messages
@@ -55,11 +56,11 @@ logger = logging.getLogger(__name__)
 
 
 def index(request):
+    logger.info('Function Name: index')
     order_id = new_order_id(request).get('new_order_id')
+    logger.debug(f'Received Order: {order_id}')
     order = Order.objects.get_or_create(pk=order_id)
-    date = get_current_date()
-    context = {'order': order,
-               'date': date}
+    context = {'order': order[0], }
     return render(request, 'index.html', context)
 
 
@@ -200,9 +201,11 @@ def modal_view(request, order_id):
     logger.debug('Function: modal_view')
     order = Order.objects.get(pk=order_id)
     logger.debug(f'Got order: {order.id} Reqeuested Order: {order_id}')
+    json_data = serializers.serialize('json', [order,])
     context = {
         'order': order,
         'order_id': order.id,
+        'json_order': json_data
     }
     return render(request, 'modal.html', context)
 
@@ -224,20 +227,29 @@ def print_receipt_view(request, order_id):
 def search_orders(request):
     logger.info('Function Name: search_orders')
     order_id = request.POST.get('order-id')
-    logger.debug(f'Received order_id: {order_id}')
-    order = get_order_or_none(order_id)
-    if order:
-        logger.debug('Order found')
-        context = {
-            'orders': [order],
-        }
-        return render(request, 'partials/order-search-results.html', context)
+    if order_id:
+        logger.debug(f'Received order_id: {order_id}')
+        order = get_order_or_none(order_id)
+        if order:
+            logger.debug('Order found')
+            context = {
+                'orders': [order],
+                'json_order_data': serializers.serialize('json', [order,]),
+            }
+            return render(request, 'partials/order-search-results.html', context)
+        else:
+            logger.warn('Order Not Found')
+            context = {
+                'message': 'No orders found',
+            }
+            return render(request, 'partials/order-search-results.html', context)
     else:
-        logger.warn('Order Not Found')
         context = {
             'message': 'No orders found',
         }
-        return render(request, 'partials/order-search-results.html', context)
+        return render(request,
+                      'partials/order-search-results.html',
+                      context)
 
 
 @csrf_exempt
@@ -292,3 +304,22 @@ def update_order_status(request, order_id):
         'status': order_status,
     }
     return render(request, 'partials/order-search-results.html', context)
+
+
+@csrf_exempt
+def update_payment_method(request, order_id):
+    logger.info('Function Name: update_payment_method')
+    order = Order.objects.get(pk=order_id)
+    logger.debug(f'Fetched order: {order.id} Requested order: {order_id}')
+    payment_method = request.POST.get('payment-method')
+    logger.debug(f'Received payment method: {payment_method}')
+    order.payment_method = payment_method
+    order.save()
+    logger.info(f'Updated order {order.id} payment method to {payment_method}')
+    json_data = serializers.serialize('json', [order,])
+    logger.debug(json_data)
+    context = {
+        'order': order,
+        'json_order': json_data,
+    }
+    return render(request, 'modal.html', context)

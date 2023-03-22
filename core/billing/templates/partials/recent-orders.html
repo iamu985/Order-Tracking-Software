@@ -5,6 +5,7 @@
 <form action="#">
   <input type="search"
          class="form-control me-2 recent-order-search"
+         id="recent-order-search-bar"
          aria-label="Search"
          placeholder="Search Orders"
          hx-post="{% url 'billing:search_orders' %}"
@@ -13,3 +14,11 @@
          name="order-id">
 </form>
 {% include 'partials/order-search-results.html' %}
+<script>
+  var searchbar = document.getElementById('recent-order-search-bar');
+  searchbar.addEventListener('keyup', function(event) {
+    if (event.key === 'Escape') {
+      location.reload();
+    }
+  });
+</script>
