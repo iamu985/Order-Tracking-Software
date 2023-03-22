@@ -1,8 +1,7 @@
-{% include "base.html" %}
+{% extends "index.html" %}
 {% block content %}
     {% load static %}
     {% load mathfilters %}
-    {% include "partials/header.html" %}
     <link rel="stylesheet" href="{% static 'css/modal.css' %}">
     <div class="container-fluid container-section-modal">
         <div class="row">
@@ -58,8 +57,7 @@
                                type="radio"
                                name="payment-method"
                                id="payment-unpaid"
-                               value="unpaid"
-                               checked>
+                               value="Unpaid">
                         <label class="form-check-label" for="payment-unpaid">Unpaid</label>
                     </div>
                     <div class="payment-method-container">
@@ -67,7 +65,10 @@
                                type="radio"
                                name="payment-method"
                                id="payment-cash"
-                               value="cash">
+                               value="Cash"
+                               hx-post="{% url 'billing:update_payment_method' order.id %}"
+                               hx-trigger="click"
+                               hx-target="body">
                         <label class="form-check-label" for="payment-cash">Cash</label>
                     </div>
                     <div class="payment-method-container">
@@ -75,10 +76,17 @@
                                type="radio"
                                name="payment-method"
                                id="payment-online"
-                               value="online">
+                               value="Online"
+                               hx-post="{% url 'billing:update_payment_method' order.id %}"
+                               hx-trigger="click"
+                               hx-target="body">
                         <label class="form-check-label" for="payment-online">Online</label>
                     </div>
-                    <input type="button" class="btn btn-secondary save-print" value="Save">
+                    <a href="{% url 'billing:index' %}"
+                       type="button"
+                       style="color:white"
+                       class="btn btn-secondary save-print"
+                       value="Save">Save</a>
                     <input type="button"
                            id="print-button"
                            class="btn btn-secondary save-print"
@@ -91,7 +99,7 @@
         </div>
         <script>
         //Print Button remain disabled when Unpaid
-       $('input:radio[name="payment-method"]').change(function(){
+        $('input:radio[name="payment-method"]').change(function(){
         if($(this).is(':checked') && $(this).val() != 'unpaid'){
            $('#print-button').prop("disabled",false);
         }
@@ -99,5 +107,17 @@
            $('#print-button').prop("disabled",true);
         }
        });
+       
+       // add checked to the selected option in radio button
+       var order = {{json_order|safe}};
+       var status = order[0].fields.payment_method;
+       if (status === 'Cash'){
+        $('#payment-cash').prop('checked', true);
+        $('#print-button').prop('disabled', false);
+       }
+       if (status === 'Online'){
+        $('#payment-online').prop('checked', true);
+        $('#print-button').prop('disabled', false);
+       }
         </script>
     {% endblock content %}

@@ -201,9 +201,11 @@ def modal_view(request, order_id):
     logger.debug('Function: modal_view')
     order = Order.objects.get(pk=order_id)
     logger.debug(f'Got order: {order.id} Reqeuested Order: {order_id}')
+    json_data = serializers.serialize('json', [order,])
     context = {
         'order': order,
         'order_id': order.id,
+        'json_order': json_data
     }
     return render(request, 'modal.html', context)
 
@@ -302,3 +304,22 @@ def update_order_status(request, order_id):
         'status': order_status,
     }
     return render(request, 'partials/order-search-results.html', context)
+
+
+@csrf_exempt
+def update_payment_method(request, order_id):
+    logger.info('Function Name: update_payment_method')
+    order = Order.objects.get(pk=order_id)
+    logger.debug(f'Fetched order: {order.id} Requested order: {order_id}')
+    payment_method = request.POST.get('payment-method')
+    logger.debug(f'Received payment method: {payment_method}')
+    order.payment_method = payment_method
+    order.save()
+    logger.info(f'Updated order {order.id} payment method to {payment_method}')
+    json_data = serializers.serialize('json', [order,])
+    logger.debug(json_data)
+    context = {
+        'order': order,
+        'json_order': json_data,
+    }
+    return render(request, 'modal.html', context)
