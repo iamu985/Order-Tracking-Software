@@ -56,11 +56,11 @@ logger = logging.getLogger(__name__)
 
 
 def index(request):
+    logger.info('Function Name: index')
     order_id = new_order_id(request).get('new_order_id')
+    logger.debug(f'Received Order: {order_id}')
     order = Order.objects.get_or_create(pk=order_id)
-    date = get_current_date()
-    context = {'order': order,
-               'date': date}
+    context = {'order': order[0], }
     return render(request, 'index.html', context)
 
 
