@@ -192,7 +192,7 @@ def update_table_number(request, order_id):
     context = {
         'order': order,
     }
-    return render(request, 'partials/order-create.html', context)
+    return render(request, 'index.html', context)
 
 
 # @csrf_exempt
