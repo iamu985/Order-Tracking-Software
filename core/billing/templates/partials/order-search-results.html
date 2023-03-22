@@ -44,3 +44,8 @@
         <div class="recent-orders-empty">No recent Orders</div>
     {% endif %}
 </div>
+<script>
+    var orderObj = {{json_order_data|safe}};
+    var status = orderObj[0].fields.order_status;
+    $('#select-order-status').val(status);
+</script>

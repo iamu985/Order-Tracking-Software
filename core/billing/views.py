@@ -1,4 +1,5 @@
 import logging
+from django.core import serializers
 from django.shortcuts import render, redirect
 from django.db.models import Q
 from django.contrib import messages
@@ -224,20 +225,29 @@ def print_receipt_view(request, order_id):
 def search_orders(request):
     logger.info('Function Name: search_orders')
     order_id = request.POST.get('order-id')
-    logger.debug(f'Received order_id: {order_id}')
-    order = get_order_or_none(order_id)
-    if order:
-        logger.debug('Order found')
-        context = {
-            'orders': [order],
-        }
-        return render(request, 'partials/order-search-results.html', context)
+    if order_id:
+        logger.debug(f'Received order_id: {order_id}')
+        order = get_order_or_none(order_id)
+        if order:
+            logger.debug('Order found')
+            context = {
+                'orders': [order],
+                'json_order_data': serializers.serialize('json', [order,]),
+            }
+            return render(request, 'partials/order-search-results.html', context)
+        else:
+            logger.warn('Order Not Found')
+            context = {
+                'message': 'No orders found',
+            }
+            return render(request, 'partials/order-search-results.html', context)
     else:
-        logger.warn('Order Not Found')
         context = {
             'message': 'No orders found',
         }
-        return render(request, 'partials/order-search-results.html', context)
+        return render(request,
+                      'partials/order-search-results.html',
+                      context)
 
 
 @csrf_exempt
