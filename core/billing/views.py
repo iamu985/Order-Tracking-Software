@@ -157,8 +157,7 @@ def delete_item(request, order_id, item_id):
 
 
 @csrf_exempt
-def create_order(request):
-    order_id = new_order_id(request).get('new_order_id')
+def create_order(request, order_id):
     logger.debug('Function Name: create_order')
     logger.debug(f'Created Order {order_id}')
     order = Order.objects.get(pk=order_id)

@@ -20,6 +20,15 @@ def get_present_year():
     return datetime.datetime.today().year
 
 
+def get_total_sales_by_orders(orders):
+    # Returns total sales of the orders
+    # Either by month, year or week
+    sales = 0
+    for order in orders:
+        sales += order.get_total_price()
+    return sales
+
+
 def generate_labels_for_month(month: int):
     thirty_months = [4, 6, 9, 11]
     thirty_one_months = [1, 3, 5, 7, 8, 19, 12]
@@ -110,7 +119,7 @@ def get_daily_data():
     month = get_present_month()
     orders_by_month = Order.objects.filter(ordered_on__month=month)
     label = [i for i in generate_labels_for_month(month)]
-    data = [len(orders_by_month.filter(ordered_on__day=i))
+    data = [get_total_sales_by_orders(orders_by_month.filter(ordered_on__day=i))
             for i in range(1, 31)]
     return label, data
 
@@ -122,7 +131,7 @@ def get_weekly_data():
     orders_by_month = Order.objects.filter(ordered_on__month=month)
     label = ['Monday', 'Tuesday', 'Wednesday',
              'Thursday', 'Friday', 'Saturday', 'Sunday']
-    data = [len(orders_by_month.filter(ordered_on__day=i))
+    data = [get_total_sales_by_orders(orders_by_month.filter(ordered_on__week_day=i))
             for i in range(1, 8)]
     return label, data
 
@@ -133,7 +142,8 @@ def get_monthly_data():
     orders = Order.objects.all()
     label = ['Jan', 'Feb', 'Mar', 'Apr', 'May',
              'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-    data = [len(orders.filter(ordered_on__month=i)) for i in range(1, 13)]
+    data = [get_total_sales_by_orders(orders.filter(
+        ordered_on__month=i)) for i in range(1, 13)]
     return label, data
 
 
@@ -142,5 +152,6 @@ def get_yearly_data():
     # for the yearly chart
     orders = Order.objects.all()
     label = list(make_new_year_range())
-    data = [len(orders.filter(ordered_on__year=i)) for i in label]
+    data = [get_total_sales_by_orders(
+        orders.filter(ordered_on__year=i)) for i in label]
     return label, data
