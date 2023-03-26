@@ -1,8 +1,4 @@
-{% if message %}
-  <div class="alert alert-info" id="hideDiv" >
-    {{ message }} 
-  </div>
-{% endif %}
+{% if message %}<div class="alert alert-info" id="hideDiv">{{ message }}</div>{% endif %}
 <table class="table table-striped" id="add-items-target">
   {% if order.orderitem_set.all %}
     <thead>
@@ -52,12 +48,10 @@
       </tr>
     {% endif %}
   </table>
-
-   <script>
+  <script>
     function hide()
     {
     document.getElementById("hideDiv").style.visibility="hidden";
     }
     setTimeout("hide()",2000);
   </script>
-   

@@ -157,9 +157,10 @@ def delete_item(request, order_id, item_id):
 
 
 @csrf_exempt
-def create_order(request, order_id):
+def create_order(request):
+    order_id = int(request.POST['order_id'])
     logger.debug('Function Name: create_order')
-    logger.debug(f'Created Order {order_id}')
+    logger.debug(f'Received Order {order_id}')
     order = Order.objects.get(pk=order_id)
     order.is_new = False
     order.save()
