@@ -29,7 +29,7 @@ htmx_patterns = [
          name="delete_item"
          ),
 
-    path('create-order/<int:order_id>',
+    path('create-order/',
          views.create_order,
          name='create_order'),
 

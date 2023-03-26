@@ -3,7 +3,11 @@ from django.conf import settings
 from .utils import (get_daily_data,
                     get_weekly_data,
                     get_monthly_data,
-                    get_yearly_data)
+                    get_yearly_data,
+                    get_present_date)
+import datetime
+from billing.models import Order
+
 
 LOG_DIR = settings.BASE_DIR / 'logs'
 logging.config.dictConfig({
@@ -53,4 +57,28 @@ def get_chart_data(request):
         'monthly_data': get_monthly_data()[1],
         'yearly_label': get_yearly_data()[0],
         'yearly_data': get_yearly_data()[1],
+    }
+
+
+def get_daily_sales(request):
+    # Returns a dictionary containing the daily sales
+    today = get_present_date()
+    orders = Order.objects.filter(ordered_on__day=today.day)
+    total_sales = 0
+    for order in orders:
+        total_sales += order.get_total_price()
+    return {
+        'daily_sales': total_sales,
+    }
+
+
+def get_weekly_sales(request):
+    # Returns a dictionary containing the weekly sales
+    today = get_present_date()
+    orders = Order.objects.filter(ordered_on__week_day=today.weekday())
+    total_sales = 0
+    for order in orders:
+        total_sales += order.get_total_price()
+    return {
+        'weekly_sales': total_sales,
     }

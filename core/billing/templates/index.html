@@ -11,14 +11,35 @@
         </div>
         {% include 'partials/show-added-items.html' %}
         <div class="d-flex justify-content-center order-create-btn">
-          <a class="btn"
-             style="background-color: #1d1d1d;
-                    color: #fefefe"
-             href="{% url 'billing:create_order' new_order_id %}">Create</a>
+          <button type="submit"
+                  class="btn"
+                  id="create-button"
+                  style="background-color: #1d1d1d;
+                         color: #fefefe"
+                  onclick="createOrder()">
+            Create
+          </button>
         </div>
       </div>
       <div class="col-md-5 recent-order">{% include 'partials/recent-orders.html' %}</div>
     </div>
   </div>
   <script src="{% static 'js/functions.js' %}"></script>
+  <script>
+    function createOrder() {
+      var orderId = {{new_order_id|safe}};
+      var obj = {
+        type: 'POST',
+        url: {% url 'billing:create_order' %},
+        data: {
+          'order_id': orderId,
+        },
+        success: function(result){
+          location.reload();
+        }
+      };
+      $.ajax(obj);
+
+    }
+  </script>
 {% endblock content %}
