@@ -10,6 +10,8 @@ urlpatterns = [
     path('order-history', views.order_history, name="order_history"),
     path('order-detail/<int:order_id>',
          views.order_detail_view, name="order_detail"),
+    path("item-update/<int:id>", views.item_update,
+         name='item_update_form_model'),
 
 ]
 
