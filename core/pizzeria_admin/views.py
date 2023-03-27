@@ -151,7 +151,7 @@ def admin_logout(request):
     logout(request)
     order = Order.objects.get_or_create(pk=order_id)
     context = {'order': order}
-    return render(request, 'index.html', context)
+    return redirect('billing:index')
 
 
 @login_required
