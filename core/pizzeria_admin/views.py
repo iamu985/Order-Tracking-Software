@@ -1,7 +1,7 @@
 import logging
 import random
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.conf import settings
 from django.db.models import Q
 from django.contrib.auth import login, logout, authenticate
@@ -219,3 +219,13 @@ def search_items(request):
         'items': items,
     }
     return render(request, 'pizzeria_admin/partials/show-all-items.html', context)
+
+
+@login_required
+def item_update(request, id):
+    instance = get_object_or_404(Item, pk=id)
+    form = CreateNewItemForm(request.POST or None, instance=instance)
+    if request.method == 'POST' and form.is_valid():
+        form.save()
+        return redirect('pizzeria_admin:admin')
+    return render(request, "pizzeria_admin/item-update.html", {'form': form})

@@ -4,7 +4,8 @@
         <div class="tableData">{{ item.name }}</div>
         <div class="tableData">{{ item.price }}</div>
         <div class="tableData">
-            <button class="button1">Update</button>
+            <button onclick="redirect('{% url 'pizzeria_admin:item_update_form_model' item.id %}')"
+                    class="button1">Update</button>
             <button hx-post="{% url 'pizzeria_admin:delete_item_from_model' item.id %}"
                     hx-trigger="click"
                     hx-target="#items"
@@ -14,3 +15,8 @@
         </div>
     </div>
 {% endfor %}
+<script>
+function redirect(url){
+    window.location.href = url;
+}
+</script>
