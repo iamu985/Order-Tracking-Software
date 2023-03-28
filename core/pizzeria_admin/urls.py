@@ -20,6 +20,9 @@ htmx_urlpatterns = [
     path('order-history-search/',
          views.order_history_search,
          name="order_history_search"),
+    path('search-items/',
+         views.search_items,
+         name="search_items"),
 
 ]
 

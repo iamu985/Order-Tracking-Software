@@ -37,7 +37,11 @@
                 </div>
                 <div class="search">
                     Search :
-                    <input type="text">
+                    <input type="search"
+                           hx-post="{% url 'pizzeria_admin:search_items' %}"
+                           hx-trigger="focus, keyup changed"
+                           hx-target="#item-div"
+                           name="item-query">
                 </div>
             </div>
             <div class="table">
@@ -47,7 +51,7 @@
                 <div class="tableData">Function</div>
             </div>
             <!--Include show items in admin-->
-            <div class="table-items-container">{% include "pizzeria_admin/partials/show-all-items.html" %}</div>
+            <div id="item-div" class="table-items-container">{% include "pizzeria_admin/partials/show-all-items.html" %}</div>
         </div>
     </div>
 </section>

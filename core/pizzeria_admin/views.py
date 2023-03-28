@@ -206,3 +206,16 @@ def order_history_search(request):
         'orders': [order],
     }
     return render(request, 'pizzeria_admin/partials/show-all-orders.html', context)
+
+
+@csrf_exempt
+@login_required
+def search_items(request):
+    logger.info('Function Name: search_items')
+    item_name = request.POST.get('item-query')
+    logger.debug(f'Item Name: {item_name}')
+    items = Item.objects.filter(name__icontains=item_name)
+    context = {
+        'items': items,
+    }
+    return render(request, 'pizzeria_admin/partials/show-all-items.html', context)
