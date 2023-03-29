@@ -1,6 +1,7 @@
-from django.db import models
-from uuid import uuid4 as uuid
 import re
+from uuid import uuid4 as uuid
+
+from django.db import models
 
 # Create your models here.
 

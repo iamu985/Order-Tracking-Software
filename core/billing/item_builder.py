@@ -1,4 +1,4 @@
-from .models import Order, Item, OrderItem
+from .models import Item, Order, OrderItem
 
 ITEMS = [
     # Starter Section
