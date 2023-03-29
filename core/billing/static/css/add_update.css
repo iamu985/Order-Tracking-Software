@@ -44,7 +44,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    width: calc(100% / 2 - 50px);
+    width: calc(100% / 2 - 250px);
     height: 40px;
     margin: 5px 40px;
 }
