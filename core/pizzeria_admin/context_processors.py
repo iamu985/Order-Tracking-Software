@@ -1,13 +1,12 @@
-import logging
-from django.conf import settings
-from .utils import (get_daily_data,
-                    get_weekly_data,
-                    get_monthly_data,
-                    get_yearly_data,
-                    get_present_date)
 import datetime
+import logging
+
+from django.conf import settings
+
 from billing.models import Order
 
+from .utils import (get_daily_data, get_monthly_data, get_present_date,
+                    get_weekly_data, get_yearly_data)
 
 LOG_DIR = settings.BASE_DIR / 'logs'
 logging.config.dictConfig({

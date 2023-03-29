@@ -1,21 +1,22 @@
 import logging
 import random
+import re
 
-from django.shortcuts import render, redirect, get_object_or_404
 from django.conf import settings
-from django.db.models import Q
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
+from django.db.models import Q
+from django.shortcuts import get_object_or_404, redirect, render
 from django.views.decorators.csrf import csrf_exempt
 
-from billing.models import Order, Item, OrderItem
 from billing.context_processors import new_order_id
+from billing.models import Item, Order, OrderItem
+
 from .forms import CreateNewItemForm
-from .utils import (get_present_month,
-                    generate_labels_for_month,
+from .utils import (generate_labels_for_month, get_present_month,
                     make_new_year_range)
-import re
+
 # All admin related views here
 
 LOG_DIR = settings.BASE_DIR / 'logs'

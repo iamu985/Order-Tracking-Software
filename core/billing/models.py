@@ -1,6 +1,7 @@
-from django.db import models
-from uuid import uuid4 as uuid
 import re
+from uuid import uuid4 as uuid
+
+from django.db import models
 
 # Create your models here.
 
@@ -53,6 +54,13 @@ class Order(models.Model):
         """
         return self.ordered_on.strftime('%b %d, %Y')
 
+    def has_items(self):
+        """
+        Returns True when there are items
+        Returns False when no items are there
+        """
+        return False if len(self.items.all()) <= 0 else True
+
     def __str__(self):
         return f"OrderId: {self.pk} Table: {self.table_number}"
 
@@ -76,10 +84,10 @@ class Item(models.Model):
         return self.name[:11].upper()
 
     def get_price(self):
-        return f"Rs.{self.price}"
+        return f"{self.price}"
 
     def get_total_price(self):
-        return f"Rs. {self.get_quantity() * self.price}"
+        return f"{self.get_quantity() * self.price}"
 
     def __str__(self):
         return f"{self.id}. {self.name} - Rs. {self.price}"

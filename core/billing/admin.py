@@ -1,8 +1,7 @@
 from django.contrib import admin
-from django.contrib.auth.models import User, Group
-from .models import (Order,
-                     Item)
+from django.contrib.auth.models import Group, User
 
+from .models import Item, Order
 
 admin.site.register(Order)
 admin.site.register(Item)

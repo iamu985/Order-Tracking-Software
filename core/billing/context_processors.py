@@ -1,9 +1,10 @@
-from .models import Order
-from .utils import get_current_date
 import logging
+
 from django.conf import settings
 from django.db.models import Q
 
+from .models import Order
+from .utils import get_current_date
 
 LOG_DIR = settings.BASE_DIR / 'logs'
 logging.config.dictConfig({

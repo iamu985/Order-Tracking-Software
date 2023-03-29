@@ -1,20 +1,19 @@
 import logging
-from django.core import serializers
-from django.shortcuts import render, redirect
-from django.db.models import Q
-from django.contrib import messages
-from django.views.decorators.csrf import csrf_exempt
-# from django.http import JsonResponse
-from .models import Order, Item, OrderItem
-from .context_processors import new_order_id
-from .utils import (delete_order_item,
-                    get_order_or_none,
-                    get_current_date,
-                    check_order_status)
-from .receipt_printer import print_receipt
 import re
-from django.conf import settings
 
+from django.conf import settings
+from django.contrib import messages
+from django.core import serializers
+from django.db.models import Q
+from django.shortcuts import redirect, render
+from django.views.decorators.csrf import csrf_exempt
+
+from .context_processors import new_order_id
+# from django.http import JsonResponse
+from .models import Item, Order, OrderItem
+from .receipt_printer import print_receipt
+from .utils import (check_order_status, delete_order_item, get_current_date,
+                    get_order_or_none)
 
 #  logging setup
 LOG_DIR = settings.BASE_DIR / 'logs'
@@ -162,14 +161,20 @@ def create_order(request):
     logger.debug('Function Name: create_order')
     logger.debug(f'Received Order {order_id}')
     order = Order.objects.get(pk=order_id)
-    order.is_new = False
-    order.save()
-    logger.info(f'Saved order {order_id}')
-    new_order = Order.objects.create(pk=order_id+1)
-    logger.debug(f'Created new order {order_id+1}')
+    if order.has_items():
+        order.is_new = False
+        order.save()
+        logger.info(f'Saved order {order_id}')
+        new_order = Order.objects.create(pk=order_id+1)
+        logger.debug(f'Created new order {order_id+1}')
+        context = {
+            'prev_order': order,
+            'order': new_order,
+        }
+        return render(request, 'index.html', context)
+
     context = {
-        'prev_order': order,
-        'order': new_order,
+        'message': "Order is empty. Please add items to the order."
     }
     return render(request, 'index.html', context)
 
@@ -221,7 +226,7 @@ def print_receipt_view(request, order_id):
     context = {
         'order': order,
     }
-    return render(request, 'partials/modal-recent-order.html')
+    return render(request, 'modal.html')
 
 
 @csrf_exempt
