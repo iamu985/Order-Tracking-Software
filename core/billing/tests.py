@@ -1,6 +1,7 @@
 import pytest
-from .models import Order, Item
-from .utils import get_order_or_none, delete_order_item
+
+from .models import Item, Order
+from .utils import delete_order_item, get_order_or_none
 
 
 @pytest.mark.django_db

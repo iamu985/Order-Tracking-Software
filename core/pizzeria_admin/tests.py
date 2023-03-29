@@ -1,5 +1,6 @@
 from django.test import TestCase
-from .utils import make_new_year_range, get_min_max_year
+
+from .utils import get_min_max_year, make_new_year_range
 
 
 class TestAdminUtils:

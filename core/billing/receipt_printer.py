@@ -1,9 +1,11 @@
-from escpos.printer import Usb
 import logging
-from .conf import A, B, INTERFACE, EP_IN, EP_OUT, LOGO
-from PIL import Image
-from .models import Order
+
 from django.conf import settings
+from escpos.printer import Usb
+from PIL import Image
+
+from .conf import EP_IN, EP_OUT, INTERFACE, LOGO, A, B
+from .models import Order
 
 LOG_DIR = settings.BASE_DIR / 'logs'
 logging.config.dictConfig({
