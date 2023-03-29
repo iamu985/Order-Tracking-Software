@@ -53,6 +53,13 @@ class Order(models.Model):
         """
         return self.ordered_on.strftime('%b %d, %Y')
 
+    def has_items(self):
+        """
+        Returns True when there are items
+        Returns False when no items are there
+        """
+        return False if len(self.items.all()) <= 0 else True
+
     def __str__(self):
         return f"OrderId: {self.pk} Table: {self.table_number}"
 

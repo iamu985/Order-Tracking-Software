@@ -162,16 +162,18 @@ def create_order(request):
     logger.debug('Function Name: create_order')
     logger.debug(f'Received Order {order_id}')
     order = Order.objects.get(pk=order_id)
-    order.is_new = False
-    order.save()
-    logger.info(f'Saved order {order_id}')
-    new_order = Order.objects.create(pk=order_id+1)
-    logger.debug(f'Created new order {order_id+1}')
-    context = {
-        'prev_order': order,
-        'order': new_order,
-    }
-    return render(request, 'index.html', context)
+    if order.has_items():
+        order.is_new = False
+        order.save()
+        logger.info(f'Saved order {order_id}')
+        new_order = Order.objects.create(pk=order_id+1)
+        logger.debug(f'Created new order {order_id+1}')
+        context = {
+            'prev_order': order,
+            'order': new_order,
+        }
+        return render(request, 'index.html', context)
+    return redirect('billing:index')
 
 
 @csrf_exempt
