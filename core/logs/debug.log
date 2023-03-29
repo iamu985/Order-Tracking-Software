@@ -26327,3 +26327,1165 @@ Traceback (most recent call last):
   File "/home/iamu/.local/share/virtualenvs/Order-Tracking-Software-qxsevUPB/lib/python3.10/site-packages/django/template/loader.py", line 19, in get_template
     raise TemplateDoesNotExist(template_name, chain=chain)
 django.template.exceptions.TemplateDoesNotExist: partials/modal-recent-order.html
+2023-03-22 10:22:35,922 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-22 10:22:35,922 pizzeria_admin.views INFO     Received POST request
+2023-03-22 10:22:35,922 pizzeria_admin.views INFO     Received form data
+2023-03-22 10:22:35,922 pizzeria_admin.views INFO     Received POST request
+2023-03-22 10:22:35,922 pizzeria_admin.views INFO     Received form data
+2023-03-22 10:22:36,346 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-22 10:22:36,346 billing.context_processors INFO     There are orders in the database
+2023-03-22 10:22:36,354 billing.context_processors DEBUG    Total orders: 7 from 1 to 7
+2023-03-22 10:22:36,354 billing.context_processors INFO     Got last order: OrderId: 7 Table: 1
+2023-03-22 10:22:36,354 billing.context_processors INFO     new_order_id: 7
+2023-03-22 10:22:36,354 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-22 10:22:36,354 billing.context_processors DEBUG    Orders is empty
+2023-03-22 10:22:48,599 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-22 10:22:48,599 billing.context_processors INFO     There are orders in the database
+2023-03-22 10:22:48,599 billing.context_processors DEBUG    Total orders: 7 from 1 to 7
+2023-03-22 10:22:48,607 billing.context_processors INFO     Got last order: OrderId: 7 Table: 1
+2023-03-22 10:22:48,607 billing.context_processors INFO     new_order_id: 7
+2023-03-22 10:22:48,615 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-22 10:22:48,615 billing.context_processors INFO     There are orders in the database
+2023-03-22 10:22:48,615 billing.context_processors DEBUG    Total orders: 7 from 1 to 7
+2023-03-22 10:22:48,615 billing.context_processors INFO     Got last order: OrderId: 7 Table: 1
+2023-03-22 10:22:48,615 billing.context_processors INFO     new_order_id: 7
+2023-03-22 10:22:48,615 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-22 10:22:48,623 billing.context_processors DEBUG    Orders is empty
+2023-03-22 10:22:51,128 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-22 10:22:51,144 pizzeria_admin.views INFO     Received GET request
+2023-03-22 10:22:51,144 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-22 10:22:51,152 billing.context_processors INFO     There are orders in the database
+2023-03-22 10:22:51,152 billing.context_processors DEBUG    Total orders: 7 from 1 to 7
+2023-03-22 10:22:51,160 billing.context_processors INFO     Got last order: OrderId: 7 Table: 1
+2023-03-22 10:22:51,168 billing.context_processors INFO     new_order_id: 7
+2023-03-22 10:22:51,168 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-22 10:22:51,176 billing.context_processors DEBUG    Orders is empty
+2023-03-28 10:46:41,049 billing.views INFO     Function Name: index
+2023-03-28 10:46:41,169 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:46:41,177 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:46:41,177 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:46:41,185 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:46:41,185 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:46:41,185 billing.views DEBUG    Received Order: 72
+2023-03-28 10:46:41,281 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:46:41,281 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:46:41,281 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:46:41,289 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:46:41,289 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:46:41,289 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 10:46:41,297 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 10:46:43,906 django.request WARNING  Not Found: /favicon.ico
+2023-03-28 10:46:48,135 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 10:46:48,143 pizzeria_admin.views INFO     Received GET request
+2023-03-28 10:46:48,151 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:46:48,159 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:46:48,159 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:46:48,159 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:46:48,159 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:46:48,167 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 10:46:48,167 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 10:47:00,933 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 10:47:00,933 pizzeria_admin.views INFO     Received POST request
+2023-03-28 10:47:00,933 pizzeria_admin.views INFO     Received form data
+2023-03-28 10:47:00,941 pizzeria_admin.views INFO     Received POST request
+2023-03-28 10:47:00,941 pizzeria_admin.views INFO     Received form data
+2023-03-28 10:47:01,237 pizzeria_admin.views INFO     Form is valid
+2023-03-28 10:47:01,237 pizzeria_admin.views INFO     Form is valid
+2023-03-28 10:47:01,245 pizzeria_admin.views INFO     Got user
+2023-03-28 10:47:01,245 pizzeria_admin.views INFO     Got user
+2023-03-28 10:47:01,245 pizzeria_admin.views INFO     User exists!
+2023-03-28 10:47:01,245 pizzeria_admin.views INFO     User exists!
+2023-03-28 10:47:01,714 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-28 10:47:01,716 pizzeria_admin.views DEBUG    Method: GET
+2023-03-28 10:47:01,716 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 105. Cheese Pakoda - Rs. 70>, <Item: 104. Onion Pakoda - Rs. 70>, <Item: 103. Veg Pakoda - Rs. 60>, <Item: 102. Chicken Manchurian - Rs. 150>, <Item: 101. Veg Manchurian - Rs. 100>, <Item: 100. Pork Sausage - Rs. 160>, <Item: 99. Chicken Sausage - Rs. 150>, <Item: 98. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 97. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 96. Cold Chocolate - Rs. 50>, <Item: 95. Hot Chocolate - Rs. 70>, <Item: 94. Blue Lagoon Milkshake - Rs. 110>, <Item: 93. Blue Berry Milkshake - Rs. 90>, <Item: 92. Kiwi Milkshake - Rs. 90>, <Item: 91. Black Current Milkshake - Rs. 90>, <Item: 90. Mango Milkshake - Rs. 90>, <Item: 89. Strawberry Milkshake - Rs. 90>, <Item: 88. Oreo Milkshake - Rs. 90>, <Item: 87. Chicken Cheese Sandwich(Grilled) - Rs. 100>, <Item: 86. Chicken Cheese Sandwich(Non Grilled) - Rs. 80>, '...(remaining elements truncated)...']>.
+2023-03-28 10:47:01,740 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:47:01,748 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:47:01,748 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:47:01,748 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:47:01,756 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:47:01,756 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 10:47:01,764 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 10:47:27,490 billing.views INFO     Function Name: index
+2023-03-28 10:47:27,498 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:47:27,498 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:47:27,498 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:47:27,498 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:47:27,506 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:47:27,506 billing.views DEBUG    Received Order: 72
+2023-03-28 10:47:27,506 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:47:27,514 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:47:27,514 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:47:27,514 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:47:27,514 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:47:27,514 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 10:47:27,522 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 10:47:33,336 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 10:47:33,336 pizzeria_admin.views INFO     Received GET request
+2023-03-28 10:47:33,336 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:47:33,336 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:47:33,344 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:47:33,344 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:47:33,344 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:47:33,344 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 10:47:33,344 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 10:47:40,533 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 10:47:40,533 pizzeria_admin.views INFO     Received GET request
+2023-03-28 10:47:40,533 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:47:40,541 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:47:40,541 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:47:40,541 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:47:40,541 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:47:40,541 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 10:47:40,549 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 10:48:43,924 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 10:48:43,924 pizzeria_admin.views INFO     Received GET request
+2023-03-28 10:48:43,940 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:48:43,940 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:48:43,940 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:48:43,940 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:48:43,940 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:48:43,940 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 10:48:43,955 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 10:51:02,199 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 10:51:02,214 pizzeria_admin.views INFO     Received GET request
+2023-03-28 10:51:02,214 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:51:02,230 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:51:02,230 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:51:02,230 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:51:02,230 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:51:02,230 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 10:51:02,230 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 10:52:23,419 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 10:52:23,419 pizzeria_admin.views INFO     Received GET request
+2023-03-28 10:52:23,435 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:52:23,435 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:52:23,435 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:52:23,435 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:52:23,451 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:52:23,451 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 10:52:23,451 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 10:52:51,272 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 10:52:51,272 pizzeria_admin.views INFO     Received GET request
+2023-03-28 10:52:51,288 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:52:51,288 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:52:51,288 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:52:51,288 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:52:51,288 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:52:51,288 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 10:52:51,303 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 10:53:17,808 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 10:53:17,808 pizzeria_admin.views INFO     Received GET request
+2023-03-28 10:53:17,824 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:53:17,840 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:53:17,840 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:53:17,840 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:53:17,840 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:53:17,840 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 10:53:17,840 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 10:53:55,869 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 10:53:55,869 pizzeria_admin.views INFO     Received GET request
+2023-03-28 10:53:55,884 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:53:55,884 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:53:55,884 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:53:55,884 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:53:55,900 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:53:55,900 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 10:53:55,900 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 10:55:43,162 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 10:55:43,162 pizzeria_admin.views INFO     Received GET request
+2023-03-28 10:55:43,162 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:55:43,162 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:55:43,162 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:55:43,162 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:55:43,162 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:55:43,178 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 10:55:43,178 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 10:56:05,344 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 10:56:05,344 pizzeria_admin.views INFO     Received GET request
+2023-03-28 10:56:05,344 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:56:05,344 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:56:05,360 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:56:05,360 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:56:05,360 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:56:05,360 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 10:56:05,360 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 10:56:54,674 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 10:56:54,674 pizzeria_admin.views INFO     Received GET request
+2023-03-28 10:56:54,690 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 10:56:54,698 billing.context_processors INFO     There are orders in the database
+2023-03-28 10:56:54,698 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 10:56:54,706 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 10:56:54,706 billing.context_processors INFO     new_order_id: 72
+2023-03-28 10:56:54,706 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 10:56:54,706 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 10:56:59,407 django.request WARNING  Not Found: /favicon.ico
+2023-03-28 11:01:28,808 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:01:28,810 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:01:28,810 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:01:28,810 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:01:28,810 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:01:28,810 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:01:28,810 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:01:28,810 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:01:28,810 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:01:49,910 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:01:49,910 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:01:49,910 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:01:49,910 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:01:49,910 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:01:49,910 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:01:49,910 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:01:49,910 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:01:49,910 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:01:53,013 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:01:53,013 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:01:53,013 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:01:53,013 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:01:53,013 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:01:53,013 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:01:53,013 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:01:53,013 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:01:53,029 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:02:27,104 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:02:27,104 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:02:27,104 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:02:27,104 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:02:27,104 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:02:27,104 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:02:27,104 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:02:27,104 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:02:27,104 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:21:42,557 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:21:42,862 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:21:42,926 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:21:42,982 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:21:42,982 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:21:42,982 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:21:42,990 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:21:42,990 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:21:42,998 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:21:47,314 billing.views INFO     Function Name: index
+2023-03-28 11:21:47,322 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:21:47,330 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:21:47,330 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:21:47,330 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:21:47,330 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:21:47,330 billing.views DEBUG    Received Order: 72
+2023-03-28 11:21:47,434 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:21:47,442 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:21:47,442 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:21:47,442 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:21:47,442 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:21:47,442 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:21:47,442 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:21:49,837 django.request WARNING  Not Found: /favicon.ico
+2023-03-28 11:21:55,283 billing.views DEBUG    Function Name: search_items
+2023-03-28 11:21:55,283 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:21:55,283 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:21:55,283 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:21:55,283 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:21:55,283 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:21:55,283 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:21:55,283 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:22:48,042 billing.views DEBUG    Function: modal_view
+2023-03-28 11:22:48,050 billing.views DEBUG    Got order: 71 Reqeuested Order: 71
+2023-03-28 11:22:48,855 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:22:48,863 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:22:48,863 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:22:48,863 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:22:48,863 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:22:48,871 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:22:48,871 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:22:58,543 billing.views INFO     Function Name: index
+2023-03-28 11:22:58,543 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:22:58,551 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:22:58,551 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:22:58,559 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:22:58,559 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:22:58,559 billing.views DEBUG    Received Order: 72
+2023-03-28 11:22:58,567 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:22:58,575 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:22:58,575 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:22:58,575 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:22:58,575 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:22:58,575 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:22:58,583 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:23:00,079 billing.views INFO     Function Name: index
+2023-03-28 11:23:00,087 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:23:00,103 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:23:00,111 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:23:00,111 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:23:00,111 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:23:00,111 billing.views DEBUG    Received Order: 72
+2023-03-28 11:23:00,111 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:23:00,119 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:23:00,119 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:23:00,119 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:23:00,119 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:23:00,127 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:23:00,127 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:23:03,830 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:23:03,830 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:23:03,830 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:23:03,838 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:23:03,838 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:23:03,838 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:23:03,838 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:23:03,838 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:23:03,838 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:23:41,722 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:23:41,730 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:23:41,754 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:23:41,778 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:23:41,810 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:23:41,810 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:23:41,810 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:23:41,818 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:23:41,858 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:24:24,267 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:24:24,267 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:24:24,267 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:24:24,282 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:24:24,282 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:24:24,282 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:24:24,282 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:24:24,282 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:24:24,298 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:24:46,308 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:24:46,308 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:24:46,315 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:24:46,315 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:24:46,323 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:24:46,323 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:24:46,323 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:24:46,331 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:24:46,331 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:25:12,179 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:25:12,211 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:25:12,258 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:25:12,304 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:25:12,351 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:25:12,367 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:25:12,383 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:25:12,398 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:25:12,429 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:26:15,983 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:26:15,983 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:26:15,983 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:26:15,999 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:26:15,999 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:26:15,999 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:26:16,014 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:26:16,014 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:26:16,014 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:26:58,447 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:26:58,448 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:26:58,483 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:26:58,495 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:26:58,495 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:26:58,498 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:26:58,498 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:26:58,498 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:26:58,498 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:27:17,254 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:27:17,270 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:27:17,270 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:27:17,270 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:27:17,270 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:27:17,270 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:27:17,270 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:27:17,270 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:27:17,285 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:27:47,480 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:27:47,480 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:27:47,507 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:27:47,507 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:27:47,507 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:27:47,523 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:27:47,523 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:27:47,523 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:27:47,523 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:28:54,723 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:28:54,723 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:28:54,723 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:28:54,738 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:28:54,738 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:28:54,738 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:28:54,754 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:28:54,754 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:28:54,754 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:29:33,219 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:29:33,219 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:29:33,251 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:29:33,266 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:29:33,266 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:29:33,275 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:29:33,277 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:29:33,278 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:29:33,282 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:29:51,133 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:29:51,133 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:29:51,133 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:29:51,149 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:29:51,149 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:29:51,149 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:29:51,149 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:29:51,149 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:29:51,149 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:30:56,820 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:30:56,820 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:30:56,820 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:30:56,836 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:30:56,836 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:30:56,836 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:30:56,836 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:30:56,836 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:30:56,836 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:31:47,071 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:31:47,071 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:31:47,087 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:31:47,087 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:31:47,087 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:31:47,087 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:31:47,087 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:31:47,102 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:31:47,102 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:32:14,073 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:32:14,073 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:32:14,073 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:32:14,073 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:32:14,073 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:32:14,088 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:32:14,088 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:32:14,088 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:32:14,088 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:32:53,498 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:32:53,498 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:32:53,503 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:32:53,503 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:32:53,503 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:32:53,503 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:32:53,512 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:32:53,518 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:32:53,521 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:33:13,963 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:33:13,963 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:33:13,979 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:33:13,979 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:33:13,979 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:33:13,979 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:33:13,979 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:33:13,979 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:33:13,979 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:33:39,768 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:33:39,768 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:33:39,768 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:33:39,768 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:33:39,768 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:33:39,768 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:33:39,784 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:33:39,784 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:33:39,784 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:34:16,326 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:34:16,326 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:34:16,326 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:34:16,326 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:34:16,326 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:34:16,342 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:34:16,342 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:34:16,342 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:34:16,342 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:34:19,950 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:34:19,950 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:34:19,950 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:34:19,958 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:34:19,958 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:34:19,958 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:34:19,966 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:34:19,966 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:34:19,966 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:34:41,718 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:34:41,718 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:34:41,734 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:34:41,734 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:34:41,734 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:34:41,734 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:34:41,734 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:34:41,734 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:34:41,749 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:35:15,463 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:35:15,464 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:35:15,464 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:35:15,464 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:35:15,464 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:35:15,464 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:35:15,464 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:35:15,464 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:35:15,480 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:36:25,680 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:36:25,680 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:36:25,696 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:36:25,696 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:36:25,696 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:36:25,696 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:36:25,711 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:36:25,711 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:36:25,711 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:36:53,550 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:36:53,550 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:36:53,550 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:36:53,550 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:36:53,550 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:36:53,550 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:36:53,550 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:36:53,566 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:36:53,566 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:37:14,200 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:37:14,215 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:37:14,231 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:37:14,231 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:37:14,231 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:37:14,231 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:37:14,231 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:37:14,250 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:37:14,253 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:37:34,763 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:37:34,763 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:37:34,763 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:37:34,779 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:37:34,779 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:37:34,779 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:37:34,779 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:37:34,779 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:37:34,779 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:38:04,790 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:38:04,790 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:38:04,790 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:38:04,806 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:38:04,806 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:38:04,806 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:38:04,806 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:38:04,806 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:38:04,806 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:38:33,439 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:38:33,439 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:38:33,439 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:38:33,439 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:38:33,439 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:38:33,439 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:38:33,439 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:38:33,439 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:38:33,455 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:38:44,496 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:38:44,511 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:38:44,511 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:38:44,511 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:38:44,511 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:38:44,511 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:38:44,511 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:38:44,511 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:38:44,527 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:39:04,874 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:39:04,874 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:39:04,890 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:39:04,890 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:39:04,890 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:39:04,890 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:39:04,890 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:39:04,890 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:39:04,905 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:40:03,022 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:40:03,022 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:40:03,022 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:40:03,022 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:40:03,022 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:40:03,022 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:40:03,031 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:40:03,038 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:40:03,040 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:40:42,487 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:40:42,487 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:40:42,487 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:40:42,499 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:40:42,499 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:40:42,499 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:40:42,499 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:40:42,499 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:40:42,499 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:41:02,151 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:41:02,151 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:41:02,159 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:41:02,159 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:41:02,159 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:41:02,159 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:41:02,159 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:41:02,167 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:41:02,167 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:41:55,885 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:41:55,885 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:41:55,901 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:41:55,901 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:41:55,901 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:41:55,901 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:41:55,901 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:41:55,901 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:41:55,901 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:42:08,580 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:42:08,580 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:42:08,580 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:42:08,588 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:42:08,588 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:42:08,588 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:42:08,588 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:42:08,596 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:42:08,604 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:42:43,450 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:42:43,450 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:42:43,450 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:42:43,450 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:42:43,450 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:42:43,466 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:42:43,466 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:42:43,466 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:42:43,466 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:42:50,908 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:42:50,908 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:42:50,924 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:42:50,924 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:42:50,924 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:42:50,924 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:42:50,924 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:42:50,924 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:42:50,924 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:42:59,921 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:42:59,921 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:42:59,921 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:42:59,929 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:42:59,929 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:42:59,929 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:42:59,937 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:42:59,937 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:42:59,945 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:44:13,693 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:44:13,693 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:44:13,699 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:44:13,699 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:44:13,699 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:44:13,699 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:44:13,699 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:44:13,699 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:44:13,699 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:45:16,861 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:45:16,869 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:45:16,879 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:45:16,879 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:45:16,879 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:45:16,879 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:45:16,879 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:45:16,895 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:45:16,896 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:45:29,694 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:45:29,694 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:45:29,694 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:45:29,709 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:45:29,709 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:45:29,709 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:45:29,709 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:45:29,709 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:45:29,709 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:45:59,557 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:45:59,557 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:45:59,557 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:45:59,557 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:45:59,557 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:45:59,557 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:45:59,557 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:45:59,557 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:45:59,573 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:46:07,453 billing.views INFO     Function Name: index
+2023-03-28 11:46:07,461 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:46:07,461 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:46:07,461 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:46:07,461 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:46:07,469 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:46:07,469 billing.views DEBUG    Received Order: 72
+2023-03-28 11:46:07,469 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:46:07,477 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:46:07,477 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:46:07,485 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:46:07,485 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:46:07,485 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:46:07,493 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:46:12,763 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:46:12,763 pizzeria_admin.views INFO     Received GET request
+2023-03-28 11:46:12,763 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:46:12,771 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:46:12,771 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:46:12,771 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:46:12,771 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:46:12,779 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:46:12,779 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:46:37,130 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-28 11:46:37,130 pizzeria_admin.views INFO     Received POST request
+2023-03-28 11:46:37,138 pizzeria_admin.views INFO     Received form data
+2023-03-28 11:46:37,138 pizzeria_admin.views INFO     Received POST request
+2023-03-28 11:46:37,138 pizzeria_admin.views INFO     Received form data
+2023-03-28 11:46:37,498 pizzeria_admin.views INFO     Form is valid
+2023-03-28 11:46:37,498 pizzeria_admin.views INFO     Form is valid
+2023-03-28 11:46:37,506 pizzeria_admin.views INFO     Got user
+2023-03-28 11:46:37,506 pizzeria_admin.views INFO     Got user
+2023-03-28 11:46:37,514 pizzeria_admin.views INFO     User exists!
+2023-03-28 11:46:37,514 pizzeria_admin.views INFO     User exists!
+2023-03-28 11:46:38,219 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-28 11:46:38,219 pizzeria_admin.views DEBUG    Method: GET
+2023-03-28 11:46:38,227 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 105. Cheese Pakoda - Rs. 70>, <Item: 104. Onion Pakoda - Rs. 70>, <Item: 103. Veg Pakoda - Rs. 60>, <Item: 102. Chicken Manchurian - Rs. 150>, <Item: 101. Veg Manchurian - Rs. 100>, <Item: 100. Pork Sausage - Rs. 160>, <Item: 99. Chicken Sausage - Rs. 150>, <Item: 98. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 97. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 96. Cold Chocolate - Rs. 50>, <Item: 95. Hot Chocolate - Rs. 70>, <Item: 94. Blue Lagoon Milkshake - Rs. 110>, <Item: 93. Blue Berry Milkshake - Rs. 90>, <Item: 92. Kiwi Milkshake - Rs. 90>, <Item: 91. Black Current Milkshake - Rs. 90>, <Item: 90. Mango Milkshake - Rs. 90>, <Item: 89. Strawberry Milkshake - Rs. 90>, <Item: 88. Oreo Milkshake - Rs. 90>, <Item: 87. Chicken Cheese Sandwich(Grilled) - Rs. 100>, <Item: 86. Chicken Cheese Sandwich(Non Grilled) - Rs. 80>, '...(remaining elements truncated)...']>.
+2023-03-28 11:46:38,227 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:46:38,235 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:46:38,235 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:46:38,243 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:46:38,243 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:46:38,243 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:46:38,251 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:52:56,094 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-28 11:52:56,094 pizzeria_admin.views DEBUG    Method: POST
+2023-03-28 11:52:56,107 pizzeria_admin.views INFO     Validation: True
+2023-03-28 11:52:56,805 pizzeria_admin.views DEBUG    Created new item: item
+2023-03-28 11:52:56,805 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:52:56,805 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:52:56,805 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:52:56,821 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:52:56,821 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:52:56,821 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:52:56,837 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:53:02,475 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:53:02,475 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:53:02,475 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:53:02,475 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:53:02,483 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:53:02,483 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:53:02,483 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:53:08,137 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-28 11:53:08,137 pizzeria_admin.views DEBUG    Method: GET
+2023-03-28 11:53:08,137 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 132. item - Rs. 20>, <Item: 105. Cheese Pakoda - Rs. 70>, <Item: 104. Onion Pakoda - Rs. 70>, <Item: 103. Veg Pakoda - Rs. 60>, <Item: 102. Chicken Manchurian - Rs. 150>, <Item: 101. Veg Manchurian - Rs. 100>, <Item: 100. Pork Sausage - Rs. 160>, <Item: 99. Chicken Sausage - Rs. 150>, <Item: 98. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 97. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 96. Cold Chocolate - Rs. 50>, <Item: 95. Hot Chocolate - Rs. 70>, <Item: 94. Blue Lagoon Milkshake - Rs. 110>, <Item: 93. Blue Berry Milkshake - Rs. 90>, <Item: 92. Kiwi Milkshake - Rs. 90>, <Item: 91. Black Current Milkshake - Rs. 90>, <Item: 90. Mango Milkshake - Rs. 90>, <Item: 89. Strawberry Milkshake - Rs. 90>, <Item: 88. Oreo Milkshake - Rs. 90>, <Item: 87. Chicken Cheese Sandwich(Grilled) - Rs. 100>, '...(remaining elements truncated)...']>.
+2023-03-28 11:53:08,137 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:53:08,145 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:53:08,145 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:53:08,153 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:53:08,153 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:53:08,153 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:53:08,153 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:53:11,559 pizzeria_admin.views INFO     Function Name: delete_item_from_model
+2023-03-28 11:53:11,735 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:53:11,744 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:53:11,744 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:53:11,747 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:53:11,747 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:53:11,752 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:53:11,752 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:53:18,307 pizzeria_admin.views INFO     Function Name: statistics
+2023-03-28 11:53:18,448 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:53:18,453 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:53:18,453 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:53:18,453 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:53:18,453 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:53:18,461 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:53:18,469 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-28 11:55:40,241 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-28 11:55:40,241 pizzeria_admin.views DEBUG    Method: GET
+2023-03-28 11:55:40,241 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 105. Cheese Pakoda - Rs. 70>, <Item: 104. Onion Pakoda - Rs. 70>, <Item: 103. Veg Pakoda - Rs. 60>, <Item: 102. Chicken Manchurian - Rs. 150>, <Item: 101. Veg Manchurian - Rs. 100>, <Item: 100. Pork Sausage - Rs. 160>, <Item: 99. Chicken Sausage - Rs. 150>, <Item: 98. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 97. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 96. Cold Chocolate - Rs. 50>, <Item: 95. Hot Chocolate - Rs. 70>, <Item: 94. Blue Lagoon Milkshake - Rs. 110>, <Item: 93. Blue Berry Milkshake - Rs. 90>, <Item: 92. Kiwi Milkshake - Rs. 90>, <Item: 91. Black Current Milkshake - Rs. 90>, <Item: 90. Mango Milkshake - Rs. 90>, <Item: 89. Strawberry Milkshake - Rs. 90>, <Item: 88. Oreo Milkshake - Rs. 90>, <Item: 87. Chicken Cheese Sandwich(Grilled) - Rs. 100>, <Item: 86. Chicken Cheese Sandwich(Non Grilled) - Rs. 80>, '...(remaining elements truncated)...']>.
+2023-03-28 11:55:40,249 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-28 11:55:40,249 billing.context_processors INFO     There are orders in the database
+2023-03-28 11:55:40,249 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-28 11:55:40,257 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-28 11:55:40,257 billing.context_processors INFO     new_order_id: 72
+2023-03-28 11:55:40,265 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-28 11:55:40,265 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:30:12,665 django.request WARNING  Not Found: /accounts/login/
+2023-03-29 10:30:14,857 django.request WARNING  Not Found: /favicon.ico
+2023-03-29 10:30:21,830 billing.views INFO     Function Name: index
+2023-03-29 10:30:21,838 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:30:21,846 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:30:21,846 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:30:21,846 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:30:21,846 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:30:21,846 billing.views DEBUG    Received Order: 72
+2023-03-29 10:30:22,062 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:30:22,062 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:30:22,062 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:30:22,062 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:30:22,062 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:30:22,062 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:30:22,070 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:30:27,178 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-29 10:30:27,178 pizzeria_admin.views INFO     Received GET request
+2023-03-29 10:30:27,242 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-29 10:30:27,242 pizzeria_admin.views INFO     Received GET request
+2023-03-29 10:30:27,298 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:30:27,298 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:30:27,306 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:30:27,306 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:30:27,306 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:30:27,306 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:30:27,306 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:30:27,306 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:30:27,306 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:30:27,306 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:30:27,314 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:30:27,314 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:30:27,314 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:30:27,314 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:30:27,426 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-29 10:30:27,426 pizzeria_admin.views INFO     Received GET request
+2023-03-29 10:30:27,426 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:30:27,442 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:30:27,450 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:30:27,450 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:30:27,450 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:30:27,450 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:30:27,466 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:30:40,340 billing.views INFO     Function Name: index
+2023-03-29 10:30:40,340 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:30:40,348 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:30:40,348 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:30:40,348 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:30:40,348 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:30:40,348 billing.views DEBUG    Received Order: 72
+2023-03-29 10:30:40,348 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:30:40,356 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:30:40,356 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:30:40,356 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:30:40,356 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:30:40,356 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:30:40,356 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:30:44,470 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-29 10:30:44,470 pizzeria_admin.views INFO     Received GET request
+2023-03-29 10:30:44,470 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:30:44,478 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:30:44,478 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:30:44,478 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:30:44,478 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:30:44,478 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:30:44,478 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:30:57,057 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-29 10:30:57,057 pizzeria_admin.views INFO     Received POST request
+2023-03-29 10:30:57,065 pizzeria_admin.views INFO     Received form data
+2023-03-29 10:30:57,065 pizzeria_admin.views INFO     Received POST request
+2023-03-29 10:30:57,065 pizzeria_admin.views INFO     Received form data
+2023-03-29 10:30:57,321 pizzeria_admin.views INFO     Form is valid
+2023-03-29 10:30:57,329 pizzeria_admin.views INFO     Form is valid
+2023-03-29 10:30:57,329 pizzeria_admin.views INFO     Got user
+2023-03-29 10:30:57,329 pizzeria_admin.views INFO     Got user
+2023-03-29 10:30:57,329 pizzeria_admin.views INFO     User exists!
+2023-03-29 10:30:57,329 pizzeria_admin.views INFO     User exists!
+2023-03-29 10:30:57,698 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-29 10:30:57,698 pizzeria_admin.views DEBUG    Method: GET
+2023-03-29 10:30:57,698 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 105. Cheese Pakoda - Rs. 70>, <Item: 104. Onion Pakoda - Rs. 70>, <Item: 103. Veg Pakoda - Rs. 60>, <Item: 102. Chicken Manchurian - Rs. 150>, <Item: 101. Veg Manchurian - Rs. 100>, <Item: 100. Pork Sausage - Rs. 160>, <Item: 99. Chicken Sausage - Rs. 150>, <Item: 98. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 97. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 96. Cold Chocolate - Rs. 50>, <Item: 95. Hot Chocolate - Rs. 70>, <Item: 94. Blue Lagoon Milkshake - Rs. 110>, <Item: 93. Blue Berry Milkshake - Rs. 90>, <Item: 92. Kiwi Milkshake - Rs. 90>, <Item: 91. Black Current Milkshake - Rs. 90>, <Item: 90. Mango Milkshake - Rs. 90>, <Item: 89. Strawberry Milkshake - Rs. 90>, <Item: 88. Oreo Milkshake - Rs. 90>, <Item: 87. Chicken Cheese Sandwich(Grilled) - Rs. 100>, <Item: 86. Chicken Cheese Sandwich(Non Grilled) - Rs. 80>, '...(remaining elements truncated)...']>.
+2023-03-29 10:30:57,738 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:30:57,746 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:30:57,746 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:30:57,746 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:30:57,746 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:30:57,746 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:30:57,746 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:31:04,410 pizzeria_admin.views INFO     Function Name: search_items
+2023-03-29 10:31:04,410 pizzeria_admin.views DEBUG    Item Name: 
+2023-03-29 10:31:04,410 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:31:04,418 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:31:04,418 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:31:04,418 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:31:04,418 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:31:04,418 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:31:04,418 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:31:08,385 pizzeria_admin.views INFO     Function Name: search_items
+2023-03-29 10:31:08,385 pizzeria_admin.views DEBUG    Item Name: ceh
+2023-03-29 10:31:08,385 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:31:08,393 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:31:08,393 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:31:08,393 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:31:08,393 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:31:08,393 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:31:08,393 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:31:09,935 pizzeria_admin.views INFO     Function Name: search_items
+2023-03-29 10:31:09,951 pizzeria_admin.views DEBUG    Item Name: c
+2023-03-29 10:31:09,968 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:31:09,976 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:31:09,976 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:31:09,976 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:31:09,976 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:31:09,984 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:31:09,984 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:31:11,609 pizzeria_admin.views INFO     Function Name: search_items
+2023-03-29 10:31:11,609 pizzeria_admin.views DEBUG    Item Name: che
+2023-03-29 10:31:11,625 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:31:11,625 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:31:11,625 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:31:11,625 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:31:11,625 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:31:11,625 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:31:11,633 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:31:13,106 pizzeria_admin.views INFO     Function Name: search_items
+2023-03-29 10:31:13,106 pizzeria_admin.views DEBUG    Item Name: ch
+2023-03-29 10:31:13,106 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:31:13,106 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:31:13,114 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:31:13,114 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:31:13,114 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:31:13,114 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:31:13,114 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:31:19,044 pizzeria_admin.views INFO     Function Name: statistics
+2023-03-29 10:31:19,181 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:31:19,189 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:31:19,189 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:31:19,189 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:31:19,189 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:31:19,189 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:31:19,189 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:32:06,030 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-29 10:32:06,030 pizzeria_admin.views DEBUG    Method: GET
+2023-03-29 10:32:06,038 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 105. Cheese Pakoda - Rs. 70>, <Item: 104. Onion Pakoda - Rs. 70>, <Item: 103. Veg Pakoda - Rs. 60>, <Item: 102. Chicken Manchurian - Rs. 150>, <Item: 101. Veg Manchurian - Rs. 100>, <Item: 100. Pork Sausage - Rs. 160>, <Item: 99. Chicken Sausage - Rs. 150>, <Item: 98. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 97. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 96. Cold Chocolate - Rs. 50>, <Item: 95. Hot Chocolate - Rs. 70>, <Item: 94. Blue Lagoon Milkshake - Rs. 110>, <Item: 93. Blue Berry Milkshake - Rs. 90>, <Item: 92. Kiwi Milkshake - Rs. 90>, <Item: 91. Black Current Milkshake - Rs. 90>, <Item: 90. Mango Milkshake - Rs. 90>, <Item: 89. Strawberry Milkshake - Rs. 90>, <Item: 88. Oreo Milkshake - Rs. 90>, <Item: 87. Chicken Cheese Sandwich(Grilled) - Rs. 100>, <Item: 86. Chicken Cheese Sandwich(Non Grilled) - Rs. 80>, '...(remaining elements truncated)...']>.
+2023-03-29 10:32:06,038 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:32:06,038 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:32:06,038 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:32:06,038 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:32:06,038 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:32:06,038 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:32:06,046 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:32:09,865 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:32:09,873 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:32:09,905 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:32:09,905 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:32:09,921 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:32:10,025 billing.views INFO     Function Name: index
+2023-03-29 10:32:10,025 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:32:10,041 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:32:10,041 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:32:10,041 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:32:10,049 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:32:10,049 billing.views DEBUG    Received Order: 72
+2023-03-29 10:32:10,049 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:32:10,049 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:32:10,057 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:32:10,057 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:32:10,057 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:32:10,057 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:32:10,057 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:32:14,356 billing.views DEBUG    Function Name: search_items
+2023-03-29 10:32:14,364 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:32:14,372 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:32:14,372 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:32:14,372 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:32:14,372 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:32:14,372 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:32:14,380 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:32:17,112 billing.views DEBUG    Function Name: search_items
+2023-03-29 10:32:17,116 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:32:17,119 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:32:17,119 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:32:17,120 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:32:17,121 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:32:17,121 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:32:17,124 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:32:20,606 billing.views DEBUG    Function Name: add_item
+2023-03-29 10:32:20,606 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:32:20,606 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:32:20,606 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:32:20,606 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:32:20,606 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:32:20,606 billing.views DEBUG    Received order_id: 72
+2023-03-29 10:32:20,622 billing.views DEBUG    Received item Triple Fried Rice
+2023-03-29 10:32:20,874 billing.views INFO     Created order_item Triple Fried Rice for order 72
+2023-03-29 10:32:20,875 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:32:20,878 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:32:20,879 billing.context_processors DEBUG    Total orders: 72 from 1 to 72
+2023-03-29 10:32:20,879 billing.context_processors INFO     Got last order: OrderId: 72 Table: 1
+2023-03-29 10:32:20,880 billing.context_processors INFO     new_order_id: 72
+2023-03-29 10:32:20,881 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:32:20,883 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:32:29,273 billing.views DEBUG    Function Name: create_order
+2023-03-29 10:32:29,273 billing.views DEBUG    Received Order 72
+2023-03-29 10:32:29,464 billing.views INFO     Saved order 72
+2023-03-29 10:32:29,542 billing.views DEBUG    Created new order 73
+2023-03-29 10:32:29,542 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:32:29,557 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:32:29,557 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 10:32:29,557 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 10:32:29,557 billing.context_processors INFO     new_order_id: 73
+2023-03-29 10:32:29,557 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:32:29,557 billing.context_processors DEBUG    Orders contains 5 orders from 72 to 68
+2023-03-29 10:32:31,071 billing.views INFO     Function Name: index
+2023-03-29 10:32:31,071 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:32:31,087 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:32:31,087 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 10:32:31,087 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 10:32:31,087 billing.context_processors INFO     new_order_id: 73
+2023-03-29 10:32:31,087 billing.views DEBUG    Received Order: 73
+2023-03-29 10:32:31,087 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:32:31,087 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:32:31,087 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 10:32:31,087 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 10:32:31,095 billing.context_processors INFO     new_order_id: 73
+2023-03-29 10:32:31,095 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:32:31,095 billing.context_processors DEBUG    Orders contains 5 orders from 72 to 68
+2023-03-29 10:32:38,327 billing.views INFO     Function Name: update_order_status
+2023-03-29 10:32:38,328 billing.views DEBUG    Fetched order: 72 Requested order: 72
+2023-03-29 10:32:38,328 billing.views DEBUG    Received order status: Paid
+2023-03-29 10:32:38,588 billing.views INFO     Updated order 72 status to Paid
+2023-03-29 10:32:38,588 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:32:38,588 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:32:38,588 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 10:32:38,588 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 10:32:38,596 billing.context_processors INFO     new_order_id: 73
+2023-03-29 10:32:38,596 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:32:38,596 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:32:42,404 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-29 10:32:42,404 pizzeria_admin.views INFO     Received GET request
+2023-03-29 10:32:42,404 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:32:42,420 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:32:42,420 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 10:32:42,420 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 10:32:42,420 billing.context_processors INFO     new_order_id: 73
+2023-03-29 10:32:42,420 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:32:42,420 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:32:54,488 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-29 10:32:54,488 pizzeria_admin.views INFO     Received POST request
+2023-03-29 10:32:54,488 pizzeria_admin.views INFO     Received form data
+2023-03-29 10:32:54,488 pizzeria_admin.views INFO     Received POST request
+2023-03-29 10:32:54,496 pizzeria_admin.views INFO     Received form data
+2023-03-29 10:32:54,817 pizzeria_admin.views INFO     Form is valid
+2023-03-29 10:32:54,825 pizzeria_admin.views INFO     Form is valid
+2023-03-29 10:32:54,825 pizzeria_admin.views INFO     Got user
+2023-03-29 10:32:54,825 pizzeria_admin.views INFO     Got user
+2023-03-29 10:32:54,825 pizzeria_admin.views INFO     User exists!
+2023-03-29 10:32:54,825 pizzeria_admin.views INFO     User exists!
+2023-03-29 10:32:55,217 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-29 10:32:55,217 pizzeria_admin.views DEBUG    Method: GET
+2023-03-29 10:32:55,225 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 105. Cheese Pakoda - Rs. 70>, <Item: 104. Onion Pakoda - Rs. 70>, <Item: 103. Veg Pakoda - Rs. 60>, <Item: 102. Chicken Manchurian - Rs. 150>, <Item: 101. Veg Manchurian - Rs. 100>, <Item: 100. Pork Sausage - Rs. 160>, <Item: 99. Chicken Sausage - Rs. 150>, <Item: 98. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 97. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 96. Cold Chocolate - Rs. 50>, <Item: 95. Hot Chocolate - Rs. 70>, <Item: 94. Blue Lagoon Milkshake - Rs. 110>, <Item: 93. Blue Berry Milkshake - Rs. 90>, <Item: 92. Kiwi Milkshake - Rs. 90>, <Item: 91. Black Current Milkshake - Rs. 90>, <Item: 90. Mango Milkshake - Rs. 90>, <Item: 89. Strawberry Milkshake - Rs. 90>, <Item: 88. Oreo Milkshake - Rs. 90>, <Item: 87. Chicken Cheese Sandwich(Grilled) - Rs. 100>, <Item: 86. Chicken Cheese Sandwich(Non Grilled) - Rs. 80>, '...(remaining elements truncated)...']>.
+2023-03-29 10:32:55,225 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:32:55,233 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:32:55,233 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 10:32:55,233 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 10:32:55,233 billing.context_processors INFO     new_order_id: 73
+2023-03-29 10:32:55,233 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:32:55,233 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:33:03,430 pizzeria_admin.views INFO     Function Name: statistics
+2023-03-29 10:33:03,430 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:33:03,438 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:33:03,438 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 10:33:03,438 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 10:33:03,438 billing.context_processors INFO     new_order_id: 73
+2023-03-29 10:33:03,438 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:33:03,438 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:33:08,842 pizzeria_admin.views INFO     Function Name: statistics
+2023-03-29 10:33:08,842 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:33:08,850 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:33:08,850 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 10:33:08,850 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 10:33:08,850 billing.context_processors INFO     new_order_id: 73
+2023-03-29 10:33:08,850 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:33:08,850 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:43:15,845 django.request WARNING  Not Found: /accounts/login/
+2023-03-29 10:43:16,349 django.request WARNING  Not Found: /favicon.ico
+2023-03-29 10:56:39,772 billing.views INFO     Function Name: index
+2023-03-29 10:56:39,772 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:56:39,780 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:56:39,780 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 10:56:39,788 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 10:56:39,788 billing.context_processors INFO     new_order_id: 73
+2023-03-29 10:56:39,788 billing.views DEBUG    Received Order: 73
+2023-03-29 10:56:39,788 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:56:39,796 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:56:39,796 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 10:56:39,796 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 10:56:39,804 billing.context_processors INFO     new_order_id: 73
+2023-03-29 10:56:39,804 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:56:39,812 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:56:44,432 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-29 10:56:44,432 pizzeria_admin.views INFO     Received GET request
+2023-03-29 10:56:44,432 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:56:44,440 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:56:44,440 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 10:56:44,440 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 10:56:44,440 billing.context_processors INFO     new_order_id: 73
+2023-03-29 10:56:44,440 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:56:44,440 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:56:53,503 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-29 10:56:53,511 pizzeria_admin.views INFO     Received POST request
+2023-03-29 10:56:53,511 pizzeria_admin.views INFO     Received form data
+2023-03-29 10:56:53,511 pizzeria_admin.views INFO     Received POST request
+2023-03-29 10:56:53,511 pizzeria_admin.views INFO     Received form data
+2023-03-29 10:56:53,799 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:56:53,807 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:56:53,807 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 10:56:53,807 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 10:56:53,807 billing.context_processors INFO     new_order_id: 73
+2023-03-29 10:56:53,807 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:56:53,807 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:57:00,629 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-29 10:57:00,629 pizzeria_admin.views INFO     Received POST request
+2023-03-29 10:57:00,629 pizzeria_admin.views INFO     Received form data
+2023-03-29 10:57:00,629 pizzeria_admin.views INFO     Received POST request
+2023-03-29 10:57:00,629 pizzeria_admin.views INFO     Received form data
+2023-03-29 10:57:00,957 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:57:00,965 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:57:00,965 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 10:57:00,965 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 10:57:00,965 billing.context_processors INFO     new_order_id: 73
+2023-03-29 10:57:00,973 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:57:00,973 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:57:11,950 pizzeria_admin.views DEBUG    Function Name: pizzeria_login
+2023-03-29 10:57:11,950 pizzeria_admin.views INFO     Received POST request
+2023-03-29 10:57:11,950 pizzeria_admin.views INFO     Received form data
+2023-03-29 10:57:11,950 pizzeria_admin.views INFO     Received POST request
+2023-03-29 10:57:11,958 pizzeria_admin.views INFO     Received form data
+2023-03-29 10:57:12,262 pizzeria_admin.views INFO     Form is valid
+2023-03-29 10:57:12,262 pizzeria_admin.views INFO     Form is valid
+2023-03-29 10:57:12,262 pizzeria_admin.views INFO     Got user
+2023-03-29 10:57:12,262 pizzeria_admin.views INFO     Got user
+2023-03-29 10:57:12,262 pizzeria_admin.views INFO     User exists!
+2023-03-29 10:57:12,262 pizzeria_admin.views INFO     User exists!
+2023-03-29 10:57:12,729 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-29 10:57:12,729 pizzeria_admin.views DEBUG    Method: GET
+2023-03-29 10:57:12,729 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 105. Cheese Pakoda - Rs. 70>, <Item: 104. Onion Pakoda - Rs. 70>, <Item: 103. Veg Pakoda - Rs. 60>, <Item: 102. Chicken Manchurian - Rs. 150>, <Item: 101. Veg Manchurian - Rs. 100>, <Item: 100. Pork Sausage - Rs. 160>, <Item: 99. Chicken Sausage - Rs. 150>, <Item: 98. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 97. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 96. Cold Chocolate - Rs. 50>, <Item: 95. Hot Chocolate - Rs. 70>, <Item: 94. Blue Lagoon Milkshake - Rs. 110>, <Item: 93. Blue Berry Milkshake - Rs. 90>, <Item: 92. Kiwi Milkshake - Rs. 90>, <Item: 91. Black Current Milkshake - Rs. 90>, <Item: 90. Mango Milkshake - Rs. 90>, <Item: 89. Strawberry Milkshake - Rs. 90>, <Item: 88. Oreo Milkshake - Rs. 90>, <Item: 87. Chicken Cheese Sandwich(Grilled) - Rs. 100>, <Item: 86. Chicken Cheese Sandwich(Non Grilled) - Rs. 80>, '...(remaining elements truncated)...']>.
+2023-03-29 10:57:12,737 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:57:12,745 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:57:12,745 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 10:57:12,745 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 10:57:12,745 billing.context_processors INFO     new_order_id: 73
+2023-03-29 10:57:12,745 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:57:12,745 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 10:59:37,580 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-29 10:59:37,580 pizzeria_admin.views DEBUG    Method: GET
+2023-03-29 10:59:37,588 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 105. Cheese Pakoda - Rs. 70>, <Item: 104. Onion Pakoda - Rs. 70>, <Item: 103. Veg Pakoda - Rs. 60>, <Item: 102. Chicken Manchurian - Rs. 150>, <Item: 101. Veg Manchurian - Rs. 100>, <Item: 100. Pork Sausage - Rs. 160>, <Item: 99. Chicken Sausage - Rs. 150>, <Item: 98. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 97. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 96. Cold Chocolate - Rs. 50>, <Item: 95. Hot Chocolate - Rs. 70>, <Item: 94. Blue Lagoon Milkshake - Rs. 110>, <Item: 93. Blue Berry Milkshake - Rs. 90>, <Item: 92. Kiwi Milkshake - Rs. 90>, <Item: 91. Black Current Milkshake - Rs. 90>, <Item: 90. Mango Milkshake - Rs. 90>, <Item: 89. Strawberry Milkshake - Rs. 90>, <Item: 88. Oreo Milkshake - Rs. 90>, <Item: 87. Chicken Cheese Sandwich(Grilled) - Rs. 100>, <Item: 86. Chicken Cheese Sandwich(Non Grilled) - Rs. 80>, '...(remaining elements truncated)...']>.
+2023-03-29 10:59:37,588 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 10:59:37,588 billing.context_processors INFO     There are orders in the database
+2023-03-29 10:59:37,588 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 10:59:37,588 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 10:59:37,596 billing.context_processors INFO     new_order_id: 73
+2023-03-29 10:59:37,596 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 10:59:37,596 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 11:00:00,549 pizzeria_admin.views DEBUG    Function Name: pizzeria_admin
+2023-03-29 11:00:00,557 pizzeria_admin.views DEBUG    Method: GET
+2023-03-29 11:00:00,557 pizzeria_admin.views DEBUG    Collected all items <QuerySet [<Item: 105. Cheese Pakoda - Rs. 70>, <Item: 104. Onion Pakoda - Rs. 70>, <Item: 103. Veg Pakoda - Rs. 60>, <Item: 102. Chicken Manchurian - Rs. 150>, <Item: 101. Veg Manchurian - Rs. 100>, <Item: 100. Pork Sausage - Rs. 160>, <Item: 99. Chicken Sausage - Rs. 150>, <Item: 98. Fresh Lime Soda (Salty) - Rs. 40>, <Item: 97. Fresh Lime Soda (Sweet) - Rs. 70>, <Item: 96. Cold Chocolate - Rs. 50>, <Item: 95. Hot Chocolate - Rs. 70>, <Item: 94. Blue Lagoon Milkshake - Rs. 110>, <Item: 93. Blue Berry Milkshake - Rs. 90>, <Item: 92. Kiwi Milkshake - Rs. 90>, <Item: 91. Black Current Milkshake - Rs. 90>, <Item: 90. Mango Milkshake - Rs. 90>, <Item: 89. Strawberry Milkshake - Rs. 90>, <Item: 88. Oreo Milkshake - Rs. 90>, <Item: 87. Chicken Cheese Sandwich(Grilled) - Rs. 100>, <Item: 86. Chicken Cheese Sandwich(Non Grilled) - Rs. 80>, '...(remaining elements truncated)...']>.
+2023-03-29 11:00:00,557 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 11:00:00,565 billing.context_processors INFO     There are orders in the database
+2023-03-29 11:00:00,565 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 11:00:00,565 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 11:00:00,565 billing.context_processors INFO     new_order_id: 73
+2023-03-29 11:00:00,565 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 11:00:00,565 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68
+2023-03-29 11:13:36,750 django.request WARNING  Not Found: /accounts/login/
+2023-03-29 11:13:37,590 django.request WARNING  Not Found: /favicon.ico
+2023-03-29 11:13:45,117 billing.views INFO     Function Name: index
+2023-03-29 11:13:45,117 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 11:13:45,133 billing.context_processors INFO     There are orders in the database
+2023-03-29 11:13:45,133 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 11:13:45,133 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 11:13:45,133 billing.context_processors INFO     new_order_id: 73
+2023-03-29 11:13:45,133 billing.views DEBUG    Received Order: 73
+2023-03-29 11:13:45,317 billing.context_processors DEBUG    Function Name: new_order_id
+2023-03-29 11:13:45,325 billing.context_processors INFO     There are orders in the database
+2023-03-29 11:13:45,325 billing.context_processors DEBUG    Total orders: 73 from 1 to 73
+2023-03-29 11:13:45,325 billing.context_processors INFO     Got last order: OrderId: 73 Table: 1
+2023-03-29 11:13:45,325 billing.context_processors INFO     new_order_id: 73
+2023-03-29 11:13:45,333 billing.context_processors DEBUG    Function Name: all_orders
+2023-03-29 11:13:45,333 billing.context_processors DEBUG    Orders contains 4 orders from 71 to 68

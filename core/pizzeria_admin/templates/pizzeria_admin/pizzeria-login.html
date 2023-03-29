@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% block header %}
+{% endblock header %}
 {% block content %}
     {% load static %}
     {% load widget_tweaks %}
@@ -8,18 +10,14 @@
     </div>
     <!--Log In Section-->
     <br>
-    <div class="back">
-        <a href="{% url 'billing:index' %}">
-            <button class="btn">
-                <img src="{% static 'img/back.svg' %}" alt="back" width="30px">
-            </button>
-        </a>
-    </div>
+   
     <div class="logInSec">
         <div class="box">
-            <h2>Admin Login</h2>
+        <div class="heading"><h2>Admin Login</h2>
+        </div>
+            
             <form class="container" method="post">
-                <img src="{% static '/img/avatar.svg' %}" alt="img" id="avatar">
+              <img src="{% static '/img/avatar.svg' %}" alt="img" id="avatar">
                 {% render_field login_form.username|attr:"id:username" %}
                 <br>
                 <img src="{% static '/img/lock.svg' %}" alt="img" id="lock">
@@ -29,6 +27,14 @@
                     <input type="submit" value="Login" id="login">
                 </div>
             </form>
+            <div class="back">
+                <a href="{% url 'billing:index' %}">
+                    <button class="Pz-btn">
+                        Go Back
+                    </button>
+                </a>
+            </div>
         </div>
+       
     </div>
 {% endblock content %}
