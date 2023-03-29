@@ -76,10 +76,10 @@ class Item(models.Model):
         return self.name[:11].upper()
 
     def get_price(self):
-        return f"Rs.{self.price}"
+        return f"{self.price}"
 
     def get_total_price(self):
-        return f"Rs. {self.get_quantity() * self.price}"
+        return f"{self.get_quantity() * self.price}"
 
     def __str__(self):
         return f"{self.id}. {self.name} - Rs. {self.price}"
