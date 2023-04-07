@@ -51,22 +51,33 @@ logging.config.dictConfig({
 
 logger = logging.getLogger(__name__)
 
-#  Views
-
 
 def index(request):
     logger.info('Function Name: index')
-    order_id = new_order_id(request).get('new_order_id')
-    logger.debug(f'Received Order: {order_id}')
-    order = Order.objects.get_or_create(pk=order_id)
-    context = {'order': order[0], }
-    return render(request, 'index.html', context)
+    order_id = None
+    try:
+        order_id = int(request.GET['orderid'])
+        logger.debug(f'UpdateOrder: {order_id}')
+        order = Order.objects.get(pk=order_id)
+        order.is_update = True
+        order.save()
+        logger.debug(f'IsUpdate: {order.is_update}')
+        context = {'order': order}
+        return render(request, 'index.html', context)
+    except KeyError:
+        order_id = new_order_id(request).get('new_order_id')
+        logger.debug(f'Received Order: {order_id}')
+        order = Order.objects.get_or_create(pk=order_id)
+        context = {'order': order[0], }
+        return render(request, 'index.html', context)
 
 
 @csrf_exempt
 def search_items(request):
     logger.debug('Function Name: search_items')
-    item_name = request.POST.get('item-name')
+    item_name = request.GET.get('item-name')
+    order_id = request.GET.get('orderid')
+    order = Order.objects.get(pk=order_id)
     suggestions = []
     try:
         index_number = int(item_name)
@@ -83,7 +94,8 @@ def search_items(request):
                     #  item[0] is the item object
                     #  item[1] is the string to represent the item
                     (item, str(item)))
-    context = {"suggestions": suggestions}
+    context = {"suggestions": suggestions,
+               "order": order}
     return render(
         request,
         'partials/search-results.html',
@@ -95,7 +107,7 @@ def search_items(request):
 def add_item(request, item_id):
     logger.debug('Function Name: add_item')
     #  adds item to the order
-    order_id = new_order_id(request).get('new_order_id')
+    order_id = request.GET['orderid']
     logger.debug(f"Received order_id: {order_id}")
     item = Item.objects.get(pk=item_id)
     order = Order.objects.get_or_create(pk=order_id)[0]
@@ -176,6 +188,21 @@ def create_order(request):
     context = {
         'message': "Order is empty. Please add items to the order."
     }
+    return render(request, 'index.html', context)
+
+
+@csrf_exempt
+def update_order(request, order_id):
+    logger.info('Function name: update_order')
+    order = Order.objects.get(pk=order_id)
+    logger.debug(f'Got order {order.id}')
+    order.is_udpate = False
+    order.save()
+    next_order_id = new_order_id(request).get('new_order_id')
+    next_order = Order.objects.get(pk=next_order_id)
+    logger.debug(f'Got next order {next_order.id}')
+    context = {
+        'order': next_order}
     return render(request, 'index.html', context)
 
 

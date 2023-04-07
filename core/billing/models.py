@@ -22,6 +22,7 @@ class Order(models.Model):
     #  all the items are set and it is finally saved as a model.
     is_new = models.BooleanField(default=True)
     is_paid = models.BooleanField(default=False)
+    is_update = models.BooleanField(default=False)
     payment_method = models.CharField(max_length=10, default='Cash')
     items = models.ManyToManyField('Item', through="OrderItem")
     table_number = models.PositiveIntegerField(default=1)
