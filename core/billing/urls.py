@@ -6,6 +6,7 @@ app_name = "billing"
 urlpatterns = [
     path("", views.index, name='index'),
     path('modal/<int:order_id>', views.modal_view, name='modal-view'),
+    path('update-order/<int:order_id>', views.update_order, name='update_order'),
 ]
 
 htmx_patterns = [

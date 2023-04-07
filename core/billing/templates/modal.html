@@ -42,7 +42,9 @@
                     <tbody>
                         <tr>
                             <th colspan=2>
-                                <input class="btn btn-primary" type="button" value="Edit">
+                                <a href="{% url 'billing:index' %}?orderid={{ order.id }}"
+                                   class="btn btn-primary">Edit</a>
+                                {% comment %} <input class="btn btn-primary" type="button" value="Edit"> {% endcomment %}
                             </th>
                         </tr>
                         <tr>

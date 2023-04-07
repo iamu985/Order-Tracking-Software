@@ -12,14 +12,21 @@
         </div>
         {% include 'partials/show-added-items.html' %}
         <div class="d-flex justify-content-center order-create-btn">
-          <button type="submit"
-                  class="btn"
-                  id="create-button"
-                  style="background-color: #1d1d1d;
-                         color: #fefefe"
-                  onclick="createOrder()">
-            Create
-          </button>
+          {% if order.is_update %}
+            <a href="{% url 'billing:update_order' order.id %}"
+               class="btn"
+               style="background-color: #1d1d1d;
+                      color: #fefefe">Update</a>
+          {% else %}
+            <button type="submit"
+                    class="btn"
+                    id="create-button"
+                    style="background-color: #1d1d1d;
+                           color: #fefefe"
+                    onclick="createOrder()">
+              Create
+            </button>
+          {% endif %}
         </div>
       </div>
       <div class="col-md-5 recent-order">{% include 'partials/recent-orders.html' %}</div>
@@ -28,7 +35,7 @@
   <script src="{% static 'js/functions.js' %}"></script>
   <script>
     function createOrder() {
-      var orderId = {{new_order_id|safe}};
+      var orderId = {{order.id|safe}};
       var obj = {
         type: 'POST',
         url: {% url 'billing:create_order' %},

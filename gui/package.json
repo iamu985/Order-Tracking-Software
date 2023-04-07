@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "concurrent": "^0.3.2"
-  },
-  "devDependencies": {
-    "electron-forge": "^2.8.0"
-  }
-}

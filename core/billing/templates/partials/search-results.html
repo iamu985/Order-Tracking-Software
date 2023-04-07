@@ -1,7 +1,7 @@
 <ul class="two-columns list-unstyled" id="search-results">
   {% for item in suggestions %}
     <li class="search-result-li"
-        hx-post="{% url 'billing:add_item' item.0.id %}"
+        hx-get="{% url 'billing:add_item' item.0.id %}?orderid={{ order.id }}"
         hx-target="#add-items-target"
         hx-trigger="click">
       <div class="list-items1">{{ item.0.id }}</div>
