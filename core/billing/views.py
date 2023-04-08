@@ -229,7 +229,7 @@ def update_table_number(request, order_id):
     return render(request, 'index.html', context)
 
 
-# @csrf_exempt
+@csrf_exempt
 def modal_view(request, order_id):
     logger.debug('Function: modal_view')
     order = Order.objects.get(pk=order_id)
