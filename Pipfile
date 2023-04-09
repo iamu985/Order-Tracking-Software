@@ -15,6 +15,7 @@ python-escpos = "*"
 djlint = "*"
 django-mathfilters = "*"
 isort = "*"
+tzdata = "*"
 
 [dev-packages]
 autopep8 = "*"
