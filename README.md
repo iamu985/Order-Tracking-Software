@@ -2,11 +2,11 @@
 Order tracking and receipt prinitng software.
 
 ## Development SetUp
-In order to run the application you need to have docker installed. If you are not aware of how to install it then check out the docs[https://docs.docker.com/get-docker/].
+In order to run the application you need to have docker installed. If you are not aware of how to install it then check out the [docs](https://docs.docker.com/get-docker/).
 
 1. Make sure your terminal shows Dockerfile in your filesystem.
 2. To build your app run this command `docker build -t ellora/ots:dev .`
-3. In linux the command in 2 needs sudo to run. You can remove to use sudo by following this guide [https://docs.docker.com/engine/install/linux-postinstall/]. 
+3. In linux the command in 2 needs sudo to run. You can remove to use sudo by following this [guide](https://docs.docker.com/engine/install/linux-postinstall/). 
 
 The initial build might require some time depending on your internet speed and system.
 
