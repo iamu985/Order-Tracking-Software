@@ -4,6 +4,7 @@
     {% load mathfilters %}
     <link rel="stylesheet" href="{% static 'css/modal.css' %}">
     <div class="container-fluid container-section-modal">
+        {% if error %}<div class="alert alert-info" id="hideDiv">{{ error }}</div>{% endif %}
         <div class="row">
             <div class="col-md">
                 <a href="{% url 'billing:index' %}">
@@ -122,5 +123,12 @@
         $('#payment-online').prop('checked', true);
         $('#print-button').prop('disabled', false);
        }
+        </script>
+        <script>
+            function hide()
+            {
+            document.getElementById("hideDiv").style.visibility="hidden";
+            }
+            setTimeout("hide()",2000);
         </script>
     {% endblock content %}
