@@ -59,11 +59,16 @@ def index(request):
         order_id = int(request.GET['orderid'])
         logger.debug(f'UpdateOrder: {order_id}')
         order = Order.objects.get(pk=order_id)
-        order.is_update = True
-        order.save()
-        logger.debug(f'IsUpdate: {order.is_update}')
-        context = {'order': order}
-        return render(request, 'index.html', context)
+        if not order.is_paid:
+            order.is_update = True
+            order.save()
+            logger.debug(f'IsUpdate: {order.is_update}')
+            context = {'order': order}
+            return render(request, 'index.html', context)
+
+        else:
+            return render(request, 'modal.html', {'order': order,
+                                                  'error': "Cannot update a paid order"})
     except KeyError:
         order_id = new_order_id(request).get('new_order_id')
         logger.debug(f'Received Order: {order_id}')
