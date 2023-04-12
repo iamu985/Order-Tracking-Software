@@ -286,7 +286,7 @@ def search_orders(request):
     if order_id:
         logger.debug(f'Received order_id: {order_id}')
         order = get_order_or_none(order_id)
-        if order:
+        if order and not order.is_new:
             logger.debug('Order found')
             context = {
                 'orders': [order],
