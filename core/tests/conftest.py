@@ -55,3 +55,12 @@ def item_name():
     return Item.objects.create(id=id_,
                                name=name,
                                price=price)
+
+
+@pytest.fixture
+def multiple_orders():
+    orders = []
+    for i in range(5):
+        order = Order.objects.create(id=i)
+        orders.append(order)
+    return orders
