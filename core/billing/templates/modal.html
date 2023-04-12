@@ -45,7 +45,6 @@
                             <th colspan=2>
                                 <a href="{% url 'billing:index' %}?orderid={{ order.id }}"
                                    class="btn btn-primary">Edit</a>
-                                {% comment %} <input class="btn btn-primary" type="button" value="Edit"> {% endcomment %}
                             </th>
                         </tr>
                         <tr>
@@ -86,7 +85,7 @@
                                hx-target="body">
                         <label class="form-check-label" for="payment-online">Online</label>
                     </div>
-                    <a href="{% url 'billing:index' %}"
+                    <a href="{% url 'billing:modal_save' %}?orderid={{ order.id }}"
                        type="button"
                        style="color:white"
                        class="btn btn-secondary save-print"

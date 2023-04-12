@@ -249,6 +249,22 @@ def modal_view(request, order_id):
 
 
 @csrf_exempt
+def modal_save(request):
+    logger.info('Function Name: modal_save')
+    order_id = request.GET.get('orderid')
+    logger.debug(f'Received OrderId from GET: {order_id}')
+    order = Order.objects.get(pk=order_id)
+    order.is_paid = True
+    order.save()
+    logger.info(f'Order {order.id} is paid')
+    order_id = new_order_id(request).get('new_order_id')
+    logger.debug(f'Received Order: {order_id}')
+    order = Order.objects.get_or_create(pk=order_id)
+    context = {'order': order[0], }
+    return render(request, 'index.html', context)
+
+
+@csrf_exempt
 def print_receipt_view(request, order_id):
     logger.debug('Function: print_receipt_view')
     logger.info(f'OrderId: {order_id}')
