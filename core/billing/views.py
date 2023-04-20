@@ -11,7 +11,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .context_processors import new_order_id
 # from django.http import JsonResponse
 from .models import Item, Order, OrderItem
-from .receipt_printer import print_receipt
+from .receipt_backend import ReceiptPrinter
 from .utils import (check_order_status, delete_order_item, get_current_date,
                     get_order_or_none)
 
@@ -249,7 +249,9 @@ def print_receipt_view(request, order_id):
     logger.info(f'OrderId: {order_id}')
     order = Order.objects.get(pk=order_id)
     logger.debug('Function: print_receipt_view')
-    print_receipt(order)
+
+    printer = ReceiptPrinter(order)
+    printer.print_receipt()
     context = {
         'order': order,
     }
