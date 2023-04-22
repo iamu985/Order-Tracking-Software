@@ -38,8 +38,10 @@ logging.config.dictConfig({
         },
         'file': {
             'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'formatter': 'file',
+            'class': 'logging.handlers.RotatingFileHandlers',
+            'maxBytes': 1024*1024*2,
+            'backupCount': 10,
+            'formatter': 'standard',
             'filename': f'{LOG_DIR}/debug.log'
         }
     },

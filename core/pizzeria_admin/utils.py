@@ -31,6 +31,7 @@ def get_total_sales_by_orders(orders):
 
 
 def generate_labels_for_month(month: int):
+    # generates labels for month
     thirty_months = [4, 6, 9, 11]
     thirty_one_months = [1, 3, 5, 7, 8, 19, 12]
     year = get_present_year()
@@ -46,6 +47,7 @@ def generate_labels_for_month(month: int):
 
 
 def get_random_date():
+    # Returns random date
     year = random.randint(2020, 2023)
     month = random.randint(1, 12)
     day = random.randint(1, 28)
@@ -53,6 +55,7 @@ def get_random_date():
 
 
 def generate_dummy_daily_orders(limit_per_day=50):
+    # Returns dummy daily orders data
     items = Item.objects.all()
     for i in range(1, 31):
         random_limit_per_day = random.randint(1, limit_per_day)
@@ -75,6 +78,7 @@ def generate_dummy_daily_orders(limit_per_day=50):
 
 
 def generate_dummy_orders(limit=100):
+    # Returns dummy orders data
     items = Item.objects.all()
     item_limit = random.randint(1, 8)
     for i in range(limit):
@@ -117,7 +121,9 @@ def make_new_year_range():
 def get_daily_data():
     # Returns a tuple containing the labels and data
     # for the daily chart
+    logger.info('Function Name: get_daily_data')
     month = get_present_month()
+    logger.debug(f'Present Month: {month}')
     orders_by_month = Order.objects.filter(ordered_on__month=month)
     label = [i for i in generate_labels_for_month(month)]
     data = [get_total_sales_by_orders(orders_by_month.filter(ordered_on__day=i))

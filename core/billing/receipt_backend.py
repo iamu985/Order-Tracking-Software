@@ -22,15 +22,17 @@ logging.config.dictConfig({
             'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
         }
     },
-    'handlers': {
+   'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
             'formatter': 'console'
         },
         'file': {
             'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'formatter': 'file',
+            'class': 'logging.handlers.RotatingFileHandlers',
+            'maxBytes': 1024*1024*2,
+            'backupCount': 10,
+            'formatter': 'standard',
             'filename': f'{LOG_DIR}/debug.log'
         }
     },

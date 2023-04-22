@@ -3,8 +3,6 @@ from uuid import uuid4 as uuid
 
 from django.db import models
 
-# Create your models here.
-
 
 class Order(models.Model):
     ORDER_STATUS_CHOICE = [
