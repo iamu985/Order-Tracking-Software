@@ -1,8 +1,45 @@
 import datetime
 import random
-
+import logging
 from billing.models import Item, Order, OrderItem
+from django.conf import settings
 
+
+LOG_DIR = settings.BASE_DIR / 'logs'
+logging.config.dictConfig({
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'console': {
+            'format': '%(name)-12s %(levelname)-8s %(message)s'
+        },
+        'file': {
+            'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
+        }
+    },
+   'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'console'
+        },
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'maxBytes': 1024*1024*2,
+            'backupCount': 10,
+            'formatter': 'file',
+            'filename': f'{LOG_DIR}/debug.log'
+        }
+    },
+    'loggers': {
+        '': {
+            'level': 'DEBUG',
+            'handlers': ['console', 'file']
+        }
+    }
+})
+
+logger = logging.getLogger(__name__)
 
 def get_present_month():
     # returns present month
