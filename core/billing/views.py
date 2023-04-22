@@ -280,7 +280,7 @@ def print_receipt_view(request, order_id):
     context = {
         'order': order,
     }
-    return render(request, 'modal.html')
+    return render(request, 'modal.html', context)
 
 
 @csrf_exempt
