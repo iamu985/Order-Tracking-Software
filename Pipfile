@@ -16,6 +16,9 @@ djlint = "*"
 django-mathfilters = "*"
 isort = "*"
 tzdata = "*"
+win32printing = "*"
+cx-freeze = "*"
+idna = "*"
 
 [dev-packages]
 autopep8 = "*"
