@@ -3,8 +3,6 @@ from uuid import uuid4 as uuid
 
 from django.db import models
 
-# Create your models here.
-
 
 class Order(models.Model):
     ORDER_STATUS_CHOICE = [
@@ -77,18 +75,23 @@ class Item(models.Model):
         if 'chicken' in self.name.lower():
             new_name = re.sub('chicken', 'chk', self.name.lower()).upper()
             if len(new_name) > 11:
-                return new_name[:11]
+                return new_name[:11].upper()
+            if len(new_name) < 11:
+                new_name += " "*(11-len(new_name))
+                return new_name.upper()
         if 'pork' in self.name.lower():
             new_name = re.sub('pork', 'prk', self.name.lower()).upper()
             if len(new_name) > 11:
-                return new_name[:11]
+                return new_name[:11].upper()
+            if len(new_name) < 11:
+                new_name += " "*(11-len(new_name))
+                return new_name.upper()
+        if len(self.name) < 11:
+            return self.name.upper() + " "*(11-len(self.name))
         return self.name[:11].upper()
 
     def get_price(self):
         return f"{self.price}"
-
-    def get_total_price(self):
-        return f"{self.get_quantity() * self.price}"
 
     def __str__(self):
         return f"{self.id}. {self.name} - Rs. {self.price}"

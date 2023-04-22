@@ -53,6 +53,8 @@ TEMPLATES = [
                 'pizzeria_admin.context_processors.get_chart_data',
                 'pizzeria_admin.context_processors.get_daily_sales',
                 'pizzeria_admin.context_processors.get_weekly_sales',
+                'pizzeria_admin.context_processors.get_monthly_sales',
+                'pizzeria_admin.context_processors.get_yearly_sales',
             ],
         },
     },

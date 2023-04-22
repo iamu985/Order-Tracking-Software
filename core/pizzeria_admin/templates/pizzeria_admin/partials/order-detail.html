@@ -40,61 +40,20 @@
                 <table class="table table-striped">
                     <tbody>
                         <tr>
-                            <th colspan=2>
-                                <input class="btn btn-primary" type="button" value="Edit">
-                            </th>
-                        </tr>
-                        <tr>
                             <th>Total</th>
                             <th>Rs. {{ order.get_total_price }}</th>
                         </tr>
                     </tbody>
                 </table>
-                <div>Payment Method</div>
-                <div class="payment-method-section">
-                    <div class="payment-method-container">
-                        <input class="form-check-input"
-                               type="radio"
-                               name="payment-method"
-                               id="payment-unpaid"
-                               value="unpaid"
-                               checked>
-                        <label class="form-check-label" for="payment-unpaid">Unpaid</label>
-                    </div>
-                    <div class="payment-method-container">
-                        <input class="form-check-input"
-                               type="radio"
-                               name="payment-method"
-                               id="payment-cash"
-                               value="cash">
-                        <label class="form-check-label" for="payment-cash">Cash</label>
-                    </div>
-                    <div class="payment-method-container">
-                        <input class="form-check-input"
-                               type="radio"
-                               name="payment-method"
-                               id="payment-online"
-                               value="online">
-                        <label class="form-check-label" for="payment-online">Online</label>
-                    </div>
-                    <input type="button" class="btn btn-secondary save-print" value="Save">
-                    <input type="button"
-                           id="print-button"
-                           class="btn btn-secondary save-print"
-                           value="Print"
-                           disabled="true">
+                <div class="mx-3">Payment Method: <b>{{ order.payment_method }}</b></div>
+                <input type="button"
+                id="print-button"
+                class="btn btn-secondary save-print my-4"
+                value="Print"
+                hx-post="{% url 'billing:print_receipt' order.id %}"
+                hx-trigger="click">
+
                 </div>
             </div>
         </div>
-        <script>
-        //Print Button remain disabled when Unpaid
-       $('input:radio[name="payment-method"]').change(function(){
-        if($(this).is(':checked') && $(this).val() != 'unpaid'){
-           $('#print-button').prop("disabled",false);
-        }
-        else{
-           $('#print-button').prop("disabled",true);
-        }
-       });
-        </script>
     {% endblock content %}

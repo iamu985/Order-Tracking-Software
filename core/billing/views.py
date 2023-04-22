@@ -11,7 +11,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .context_processors import new_order_id
 # from django.http import JsonResponse
 from .models import Item, Order, OrderItem
-from .receipt_printer import print_receipt
+from .receipt_backend import ReceiptPrinter
 from .utils import (check_order_status, delete_order_item, get_current_date,
                     get_order_or_none)
 
@@ -28,14 +28,16 @@ logging.config.dictConfig({
             'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
         }
     },
-    'handlers': {
+   'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
             'formatter': 'console'
         },
         'file': {
             'level': 'DEBUG',
-            'class': 'logging.FileHandler',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'maxBytes': 1024*1024*2,
+            'backupCount': 10,
             'formatter': 'file',
             'filename': f'{LOG_DIR}/debug.log'
         }
@@ -59,11 +61,16 @@ def index(request):
         order_id = int(request.GET['orderid'])
         logger.debug(f'UpdateOrder: {order_id}')
         order = Order.objects.get(pk=order_id)
-        order.is_update = True
-        order.save()
-        logger.debug(f'IsUpdate: {order.is_update}')
-        context = {'order': order}
-        return render(request, 'index.html', context)
+        if not order.is_paid:
+            order.is_update = True
+            order.save()
+            logger.debug(f'IsUpdate: {order.is_update}')
+            context = {'order': order}
+            return render(request, 'index.html', context)
+
+        else:
+            return render(request, 'modal.html', {'order': order,
+                                                  'error': "Cannot update a paid order"})
     except KeyError:
         order_id = new_order_id(request).get('new_order_id')
         logger.debug(f'Received Order: {order_id}')
@@ -229,7 +236,7 @@ def update_table_number(request, order_id):
     return render(request, 'index.html', context)
 
 
-# @csrf_exempt
+@csrf_exempt
 def modal_view(request, order_id):
     logger.debug('Function: modal_view')
     order = Order.objects.get(pk=order_id)
@@ -244,12 +251,32 @@ def modal_view(request, order_id):
 
 
 @csrf_exempt
+def modal_save(request):
+    logger.info('Function Name: modal_save')
+    order_id = request.GET.get('orderid')
+    logger.debug(f'Received OrderId from GET: {order_id}')
+    order = Order.objects.get(pk=order_id)
+    order.is_paid = True
+    order.order_status = "Paid"
+    order.save()
+    logger.info(f'Order.is_paid: {order.is_paid}')
+    logger.info(f'Order {order.id} is paid')
+    order_id = new_order_id(request).get('new_order_id')
+    logger.debug(f'Received Order: {order_id}')
+    order = Order.objects.get_or_create(pk=order_id)
+    context = {'order': order[0], }
+    return render(request, 'index.html', context)
+
+
+@csrf_exempt
 def print_receipt_view(request, order_id):
     logger.debug('Function: print_receipt_view')
     logger.info(f'OrderId: {order_id}')
     order = Order.objects.get(pk=order_id)
     logger.debug('Function: print_receipt_view')
-    print_receipt(order)
+
+    printer = ReceiptPrinter(order)
+    printer.print_receipt()
     context = {
         'order': order,
     }
@@ -263,7 +290,7 @@ def search_orders(request):
     if order_id:
         logger.debug(f'Received order_id: {order_id}')
         order = get_order_or_none(order_id)
-        if order:
+        if order and not order.is_new:
             logger.debug('Order found')
             context = {
                 'orders': [order],

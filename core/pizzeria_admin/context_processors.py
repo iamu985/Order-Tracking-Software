@@ -6,7 +6,8 @@ from django.conf import settings
 from billing.models import Order
 
 from .utils import (get_daily_data, get_monthly_data, get_present_date,
-                    get_weekly_data, get_yearly_data)
+                    get_weekly_data, get_yearly_data, get_total_sales_by_orders,
+                    get_present_month, get_present_year)
 
 LOG_DIR = settings.BASE_DIR / 'logs'
 logging.config.dictConfig({
@@ -20,16 +21,18 @@ logging.config.dictConfig({
             'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
         }
     },
-    'handlers': {
+   'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
             'formatter': 'console'
         },
         'file': {
             'level': 'DEBUG',
-            'class': 'logging.FileHandler',
+            'filename': f'{LOG_DIR}/debug.log',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'maxBytes': 1024*1024*2,
+            'backupCount': 10,
             'formatter': 'file',
-            'filename': f'{LOG_DIR}/debug.log'
         }
     },
     'loggers': {
@@ -80,4 +83,24 @@ def get_weekly_sales(request):
         total_sales += order.get_total_price()
     return {
         'weekly_sales': total_sales,
+    }
+
+
+def get_monthly_sales(request):
+    # Returns a dictionary containing total monthly sales amount
+    month = get_present_month()
+    orders = Order.objects.filter(ordered_on__month=month)
+    total_sales = get_total_sales_by_orders(orders)
+    return {
+        'monthly_sales': total_sales,
+    }
+
+
+def get_yearly_sales(request):
+    # Returns a dictionary containing total yearly sales amount
+    year = get_present_year()
+    orders = Order.objects.filter(ordered_on__year=year)
+    total_sales = get_total_sales_by_orders(orders)
+    return {
+        'yearly_sales': total_sales,
     }

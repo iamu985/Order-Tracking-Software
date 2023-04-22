@@ -4,6 +4,7 @@
     {% load mathfilters %}
     <link rel="stylesheet" href="{% static 'css/modal.css' %}">
     <div class="container-fluid container-section-modal">
+        {% if error %}<div class="alert alert-info" id="hideDiv">{{ error }}</div>{% endif %}
         <div class="row">
             <div class="col-md">
                 <a href="{% url 'billing:index' %}">
@@ -44,7 +45,6 @@
                             <th colspan=2>
                                 <a href="{% url 'billing:index' %}?orderid={{ order.id }}"
                                    class="btn btn-primary">Edit</a>
-                                {% comment %} <input class="btn btn-primary" type="button" value="Edit"> {% endcomment %}
                             </th>
                         </tr>
                         <tr>
@@ -85,7 +85,7 @@
                                hx-target="body">
                         <label class="form-check-label" for="payment-online">Online</label>
                     </div>
-                    <a href="{% url 'billing:index' %}"
+                    <a href="{% url 'billing:modal_save' %}?orderid={{ order.id }}"
                        type="button"
                        style="color:white"
                        class="btn btn-secondary save-print"
@@ -122,5 +122,12 @@
         $('#payment-online').prop('checked', true);
         $('#print-button').prop('disabled', false);
        }
+        </script>
+        <script>
+            function hide()
+            {
+            document.getElementById("hideDiv").style.visibility="hidden";
+            }
+            setTimeout("hide()",2000);
         </script>
     {% endblock content %}
