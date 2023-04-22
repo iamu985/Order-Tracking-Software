@@ -15,7 +15,7 @@
                         <td>{{ order.get_total_price }}</td>
                         <!-- Status Section -->
                         <td>
-                            <select class="form-select form-control select-status"
+                            {% comment %} <select class="form-select form-control select-status"
                                     id="select-order-status"
                                     aria-label="Status"
                                     hx-post="{% url 'billing:update_order_status' order.id %}"
@@ -23,7 +23,8 @@
                                     name='order-status'>
                                 <option value="Unpaid">Unpaid</option>
                                 <option value="Paid">Paid</option>
-                            </select>
+                            </select> {% endcomment %}
+                            {{ order.order_status }}
                         </td>
                         <td>
                             <input type="number"

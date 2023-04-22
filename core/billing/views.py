@@ -255,6 +255,7 @@ def modal_save(request):
     logger.debug(f'Received OrderId from GET: {order_id}')
     order = Order.objects.get(pk=order_id)
     order.is_paid = True
+    order.order_status = "Paid"
     order.save()
     logger.info(f'Order.is_paid: {order.is_paid}')
     logger.info(f'Order {order.id} is paid')
