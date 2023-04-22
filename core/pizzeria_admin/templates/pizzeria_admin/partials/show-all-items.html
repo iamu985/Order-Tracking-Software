@@ -9,7 +9,7 @@
             <button hx-post="{% url 'pizzeria_admin:delete_item_from_model' item.id %}"
                     hx-trigger="click"
                     hx-target="#items"
-                    hx-swap="outerHTML">
+                    hx-swap="innerHTML">
                 Delete
             </button>
         </div>

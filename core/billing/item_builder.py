@@ -155,3 +155,7 @@ def build_items(items: list = ITEMS):
             price=item[1]
         )
     print('Items created successfully.')
+
+
+if __name__ == "__main__":
+    build_items()
