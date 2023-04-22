@@ -71,6 +71,9 @@ class Item(models.Model):
     def get_quantity(self):
         return self.orderitem_set.all()[0].quantity
 
+    def get_total_price(self):
+        return self.get_quantity() * self.price
+
     def get_shortened_name(self):
         if 'chicken' in self.name.lower():
             new_name = re.sub('chicken', 'chk', self.name.lower()).upper()
