@@ -93,16 +93,16 @@ def print_receipt_windows(order, printer, fontsize, title_fontsize, weight):
         printer.text(f"OrderId: {order.id}", font_config=title_font)
         printer.text(f'TableNumber: {order.table_number}', font_config=title_font)
         printer.text(f"{'-' * 32}")
-        printer.text('{:8} {:>8} {:>5} {:>8}\n'.format('Item', 'Qty', 'Rate', 'Price'), font_config=title_font)
+        printer.text('{:>11} {:>8} {:>5} {:>8}\n'.format('Item', 'Qty', 'Rate', 'Price'), font_config=title_font)
         
         # printing items
         for item in order.items.all():
             if len(item.get_shortened_name()) < 10:
-                printer.text('{:10} {:>3} {:>5} {:>8}\n'.format(
+                printer.text('{:>11} {:>8} {:>5} {:>10}\n'.format(
                     item.get_shortened_name(), item.get_quantity(), item.get_price(), item.get_total_price()
                 ), font_config=font)
             else:
-                printer.text('{:4} {:>2} {:>5} {:>8}\n'.format(
+                printer.text('{:>11} {:>8} {:>5} {:>10}\n'.format(
                     item.get_shortened_name(), item.get_quantity(), item.get_price(), item.get_total_price()
                 ), font_config=font)
         
