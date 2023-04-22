@@ -20,6 +20,7 @@ win32printing = "*"
 cx-freeze = "*"
 idna = "*"
 pillow = "*"
+ipython = "*"
 
 [dev-packages]
 autopep8 = "*"
