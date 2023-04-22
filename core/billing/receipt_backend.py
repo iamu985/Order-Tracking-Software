@@ -1,4 +1,3 @@
-from win32printing import Printer
 import platform
 from escpos.printer import Usb
 from .conf import EP_IN, EP_OUT, INTERFACE, LOGO, A, B
@@ -6,6 +5,10 @@ from .receipt_printer import print_receipt_linux, print_receipt_windows
 import logging
 from django.conf import settings
 
+SYSTEM = platform.platform()
+
+if 'windows' in SYSTEM.lower():
+    import win32printing
 
 LOG_DIR = settings.BASE_DIR / 'logs'
 logging.config.dictConfig({
@@ -58,14 +61,13 @@ class ReceiptPrinter:
         self.os = None
     
     def get_printer_backend(self):
-        system_os = platform.platform()
-        if 'windows' in system_os.lower():
+        if 'windows' in SYSTEM.lower():
             logger.info('Found system to be Windows using windows backend.')
             self.os = 'windows'
             logger.debug(f'Set self.os to {self.os}')
             return Printer(linegap=1)
         
-        if 'linux' in system_os.lower():
+        if 'linux' in SYSTEM.lower():
             logger.info('Found system to be linux using linux backend.')
             self.os = 'linux'
             logger.debug(f'Set self.os to {self.os}')

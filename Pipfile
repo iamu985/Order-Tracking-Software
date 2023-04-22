@@ -19,6 +19,7 @@ tzdata = "*"
 win32printing = "*"
 cx-freeze = "*"
 idna = "*"
+pillow = "*"
 
 [dev-packages]
 autopep8 = "*"
