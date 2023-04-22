@@ -8,7 +8,7 @@ from django.conf import settings
 SYSTEM = platform.platform()
 
 if 'windows' in SYSTEM.lower():
-    import win32printing
+    from win32printing import Printer
 
 LOG_DIR = settings.BASE_DIR / 'logs'
 logging.config.dictConfig({
@@ -22,7 +22,7 @@ logging.config.dictConfig({
             'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
         }
     },
-   'handlers': {
+    'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
             'formatter': 'console'
@@ -46,6 +46,7 @@ logging.config.dictConfig({
 
 logger = logging.getLogger(__name__)
 
+
 class ReceiptPrinter:
     '''
     ReceiptPrinter class to print receipt.
@@ -55,31 +56,32 @@ class ReceiptPrinter:
     font (default 8): used to manage font size for windows backend
     weight (default 10): same as font
     '''
+
     def __init__(self, order, title_font=10, font=8, weight=10):
         self.order = order
         self.title_font = title_font
         self.font = font
         self.weight = weight
         self.os = None
-    
+
     def get_printer_backend(self):
         if 'windows' in SYSTEM.lower():
             logger.info('Found system to be Windows using windows backend.')
             self.os = 'windows'
             logger.debug(f'Set self.os to {self.os}')
             return Printer(linegap=1)
-        
+
         if 'linux' in SYSTEM.lower():
             logger.info('Found system to be linux using linux backend.')
             self.os = 'linux'
             logger.debug(f'Set self.os to {self.os}')
             return Usb(A, B, INTERFACE, EP_IN, EP_OUT)
-    
+
     def print_receipt(self):
         printer = self.get_printer_backend()
         logger.debug(printer)
         if self.os == 'windows':
-            print_receipt_windows(self.order, printer, self.font, self.title_font, self.weight)
+            print_receipt_windows(self.order, printer,
+                                  self.font, self.title_font, self.weight)
         if self.os == 'linux':
             print_receipt_linux(self.order, printer)
-
