@@ -5,6 +5,7 @@ from . import views
 app_name = "pizzeria_admin"
 urlpatterns = [
     path("login/", views.pizzeria_login, name='login'),
+    path("logout/", views.pizzeria_logout, name="logout"),
     path('', views.pizzeria_admin, name="admin"),
     path('statistics/', views.statistics, name="statistics"),
     path('admin-logout/', views.admin_logout, name="logout"),

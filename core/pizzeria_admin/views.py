@@ -107,6 +107,12 @@ def pizzeria_login(request):
         return render(request, 'pizzeria_admin/pizzeria-login.html', context)
 
 
+@csrf_exempt
+@login_required
+def pizzeria_logout(request):
+    logout(request)
+    return redirect('billing:index')
+
 @login_required
 @csrf_exempt
 def pizzeria_admin(request):
