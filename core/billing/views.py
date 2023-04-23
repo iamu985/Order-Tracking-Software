@@ -28,7 +28,7 @@ logging.config.dictConfig({
             'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
         }
     },
-   'handlers': {
+    'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
             'formatter': 'console'
@@ -88,25 +88,21 @@ def search_items(request):
     suggestions = []
     try:
         index_number = int(item_name)
-        item = Item.objects.get(pk=index_number)
+        # suggestions = Item.objects.get(pk=index_number)
+        item = Item.objects.get(id=index_number)
         suggestions.append(
             (item, str(item))
         )
     except ValueError:
-        query = re.compile(item_name, re.IGNORECASE)
+        suggestions = Item.objects.filter(name__icontains=item_name)
+        # print(suggestions)
 
-        for item in Item.objects.all():
-            if re.search(query, item.name):
-                suggestions.append(
-                    #  item[0] is the item object
-                    #  item[1] is the string to represent the item
-                    (item, str(item)))
     context = {"suggestions": suggestions,
                "order": order}
     return render(
         request,
         'partials/search-results.html',
-        context
+        context,
     )
 
 

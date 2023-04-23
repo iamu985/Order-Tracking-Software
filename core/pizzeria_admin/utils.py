@@ -17,7 +17,7 @@ logging.config.dictConfig({
             'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
         }
     },
-   'handlers': {
+    'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
             'formatter': 'console'
@@ -40,6 +40,7 @@ logging.config.dictConfig({
 })
 
 logger = logging.getLogger(__name__)
+
 
 def get_present_month():
     # returns present month

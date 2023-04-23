@@ -1,4 +1,11 @@
-{% if message %}<div class="alert alert-info" id="hideDiv">{{ message }}</div>{% endif %}
+{% if message %}
+  <div class="alert alert-success" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ message }}
+  </div>
+{% endif %}
 <table class="table table-striped" id="add-items-target">
   {% if order.orderitem_set.all %}
     <thead>
@@ -10,7 +17,7 @@
         <th scope="col">Function</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody style="max-height:30px; overflow-y:auto;">
       {% for item in order.orderitem_set.all %}
         <tr>
           <th scope="row">{{ forloop.counter }}</th>
@@ -49,9 +56,8 @@
     {% endif %}
   </table>
   <script>
-    function hide()
-    {
-    document.getElementById("hideDiv").style.visibility="hidden";
-    }
-    setTimeout("hide()",2000);
+   window.setTimeout(function() {
+    $(".alert").fadeTo(500, 0).slideUp(500, function(){
+        $(this).remove(); 
+    });}, 4000);                                                                      
   </script>

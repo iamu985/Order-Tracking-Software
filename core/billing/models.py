@@ -1,5 +1,4 @@
 import re
-from uuid import uuid4 as uuid
 
 from django.db import models
 
@@ -65,7 +64,7 @@ class Order(models.Model):
 
 
 class Item(models.Model):
-    name = models.CharField(max_length=120)
+    name = models.CharField(max_length=120, db_index=True)
     price = models.IntegerField(default=0)
 
     def get_quantity(self):

@@ -53,46 +53,46 @@ $(document).ready(function () {
         }
 
 
-        if (istab) {
-            let max = $("#search-bar004-target ul li").length;
+        // if (istab) {
+        //     let max = $("#search-bar004-target ul li").length;
 
-            let half = Math.round(max / 2);
+        //     let half = Math.round(max / 2);
 
-            if (event.which === 40 && pointer < max - 1) { /* down arrow */
-                event.preventDefault();
-                rebaseBackground();
-                pointer++;
-            }
+        //     if (event.which === 40 && pointer < max - 1) { /* down arrow */
+        //         event.preventDefault();
+        //         rebaseBackground();
+        //         pointer++;
+        //     }
 
-            if (event.which === 38) { /* up arrow */
-                event.preventDefault();
-                if (pointer > 0) {
-                    rebaseBackground();
-                    pointer--;
-                }
-            }
-            // if (event.which === 39) { /* right arrow */
-            //     event.preventDefault();
-            //     let shift = pointer + half;
-            //     if (shift < max) {
-            //         rebaseBackground();
-            //         pointer = shift;
-            //     }
+        //     if (event.which === 38) { /* up arrow */
+        //         event.preventDefault();
+        //         if (pointer > 0) {
+        //             rebaseBackground();
+        //             pointer--;
+        //         }
+        //     }
+        //     // if (event.which === 39) { /* right arrow */
+        //     //     event.preventDefault();
+        //     //     let shift = pointer + half;
+        //     //     if (shift < max) {
+        //     //         rebaseBackground();
+        //     //         pointer = shift;
+        //     //     }
 
-            // }
+        //     // }
 
-            // if (event.which === 37) { /* left arrow */
-            //     event.preventDefault();
-            //     let shift = pointer - half;
-            //     if (shift >= 0) {
-            //         rebaseBackground();
-            //         pointer = shift;
-            //     }
-            // }
+        //     // if (event.which === 37) { /* left arrow */
+        //     //     event.preventDefault();
+        //     //     let shift = pointer - half;
+        //     //     if (shift >= 0) {
+        //     //         rebaseBackground();
+        //     //         pointer = shift;
+        //     //     }
+        //     // }
 
 
-            $('#search-bar004-target ul li').eq(pointer).css({ 'background-color': 'gray' });
-        }
+        //     $('#search-bar004-target ul li').eq(pointer).css({ 'background-color': 'gray' });
+        // }
 
     });
 
