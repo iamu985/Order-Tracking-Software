@@ -1,3 +1,4 @@
+{% load static %}
 {% if message %}
   <div class="alert alert-success" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -44,8 +45,10 @@
               <td>{{ item.get_price }}</td>
               <td hx-post="{% url 'billing:delete_item' item.item.id order.id %}"
                   hx-trigger="click"
+                  class="button-remove"
                   hx-target="#add-items-target">
-                remove
+                Remove
+                <img src="{% static 'img/remove.png' %}" height="15px">
               </td>
             </tr>
           {% endfor %}

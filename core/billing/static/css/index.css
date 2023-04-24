@@ -6,6 +6,11 @@
 
 
 }
+/* Disabled Default Bootstrap shadow and outline */
+:focus {
+    outline: none;
+    box-shadow: none !important;
+  }
 .form-control:focus {
     border: 2px solid #9e92d0;
   }
@@ -19,7 +24,7 @@ header {
 }
 
 .create-order {
-    height: calc(88vh);
+    height: calc(100vh - 80px);
 
     /* background-color: aquamarine; */
 }
@@ -31,7 +36,7 @@ header {
 
 .recent-order {
     background-color: #414141;
-    height: calc(88vh);
+    height: calc(100vh - 80px);
 }
 .order-create-btn > button{
     width: 30rem;
@@ -83,6 +88,7 @@ header {
 /* Scroll Bar */
 ::-webkit-scrollbar {
     width: 3px;
+    height: 3px;
 
 }
 
@@ -154,4 +160,16 @@ $cyan:    #0dcaf0 !default; */
     font-size: 2.5rem;
     margin-top: 20rem;
     margin-bottom: auto;
+}
+
+
+/* Remove added item Button */
+.button-remove{
+    transition: 0.3s;
+}
+.button-remove:hover{
+    background-color: #373737;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.1em;
 }
