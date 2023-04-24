@@ -1,6 +1,5 @@
 import logging
 import re
-
 from django.conf import settings
 from django.contrib import messages
 from django.core import serializers
@@ -85,25 +84,22 @@ def search_items(request):
     item_name = request.GET.get('item-name')
     order_id = request.GET.get('orderid')
     order = Order.objects.get(pk=order_id)
-    suggestions = []
+    suggestions: list = []
+    print("Indes____________-")
     try:
         index_number = int(item_name)
-        # suggestions = Item.objects.get(pk=index_number)
-        item = Item.objects.get(id=index_number)
-        suggestions.append(
-            (item, str(item))
-        )
+        suggestions = Item.objects.filter(pk=index_number)
+
     except ValueError:
         suggestions = Item.objects.filter(name__icontains=item_name)
         # print(suggestions)
 
-    context = {"suggestions": suggestions,
-               "order": order}
-    return render(
-        request,
-        'partials/search-results.html',
-        context,
-    )
+    return render(request, 'partials/search-results.html',
+                  context={
+                      "suggestions": suggestions,
+                      "order": order,
+                  },
+                  )
 
 
 @csrf_exempt
