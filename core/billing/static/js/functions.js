@@ -27,6 +27,14 @@ $(document).ready(function () {
 
     });
 
+    // listItem.on('blur', function () {
+    //     console.log("Blured");
+    //     searchTarget.animate({ height: 'hide' }, 200);
+    //     rebaseBackground(pointer);
+    //     pointer = 0;
+    //     istab = false;
+    //     searchBar.blur();
+    // });
 
 
     /* Keypress Events*/

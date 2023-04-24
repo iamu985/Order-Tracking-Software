@@ -10,10 +10,8 @@
                 <a href="{% url 'billing:index' %}">
                     <img src="{% static 'img/back.svg' %}" alt="Back" width="30px">
                 </a>
-                <div class="modal-heading">Order No: {{ order.id }}</div>
-                <div class="modal-heading">TableNumber: {{ order.table_number }}</div>
                 <hr>
-                <div>Items</div>
+                <div class="modal-heading">Order No: {{ order.id }} TableNumber: {{ order.table_number }}</div>
                 <hr>
                 <div class="table-responsive" style="max-height: 23rem;">
                     <table class="table table-striped items-list-table">

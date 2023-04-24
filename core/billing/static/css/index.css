@@ -11,26 +11,27 @@
   }
   
 header {
-    min-height: 50px;
+    min-height: 20px;
+    max-height: 70px;
     background-color: #202428;
     color: #d9d9d9;
     padding: 0 10px;
 }
 
 .create-order {
-    min-height: calc(100vh - 50px);
+    height: calc(88vh);
 
     /* background-color: aquamarine; */
 }
 
 .create-order>.title {
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
     font-size: 2em;
 }
 
 .recent-order {
     background-color: #414141;
-    min-height: calc(100vh - 50px);
+    height: calc(88vh);
 }
 .order-create-btn > button{
     width: 30rem;
