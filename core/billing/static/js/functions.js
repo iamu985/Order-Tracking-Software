@@ -60,7 +60,6 @@ $(document).ready(function () {
             istab = true;
         }
 
-
         // if (istab) {
         //     let max = $("#search-bar004-target ul li").length;
 
