@@ -10,10 +10,9 @@
                 <a href="{% url 'billing:index' %}">
                     <img src="{% static 'img/back.svg' %}" alt="Back" width="30px">
                 </a>
-                <div class="modal-heading">Date: {{ order.get_order_date }}</div>
                 <hr>
                 <div class="modal-heading">
-                    Order No: {{ order.id }} <span style="padding:0px 30px;"></span>TableNumber: {{ order.table_number }}
+                    Order No: {{ order.id }} <span style="padding:0px 30px;"></span>TableNumber: {{ order.table_number }} <span style="padding:0px 30px;"></span> Date: {{ order.get_order_date }}
                 </div>
                 <hr>
                 <div class="table-responsive" style="max-height: 23rem;">
@@ -39,6 +38,24 @@
                             </tbody>
                         {% endfor %}
                     </table>
+                    <table class="table table-striped">
+                        <tbody>
+                            {% if not order.is_paid %}
+                            <tr>
+                                <th colspan=2>
+                                    <a href="{% url 'billing:index' %}?orderid={{ order.id }}"
+                                       class="btn btn-primary">Edit</a>
+                                </th>
+                            </tr>
+
+                            {% endif %}
+                            <tr>
+                                <th>Total</th>
+                                <th>Rs. {{ order.get_total_price }}</th>
+                            </tr>
+                        </tbody>
+                    </table>
+    
                 </div>
                 <table class="table table-striped">
                     <tbody>
