@@ -2,3 +2,4 @@ __pycache__/
 gui/node_modules/
 logs/debug.log
 db.sqlite3
+

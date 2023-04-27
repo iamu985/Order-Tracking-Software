@@ -13,9 +13,13 @@
 .payment-method-container{
     margin-left: 30px;
 }
-.save-print{
+.functional-buttons{
     margin-left:1rem;
 }
-.save-print:nth-child(even){
-    margin-left: 20rem;
+.functional-buttons-section{
+    margin-left:15rem;
 }
+/* .save-print:nth-child(even){
+    margin-left: 0rem;
+} */
+ 

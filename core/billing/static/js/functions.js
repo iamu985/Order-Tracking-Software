@@ -27,6 +27,14 @@ $(document).ready(function () {
 
     });
 
+    // listItem.on('blur', function () {
+    //     console.log("Blured");
+    //     searchTarget.animate({ height: 'hide' }, 200);
+    //     rebaseBackground(pointer);
+    //     pointer = 0;
+    //     istab = false;
+    //     searchBar.blur();
+    // });
 
 
     /* Keypress Events*/
@@ -51,7 +59,6 @@ $(document).ready(function () {
             listItem.eq(0).css({ 'background-color': 'gray' });
             istab = true;
         }
-
 
         // if (istab) {
         //     let max = $("#search-bar004-target ul li").length;

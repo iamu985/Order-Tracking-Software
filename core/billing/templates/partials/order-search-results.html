@@ -15,12 +15,7 @@
                         <td>{{ order.get_total_price }}</td>
                         <!-- Status Section -->
                         <td>
-                            {% comment %} <select class="form-select form-control select-status"
-                                    id="select-order-status"
-                                    aria-label="Status"
-                                    hx-post="{% url 'billing:update_order_status' order.id %}"
-                                    hx-target="#search-order"
-                                    name='order-status'>
+                            {% comment %} <select class="form-select form-control select-status" id="select-order-status" aria-label="Status" hx-post="{% url 'billing:update_order_status' order.id %}" hx-target="#search-order" name='order-status'>
                                 <option value="Unpaid">Unpaid</option>
                                 <option value="Paid">Paid</option>
                             </select> {% endcomment %}
@@ -54,8 +49,8 @@
         <div class="recent-orders-empty">No recent Orders</div>
     {% endif %}
 </div>
-<script>
+{% comment %} <script>
     var orderObj = {{json_order_data|safe}};
     var status = orderObj[0].fields.order_status;
     $('#select-order-status').val(status);
-</script>
+</script> {% endcomment %}
