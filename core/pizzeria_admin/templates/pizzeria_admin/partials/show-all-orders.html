@@ -13,7 +13,7 @@
                         <div class="dataList">{{ order.id }}</div>
                         <div class="dataList">{{ order.get_order_date }}</div>
                         <div class="dataList">{{ order.get_payment_mode }}</div>
-                        <div class="dataList">₹{{ order.get_total_price }}</div>
+                        <div class="dataList">₹{{ order.total_price }}</div>
                     </div>
                 </a>
             {% endfor %}
