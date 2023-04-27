@@ -21,6 +21,7 @@ cx-freeze = "*"
 idna = "*"
 pillow = "*"
 ipython = "*"
+django-extensions = "*"
 
 [dev-packages]
 autopep8 = "*"

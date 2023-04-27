@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     # third party apps
     'widget_tweaks',
     'mathfilters',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -50,11 +51,6 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'billing.context_processors.new_order_id',
                 'billing.context_processors.all_orders',
-                'pizzeria_admin.context_processors.get_chart_data',
-                'pizzeria_admin.context_processors.get_daily_sales',
-                'pizzeria_admin.context_processors.get_weekly_sales',
-                'pizzeria_admin.context_processors.get_monthly_sales',
-                'pizzeria_admin.context_processors.get_yearly_sales',
             ],
         },
     },

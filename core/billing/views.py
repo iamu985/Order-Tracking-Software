@@ -174,6 +174,7 @@ def create_order(request):
     order = Order.objects.get(pk=order_id)
     if order.has_items():
         order.is_new = False
+        order.total_price = order.get_total_price()
         order.save()
         logger.info(f'Saved order {order_id}')
         new_order = Order.objects.create(pk=order_id+1)

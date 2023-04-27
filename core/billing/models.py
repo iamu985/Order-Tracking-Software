@@ -23,6 +23,7 @@ class Order(models.Model):
     payment_method = models.CharField(max_length=10, default='Cash')
     items = models.ManyToManyField('Item', through="OrderItem")
     table_number = models.PositiveIntegerField(default=1)
+    total_price = models.IntegerField(default=0)
 
     def get_id(self):
         """
