@@ -31,9 +31,9 @@
                                 <tr>
                                     <th scope="row">{{ forloop.counter }}</th>
                                     <td>{{ orderitem.item.name }}</td>
-                                    <td>₹{{ orderitem.item.price }}</td>
+                                    <td>Rs. {{ orderitem.item.price }}</td>
                                     <td>{{ orderitem.quantity }}</td>
-                                    <td>₹{{ orderitem.item.price|mul:orderitem.quantity }}</td>
+                                    <td>Rs. {{ orderitem.item.price|mul:orderitem.quantity }}</td>
                                 </tr>
                             </tbody>
                         {% endfor %}
