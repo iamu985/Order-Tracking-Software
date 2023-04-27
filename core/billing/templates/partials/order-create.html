@@ -11,12 +11,13 @@
            class="form-control me-2"
            id="search-bar004"
            type="search"
-           placeholder="Search Items"
+           placeholder="Search Items (ctrl + I) "
            aria-label="Search"
            hx-get="{% url 'billing:search_items' %}?orderid={{ order.id }}"
            hx-target="#search-results"
            hx-trigger="focus, keyup changed"
            name="item-name"/>
+    <div id="search-close-btn" class="btn btn-danger">x</div>
   </form>
   <!-- Drop down List Section -->
   <div class="list-menu position-absolute end-0" id="search-bar004-target">

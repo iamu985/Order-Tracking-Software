@@ -8,7 +8,7 @@ ITEMS = [
     ('Pork Septa', 170),
     ('Chicken 65', 170),
     ('Chicken Schzwan', 160),
-    ('Chiken Lollypop', 180),
+    ('Chicken Lollypop', 180),
 
     # Fried Rice Section
     ('Chicken Fried Rice', 120),

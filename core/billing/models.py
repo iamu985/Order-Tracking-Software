@@ -1,5 +1,4 @@
 import re
-from uuid import uuid4 as uuid
 
 from django.db import models
 
@@ -24,6 +23,7 @@ class Order(models.Model):
     payment_method = models.CharField(max_length=10, default='Cash')
     items = models.ManyToManyField('Item', through="OrderItem")
     table_number = models.PositiveIntegerField(default=1)
+    total_price = models.IntegerField(default=0)
 
     def get_id(self):
         """
@@ -65,7 +65,7 @@ class Order(models.Model):
 
 
 class Item(models.Model):
-    name = models.CharField(max_length=120)
+    name = models.CharField(max_length=120, db_index=True)
     price = models.IntegerField(default=0)
 
     def get_quantity(self):

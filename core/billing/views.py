@@ -1,6 +1,5 @@
 import logging
 import re
-
 from django.conf import settings
 from django.contrib import messages
 from django.core import serializers
@@ -12,8 +11,11 @@ from .context_processors import new_order_id
 # from django.http import JsonResponse
 from .models import Item, Order, OrderItem
 from .receipt_backend import ReceiptPrinter
-from .utils import (check_order_status, delete_order_item, get_current_date,
-                    get_order_or_none)
+from .utils import (
+    check_order_status,
+    delete_order_item,
+    get_order_or_none
+)
 
 #  logging setup
 LOG_DIR = settings.BASE_DIR / 'logs'
@@ -28,7 +30,7 @@ logging.config.dictConfig({
             'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
         }
     },
-   'handlers': {
+    'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
             'formatter': 'console'
@@ -85,29 +87,22 @@ def search_items(request):
     item_name = request.GET.get('item-name')
     order_id = request.GET.get('orderid')
     order = Order.objects.get(pk=order_id)
-    suggestions = []
+    suggestions: list = []
+    print("Indes____________-")
     try:
         index_number = int(item_name)
-        item = Item.objects.get(pk=index_number)
-        suggestions.append(
-            (item, str(item))
-        )
-    except ValueError:
-        query = re.compile(item_name, re.IGNORECASE)
+        suggestions = Item.objects.filter(pk=index_number)
 
-        for item in Item.objects.all():
-            if re.search(query, item.name):
-                suggestions.append(
-                    #  item[0] is the item object
-                    #  item[1] is the string to represent the item
-                    (item, str(item)))
-    context = {"suggestions": suggestions,
-               "order": order}
-    return render(
-        request,
-        'partials/search-results.html',
-        context
-    )
+    except ValueError:
+        suggestions = Item.objects.filter(name__icontains=item_name)
+        # print(suggestions)
+
+    return render(request, 'partials/search-results.html',
+                  context={
+                      "suggestions": suggestions,
+                      "order": order,
+                  },
+                  )
 
 
 @csrf_exempt
@@ -165,13 +160,21 @@ def update_item_quantity(request, item_id, order_id):
 
 @csrf_exempt
 def delete_item(request, order_id, item_id):
-    logger.debug('Function Name: delete_item')
+    logger.info('Function Name: delete_item')
     order = delete_order_item(order_id, item_id)
     context = {
         'order': order
     }
     return render(request,
                   'partials/show-added-items.html', context)
+
+
+@csrf_exempt
+def delete_order(request, order_id):
+    logger.info('Function Name: delete_order')
+    order = Order.objects.get(pk=order_id)
+    order.delete()
+    return redirect('billing:index')
 
 
 @csrf_exempt
@@ -182,6 +185,7 @@ def create_order(request):
     order = Order.objects.get(pk=order_id)
     if order.has_items():
         order.is_new = False
+        order.total_price = order.get_total_price()
         order.save()
         logger.info(f'Saved order {order_id}')
         new_order = Order.objects.create(pk=order_id+1)
@@ -204,6 +208,7 @@ def update_order(request, order_id):
     order = Order.objects.get(pk=order_id)
     logger.debug(f'Got order {order.id}')
     order.is_udpate = False
+    order.total_price = order.get_total_price()
     order.save()
     next_order_id = new_order_id(request).get('new_order_id')
     next_order = Order.objects.get(pk=next_order_id)
