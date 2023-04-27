@@ -201,6 +201,7 @@ def update_order(request, order_id):
     order = Order.objects.get(pk=order_id)
     logger.debug(f'Got order {order.id}')
     order.is_udpate = False
+    order.total_price = order.get_total_price()
     order.save()
     next_order_id = new_order_id(request).get('new_order_id')
     next_order = Order.objects.get(pk=next_order_id)

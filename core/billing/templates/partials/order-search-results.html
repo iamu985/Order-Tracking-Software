@@ -26,16 +26,20 @@
                             </select> {% endcomment %}
                             {{ order.order_status }}
                         </td>
-                        <td>
-                            <input type="number"
-                                   class="items-quanitity form-select form-control mx-3"
-                                   min="1"
-                                   max="7"
-                                   value="{{ order.table_number }}"
-                                   name="table-number"
-                                   placeholder="Table number"
-                                   hx-post="{% url 'billing:update_table_number' order.id %}"/>
-                        </td>
+                        {% if order.is_paid %}
+                            <td>{{ order.table_number }}</td>
+                        {% else %}
+                            <td>
+                                <input type="number"
+                                       class="items-quanitity form-select form-control mx-3"
+                                       min="1"
+                                       max="7"
+                                       value="{{ order.table_number }}"
+                                       name="table-number"
+                                       placeholder="Table number"
+                                       hx-post="{% url 'billing:update_table_number' order.id %}"/>
+                            </td>
+                        {% endif %}
                         <td>
                             <a href="{% url 'billing:modal-view' order.id %}"
                                class="custom-button btn btn-primary">View</a>
