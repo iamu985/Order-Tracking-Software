@@ -10,8 +10,6 @@
                 <a href="{% url 'billing:index' %}">
                     <img src="{% static 'img/back.svg' %}" alt="Back" width="30px">
                 </a>
-                <div class="modal-heading">Order No: {{ order.id }}</div>
-                <div class="modal-heading">TableNumber: {{ order.table_number }}</div>
                 <div class="modal-heading">Date: {{ order.get_order_date }}</div>
                 <hr>
                 <div class="modal-heading">
@@ -95,6 +93,27 @@
                                    hx-target="body">
                             <label class="form-check-label" for="payment-online">Online</label>
                         </div>
+                        <div class="functional-buttons-section">
+                            <a href="{% url 'billing:delete_order' order.id %}"
+                               style="color:white"
+                               class="btn btn-danger functional-buttons">Delete</a>
+                            <a href="{% url 'billing:modal_save' %}?orderid={{ order.id }}"
+                               style="color:white"
+                               class="btn btn-primary functional-buttons"
+                               value="Paid">Paid</a>
+                            <input type="button"
+                                   id="print-button"
+                                   class="btn btn-success functional-buttons"
+                                   value="Print"
+                                   disabled="true"
+                                   hx-post="{% url 'billing:print_receipt' order.id %}"
+                                   hx-trigger="click">
+                        </div>
+                    {% endif %}
+                </div>
+                <br>
+            </div>
+            <script>
                         <a href="{% url 'billing:modal_save' %}?orderid={{ order.id }}"
                            type="button"
                            style="color:white"
@@ -131,12 +150,12 @@
         $('#payment-online').prop('checked', true);
         $('#print-button').prop('disabled', false);
        }
-                </script>
-                <script>
+</script>
+<script>
             function hide()
             {
             document.getElementById("hideDiv").style.visibility="hidden";
             }
             setTimeout("hide()",2000);
-                </script>
-            {% endblock content %}
+</script>
+{% endblock content %}
