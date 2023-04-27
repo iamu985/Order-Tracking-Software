@@ -19,7 +19,7 @@ logging.config.dictConfig({
             'format': '%(asctime)s %(name)-12s %(levelname)-8s %(message)s'
         }
     },
-   'handlers': {
+    'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
             'formatter': 'console'
@@ -65,7 +65,8 @@ def print_receipt_linux(order, printer):
     printer.text(f'orderID: {order.id}\n')
     printer.text(f'TableNo: {order.table_number}\n')
     printer.text(f"{'-'*32}\n")
-    printer.text('{:8} {:>5} {:>5} {:>8}\n'.format('Item', 'Qty', 'Rate', 'Price'))
+    printer.text('{:8} {:>5} {:>5} {:>8}\n'.format(
+        'Item', 'Qty', 'Rate', 'Price'))
     for item in order.items.all():
         if len(item.get_shortened_name()) < 10:
             printer.text('{:10} {:>3} {:>5} {:>8}\n'.format(
@@ -87,26 +88,33 @@ def print_receipt_windows(order, printer, fontsize, title_fontsize, weight):
     logger.debug('Printing Receipt')
     with printer as printer:
         printer.text(f"{'-' * 32}\n", font_config=title_font)
-        printer.text("HomeTown Pizzeria and Restaurant", font_config=title_font) 
+        printer.text("HomeTown Pizzeria and Restaurant",
+                     font_config=title_font)
         printer.text('Singhmari, Darjeeling', font_config=title_font)
         printer.text('Ph No: 7001497783', font_config=title_font)
         printer.text(f"OrderId: {order.id}", font_config=title_font)
-        printer.text(f'TableNumber: {order.table_number}', font_config=title_font)
+        printer.text(
+            f'TableNumber: {order.table_number}', font_config=title_font)
         printer.text(f"{'-' * 32}")
-        printer.text('{:>11} {:>8} {:>5} {:>8}\n'.format('Item', 'Qty', 'Rate', 'Price'), font_config=title_font)
-        
+        printer.text('{:>11} {:>8} {:>5} {:>8}\n'.format(
+            'Item', 'Qty', 'Rate', 'Price'), font_config=title_font)
+
         # printing items
-        for item in order.items.all():
+        for item in order.orderitem_set.all():
             if len(item.get_shortened_name()) < 10:
                 printer.text('{:>11} {:>8} {:>5} {:>10}\n'.format(
-                    item.get_shortened_name(), item.get_quantity(), item.get_price(), item.get_total_price()
+                    item.item.get_shortened_name(),
+                    item.quantity,
+                    item.item.price,
+                    item.get_total_price()
                 ), font_config=font)
             else:
                 printer.text('{:>11} {:>8} {:>5} {:>10}\n'.format(
-                    item.get_shortened_name(), item.get_quantity(), item.get_price(), item.get_total_price()
+                    item.get_shortened_name(), item.get_quantity(
+                    ), item.get_price(), item.get_total_price()
                 ), font_config=font)
-        
-        printer.text(f"{'-' * 32}\n", font_config=font)
-        printer.text(f"Total Price: Rs{order.get_total_price()}\n", font_config=title_font)
-        printer.text('Visit Again!\n', font_config=title_font)
 
+        printer.text(f"{'-' * 32}\n", font_config=font)
+        printer.text(
+            f"Total Price: Rs{order.get_total_price()}\n", font_config=title_font)
+        printer.text('Visit Again!\n', font_config=title_font)
