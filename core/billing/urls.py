@@ -8,6 +8,7 @@ urlpatterns = [
     path('modal/<int:order_id>', views.modal_view, name='modal-view'),
     path('update-order/<int:order_id>', views.update_order, name='update_order'),
     path('modal-save', views.modal_save, name='modal_save'),
+    path('delete-order/<int:order_id>', views.delete_order, name='delete_order'),
 ]
 
 htmx_patterns = [

@@ -11,8 +11,11 @@ from .context_processors import new_order_id
 # from django.http import JsonResponse
 from .models import Item, Order, OrderItem
 from .receipt_backend import ReceiptPrinter
-from .utils import (check_order_status, delete_order_item, get_current_date,
-                    get_order_or_none)
+from .utils import (
+    check_order_status,
+    delete_order_item,
+    get_order_or_none
+)
 
 #  logging setup
 LOG_DIR = settings.BASE_DIR / 'logs'
@@ -157,13 +160,21 @@ def update_item_quantity(request, item_id, order_id):
 
 @csrf_exempt
 def delete_item(request, order_id, item_id):
-    logger.debug('Function Name: delete_item')
+    logger.info('Function Name: delete_item')
     order = delete_order_item(order_id, item_id)
     context = {
         'order': order
     }
     return render(request,
                   'partials/show-added-items.html', context)
+
+
+@csrf_exempt
+def delete_order(request, order_id):
+    logger.info('Function Name: delete_order')
+    order = Order.objects.get(pk=order_id)
+    order.delete()
+    return redirect('billing:index')
 
 
 @csrf_exempt

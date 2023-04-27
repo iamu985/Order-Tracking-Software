@@ -10,8 +10,6 @@
                 <a href="{% url 'billing:index' %}">
                     <img src="{% static 'img/back.svg' %}" alt="Back" width="30px">
                 </a>
-                <div class="modal-heading">Order No: {{ order.id }}</div>
-                <div class="modal-heading">TableNumber: {{ order.table_number }}</div>
                 <div class="modal-heading">Date: {{ order.get_order_date }}</div>
                 <hr>
                 <div class="modal-heading">
@@ -96,7 +94,7 @@
                             <label class="form-check-label" for="payment-online">Online</label>
                         </div>
                         <div class="functional-buttons-section">
-                            <a href="#"
+                            <a href="{% url 'billing:delete_order' order.id %}"
                                style="color:white"
                                class="btn btn-danger functional-buttons">Delete</a>
                             <a href="{% url 'billing:modal_save' %}?orderid={{ order.id }}"
