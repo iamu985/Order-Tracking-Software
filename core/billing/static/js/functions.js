@@ -14,11 +14,19 @@ $(document).ready(function () {
     var listItem = $('#search-bar004-target ul li');
     var istab = false;
     var pointer = 0;
-
+    const closeButton = $('#search-close-btn');
 
     // Search Bar on Focus
     searchBar.on('focus', function () {
         searchTarget.animate({ height: 'show' }, 200);
+    });
+
+    closeButton.on('click', function (e) {
+        // console.log('hello');
+        searchTarget.animate({ height: 'hide' }, 200);
+        istab = false;
+        searchBar.blur();
+
     });
 
     // Search Bar on Focusout
@@ -35,7 +43,6 @@ $(document).ready(function () {
     //     istab = false;
     //     searchBar.blur();
     // });
-
 
     /* Keypress Events*/
     $(document).keydown(function (event) {
