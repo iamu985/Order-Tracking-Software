@@ -14,8 +14,20 @@ from billing.context_processors import new_order_id
 from billing.models import Item, Order, OrderItem
 
 from .forms import CreateNewItemForm
-from .utils import (generate_labels_for_month, get_present_month,
-                    make_new_year_range)
+from .utils import (
+    generate_labels_for_month,
+    get_present_month,
+    make_new_year_range)
+from .sales_data import (
+    get_daily_data,
+    get_weekly_data,
+    get_monthly_data,
+    get_yearly_data,
+    get_daily_sales,
+    get_weekly_sales,
+    get_monthly_sales,
+    get_yearly_sales,
+)
 
 # All admin related views here
 
@@ -115,6 +127,7 @@ def pizzeria_logout(request):
     logout(request)
     return redirect('billing:index')
 
+
 @login_required
 @csrf_exempt
 def pizzeria_admin(request):
@@ -166,7 +179,29 @@ def admin_logout(request):
 @login_required
 def statistics(request):
     logger.info('Function Name: statistics')
-    return render(request, 'pizzeria_admin/statistics.html')
+    daily_label, daily_data = get_daily_data()
+    weekly_label, weekly_data = get_weekly_data()
+    monthly_label, monthly_data = get_monthly_data()
+    yearly_label, yearly_data = get_yearly_data()
+    context = {
+        'daily_label': daily_label,
+        'daily_data': daily_data,
+        'weekly_label': weekly_label,
+        'weekly_data': weekly_data,
+        'monthly_label': monthly_label,
+        'monthly_data': monthly_data,
+        'yearly_label': yearly_label,
+        'yearly_data': yearly_data,
+        'daily_sales': get_daily_sales(),
+        'weekly_sales': get_weekly_sales(),
+        'monthly_sales': get_monthly_sales(),
+        'yearly_sales': get_yearly_sales(),
+    }
+    return render(
+        request,
+        'pizzeria_admin/statistics.html',
+        context,
+    )
 
 
 @ csrf_exempt
