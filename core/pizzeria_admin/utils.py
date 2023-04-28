@@ -1,7 +1,6 @@
 import datetime
 import random
 import logging
-from zoneinfo import ZoneInfo
 from billing.models import Item, Order, OrderItem
 from django.conf import settings
 from django.db.models import Sum
@@ -46,8 +45,7 @@ logger = logging.getLogger(__name__)
 
 def get_present_date():
     # Returns current datetimeobj in ist timezone
-    zinfo = ZoneInfo('Asia/Kolkata')
-    return datetime.datetime.now(tz=zinfo)
+    return datetime.datetime.now()
 
 
 def get_present_month():

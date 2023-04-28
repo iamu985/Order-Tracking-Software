@@ -90,7 +90,7 @@ def print_receipt_windows(order, printer, fontsize, title_fontsize, weight):
         printer.text(f"{'-' * 32}\n", font_config=title_font)
         printer.text("HomeTown Pizzeria and Restaurant",
                      font_config=title_font)
-        printer.text('Singhmari, Darjeeling', font_config=title_font)
+        printer.text('Singamari, Darjeeling', font_config=title_font)
         printer.text('Ph No: 7001497783', font_config=title_font)
         printer.text(f"OrderId: {order.id}", font_config=title_font)
         printer.text(
@@ -101,17 +101,19 @@ def print_receipt_windows(order, printer, fontsize, title_fontsize, weight):
 
         # printing items
         for item in order.orderitem_set.all():
-            if len(item.get_shortened_name()) < 10:
+            if len(item.item.get_shortened_name()) < 10:
                 printer.text('{:>11} {:>8} {:>5} {:>10}\n'.format(
                     item.item.get_shortened_name(),
                     item.quantity,
                     item.item.price,
-                    item.get_total_price()
+                    item.get_price()
                 ), font_config=font)
             else:
                 printer.text('{:>11} {:>8} {:>5} {:>10}\n'.format(
-                    item.get_shortened_name(), item.get_quantity(
-                    ), item.get_price(), item.get_total_price()
+                    item.item.get_shortened_name(),
+                    item.quantity, 
+                    item.item.price, 
+                    item.get_price()
                 ), font_config=font)
 
         printer.text(f"{'-' * 32}\n", font_config=font)
