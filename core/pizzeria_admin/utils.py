@@ -1,4 +1,5 @@
 import datetime
+import calendar
 import random
 import logging
 from billing.models import Item, Order, OrderItem
@@ -68,18 +69,11 @@ def get_total_sales_by_orders(orders):
 
 def generate_labels_for_month(month: int):
     # generates labels for month
-    thirty_months = [4, 6, 9, 11]
-    thirty_one_months = [1, 3, 5, 7, 8, 19, 12]
-    year = get_present_year()
+    logger.info('Function Name: generate_labels_for_month')
     month = get_present_month()
-    if not year % 4 and month == 2:
-        return range(1, 30)
-    else:
-        return range(1, 29)
-    if month in thirty_months:
-        return range(1, 31)
-    if month in thirty_one_months:
-        return range(1, 32)
+    year = get_present_year()
+    number_of_days = calendar.monthrange(year, month)[1]
+    return range(1, number_of_days+1)
 
 
 def get_random_date():
