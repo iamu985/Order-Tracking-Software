@@ -190,6 +190,31 @@ button {
 
 }
 
+.pz-btn {
+    font-family: sans-serif;
+    /* font-weight: bolder; */
+    background-color: var(--colour5);
+    border-style: none;
+    border-radius: 5px;
+    margin-left:10px;
+    color: var(--colour1);
+    text-decoration: none;
+
+}
+
+.pz-btn:active {
+    box-shadow: 0 0 10px var(--colour2);
+
+}
+
+.pz-btn:hover {
+
+    background-color: var(--colour3);
+    color: var(--colour2);
+    transition: 0.2s;
+}
+
+
 button:active {
     box-shadow: 0 0 10px var(--colour2);
 
