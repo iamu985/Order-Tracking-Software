@@ -16,7 +16,7 @@
         <div class="tableData">{{ item.price }}</div>
         <div class="tableData">
             <button onclick="redirect('{% url 'pizzeria_admin:item_update_form_model' item.id %}')"
-                    class="button1">Update</button>
+                    class="">Update</button>
             <a class="pz-btn"
                href="{% url 'pizzeria_admin:delete_item_from_model' item.id %}">Delete</a>
         </div>
