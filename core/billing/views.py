@@ -179,7 +179,7 @@ def delete_order(request, order_id):
 
 @csrf_exempt
 def create_order(request):
-    order_id = int(request.POST['order_id'])
+    order_id = int(request.GET['order_id'])
     logger.debug('Function Name: create_order')
     logger.debug(f'Received Order {order_id}')
     order = Order.objects.get(pk=order_id)
@@ -205,6 +205,7 @@ def create_order(request):
 @csrf_exempt
 def update_order(request, order_id):
     logger.info('Function name: update_order')
+    logger.info(f'OrderId: {order_id}')
     order = Order.objects.get(pk=order_id)
     logger.debug(f'Got order {order.id}')
     order.is_udpate = False
