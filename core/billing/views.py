@@ -197,6 +197,7 @@ def create_order(request):
         return render(request, 'index.html', context)
 
     context = {
+        'order': order,
         'message': "Order is empty. Please add items to the order."
     }
     return render(request, 'index.html', context)
