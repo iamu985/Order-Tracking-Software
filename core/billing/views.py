@@ -183,6 +183,17 @@ def create_order(request):
     logger.debug('Function Name: create_order')
     logger.debug(f'Received Order {order_id}')
     order = Order.objects.get(pk=order_id)
+    # handles reloading of the site
+    # if the page is reloaded after creating a new order
+    # it renders the index page with the last created order
+    # last created order is received from new_order_id context_processors
+    if not order.is_new:
+        order = Order.objects.last()
+        context = {
+                "order": order
+                }
+        logger.debug(f"New Order after reload: {order}")
+        return render(request, 'index.html', context)
     if order.has_items():
         order.is_new = False
         order.total_price = order.get_total_price()

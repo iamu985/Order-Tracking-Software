@@ -24,4 +24,9 @@
     {% include 'partials/search-results.html' %}
   </div>
 </div>
+<script>
+    $('window').bind("unload", function(){
+        console.log('Reloading')
+    })
+</script>
 <!--Add items section-->
