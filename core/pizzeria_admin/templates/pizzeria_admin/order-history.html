@@ -15,6 +15,7 @@ Order History
             <input type="text" id="order-history-search" placeholder="Search Orders"
                 hx-get="{% url 'pizzeria_admin:order_history_search' %}" hx-trigger="focus, keyup changed"
                 hx-target="section" name="order-query">
+            <input type="date" id="order-history-search-date">
         </div>
     </div>
     <button class="goback">
